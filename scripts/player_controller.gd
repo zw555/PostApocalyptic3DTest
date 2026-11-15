@@ -7,6 +7,7 @@ var controls_enabled := true
 var face_movement := true
 var gravity := 9.8
 var combat_component: Node
+var melee_movement_source: Node # Optional D.1-B stance modifier; no base-speed mutation.
 @onready var visual: Node3D = $Visual
 
 func _ready() -> void:
@@ -35,8 +36,9 @@ func step_motion(axis: Vector2, delta: float) -> void:
 	var camera := get_viewport().get_camera_3d()
 	var basis_value := camera.global_basis if camera else Basis.IDENTITY
 	var direction := camera_relative_direction(axis, basis_value)
-	velocity.x = move_toward(velocity.x, direction.x * move_speed, acceleration * delta)
-	velocity.z = move_toward(velocity.z, direction.z * move_speed, acceleration * delta)
+	var multiplier: float = melee_movement_source.movement_multiplier() if is_instance_valid(melee_movement_source) else 1.0
+	velocity.x = move_toward(velocity.x, direction.x * move_speed * multiplier, acceleration * delta)
+	velocity.z = move_toward(velocity.z, direction.z * move_speed * multiplier, acceleration * delta)
 	if not is_on_floor():
 		velocity.y -= gravity * delta
 	else:

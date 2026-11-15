@@ -209,12 +209,22 @@ func _on_died(_source: Node, hit_direction: Vector3) -> void:
 	if is_instance_valid(visual) and visual.has_method("death_feedback"):
 		visual.death_feedback()
 
+func needs_attack_approach() -> bool:
+	# Preserve ATTACK hysteresis while closing the gap between melee reach and
+	# the AI exit radius. C.1/C.2 feedback-only attacks retain their old behavior.
+	if state != "ATTACK" or not is_instance_valid(melee_component) or melee_component.busy() or not melee_component.valid_target():
+		return false
+	var offset := player.global_position-global_position
+	offset.y = 0.0
+	var distance := offset.length()
+	return distance > melee_component.reach and distance <= float(settings.attack_exit_distance)
+
 func update_navigation(delta: float) -> Vector3:
 	var started := Time.get_ticks_usec()
 	var direction := Vector3.ZERO
 	repath_timer -= delta
 	retry_time -= delta
-	if state in ["CHASE","INVESTIGATE","RETURN"]:
+	if state in ["CHASE","INVESTIGATE","RETURN"] or needs_attack_approach():
 		if not is_finite(requested.x) or (repath_timer <= 0 and requested.distance_to(target) >= float(settings.repath_distance)) or (stuck_time > 1.5 or not path_valid) and repath_timer <= 0 and retry_time <= 0:
 			var projected := NavigationServer3D.map_get_closest_point(get_world_3d().navigation_map,target)
 			agent.target_position = projected
@@ -277,7 +287,7 @@ func _physics_process(delta: float) -> void:
 		think(think_timer)
 		think_timer = 0
 	var direction := update_navigation(delta)
-	var speed: float = settings.chase_speed if state == "CHASE" else settings.walk_speed
+	var speed: float = settings.chase_speed if state == "CHASE" or needs_attack_approach() else settings.walk_speed
 	velocity.x = move_toward(velocity.x,direction.x*speed,float(settings.acceleration)*delta)
 	velocity.z = move_toward(velocity.z,direction.z*speed,float(settings.acceleration)*delta)
 	velocity.y = -0.1 if is_on_floor() else velocity.y-9.8*delta

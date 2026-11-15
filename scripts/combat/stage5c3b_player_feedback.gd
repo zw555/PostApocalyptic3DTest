@@ -68,7 +68,10 @@ func apply_pose(delta: float) -> void:
 	var weight: float = visual.gait_weight
 	var desired := Vector3(-0.035*weight,0,sin(visual.phase)*0.018*weight)
 	pose_kind = "NORMAL"
-	if attack_visual.attack_time < attack_visual.attack_duration:
+	if attack_visual.stance_upper_active:
+		desired = attack_visual.stance_upper_rotation
+		pose_kind = attack_visual.stance_pose_kind
+	elif attack_visual.attack_time < attack_visual.attack_duration:
 		var t: float = clampf(attack_visual.attack_time/attack_visual.attack_duration,0,1)
 		desired = attack_visual.base_upper_rotation+Vector3(0,sin(t*PI)*0.18,-sin(t*PI)*0.06)
 		pose_kind = "ATTACK"
@@ -80,7 +83,12 @@ func apply_pose(delta: float) -> void:
 		attack_visual.weapon_pivot.rotation = Vector3(0.9,0,0.25)
 		attack_visual.trail.hide()
 		pose_kind = "DEAD"
-	upper.rotation = upper.rotation.lerp(desired,1-exp(-24.0*delta)) if delta > 0 else desired
+	# The stance trajectory is already blended and timed to impact. A second
+	# smoothing filter would lag it; hurt/death keep their original final priority.
+	if attack_visual.stance_upper_active and pose_kind not in ["HURT","DEAD"]:
+		upper.rotation = desired
+	else:
+		upper.rotation = upper.rotation.lerp(desired,1-exp(-24.0*delta)) if delta > 0 else desired
 
 func _process(delta: float) -> void:
 	flash_remaining = maxf(0,flash_remaining-delta)

@@ -30,6 +30,74 @@ var last_damage_result: Dictionary = {}
 var last_input_ignored_ui := false
 var debug_mesh: MeshInstance3D
 var debug_label: Label
+# Opt-in prototype; all existing validation scenes keep the original behavior.
+@export var ready_stance_enabled := false
+@export var prepare_duration := 0.30
+@export var prepared_impact_time := 0.08
+@export var ready_move_multiplier := 0.75
+var stance_state := "IDLE"
+var prepare_elapsed := 0.0
+var prepare_held := false
+var release_pending := false
+var release_prepared := false
+var last_attack_prepared := false
+var attack_in_progress := false
+var recovery_end := 0.55
+
+func enable_ready_stance() -> void:
+	ready_stance_enabled = true
+	player.melee_movement_source = self
+	visual.stance_controller = self
+	visual.process_priority = 10 # Locomotion < weapon/arms < sole upper-body owner.
+	if not get_window().focus_exited.is_connected(_release_ready):
+		get_window().focus_exited.connect(_release_ready)
+
+func _input(event: InputEvent) -> void:
+	# A GUI can consume release events: always clear a previous hold first.
+	if ready_stance_enabled and event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and not event.pressed:
+		var held := prepare_held
+		var prepared := stance_state == "READY"
+		_release_ready()
+		# Release may be consumed by GUI. Remember eligibility, but only the
+		# unhandled release is allowed to start a world attack.
+		release_pending = held
+		release_prepared = prepared
+
+func _release_ready() -> void:
+	prepare_held = false
+	release_pending = false
+	release_prepared = false
+	prepare_elapsed = 0.0
+	if not attack_in_progress: stance_state = "IDLE"
+
+func movement_multiplier() -> float:
+	return ready_move_multiplier if ready_stance_enabled and attack_allowed() and stance_state in ["PREPARING","READY"] else 1.0
+
+func impact_time() -> float:
+	return prepared_impact_time if ready_stance_enabled and last_attack_prepared else active_window_start
+
+func _advance_stance(delta: float, previous_elapsed: float) -> void:
+	if not ready_stance_enabled: return
+	if not attack_allowed():
+		_release_ready()
+		stance_state = "IDLE"
+		return
+	var prepare_delta := delta
+	if attack_in_progress:
+		if attack_elapsed < recovery_end:
+			stance_state = "RECOVERING" if attack_resolved_once else "ATTACKING"
+			return
+		attack_in_progress = false
+		prepare_delta = minf(delta,maxf(0.0,attack_elapsed-maxf(previous_elapsed,recovery_end)))
+	if not prepare_held:
+		stance_state = "IDLE"
+		prepare_elapsed = 0.0
+		return
+	if stance_state not in ["PREPARING","READY"]:
+		stance_state = "PREPARING"
+		prepare_elapsed = 0.0
+	prepare_elapsed = minf(prepare_duration,prepare_elapsed+prepare_delta)
+	if prepare_elapsed+0.0000001 >= prepare_duration: stance_state = "READY"
 
 func setup(actor: CharacterBody3D, view_camera: Camera3D, aim_controller: Node, root_node: Node3D) -> void:
 	player = actor
@@ -72,6 +140,22 @@ func _unhandled_input(event: InputEvent) -> void:
 		debug_label.visible = debug_enabled
 		get_viewport().set_input_as_handled()
 		return
+	if ready_stance_enabled and event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
+		if not event.pressed:
+			var eligible := release_pending or prepare_held
+			var prepared := release_prepared if release_pending else stance_state == "READY"
+			_release_ready()
+			if eligible and attack_allowed() and not _ui_has_mouse() and cooldown_remaining <= 0.0 and attack_elapsed >= attack_cooldown:
+				_start_attack(prepared)
+		elif attack_allowed() and not _ui_has_mouse():
+			release_pending = false
+			release_prepared = false
+			prepare_held = true
+			if not attack_in_progress and stance_state == "IDLE":
+				stance_state = "PREPARING"
+				prepare_elapsed = 0.0
+			get_viewport().set_input_as_handled()
+		return
 	if not event is InputEventMouseButton or not event.pressed or event.button_index != MOUSE_BUTTON_LEFT:
 		return
 	if _ui_has_mouse():
@@ -79,14 +163,23 @@ func _unhandled_input(event: InputEvent) -> void:
 		return
 	last_input_ignored_ui = false
 	if attack_allowed() and cooldown_remaining <= 0.0 and attack_elapsed >= attack_cooldown:
-		attack_elapsed = 0.0
-		attack_resolved_once = false
-		attack_count += 1
-		last_target = null
-		last_blocked_target = null
-		visual.play_attack()
-		attack_started.emit()
-		get_viewport().set_input_as_handled()
+		_start_attack(false)
+
+func _start_attack(prepared: bool) -> void:
+	last_attack_prepared = ready_stance_enabled and prepared
+	if ready_stance_enabled:
+		attack_in_progress = true
+		stance_state = "ATTACKING"
+		prepare_elapsed = 0.0
+		recovery_end = visual.attack_duration
+	attack_elapsed = 0.0
+	attack_resolved_once = false
+	attack_count += 1
+	last_target = null
+	last_blocked_target = null
+	visual.play_attack()
+	attack_started.emit()
+	get_viewport().set_input_as_handled()
 
 func _ui_has_mouse() -> bool:
 	var hovered := get_viewport().gui_get_hovered_control()
@@ -102,7 +195,9 @@ func _physics_process(delta: float) -> void:
 	attack_elapsed += delta
 	# Resolve when the frame interval crosses the active window. This keeps a
 	# low-FPS frame from skipping the hit entirely.
-	if previous_attack_elapsed < active_window_end and attack_elapsed >= active_window_start and not attack_resolved_once:
+	var window_start := impact_time()
+	var window_end := window_start+(active_window_end-active_window_start)
+	if previous_attack_elapsed < window_end and attack_elapsed >= window_start and not attack_resolved_once:
 		attack_resolved_once = true
 		var result := resolve_and_apply_hit()
 		last_target = result.target
@@ -111,6 +206,7 @@ func _physics_process(delta: float) -> void:
 		# Synchronous signal subscribers must see this hit, not the previous one.
 		attack_resolved.emit(result.target, result.blocked)
 		damage_resolved.emit(result)
+	_advance_stance(delta,previous_attack_elapsed)
 	if debug_enabled:
 		_update_debug()
 
@@ -168,6 +264,9 @@ func attack_allowed() -> bool:
 
 func cancel_pending_attack() -> void:
 	attack_resolved_once = true
+	if ready_stance_enabled:
+		attack_in_progress = false
+		_release_ready()
 	# Keep the original elapsed/cooldown timeline; cancelling is not a reset.
 	if is_instance_valid(visual):
 		visual.attack_time = visual.attack_duration
