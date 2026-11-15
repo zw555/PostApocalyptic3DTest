@@ -1,0 +1,10 @@
+[gd_resource type="Resource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/procedural/material_recipe.gd" id="1_b53mu"]
+
+[resource]
+script = ExtResource("1_b53mu")
+family = "Concrete"
+base_color = Color(0.627451, 0.62352943, 0.5529412, 1)
+roughness = 0.96
+wear_amount = 0.3

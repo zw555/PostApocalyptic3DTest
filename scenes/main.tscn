@@ -1,0 +1,51 @@
+[gd_scene load_steps=8 format=3]
+
+[ext_resource type="Script" path="res://scripts/main.gd" id="1_tbgi4"]
+[ext_resource type="PackedScene" path="res://scenes/environment/convenience_store.tscn" id="2_tefeu"]
+[ext_resource type="PackedScene" path="res://scenes/player/player_visual_v2.tscn" id="3_o6xl0"]
+[ext_resource type="Script" path="res://scripts/player_controller.gd" id="4_tipki"]
+[ext_resource type="Script" path="res://scripts/camera_controller.gd" id="5_85g3d"]
+[ext_resource type="PackedScene" path="res://scenes/environment/environment_story.tscn" id="6_story"]
+
+[sub_resource type="Environment" id="Environment_choun"]
+background_mode = 1
+background_color = Color(0.09019608, 0.13333334, 0.15686275, 1)
+ambient_light_source = 2
+ambient_light_color = Color(0.7058824, 0.78431374, 0.81960785, 1)
+ambient_light_energy = 0.46
+tonemap_mode = 2
+
+[node name="AfterHours" type="Node3D"]
+script = ExtResource("1_tbgi4")
+
+[node name="ConvenienceStore" type="Node3D" parent="." instance=ExtResource("2_tefeu")]
+
+[node name="Player" type="CharacterBody3D" parent="." instance=ExtResource("3_o6xl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.02, 2.3)
+collision_layer = 2
+floor_snap_length = 0.15
+script = ExtResource("4_tipki")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+projection = 1
+size = 13.8
+near = 0.1
+far = 70.0
+script = ExtResource("5_85g3d")
+target_path = NodePath("../Player")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_choun")
+
+[node name="SoftDaylight" type="DirectionalLight3D" parent="." groups=["shadow_lights"]]
+transform = Transform3D(0.8480481, 0.44939703, -0.28081444, 0, 0.52991927, 0.8480481, 0.52991927, -0.7191856, 0.44939703, 0, 0, 0)
+light_color = Color(0.8235294, 0.8509804, 0.8, 1)
+light_energy = 0.75
+light_angular_distance = 2.0
+shadow_enabled = true
+shadow_bias = 0.035
+shadow_normal_bias = 0.7
+directional_shadow_max_distance = 32.0
+
+[node name="EnvironmentStory" parent="." instance=ExtResource("6_story")]
+finish_enabled = true

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/procedural/material_recipe.gd" id="1_wq0mt"]
+
+[resource]
+script = ExtResource("1_wq0mt")
+family = "PaintedMetal"
+base_color = Color(0.45882353, 0.5019608, 0.47058824, 1)
+roughness = 0.72
+wear_amount = 0.3

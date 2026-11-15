@@ -1,0 +1,14 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3]
+
+[ext_resource type="Shader" path="res://materials/upgrade/architectural_finish.gdshader" id="1_r3ias"]
+
+[resource]
+resource_name = "Concrete / continuous floor_finish"
+render_priority = 0
+shader = ExtResource("1_r3ias")
+shader_parameter/base_color = Color(0.6431373, 0.6313726, 0.5568628, 1)
+shader_parameter/roughness = null
+shader_parameter/wear_amount = 0.4
+shader_parameter/dust_amount = 0.32
+shader_parameter/noise_scale = null
+shader_parameter/floor_surface = true

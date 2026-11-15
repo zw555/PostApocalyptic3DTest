@@ -1,0 +1,13 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3]
+
+[ext_resource type="Shader" path="res://materials/surface.gdshader" id="1_vedg2"]
+
+[resource]
+resource_name = "floor"
+render_priority = 0
+shader = ExtResource("1_vedg2")
+shader_parameter/base_color = Color(0.6431373, 0.6313726, 0.5568628, 1)
+shader_parameter/grain = 0.12
+shader_parameter/surface_roughness = 0.94
+shader_parameter/floor_tiles = true
+shader_parameter/wood_grain = false

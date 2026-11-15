@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://scenes/zombie_chase_validation.tscn" id="1_base"]
+[ext_resource type="Script" path="res://scripts/combat/stage5c1_validation_main.gd" id="2_main"]
+
+[node name="MeleeValidation" instance=ExtResource("1_base")]
+script = ExtResource("2_main")

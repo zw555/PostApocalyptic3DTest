@@ -1,0 +1,97 @@
+[gd_scene load_steps=10 format=3]
+
+[ext_resource type="Material" path="res://materials/upgrade/old_wood.tres" id="1_7712g"]
+[ext_resource type="Material" path="res://materials/metal_dark.tres" id="2_rtyyu"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_sdyvc"]
+top_radius = 0.17
+bottom_radius = 0.17
+height = 0.065
+radial_segments = 8
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_fq4w3"]
+top_radius = 0.013
+bottom_radius = 0.013
+height = 0.655
+radial_segments = 8
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_u38a8"]
+top_radius = 0.013
+bottom_radius = 0.013
+height = 0.655
+radial_segments = 8
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_fu8a3"]
+top_radius = 0.013
+bottom_radius = 0.013
+height = 0.655
+radial_segments = 8
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_eslct"]
+top_radius = 0.013
+bottom_radius = 0.013
+height = 0.655
+radial_segments = 8
+rings = 1
+
+[sub_resource type="BoxMesh" id="BoxMesh_5nks0"]
+size = Vector3(0.23, 0.018, 0.018)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_b8wl0"]
+size = Vector3(0.34, 0.72, 0.34)
+
+[node name="EastStool2" type="Node3D"]
+metadata/layout = {
+"collision": true,
+"density": 0.84,
+"height": 0.72,
+"id": "EastStool2",
+"length": 0.34,
+"position": Vector3(5.41, 0, -0.07),
+"rotation": 0.0,
+"source": "plan-proportion estimate",
+"type": "stool",
+"width": 0.34,
+"zone": 5
+}
+
+[node name="Seat" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6875, 0)
+material_override = ExtResource("1_7712g")
+mesh = SubResource("CylinderMesh_sdyvc")
+
+[node name="Leg" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1, 0.3275, -0.1)
+material_override = ExtResource("2_rtyyu")
+mesh = SubResource("CylinderMesh_fq4w3")
+
+[node name="Leg2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1, 0.3275, 0.1)
+material_override = ExtResource("2_rtyyu")
+mesh = SubResource("CylinderMesh_u38a8")
+
+[node name="Leg3" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, 0.3275, -0.1)
+material_override = ExtResource("2_rtyyu")
+mesh = SubResource("CylinderMesh_fu8a3")
+
+[node name="Leg4" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, 0.3275, 0.1)
+material_override = ExtResource("2_rtyyu")
+mesh = SubResource("CylinderMesh_eslct")
+
+[node name="FootRest" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0.1)
+material_override = ExtResource("2_rtyyu")
+mesh = SubResource("BoxMesh_5nks0")
+
+[node name="StoolCollision" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.36, 0)
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StoolCollision"]
+shape = SubResource("BoxShape3D_b8wl0")

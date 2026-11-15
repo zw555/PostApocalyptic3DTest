@@ -1,0 +1,40 @@
+{
+	"bound": 4,
+	"capacity": 320,
+	"decorative": 98,
+	"inventory": {
+		"cad/Gondola2/loot/boxed_food": {
+			"item_type": "boxed_food",
+			"loot_id": "cad/Gondola2/loot/boxed_food",
+			"quantity": 1,
+			"remaining_slot_ids": [
+				"cad/Gondola2/level_02/face_0/row_1/slot_00"
+			]
+		},
+		"cad/Gondola2/loot/canned_food": {
+			"item_type": "canned_food",
+			"loot_id": "cad/Gondola2/loot/canned_food",
+			"quantity": 1,
+			"remaining_slot_ids": [
+				"cad/Gondola2/level_00/face_0/row_1/slot_00"
+			]
+		},
+		"cad/Gondola2/loot/water": {
+			"item_type": "water",
+			"loot_id": "cad/Gondola2/loot/water",
+			"quantity": 2,
+			"remaining_slot_ids": [
+				"cad/Gondola2/level_03/face_0/row_0/slot_13",
+				"cad/Gondola2/level_03/face_1/row_1/slot_13"
+			]
+		}
+	},
+	"remaining_after_claim": 98,
+	"separate_random_inventory": false,
+	"types": {
+		"boxed_food": 26,
+		"canned_food": 25,
+		"water": 51
+	},
+	"visible": 102
+}

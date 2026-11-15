@@ -1,0 +1,13 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3]
+
+[ext_resource type="Shader" path="res://materials/surface.gdshader" id="1_8gyhj"]
+
+[resource]
+resource_name = "paper"
+render_priority = 0
+shader = ExtResource("1_8gyhj")
+shader_parameter/base_color = Color(0.7529412, 0.7294118, 0.59607846, 1)
+shader_parameter/grain = 0.12
+shader_parameter/surface_roughness = 0.9
+shader_parameter/floor_tiles = false
+shader_parameter/wood_grain = false

@@ -1,0 +1,13 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3]
+
+[ext_resource type="Shader" path="res://materials/surface.gdshader" id="1_6f2dd"]
+
+[resource]
+resource_name = "hair"
+render_priority = 0
+shader = ExtResource("1_6f2dd")
+shader_parameter/base_color = Color(0.23137255, 0.21960784, 0.1882353, 1)
+shader_parameter/grain = 0.1
+shader_parameter/surface_roughness = 0.98
+shader_parameter/floor_tiles = false
+shader_parameter/wood_grain = false

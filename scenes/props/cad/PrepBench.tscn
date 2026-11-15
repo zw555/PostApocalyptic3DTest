@@ -1,0 +1,90 @@
+[gd_scene load_steps=12 format=3]
+
+[ext_resource type="Material" path="res://materials/upgrade/painted_metal.tres" id="1_7upu8"]
+[ext_resource type="Material" path="res://materials/metal_dark.tres" id="2_mjhp4"]
+[ext_resource type="Material" path="res://materials/metal_light.tres" id="3_x625l"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_0gmvs"]
+size = Vector3(2.48, 0.84, 0.58)
+
+[sub_resource type="BoxMesh" id="BoxMesh_4b5n8"]
+size = Vector3(2.48, 0.08, 0.62)
+
+[sub_resource type="BoxMesh" id="BoxMesh_36y75"]
+size = Vector3(0.43, 0.018, 0.42)
+
+[sub_resource type="BoxMesh" id="BoxMesh_a8uae"]
+size = Vector3(0.34, 0.02, 0.32)
+
+[sub_resource type="BoxMesh" id="BoxMesh_6agqc"]
+size = Vector3(0.43, 0.018, 0.42)
+
+[sub_resource type="BoxMesh" id="BoxMesh_gnost"]
+size = Vector3(0.34, 0.02, 0.32)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_3o5wo"]
+top_radius = 0.016
+bottom_radius = 0.016
+height = 0.18
+radial_segments = 8
+rings = 1
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vvrok"]
+size = Vector3(2.48, 0.92, 0.62)
+
+[node name="PrepBench" type="Node3D"]
+metadata/layout = {
+"collision": true,
+"density": 0.84,
+"height": 0.92,
+"id": "PrepBench",
+"length": 2.48,
+"position": Vector3(2.7, 0, -3.825),
+"rotation": 0.0,
+"source": "plan-proportion estimate",
+"type": "prep",
+"width": 0.62,
+"zone": 3
+}
+
+[node name="Cabinet" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.42, 0)
+material_override = ExtResource("1_7upu8")
+mesh = SubResource("BoxMesh_0gmvs")
+
+[node name="Countertop" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.88, 0)
+material_override = ExtResource("2_mjhp4")
+mesh = SubResource("BoxMesh_4b5n8")
+
+[node name="SinkRim" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.25, 0.929, 0)
+material_override = ExtResource("3_x625l")
+mesh = SubResource("BoxMesh_36y75")
+
+[node name="SinkBasin" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.25, 0.94, 0)
+material_override = ExtResource("2_mjhp4")
+mesh = SubResource("BoxMesh_a8uae")
+
+[node name="SinkRim2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8, 0.929, 0)
+material_override = ExtResource("3_x625l")
+mesh = SubResource("BoxMesh_6agqc")
+
+[node name="SinkBasin2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8, 0.94, 0)
+material_override = ExtResource("2_mjhp4")
+mesh = SubResource("BoxMesh_gnost")
+
+[node name="Tap" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.25, 1.01, -0.23)
+material_override = ExtResource("3_x625l")
+mesh = SubResource("CylinderMesh_3o5wo")
+
+[node name="CounterCollision" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.46, 0)
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CounterCollision"]
+shape = SubResource("BoxShape3D_vvrok")

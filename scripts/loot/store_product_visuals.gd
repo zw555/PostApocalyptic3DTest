@@ -1,0 +1,92 @@
+extends RefCounted
+## One shared geometry/material variant per type, colour and condition, never per item.
+var cache: Dictionary = {}
+var materials: Dictionary = {}
+
+func condition_material(state: String) -> ShaderMaterial:
+	if materials.has(state):
+		return materials[state]
+	var shader := Shader.new()
+	shader.code = """shader_type spatial;
+varying vec3 local_position;
+void vertex(){ local_position = VERTEX; }
+void fragment(){
+vec3 p=local_position;
+float band=step(0.45,fract((p.x+p.y)*24.0));
+float patch=step(0.3,sin(p.x*80.0+p.y*41.0)*cos(p.z*65.0-p.y*32.0));
+ALBEDO=STATE_COLOR;
+roughness=1.0;
+}
+""".replace("roughness=","ROUGHNESS=")
+	if state == "DAMAGED":
+		shader.code = shader.code.replace("STATE_COLOR","mix(vec3(0.18,0.09,0.045),vec3(0.61,0.19,0.08),band)")
+	else:
+		shader.code = shader.code.replace("STATE_COLOR","mix(vec3(0.055,0.09,0.025),vec3(0.29,0.37,0.10),patch)")
+	var material := ShaderMaterial.new()
+	material.shader = shader
+	materials[state] = material
+	return material
+
+func mesh_for(key: String) -> Mesh:
+	if cache.has(key):
+		return cache[key]
+	var parts := key.split("_")
+	var state: String = parts[-1]
+	var variant := int(parts[-2])
+	var type := key.trim_suffix("_%d_%s"%[variant,state])
+	var kind: int = 1 if type in ["water","drink"] else (0 if type == "canned_food" else 2)
+	var source: Mesh = load("res://scenes/props/loot/sku_%d_%d.res"%[kind,variant])
+	var localized: bool = type in ["water","drink","boxed_food","canned_food"]
+	if localized:
+		source = load("res://assets/localization/cn_%s_%d.res"%[type,variant])
+	if type in ["battery","lighter"]:
+		var primitive: PrimitiveMesh
+		if type == "battery":
+			var cylinder := CylinderMesh.new()
+			cylinder.top_radius = 0.035
+			cylinder.bottom_radius = 0.035
+			cylinder.height = 0.15
+			cylinder.radial_segments = 8
+			primitive = cylinder
+		else:
+			var box := BoxMesh.new()
+			box.size = Vector3(0.065,0.11,0.035)
+			primitive = box
+		var mat := StandardMaterial3D.new()
+		mat.albedo_color = Color("b3a05b") if type == "battery" else Color("ad5f3e")
+		mat.roughness = 0.85
+		primitive.material = mat
+		source = primitive
+	var mesh := ArrayMesh.new()
+	for surface in source.get_surface_count():
+		var arrays := source.surface_get_arrays(surface).duplicate(true)
+		var vertices: PackedVector3Array = arrays[Mesh.ARRAY_VERTEX]
+		for i in vertices.size():
+			if type in ["battery","lighter"]:
+				vertices[i].y += 0.075 if type == "battery" else 0.055
+			if state == "DAMAGED":
+				vertices[i].y *= 0.60
+				vertices[i].x *= 1.0+vertices[i].y*1.8
+		arrays[Mesh.ARRAY_VERTEX] = vertices
+		mesh.add_surface_from_arrays(Mesh.PRIMITIVE_TRIANGLES,arrays)
+		var material: Material = source.surface_get_material(surface)
+		if state in ["DAMAGED","SPOILED"]:
+			material = condition_material(state)
+		elif type in ["drink","biscuits","misc"] and not localized and material is StandardMaterial3D:
+			material = material.duplicate()
+			if material.albedo_texture != null:
+				# Generic wrappers must not retain misleading H2O/OATS lettering.
+				material.albedo_texture = null
+				material.albedo_color = {"drink":Color("9b6c43"),"biscuits":Color("c1aa67"),"misc":Color("71817b")}[type]
+			else:
+				material.albedo_color = Color("c3a26a") if type == "drink" else Color("b6b38d")
+		mesh.surface_set_material(surface,material)
+	if state in ["DAMAGED","SPOILED"]:
+		var merged := SurfaceTool.new()
+		merged.begin(Mesh.PRIMITIVE_TRIANGLES)
+		for surface in mesh.get_surface_count():
+			merged.append_from(mesh,surface,Transform3D.IDENTITY)
+		merged.set_material(condition_material(state))
+		mesh = merged.commit()
+	cache[key] = mesh
+	return mesh

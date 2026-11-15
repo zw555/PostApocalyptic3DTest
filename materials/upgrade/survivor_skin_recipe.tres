@@ -1,0 +1,11 @@
+[gd_resource type="Resource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/procedural/material_recipe.gd" id="1_582xv"]
+
+[resource]
+script = ExtResource("1_582xv")
+family = "Plastic"
+base_color = Color(0.7411765, 0.60784316, 0.49019608, 1)
+roughness = 0.95
+wear_amount = 0.02
+dust_amount = 0.0

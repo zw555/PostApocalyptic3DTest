@@ -1,0 +1,8 @@
+[gd_resource type="Resource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/procedural/material_recipe.gd" id="1_ytd4c"]
+
+[resource]
+script = ExtResource("1_ytd4c")
+base_color = Color(0.4117647, 0.4392157, 0.35686275, 1)
+roughness = 0.98

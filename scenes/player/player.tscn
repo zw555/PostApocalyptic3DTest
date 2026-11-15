@@ -1,0 +1,218 @@
+[gd_scene load_steps=31 format=3]
+
+[ext_resource type="Script" path="res://scripts/player_controller.gd" id="1_5gtgg"]
+[ext_resource type="Material" path="res://materials/metal_dark.tres" id="2_h17s1"]
+[ext_resource type="Material" path="res://materials/pants.tres" id="3_je7p5"]
+[ext_resource type="Material" path="res://materials/coat.tres" id="4_fm80t"]
+[ext_resource type="Material" path="res://materials/rail.tres" id="5_gx1jg"]
+[ext_resource type="Material" path="res://materials/skin.tres" id="6_ugbui"]
+[ext_resource type="Material" path="res://materials/backpack.tres" id="7_fcs02"]
+[ext_resource type="Material" path="res://materials/hair.tres" id="8_myrg7"]
+[ext_resource type="Material" path="res://materials/wood.tres" id="9_kvlxm"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_uf5tr"]
+radius = 0.27
+height = 1.72
+
+[sub_resource type="BoxMesh" id="BoxMesh_lgqa7"]
+size = Vector3(0.19, 0.16, 0.31)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_8ydkj"]
+top_radius = 0.12
+bottom_radius = 0.105
+height = 0.57
+radial_segments = 8
+rings = 1
+
+[sub_resource type="BoxMesh" id="BoxMesh_3j4b4"]
+size = Vector3(0.19, 0.16, 0.31)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_yj68g"]
+top_radius = 0.12
+bottom_radius = 0.105
+height = 0.57
+radial_segments = 8
+rings = 1
+
+[sub_resource type="BoxMesh" id="BoxMesh_ioxgp"]
+size = Vector3(0.43, 0.21, 0.27)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_cnsyf"]
+top_radius = 0.29
+bottom_radius = 0.25
+height = 0.52
+radial_segments = 8
+rings = 1
+
+[sub_resource type="BoxMesh" id="BoxMesh_007i1"]
+size = Vector3(0.45, 0.1, 0.3)
+
+[sub_resource type="BoxMesh" id="BoxMesh_6cv16"]
+size = Vector3(0.018, 0.43, 0.012)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_j4nxn"]
+top_radius = 0.11
+bottom_radius = 0.085
+height = 0.45
+radial_segments = 8
+rings = 1
+
+[sub_resource type="BoxMesh" id="BoxMesh_28m0y"]
+size = Vector3(0.13, 0.13, 0.13)
+
+[sub_resource type="BoxMesh" id="BoxMesh_uniwh"]
+size = Vector3(0.06, 0.43, 0.035)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_iqsei"]
+top_radius = 0.11
+bottom_radius = 0.085
+height = 0.45
+radial_segments = 8
+rings = 1
+
+[sub_resource type="BoxMesh" id="BoxMesh_tffgl"]
+size = Vector3(0.13, 0.13, 0.13)
+
+[sub_resource type="BoxMesh" id="BoxMesh_pk8ii"]
+size = Vector3(0.06, 0.43, 0.035)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_5mf0n"]
+top_radius = 0.085
+bottom_radius = 0.085
+height = 0.11
+radial_segments = 8
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_4hvnv"]
+top_radius = 0.13
+bottom_radius = 0.14
+height = 0.25
+radial_segments = 8
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_bbmj2"]
+top_radius = 0.12
+bottom_radius = 0.143
+height = 0.1
+radial_segments = 8
+rings = 1
+
+[sub_resource type="BoxMesh" id="BoxMesh_kxw46"]
+size = Vector3(0.055, 0.065, 0.06)
+
+[sub_resource type="BoxMesh" id="BoxMesh_8qxvo"]
+size = Vector3(0.35, 0.44, 0.2)
+
+[sub_resource type="BoxMesh" id="BoxMesh_5q8fn"]
+size = Vector3(0.27, 0.19, 0.07)
+
+[node name="Player" type="CharacterBody3D"]
+collision_layer = 2
+floor_snap_length = 0.15
+script = ExtResource("1_5gtgg")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.86, 0)
+shape = SubResource("CapsuleShape3D_uf5tr")
+
+[node name="Visual" type="Node3D" parent="."]
+
+[node name="Boot" type="MeshInstance3D" parent="Visual"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.13, 0.08, -0.045)
+material_override = ExtResource("2_h17s1")
+mesh = SubResource("BoxMesh_lgqa7")
+
+[node name="TrouserLeg" type="MeshInstance3D" parent="Visual"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.13, 0.43, 0)
+material_override = ExtResource("3_je7p5")
+mesh = SubResource("CylinderMesh_8ydkj")
+
+[node name="Boot2" type="MeshInstance3D" parent="Visual"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13, 0.08, -0.045)
+material_override = ExtResource("2_h17s1")
+mesh = SubResource("BoxMesh_3j4b4")
+
+[node name="TrouserLeg2" type="MeshInstance3D" parent="Visual"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13, 0.43, 0)
+material_override = ExtResource("3_je7p5")
+mesh = SubResource("CylinderMesh_yj68g")
+
+[node name="Hips" type="MeshInstance3D" parent="Visual"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.78, 0)
+material_override = ExtResource("3_je7p5")
+mesh = SubResource("BoxMesh_ioxgp")
+
+[node name="Jacket" type="MeshInstance3D" parent="Visual"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.63, 0, 1.12, 0)
+material_override = ExtResource("4_fm80t")
+mesh = SubResource("CylinderMesh_cnsyf")
+
+[node name="JacketHem" type="MeshInstance3D" parent="Visual"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.89, 0)
+material_override = ExtResource("4_fm80t")
+mesh = SubResource("BoxMesh_007i1")
+
+[node name="Zipper" type="MeshInstance3D" parent="Visual"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.11, -0.173)
+material_override = ExtResource("5_gx1jg")
+mesh = SubResource("BoxMesh_6cv16")
+
+[node name="Sleeve" type="MeshInstance3D" parent="Visual"]
+transform = Transform3D(0.9950042, 0.09983342, 0, -0.09983342, 0.9950042, 0, 0, 0, 1, -0.31, 1.08, -0.01)
+material_override = ExtResource("4_fm80t")
+mesh = SubResource("CylinderMesh_j4nxn")
+
+[node name="Hand" type="MeshInstance3D" parent="Visual"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.33, 0.81, -0.02)
+material_override = ExtResource("6_ugbui")
+mesh = SubResource("BoxMesh_28m0y")
+
+[node name="BackpackStrap" type="MeshInstance3D" parent="Visual"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.15, 1.15, -0.172)
+material_override = ExtResource("7_fcs02")
+mesh = SubResource("BoxMesh_uniwh")
+
+[node name="Sleeve2" type="MeshInstance3D" parent="Visual"]
+transform = Transform3D(0.9950042, -0.09983342, 0, 0.09983342, 0.9950042, 0, 0, 0, 1, 0.31, 1.08, -0.01)
+material_override = ExtResource("4_fm80t")
+mesh = SubResource("CylinderMesh_iqsei")
+
+[node name="Hand2" type="MeshInstance3D" parent="Visual"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.33, 0.81, -0.02)
+material_override = ExtResource("6_ugbui")
+mesh = SubResource("BoxMesh_tffgl")
+
+[node name="BackpackStrap2" type="MeshInstance3D" parent="Visual"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.15, 1.15, -0.172)
+material_override = ExtResource("7_fcs02")
+mesh = SubResource("BoxMesh_pk8ii")
+
+[node name="Neck" type="MeshInstance3D" parent="Visual"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.43, 0)
+material_override = ExtResource("6_ugbui")
+mesh = SubResource("CylinderMesh_5mf0n")
+
+[node name="Head" type="MeshInstance3D" parent="Visual"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.88, 0, 1.59, -0.015)
+material_override = ExtResource("6_ugbui")
+mesh = SubResource("CylinderMesh_4hvnv")
+
+[node name="Hair" type="MeshInstance3D" parent="Visual"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7, 0)
+material_override = ExtResource("8_myrg7")
+mesh = SubResource("CylinderMesh_bbmj2")
+
+[node name="Nose" type="MeshInstance3D" parent="Visual"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.58, -0.145)
+material_override = ExtResource("6_ugbui")
+mesh = SubResource("BoxMesh_kxw46")
+
+[node name="Backpack" type="MeshInstance3D" parent="Visual"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.16, 0.24)
+material_override = ExtResource("7_fcs02")
+mesh = SubResource("BoxMesh_8qxvo")
+
+[node name="BackpackPocket" type="MeshInstance3D" parent="Visual"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.08, 0.37)
+material_override = ExtResource("9_kvlxm")
+mesh = SubResource("BoxMesh_5q8fn")

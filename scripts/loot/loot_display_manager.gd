@@ -1,0 +1,229 @@
+extends Node3D
+const Catalog = preload("res://scripts/loot/display_catalog.gd")
+const State = preload("res://scripts/loot/shelf_loot_state.gd")
+const Instances = preload("res://scripts/procedural/stock_instances.gd")
+@export_enum("STOCKED","PARTIALLY_LOOTED","HEAVILY_LOOTED") var preset := "PARTIALLY_LOOTED"
+var settings: Dictionary
+var catalog: Dictionary
+var player_supplies: Dictionary = {}
+var state: RefCounted
+var batches: Dictionary = {}
+var immutable_batches: Dictionary = {}
+var slots_by_id: Dictionary = {}
+var initialized := false
+var startup_error := ""
+var update_count := 0
+var inject_failure_after_first_batch := false # Test hook: validates rollback.
+var last_removed_ids: Array[String] = []
+var target_body: StaticBody3D
+var player_body: CharacterBody3D
+var interaction_radius := 0.0
+var states: Dictionary = {}
+var container_batches: Dictionary = {}
+var bodies: Dictionary = {}
+var selected_id := ""
+var last_update_usec := 0
+const Visuals = preload("res://scripts/loot/store_product_visuals.gd")
+var visual_library := Visuals.new()
+var highlight: Node3D
+
+static func choose_candidate(candidates: Array[Dictionary], origin: Vector3, forward: Vector3) -> String:
+	var best := ""
+	var best_score := INF
+	for candidate in candidates:
+		var offset: Vector3 = candidate.position-origin
+		offset.y = 0
+		var score: float = offset.length()+0.35*(1.0-forward.normalized().dot(offset.normalized()))
+		if score < best_score or (is_equal_approx(score,best_score) and str(candidate.container_id) < best):
+			best_score = score
+			best = candidate.container_id
+	return best
+
+func _ready() -> void:
+	initialize()
+
+func sku_key(slot: Dictionary) -> String:
+	var condition: String = slot.get("state","AVAILABLE")
+	return "%s_%d_%s"%[slot.product_type,slot.variant if condition == "AVAILABLE" else 0,condition]
+
+func create_batch(parent: Node3D, key: String, transforms: Array[Transform3D]) -> MultiMeshInstance3D:
+	var node := MultiMeshInstance3D.new()
+	node.set_script(Instances)
+	node.name = "SKU_"+key
+	var resource := MultiMesh.new()
+	resource.transform_format = MultiMesh.TRANSFORM_3D
+	resource.mesh = visual_library.mesh_for(key)
+	resource.instance_count = transforms.size()
+	node.multimesh = resource
+	node.instance_transforms = transforms.duplicate()
+	parent.add_child(node)
+	node.restore_instances()
+	node.visible = not transforms.is_empty()
+	return node
+
+func initialize() -> Dictionary:
+	if initialized:
+		return {"ok":false,"error":"Session already initialized; search cannot reroll inventory."}
+	settings = Catalog.config()
+	if not settings.presets.has(preset):
+		startup_error = "Unknown display preset: "+preset
+		return {"ok":false,"error":startup_error}
+	catalog = Catalog.generate(settings,preset)
+	for container in catalog.containers.values():
+		var group := Node3D.new()
+		group.name = container.shelf_id+"_Display"
+		add_child(group)
+		var transforms_by_key: Dictionary = {}
+		for slot in container.slots:
+			slots_by_id[slot.slot_id] = slot
+			if not slot.visible:
+				continue
+			var key := sku_key(slot)
+			if not transforms_by_key.has(key):
+				transforms_by_key[key] = [] as Array[Transform3D]
+			# Fallen goods rest on the floor after geometry/state changes.
+			if slot.condition == "DAMAGED" and slot.transform.origin.y < 0.1:
+				var box: AABB = slot.transform*visual_library.mesh_for(key).get_aabb()
+				slot.transform.origin.y -= box.position.y
+			transforms_by_key[key].append(slot.transform)
+		var groups: Dictionary = {}
+		for key in transforms_by_key:
+			groups[key] = create_batch(group,key,transforms_by_key[key])
+		container_batches[container.container_id] = groups
+		states[container.container_id] = State.new(container,player_supplies)
+		var furniture := get_parent().get_node("ConvenienceStore/Furniture/"+container.shelf_id)
+		bodies[container.container_id] = furniture.find_children("*","StaticBody3D",true,false)
+		for body in bodies[container.container_id]:
+			body.set_meta("loot_container_id",container.container_id)
+	activate(catalog.target_id)
+	player_body = get_parent().get_node("Player")
+	var capsule: CapsuleShape3D = player_body.get_node("CollisionShape3D").shape
+	interaction_radius = capsule.radius
+	highlight = Node3D.new()
+	highlight.set_script(load("res://scripts/loot/container_highlight.gd"))
+	highlight.name = "InteractionHighlight"
+	add_child(highlight)
+	highlight.initialize(catalog.containers)
+	# Keep Stage 4-A resources intact; hide only this scene instance's old draw layer.
+	get_parent().get_node("ConvenienceStore/GroupedProducts").visible = false
+	initialized = true
+	return {"ok":true}
+
+func activate(container_id: String) -> void:
+	state = states[container_id]
+	batches = container_batches[container_id]
+	selected_id = container_id
+
+func closest_point(player_position: Vector3, container_id: String) -> Vector3:
+	var entry: Dictionary = catalog.containers[container_id].entry
+	var pose := Transform3D(Basis(Vector3.UP,deg_to_rad(entry.rotation)),entry.position)
+	var local := pose.affine_inverse()*player_position
+	local.x = clampf(local.x,-entry.length*0.5,entry.length*0.5)
+	local.z = clampf(local.z,-entry.width*0.5,entry.width*0.5)
+	local.y = 0
+	return pose*local
+
+func can_interact(player_position: Vector3, container_id: String = "") -> bool:
+	var id := selected_id if container_id.is_empty() else container_id
+	if not initialized or not states.has(id) or absf(player_position.y) > 1.0:
+		return false
+	var point := closest_point(player_position,id)
+	var flat := Vector3(player_position.x,0,player_position.z)
+	if point.distance_to(flat) < 0.001 or point.distance_to(flat)-interaction_radius > settings.interaction_distance:
+		return false
+	var entry: Dictionary = catalog.containers[id].entry
+	var end := point.lerp(entry.position,0.02)+Vector3.UP*minf(0.9,entry.height*0.6)
+	var query := PhysicsRayQueryParameters3D.create(player_position+Vector3.UP*0.9,end,1)
+	query.exclude = [player_body.get_rid()]
+	var hit := get_world_3d().direct_space_state.intersect_ray(query)
+	return not bodies[id].is_empty() and (hit.is_empty() or hit.collider in bodies[id])
+
+func interaction_target(player_position: Vector3, forward: Vector3) -> String:
+	var candidates: Array[Dictionary] = []
+	for id in states:
+		if can_interact(player_position,id):
+			candidates.append({"container_id":id,"position":closest_point(player_position,id)})
+	return choose_candidate(candidates,player_position,forward)
+
+func search(player_position: Vector3, container_id: String = "") -> Dictionary:
+	var id := container_id
+	if id.is_empty():
+		id = interaction_target(player_position,-player_body.visual.global_basis.z)
+	if id.is_empty() or not can_interact(player_position,id):
+		return {"ok":false,"error":"距离过远或被遮挡，请靠近目标容器。"}
+	activate(id)
+	return state.open_search()
+
+func take(player_position: Vector3, requests: Dictionary) -> Dictionary:
+	if not can_interact(player_position,selected_id):
+		return {"ok":false,"error":"距离过远，未领取任何物资。"}
+	return state.claim(requests,self)
+
+func hide_slots(container_id: String, ids: Array[String]) -> Dictionary:
+	var started := Time.get_ticks_usec()
+	if not states.has(container_id) or ids.is_empty():
+		return {"ok":false,"error":"Unknown container."}
+	var local_batches: Dictionary = container_batches[container_id]
+	var container: Dictionary = catalog.containers[container_id]
+	var touched: Dictionary = {}
+	for id in ids:
+		if not slots_by_id.has(id) or not id.begins_with(container_id+"/") or not slots_by_id[id].visible or slots_by_id[id].state != "AVAILABLE":
+			return {"ok":false,"error":"Missing, hidden, or wrong-container slot: "+id}
+		touched[sku_key(slots_by_id[id])] = true
+	var snapshots: Dictionary = {}
+	var replacements: Dictionary = {}
+	for key in touched:
+		if not local_batches.has(key) or not is_instance_valid(local_batches[key]) or local_batches[key].multimesh == null or local_batches[key].multimesh.mesh == null:
+			return {"ok":false,"error":"Missing MultiMesh batch: "+key}
+		var node: MultiMeshInstance3D = local_batches[key]
+		var expected: Array = container.slots.filter(func(s): return s.visible and sku_key(s) == key)
+		if node.instance_transforms.size() != expected.size() or node.multimesh.instance_count != expected.size():
+			return {"ok":false,"error":"Batch count differs from slot state: "+key}
+		snapshots[key] = {"transforms":node.instance_transforms.duplicate(),"visible":node.visible}
+		var transforms: Array[Transform3D] = []
+		for slot in expected:
+			if slot.slot_id not in ids:
+				transforms.append(slot.transform)
+		replacements[key] = transforms
+	var failure := ""
+	for key in replacements:
+		var node: MultiMeshInstance3D = local_batches[key]
+		node.instance_transforms = replacements[key]
+		node.restore_instances()
+		node.visible = not replacements[key].is_empty()
+		if inject_failure_after_first_batch:
+			inject_failure_after_first_batch = false
+			failure = "Injected visual write failure (rollback test)."
+			break
+		if node.multimesh.instance_count != replacements[key].size():
+			failure = "GPU instance count verification failed."
+			break
+	if not failure.is_empty():
+		for key in snapshots:
+			local_batches[key].instance_transforms = snapshots[key].transforms
+			local_batches[key].restore_instances()
+			local_batches[key].visible = snapshots[key].visible
+		return {"ok":false,"error":failure}
+	for id in ids:
+		slots_by_id[id].visible = false
+		slots_by_id[id].state = "TAKEN"
+		slots_by_id[id].condition = "TAKEN"
+	last_removed_ids = ids.duplicate()
+	update_count += 1
+	last_update_usec = Time.get_ticks_usec()-started
+	return {"ok":true}
+
+func visible_products() -> int:
+	var count := 0
+	for slot in slots_by_id.values():
+		count += int(slot.visible)
+	return count
+
+func visual_signature(container_id: String = "") -> String:
+	var content := ""
+	for container in catalog.containers.values():
+		if not container_id.is_empty() and container.container_id != container_id:
+			continue
+		for slot in container.slots:
+			content += "%s:%s;"%[slot.slot_id,slot.visible]
+	return content.sha256_text()

@@ -1,0 +1,45 @@
+{
+	"adapter": "NVIDIA GeForce RTX 4060 Laptop GPU",
+	"meaning": "Same near 65-degree shelf02 depleted state as the screenshot displaying about 54 FPS; actual multi-window timing.",
+	"metrics": [
+		{
+			"camera_size": 8.27999973297119,
+			"camera_transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 0.422618, -0.906308), Z: (0.0, 0.906308, 0.422618), O: (-3.15, 20.68877, 8.247602)]",
+			"player_position": "(-3.15, 0.0, 1.25)",
+			"scene_nodes": 1034,
+			"search_ui_open": false,
+			"stage": "before_near02_depleted",
+			"visible_products": 645,
+			"windows": [
+				{
+					"draw_calls": 1466.0,
+					"fps_from_mean": 346.470733617131,
+					"frames": 600,
+					"mean_ms": 2.88624666666667,
+					"p50_ms": 1.657,
+					"p95_ms": 2.717,
+					"primitives": 193484.0
+				},
+				{
+					"draw_calls": 1466.0,
+					"fps_from_mean": 295.007731660967,
+					"frames": 600,
+					"mean_ms": 3.38974166666667,
+					"p50_ms": 1.648,
+					"p95_ms": 2.856,
+					"primitives": 193484.0
+				},
+				{
+					"draw_calls": 1466.0,
+					"fps_from_mean": 425.642400793397,
+					"frames": 600,
+					"mean_ms": 2.34939,
+					"p50_ms": 1.636,
+					"p95_ms": 2.579,
+					"primitives": 193484.0
+				}
+			]
+		}
+	],
+	"resolution": "1440x1000"
+}

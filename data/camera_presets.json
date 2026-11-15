@@ -1,0 +1,10 @@
+{
+  "reference_size": 13.8,
+  "default_mode": 2,
+  "presets": {
+    "1": {"name":"85度俯视","pitch":85.0,"yaw":0.0,"orthographic_size":13.8,"follow_offset":[0.0,0.0,22.0],"target_offset":[0.0,0.85,0.0]},
+    "2": {"name":"65度俯视","pitch":65.0,"yaw":0.0,"orthographic_size":13.8,"follow_offset":[0.0,0.0,22.0],"target_offset":[0.0,0.85,0.0]},
+    "5": {"name":"45度正向","pitch":45.0,"yaw":0.0,"orthographic_size":13.8,"follow_offset":[0.0,0.0,22.0],"target_offset":[0.0,0.85,0.0]},
+    "6": {"name":"45度斜向","pitch":45.0,"yaw":35.0,"orthographic_size":13.8,"follow_offset":[0.0,0.0,22.0],"target_offset":[0.0,0.85,0.0]}
+  }
+}

@@ -1,0 +1,87 @@
+[gd_scene load_steps=11 format=3]
+
+[ext_resource type="Script" path="res://scripts/procedural/wall_generator.gd" id="1_svwk4"]
+[ext_resource type="Material" path="res://materials/wall.tres" id="2_vpb4j"]
+[ext_resource type="Material" path="res://materials/wall_lower.tres" id="3_2xmpy"]
+[ext_resource type="Material" path="res://materials/metal_dark.tres" id="4_vwt3u"]
+[ext_resource type="Material" path="res://materials/rail.tres" id="5_wl3rh"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_6ck4d"]
+size = Vector3(7.2, 3, 0.2)
+
+[sub_resource type="BoxMesh" id="BoxMesh_qo6tx"]
+size = Vector3(7.2, 0.8, 0.208)
+
+[sub_resource type="BoxMesh" id="BoxMesh_pisbp"]
+size = Vector3(7.2, 0.13, 0.235)
+
+[sub_resource type="BoxMesh" id="BoxMesh_h4bwt"]
+size = Vector3(7.2, 0.045, 0.214)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2nbjj"]
+size = Vector3(7.2, 3, 0.2)
+
+[node name="ModularWall" type="Node3D"]
+script = ExtResource("1_svwk4")
+wall_length = 7.2
+cutaway = true
+metadata/parameters = "7.2000/3.0000/0.2000/true"
+
+[node name="Plaster" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+material_override = ExtResource("2_vpb4j")
+transparency = 0.94
+cast_shadow = 0
+mesh = SubResource("BoxMesh_6ck4d")
+
+[node name="LowerPaint" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.47, 0)
+material_override = ExtResource("3_2xmpy")
+transparency = 0.94
+cast_shadow = 0
+mesh = SubResource("BoxMesh_qo6tx")
+
+[node name="Skirting" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.065, 0)
+material_override = ExtResource("4_vwt3u")
+transparency = 0.94
+cast_shadow = 0
+mesh = SubResource("BoxMesh_pisbp")
+
+[node name="PaintBand" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.89, 0)
+material_override = ExtResource("5_wl3rh")
+transparency = 0.94
+cast_shadow = 0
+mesh = SubResource("BoxMesh_h4bwt")
+
+[node name="WallCollision" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="WallCollision"]
+shape = SubResource("BoxShape3D_2nbjj")
+
+[node name="PlasterShadowProxy" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+material_override = ExtResource("2_vpb4j")
+cast_shadow = 3
+mesh = SubResource("BoxMesh_6ck4d")
+
+[node name="LowerPaintShadowProxy" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.47, 0)
+material_override = ExtResource("3_2xmpy")
+cast_shadow = 3
+mesh = SubResource("BoxMesh_qo6tx")
+
+[node name="SkirtingShadowProxy" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.065, 0)
+material_override = ExtResource("4_vwt3u")
+cast_shadow = 3
+mesh = SubResource("BoxMesh_pisbp")
+
+[node name="PaintBandShadowProxy" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.89, 0)
+material_override = ExtResource("5_wl3rh")
+cast_shadow = 3
+mesh = SubResource("BoxMesh_h4bwt")

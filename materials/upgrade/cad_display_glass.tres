@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3]
+
+[resource]
+resource_name = "Simple tinted glass (no refraction)"
+transparency = 1
+cull_mode = 2
+albedo_color = Color(0.34, 0.6, 0.62, 0.14)
+metallic_specular = 0.12
+roughness = 0.65

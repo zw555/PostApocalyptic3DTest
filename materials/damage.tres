@@ -1,0 +1,13 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3]
+
+[ext_resource type="Shader" path="res://materials/surface.gdshader" id="1_1epdf"]
+
+[resource]
+resource_name = "damage"
+render_priority = 0
+shader = ExtResource("1_1epdf")
+shader_parameter/base_color = Color(0.6745098, 0.6862745, 0.60784316, 1)
+shader_parameter/grain = 0.26
+shader_parameter/surface_roughness = 1.0
+shader_parameter/floor_tiles = false
+shader_parameter/wood_grain = false

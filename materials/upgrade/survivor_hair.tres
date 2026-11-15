@@ -1,0 +1,22 @@
+[gd_resource type="StandardMaterial3D" load_steps=4 format=3]
+
+[sub_resource type="Gradient" id="Gradient_ioips"]
+offsets = PackedFloat32Array(0, 0.55, 1)
+colors = PackedColorArray(0.22952157, 0.2061804, 0.17116863, 1, 0.23137255, 0.20784314, 0.17254902, 1, 0.23367843, 0.2102196, 0.17503138, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_6qc6b"]
+seed = 1703
+frequency = 0.04
+fractal_octaves = 2
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_iwr2q"]
+width = 128
+height = 128
+noise = SubResource("FastNoiseLite_6qc6b")
+color_ramp = SubResource("Gradient_ioips")
+seamless = true
+
+[resource]
+resource_name = "Fabric / shared low-frequency wear"
+albedo_texture = SubResource("NoiseTexture2D_iwr2q")
+metallic_specular = 0.25

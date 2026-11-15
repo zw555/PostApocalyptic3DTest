@@ -1,0 +1,13 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3]
+
+[ext_resource type="Shader" path="res://materials/surface.gdshader" id="1_f60b0"]
+
+[resource]
+resource_name = "product_4"
+render_priority = 0
+shader = ExtResource("1_f60b0")
+shader_parameter/base_color = Color(0.54901963, 0.4627451, 0.4745098, 1)
+shader_parameter/grain = 0.1
+shader_parameter/surface_roughness = 0.8
+shader_parameter/floor_tiles = false
+shader_parameter/wood_grain = false

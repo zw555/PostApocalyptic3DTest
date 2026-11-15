@@ -1,0 +1,871 @@
+{
+	"after": {
+		"cad/Checkout": {
+			"AVAILABLE": 0,
+			"DAMAGED": 0,
+			"EMPTY": 0,
+			"SPOILED": 0,
+			"TAKEN": 4,
+			"claimable_units": 0,
+			"visible_intact": 0
+		},
+		"cad/Gondola1": {
+			"AVAILABLE": 0,
+			"DAMAGED": 19,
+			"EMPTY": 188,
+			"SPOILED": 12,
+			"TAKEN": 101,
+			"claimable_units": 0,
+			"visible_intact": 0
+		},
+		"cad/Gondola2": {
+			"AVAILABLE": 0,
+			"DAMAGED": 7,
+			"EMPTY": 218,
+			"SPOILED": 12,
+			"TAKEN": 83,
+			"claimable_units": 0,
+			"visible_intact": 0
+		},
+		"cad/Gondola3": {
+			"AVAILABLE": 0,
+			"DAMAGED": 48,
+			"EMPTY": 174,
+			"SPOILED": 0,
+			"TAKEN": 98,
+			"claimable_units": 0,
+			"visible_intact": 0
+		},
+		"cad/IslandEast": {
+			"AVAILABLE": 0,
+			"DAMAGED": 3,
+			"EMPTY": 48,
+			"SPOILED": 19,
+			"TAKEN": 2,
+			"claimable_units": 0,
+			"visible_intact": 0
+		},
+		"cad/IslandHead": {
+			"AVAILABLE": 0,
+			"DAMAGED": 4,
+			"EMPTY": 48,
+			"SPOILED": 14,
+			"TAKEN": 6,
+			"claimable_units": 0,
+			"visible_intact": 0
+		},
+		"cad/IslandWest": {
+			"AVAILABLE": 0,
+			"DAMAGED": 3,
+			"EMPTY": 48,
+			"SPOILED": 19,
+			"TAKEN": 2,
+			"claimable_units": 0,
+			"visible_intact": 0
+		},
+		"cad/NorthFreezer1": {
+			"AVAILABLE": 0,
+			"DAMAGED": 1,
+			"EMPTY": 47,
+			"SPOILED": 19,
+			"TAKEN": 5,
+			"claimable_units": 0,
+			"visible_intact": 0
+		},
+		"cad/NorthFreezer2": {
+			"AVAILABLE": 0,
+			"DAMAGED": 5,
+			"EMPTY": 48,
+			"SPOILED": 16,
+			"TAKEN": 3,
+			"claimable_units": 0,
+			"visible_intact": 0
+		},
+		"cad/NorthFreezer3": {
+			"AVAILABLE": 0,
+			"DAMAGED": 3,
+			"EMPTY": 46,
+			"SPOILED": 19,
+			"TAKEN": 4,
+			"claimable_units": 0,
+			"visible_intact": 0
+		},
+		"cad/NorthFreezer4": {
+			"AVAILABLE": 0,
+			"DAMAGED": 3,
+			"EMPTY": 47,
+			"SPOILED": 15,
+			"TAKEN": 7,
+			"claimable_units": 0,
+			"visible_intact": 0
+		},
+		"cad/SouthShelf1": {
+			"AVAILABLE": 0,
+			"DAMAGED": 6,
+			"EMPTY": 37,
+			"SPOILED": 0,
+			"TAKEN": 22,
+			"claimable_units": 0,
+			"visible_intact": 0
+		},
+		"cad/SouthShelf2": {
+			"AVAILABLE": 0,
+			"DAMAGED": 9,
+			"EMPTY": 35,
+			"SPOILED": 0,
+			"TAKEN": 21,
+			"claimable_units": 0,
+			"visible_intact": 0
+		},
+		"cad/SouthShelf3": {
+			"AVAILABLE": 0,
+			"DAMAGED": 2,
+			"EMPTY": 36,
+			"SPOILED": 1,
+			"TAKEN": 26,
+			"claimable_units": 0,
+			"visible_intact": 0
+		},
+		"cad/WestShelfNorth": {
+			"AVAILABLE": 0,
+			"DAMAGED": 4,
+			"EMPTY": 52,
+			"SPOILED": 4,
+			"TAKEN": 35,
+			"claimable_units": 0,
+			"visible_intact": 0
+		},
+		"cad/WestShelfSouth": {
+			"AVAILABLE": 0,
+			"DAMAGED": 11,
+			"EMPTY": 48,
+			"SPOILED": 0,
+			"TAKEN": 31,
+			"claimable_units": 0,
+			"visible_intact": 0
+		}
+	},
+	"approaches": {
+		"cad/Checkout": [
+			2.70000004768372,
+			0.0199999995529652,
+			-1.3899998664856
+		],
+		"cad/Gondola1": [
+			-3.56000018119812,
+			0.0199999995529652,
+			-0.0000000432742730538394
+		],
+		"cad/Gondola2": [
+			-1.10999989509583,
+			0.0199999995529652,
+			-0.0000000432742730538394
+		],
+		"cad/Gondola3": [
+			0.990000009536743,
+			0.0199999995529652,
+			-0.0000000432742730538394
+		],
+		"cad/IslandEast": [
+			4.54400014877319,
+			0.0199999995529652,
+			1.00899994373322
+		],
+		"cad/IslandHead": [
+			2.96199989318848,
+			0.0199999995529652,
+			-1.38700008392334
+		],
+		"cad/IslandWest": [
+			1.37999999523163,
+			0.0199999995529652,
+			1.00899994373322
+		],
+		"cad/NorthFreezer1": [
+			-5.06799983978271,
+			0.0199999995529652,
+			-2.6710000038147
+		],
+		"cad/NorthFreezer2": [
+			-3.2039999961853,
+			0.0199999995529652,
+			-2.6710000038147
+		],
+		"cad/NorthFreezer3": [
+			-1.3400000333786,
+			0.0199999995529652,
+			-2.6710000038147
+		],
+		"cad/NorthFreezer4": [
+			0.523999989032745,
+			0.0199999995529652,
+			-2.6710000038147
+		],
+		"cad/SouthShelf1": [
+			-5.03999996185303,
+			0.0199999995529652,
+			3.14499998092651
+		],
+		"cad/SouthShelf2": [
+			-2.44000005722046,
+			0.0199999995529652,
+			3.14499998092651
+		],
+		"cad/SouthShelf3": [
+			0.159999921917915,
+			0.0199999995529652,
+			3.14499998092651
+		],
+		"cad/WestShelfNorth": [
+			-5.34999990463257,
+			0.0199999995529652,
+			-2.24499988555908
+		],
+		"cad/WestShelfSouth": [
+			-5.34999990463257,
+			0.0199999995529652,
+			1.88999998569489
+		]
+	},
+	"before": {
+		"cad/Checkout": {
+			"AVAILABLE": 4,
+			"DAMAGED": 0,
+			"EMPTY": 0,
+			"SPOILED": 0,
+			"TAKEN": 0,
+			"claimable_units": 4,
+			"visible_intact": 4
+		},
+		"cad/Gondola1": {
+			"AVAILABLE": 101,
+			"DAMAGED": 19,
+			"EMPTY": 188,
+			"SPOILED": 12,
+			"TAKEN": 0,
+			"claimable_units": 101,
+			"visible_intact": 101
+		},
+		"cad/Gondola2": {
+			"AVAILABLE": 83,
+			"DAMAGED": 7,
+			"EMPTY": 218,
+			"SPOILED": 12,
+			"TAKEN": 0,
+			"claimable_units": 83,
+			"visible_intact": 83
+		},
+		"cad/Gondola3": {
+			"AVAILABLE": 98,
+			"DAMAGED": 48,
+			"EMPTY": 174,
+			"SPOILED": 0,
+			"TAKEN": 0,
+			"claimable_units": 98,
+			"visible_intact": 98
+		},
+		"cad/IslandEast": {
+			"AVAILABLE": 2,
+			"DAMAGED": 3,
+			"EMPTY": 48,
+			"SPOILED": 19,
+			"TAKEN": 0,
+			"claimable_units": 2,
+			"visible_intact": 2
+		},
+		"cad/IslandHead": {
+			"AVAILABLE": 6,
+			"DAMAGED": 4,
+			"EMPTY": 48,
+			"SPOILED": 14,
+			"TAKEN": 0,
+			"claimable_units": 6,
+			"visible_intact": 6
+		},
+		"cad/IslandWest": {
+			"AVAILABLE": 2,
+			"DAMAGED": 3,
+			"EMPTY": 48,
+			"SPOILED": 19,
+			"TAKEN": 0,
+			"claimable_units": 2,
+			"visible_intact": 2
+		},
+		"cad/NorthFreezer1": {
+			"AVAILABLE": 5,
+			"DAMAGED": 1,
+			"EMPTY": 47,
+			"SPOILED": 19,
+			"TAKEN": 0,
+			"claimable_units": 5,
+			"visible_intact": 5
+		},
+		"cad/NorthFreezer2": {
+			"AVAILABLE": 3,
+			"DAMAGED": 5,
+			"EMPTY": 48,
+			"SPOILED": 16,
+			"TAKEN": 0,
+			"claimable_units": 3,
+			"visible_intact": 3
+		},
+		"cad/NorthFreezer3": {
+			"AVAILABLE": 4,
+			"DAMAGED": 3,
+			"EMPTY": 46,
+			"SPOILED": 19,
+			"TAKEN": 0,
+			"claimable_units": 4,
+			"visible_intact": 4
+		},
+		"cad/NorthFreezer4": {
+			"AVAILABLE": 7,
+			"DAMAGED": 3,
+			"EMPTY": 47,
+			"SPOILED": 15,
+			"TAKEN": 0,
+			"claimable_units": 7,
+			"visible_intact": 7
+		},
+		"cad/SouthShelf1": {
+			"AVAILABLE": 22,
+			"DAMAGED": 6,
+			"EMPTY": 37,
+			"SPOILED": 0,
+			"TAKEN": 0,
+			"claimable_units": 22,
+			"visible_intact": 22
+		},
+		"cad/SouthShelf2": {
+			"AVAILABLE": 21,
+			"DAMAGED": 9,
+			"EMPTY": 35,
+			"SPOILED": 0,
+			"TAKEN": 0,
+			"claimable_units": 21,
+			"visible_intact": 21
+		},
+		"cad/SouthShelf3": {
+			"AVAILABLE": 26,
+			"DAMAGED": 2,
+			"EMPTY": 36,
+			"SPOILED": 1,
+			"TAKEN": 0,
+			"claimable_units": 26,
+			"visible_intact": 26
+		},
+		"cad/WestShelfNorth": {
+			"AVAILABLE": 35,
+			"DAMAGED": 4,
+			"EMPTY": 52,
+			"SPOILED": 4,
+			"TAKEN": 0,
+			"claimable_units": 35,
+			"visible_intact": 35
+		},
+		"cad/WestShelfSouth": {
+			"AVAILABLE": 31,
+			"DAMAGED": 11,
+			"EMPTY": 48,
+			"SPOILED": 0,
+			"TAKEN": 0,
+			"claimable_units": 31,
+			"visible_intact": 31
+		}
+	},
+	"failed": 0,
+	"manual_acceptance": "PENDING",
+	"passed": 96,
+	"supplies": {
+		"battery": 48,
+		"biscuits": 56,
+		"boxed_food": 68,
+		"canned_food": 60,
+		"drink": 47,
+		"lighter": 55,
+		"misc": 51,
+		"water": 65
+	},
+	"tests": [
+		{
+			"detail": "",
+			"passed": true,
+			"test": "Deterministic store data"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "All slots unique and states/bindings/units consistent"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "All 16 existing display containers enabled"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "02 opens and locks movement without claiming"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "Repeat E cannot reopen panel"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "Negative and noninteger requests rejected"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "Receiver refusal changes nothing"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "Forged inventory cannot claim DAMAGED"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "Forged inventory cannot claim SPOILED"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "02 one water transfers exact type and hides its model"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "Visual failure refuses transfer"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "Visual rollback preserves inventory and render instances"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "02 depleted has no intact unexplained products"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "02 claim affects no other container"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "02 repeated search cannot duplicate or respawn"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "Reachable without collider overlap: cad/WestShelfNorth"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "Unusable slot refuses visual removal: cad/WestShelfNorth"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "All transfer/render/state agree: cad/WestShelfNorth"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "Empty shelf cannot claim again: cad/WestShelfNorth"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "Reachable without collider overlap: cad/WestShelfSouth"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "Unusable slot refuses visual removal: cad/WestShelfSouth"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "All transfer/render/state agree: cad/WestShelfSouth"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "Empty shelf cannot claim again: cad/WestShelfSouth"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "Reachable without collider overlap: cad/Gondola1"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "Unusable slot refuses visual removal: cad/Gondola1"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "All transfer/render/state agree: cad/Gondola1"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "Empty shelf cannot claim again: cad/Gondola1"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "Reachable without collider overlap: cad/Gondola2"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "Unusable slot refuses visual removal: cad/Gondola2"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "Empty shelf cannot claim again: cad/Gondola2"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "Reachable without collider overlap: cad/Gondola3"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "Unusable slot refuses visual removal: cad/Gondola3"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "All transfer/render/state agree: cad/Gondola3"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "Empty shelf cannot claim again: cad/Gondola3"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "Reachable without collider overlap: cad/NorthFreezer1"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "Unusable slot refuses visual removal: cad/NorthFreezer1"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "All transfer/render/state agree: cad/NorthFreezer1"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "Empty shelf cannot claim again: cad/NorthFreezer1"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "Cold stock drink types and mostly spoiled: cad/NorthFreezer1"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "Reachable without collider overlap: cad/NorthFreezer2"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "Unusable slot refuses visual removal: cad/NorthFreezer2"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "All transfer/render/state agree: cad/NorthFreezer2"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "Empty shelf cannot claim again: cad/NorthFreezer2"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "Cold stock drink types and mostly spoiled: cad/NorthFreezer2"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "Reachable without collider overlap: cad/NorthFreezer3"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "Unusable slot refuses visual removal: cad/NorthFreezer3"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "All transfer/render/state agree: cad/NorthFreezer3"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "Empty shelf cannot claim again: cad/NorthFreezer3"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "Cold stock drink types and mostly spoiled: cad/NorthFreezer3"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "Reachable without collider overlap: cad/NorthFreezer4"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "Unusable slot refuses visual removal: cad/NorthFreezer4"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "All transfer/render/state agree: cad/NorthFreezer4"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "Empty shelf cannot claim again: cad/NorthFreezer4"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "Cold stock drink types and mostly spoiled: cad/NorthFreezer4"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "Reachable without collider overlap: cad/Checkout"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "All transfer/render/state agree: cad/Checkout"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "Empty shelf cannot claim again: cad/Checkout"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "Checkout supplies match small goods"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "Checkout includes batteries lighter and miscellany"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "Reachable without collider overlap: cad/IslandHead"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "Unusable slot refuses visual removal: cad/IslandHead"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "All transfer/render/state agree: cad/IslandHead"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "Empty shelf cannot claim again: cad/IslandHead"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "Cold stock drink types and mostly spoiled: cad/IslandHead"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "Reachable without collider overlap: cad/IslandWest"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "Unusable slot refuses visual removal: cad/IslandWest"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "All transfer/render/state agree: cad/IslandWest"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "Empty shelf cannot claim again: cad/IslandWest"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "Cold stock drink types and mostly spoiled: cad/IslandWest"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "Reachable without collider overlap: cad/IslandEast"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "Unusable slot refuses visual removal: cad/IslandEast"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "All transfer/render/state agree: cad/IslandEast"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "Empty shelf cannot claim again: cad/IslandEast"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "Cold stock drink types and mostly spoiled: cad/IslandEast"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "Reachable without collider overlap: cad/SouthShelf1"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "Unusable slot refuses visual removal: cad/SouthShelf1"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "All transfer/render/state agree: cad/SouthShelf1"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "Empty shelf cannot claim again: cad/SouthShelf1"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "Reachable without collider overlap: cad/SouthShelf2"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "Unusable slot refuses visual removal: cad/SouthShelf2"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "All transfer/render/state agree: cad/SouthShelf2"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "Empty shelf cannot claim again: cad/SouthShelf2"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "Reachable without collider overlap: cad/SouthShelf3"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "Unusable slot refuses visual removal: cad/SouthShelf3"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "All transfer/render/state agree: cad/SouthShelf3"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "Empty shelf cannot claim again: cad/SouthShelf3"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "Whole-store temporary backpack equals all bound units"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "Store depleted leaves zero intact goods"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "Wall occludes target 02"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "Candidate selection favors facing"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "Actual aisle right-facing selects 02"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "Actual aisle left-facing selects 01"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "WASD and animation remain operational"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "F1/F2/F3/F4 still work"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "Wheel zoom still works"
+		},
+		{
+			"detail": "[]",
+			"passed": true,
+			"test": "Existing CAD/models/camera/colliders preserved"
+		}
+	]
+}

@@ -1,0 +1,176 @@
+extends "res://scripts/cad/cad_main.gd"
+@onready var loot: Node3D = $LootDisplay
+var search_panel: PanelContainer
+var rows: VBoxContainer
+var state_label: Label
+var hint: Label
+var session_label: Label
+var message_label: Label
+var take_all_button: Button
+
+func _ready() -> void:
+	super._ready()
+	build_search_ui()
+	refresh_search()
+
+func _unhandled_key_input(event: InputEvent) -> void:
+	if event is InputEventKey and event.pressed and not event.echo:
+		if event.keycode == KEY_E:
+			open_search_panel()
+			get_viewport().set_input_as_handled()
+			return
+		if event.keycode == KEY_ESCAPE and search_panel.visible:
+			close_search_panel()
+			get_viewport().set_input_as_handled()
+			return
+	super._unhandled_key_input(event)
+
+func open_search_panel() -> Dictionary:
+	var result: Dictionary = loot.search(player.position)
+	if result.ok:
+		search_panel.show()
+		message_label.text = "搜索不会自动领取；请选择取 1 或全部取走。"
+		refresh_search()
+	else:
+		session_label.text = result.error
+	return result
+
+func close_search_panel() -> void:
+	search_panel.hide()
+
+func take_one(loot_id: String) -> Dictionary:
+	return request_take({loot_id:1})
+
+func take_all() -> Dictionary:
+	return request_take(loot.state.all_requests())
+
+func request_take(requests: Dictionary) -> Dictionary:
+	var result: Dictionary = loot.take(player.position,requests)
+	message_label.text = "已领取，对应商品已从货架移除。" if result.ok else result.error
+	message_label.modulate = Color("d8dec9") if result.ok else Color("f0ad85")
+	refresh_search()
+	return result
+
+func refresh_search() -> void:
+	if loot.state == null:
+		state_label.text = "陈列初始化失败："+loot.startup_error
+		return
+	var state_name: String = {"UNSEARCHED":"未搜索","SEARCHED":"已搜索，仍有物资","DEPLETED":"已无可领取物资"}[loot.state.container.search_state]
+	state_label.text = "中央第二列 / "+state_name
+	for child in rows.get_children():
+		rows.remove_child(child)
+		child.queue_free()
+	for entry in loot.state.container.loot_inventory.values():
+		var row := HBoxContainer.new()
+		var name_label := Label.new()
+		name_label.text = "%s × %d"%[loot.settings.item_names[entry.item_type],entry.quantity]
+		name_label.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+		row.add_child(name_label)
+		var button := Button.new()
+		button.name = "Take_"+str(entry.item_type)
+		button.text = "取 1"
+		button.disabled = entry.quantity <= 0
+		button.custom_minimum_size = Vector2(82,38)
+		button.pressed.connect(take_one.bind(str(entry.loot_id)))
+		row.add_child(button)
+		rows.add_child(row)
+	take_all_button.disabled = loot.state.remaining() == 0
+	var contents: Array[String] = []
+	for type in loot.player_supplies:
+		contents.append("%s ×%d"%[loot.settings.item_names[type],loot.player_supplies[type]])
+	session_label.text = "本次获取："+("暂无" if contents.is_empty() else " / ".join(contents))+"\n仅本次会话；验证对象为中央第二列货架（02）。"
+
+func label(parent: Node, text_value: String, font_size: int = 17) -> Label:
+	var result := Label.new()
+	result.text = text_value
+	result.add_theme_font_size_override("font_size",font_size)
+	parent.add_child(result)
+	return result
+
+func build_search_ui() -> void:
+	var layer := CanvasLayer.new()
+	layer.name = "LootUI"
+	layer.layer = 20
+	add_child(layer)
+	var theme := Theme.new()
+	var font := SystemFont.new()
+	font.font_names = PackedStringArray(["Microsoft YaHei","SimHei"])
+	theme.default_font = font
+	theme.default_font_size = 17
+	search_panel = PanelContainer.new()
+	search_panel.name = "SearchPanel"
+	search_panel.theme = theme
+	search_panel.set_anchors_and_offsets_preset(Control.PRESET_TOP_RIGHT)
+	search_panel.offset_left = -455
+	search_panel.offset_right = -24
+	search_panel.offset_top = 180
+	search_panel.offset_bottom = 540
+	var style := StyleBoxFlat.new()
+	style.bg_color = Color(0.055,0.08,0.078,0.96)
+	style.border_color = Color("a4a17b")
+	style.set_border_width_all(1)
+	style.content_margin_left = 20
+	style.content_margin_right = 20
+	style.content_margin_top = 18
+	style.content_margin_bottom = 18
+	search_panel.add_theme_stylebox_override("panel",style)
+	search_panel.gui_input.connect(func(event: InputEvent):
+		if event is InputEventMouseButton:
+			search_panel.accept_event()
+	)
+	layer.add_child(search_panel)
+	var stack := VBoxContainer.new()
+	stack.add_theme_constant_override("separation",12)
+	search_panel.add_child(stack)
+	label(stack,"货架搜索 / SEARCH 02",22)
+	state_label = label(stack,"")
+	rows = VBoxContainer.new()
+	rows.add_theme_constant_override("separation",8)
+	stack.add_child(rows)
+	var explanation := label(stack,"未列入清单的商品为空瓶、过期或受损包装。\n可见陈列不代表全部可用。",15)
+	explanation.modulate = Color("b2b7a4")
+	message_label = label(stack,"",15)
+	message_label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	message_label.custom_minimum_size.x = 380
+	var buttons := HBoxContainer.new()
+	stack.add_child(buttons)
+	take_all_button = Button.new()
+	take_all_button.text = "全部取走"
+	take_all_button.custom_minimum_size = Vector2(160,40)
+	take_all_button.pressed.connect(take_all)
+	buttons.add_child(take_all_button)
+	var close := Button.new()
+	close.text = "关闭 / Esc"
+	close.custom_minimum_size = Vector2(160,40)
+	close.pressed.connect(close_search_panel)
+	buttons.add_child(close)
+	search_panel.hide()
+	hint = Label.new()
+	hint.theme = theme
+	hint.set_anchors_and_offsets_preset(Control.PRESET_BOTTOM_WIDE)
+	hint.offset_top = -150
+	hint.offset_bottom = -110
+	hint.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	hint.add_theme_font_size_override("font_size",22)
+	hint.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	layer.add_child(hint)
+	session_label = Label.new()
+	session_label.theme = theme
+	session_label.set_anchors_and_offsets_preset(Control.PRESET_BOTTOM_LEFT)
+	session_label.offset_left = 28
+	session_label.offset_top = -105
+	session_label.offset_bottom = -48
+	session_label.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	session_label.add_theme_font_size_override("font_size",15)
+	layer.add_child(session_label)
+
+func _process(delta: float) -> void:
+	super._process(delta)
+	if hint == null or not loot.initialized:
+		return
+	var near: bool = loot.can_interact(player.position)
+	hint.visible = near and not search_panel.visible
+	hint.text = "E 搜索货架" if loot.state.container.search_state != "DEPLETED" else "E 查看货架（已无可领取物资）"
+	if search_panel.visible and not near:
+		close_search_panel()
+		session_label.text = "已离开搜索范围，界面关闭；未领取物资。"

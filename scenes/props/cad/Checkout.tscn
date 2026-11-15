@@ -1,0 +1,146 @@
+[gd_scene load_steps=22 format=3]
+
+[ext_resource type="Material" path="res://materials/metal_dark.tres" id="1_58axx"]
+[ext_resource type="Material" path="res://materials/upgrade/old_wood.tres" id="2_kqdkk"]
+[ext_resource type="Material" path="res://materials/rail.tres" id="3_7y1j1"]
+[ext_resource type="Material" path="res://materials/upgrade/painted_metal.tres" id="4_tev62"]
+[ext_resource type="Material" path="res://materials/coat.tres" id="5_u3r8h"]
+[ext_resource type="Material" path="res://materials/paper.tres" id="6_iy1sa"]
+[ext_resource type="Material" path="res://materials/cardboard.tres" id="7_n8ej6"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_5lcqu"]
+size = Vector3(2.5, 0.12, 0.85)
+
+[sub_resource type="BoxMesh" id="BoxMesh_76ryt"]
+size = Vector3(2.4, 0.94, 0.78)
+
+[sub_resource type="BoxMesh" id="BoxMesh_6j0h7"]
+size = Vector3(2.65, 0.1, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_03k46"]
+size = Vector3(0.045, 0.88, 0.03)
+
+[sub_resource type="BoxMesh" id="BoxMesh_xnkos"]
+size = Vector3(0.045, 0.88, 0.03)
+
+[sub_resource type="BoxMesh" id="BoxMesh_gn7j3"]
+size = Vector3(0.045, 0.88, 0.03)
+
+[sub_resource type="BoxMesh" id="BoxMesh_xd4qg"]
+size = Vector3(0.48, 0.14, 0.38)
+
+[sub_resource type="BoxMesh" id="BoxMesh_lywni"]
+size = Vector3(0.09, 0.24, 0.09)
+
+[sub_resource type="BoxMesh" id="BoxMesh_si61s"]
+size = Vector3(0.4, 0.29, 0.065)
+
+[sub_resource type="BoxMesh" id="BoxMesh_0jtre"]
+size = Vector3(0.34, 0.22, 0.008)
+
+[sub_resource type="BoxMesh" id="BoxMesh_760vb"]
+size = Vector3(0.14, 0.008, 0.25)
+
+[sub_resource type="BoxMesh" id="BoxMesh_esm5g"]
+size = Vector3(0.42, 0.27, 0.32)
+
+[sub_resource type="BoxMesh" id="BoxMesh_jdlfi"]
+size = Vector3(0.07, 0.006, 0.33)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1p01x"]
+size = Vector3(2.48, 1.1, 0.62)
+
+[node name="Checkout" type="Node3D"]
+metadata/layout = {
+"collision": true,
+"density": 0.84,
+"height": 1.1,
+"id": "Checkout",
+"length": 2.48,
+"position": Vector3(2.7, 0, -2.35),
+"rotation": 0.0,
+"source": "plan-proportion estimate",
+"type": "checkout",
+"width": 0.62,
+"zone": 4
+}
+
+[node name="Kickplate" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.9358491, 0, 0, 0, 0.98214287, 0, 0, 0, 0.62, 0, 0.05892857, 0)
+material_override = ExtResource("1_58axx")
+mesh = SubResource("BoxMesh_5lcqu")
+
+[node name="Cabinet" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.9358491, 0, 0, 0, 0.98214287, 0, 0, 0, 0.62, 0, 0.5401786, 0)
+material_override = ExtResource("2_kqdkk")
+mesh = SubResource("BoxMesh_76ryt")
+
+[node name="Top" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.9358491, 0, 0, 0, 0.98214287, 0, 0, 0, 0.62, 0, 1.050893, 0)
+material_override = ExtResource("1_58axx")
+mesh = SubResource("BoxMesh_6j0h7")
+
+[node name="CabinetTrim" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.9358491, 0, 0, 0, 0.98214287, 0, 0, 0, 0.62, -1.066868, 0.55, 0.24862)
+material_override = ExtResource("3_7y1j1")
+mesh = SubResource("BoxMesh_03k46")
+
+[node name="CabinetTrim2" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.9358491, 0, 0, 0, 0.98214287, 0, 0, 0, 0.62, 0, 0.55, 0.24862)
+material_override = ExtResource("3_7y1j1")
+mesh = SubResource("BoxMesh_xnkos")
+
+[node name="CabinetTrim3" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.9358491, 0, 0, 0, 0.98214287, 0, 0, 0, 0.62, 1.066868, 0.55, 0.24862)
+material_override = ExtResource("3_7y1j1")
+mesh = SubResource("BoxMesh_gn7j3")
+
+[node name="RegisterBase" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.9358491, 0, 0, 0, 0.98214287, 0, 0, 0, 0.62, 0.514717, 1.16875, 0)
+material_override = ExtResource("4_tev62")
+mesh = SubResource("BoxMesh_xd4qg")
+
+[node name="RegisterNeck" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.9358491, 0, 0, 0, 0.98214287, 0, 0, 0, 0.62, 0.514717, 1.3258929, 0)
+material_override = ExtResource("1_58axx")
+mesh = SubResource("BoxMesh_lywni")
+
+[node name="Monitor" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.9358491, 0, 0, 0, 0.9606807, 0.12890525, 0, -0.20419899, 0.6064515, 0.514717, 1.4535714, -0.0061999997)
+material_override = ExtResource("1_58axx")
+mesh = SubResource("BoxMesh_si61s")
+
+[node name="Screen" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.9358491, 0, 0, 0, 0.98214287, 0, 0, 0, 0.62, 0.514717, 1.4535714, 0.0186)
+material_override = ExtResource("5_u3r8h")
+mesh = SubResource("BoxMesh_0jtre")
+
+[node name="Receipt" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.9067558, 0, 0.15339045, 0, 0.98214287, 0, -0.23153277, 0, 0.6007257, 0.77675474, 1.1049107, 0.0806)
+material_override = ExtResource("6_iy1sa")
+mesh = SubResource("BoxMesh_760vb")
+
+[node name="Parcel" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.9358491, 0, 0, 0, 0.98214287, 0, 0, 0, 0.62, -0.5802264, 1.2325892, -0.0744)
+material_override = ExtResource("7_n8ej6")
+mesh = SubResource("BoxMesh_esm5g")
+
+[node name="ParcelTape" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.9358491, 0, 0, 0, 0.98214287, 0, 0, 0, 0.62, -0.5802264, 1.368125, -0.0744)
+material_override = ExtResource("6_iy1sa")
+mesh = SubResource("BoxMesh_jdlfi")
+
+[node name="FrontSign" type="Label3D" parent="."]
+transform = Transform3D(0.9358491, 0, 0, 0, 0.98214287, 0, 0, 0, 0.62, 0, 0.7071429, 0.25358)
+pixel_size = 0.006
+modulate = Color(0.8156863, 0.76862746, 0.6392157, 1)
+text = "CHECKOUT  /  01"
+font_size = 23
+outline_size = 0
+
+[node name="CounterCollision" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.55, 0)
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CounterCollision"]
+shape = SubResource("BoxShape3D_1p01x")

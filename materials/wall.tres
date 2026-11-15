@@ -1,0 +1,13 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3]
+
+[ext_resource type="Shader" path="res://materials/surface.gdshader" id="1_xvgr5"]
+
+[resource]
+resource_name = "wall"
+render_priority = 0
+shader = ExtResource("1_xvgr5")
+shader_parameter/base_color = Color(0.5294118, 0.58431375, 0.53333336, 1)
+shader_parameter/grain = 0.16
+shader_parameter/surface_roughness = 0.95
+shader_parameter/floor_tiles = false
+shader_parameter/wood_grain = false

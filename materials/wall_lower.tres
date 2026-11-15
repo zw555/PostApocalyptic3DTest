@@ -1,0 +1,13 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3]
+
+[ext_resource type="Shader" path="res://materials/surface.gdshader" id="1_8m17k"]
+
+[resource]
+resource_name = "wall_lower"
+render_priority = 0
+shader = ExtResource("1_8m17k")
+shader_parameter/base_color = Color(0.29803923, 0.39607844, 0.36078432, 1)
+shader_parameter/grain = 0.15
+shader_parameter/surface_roughness = 0.9
+shader_parameter/floor_tiles = false
+shader_parameter/wood_grain = false

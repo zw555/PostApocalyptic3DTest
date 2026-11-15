@@ -1,0 +1,8 @@
+[gd_resource type="Resource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/procedural/material_recipe.gd" id="1_7nqsi"]
+
+[resource]
+script = ExtResource("1_7nqsi")
+base_color = Color(0.39607844, 0.4392157, 0.33333334, 1)
+roughness = 0.96

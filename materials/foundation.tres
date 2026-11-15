@@ -1,0 +1,13 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3]
+
+[ext_resource type="Shader" path="res://materials/surface.gdshader" id="1_4jwot"]
+
+[resource]
+resource_name = "foundation"
+render_priority = 0
+shader = ExtResource("1_4jwot")
+shader_parameter/base_color = Color(0.25490198, 0.30588236, 0.29803923, 1)
+shader_parameter/grain = 0.2
+shader_parameter/surface_roughness = 1.0
+shader_parameter/floor_tiles = false
+shader_parameter/wood_grain = false

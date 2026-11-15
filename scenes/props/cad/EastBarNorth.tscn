@@ -1,0 +1,45 @@
+[gd_scene load_steps=6 format=3]
+
+[ext_resource type="Material" path="res://materials/upgrade/old_wood.tres" id="1_ddill"]
+[ext_resource type="Material" path="res://materials/metal_dark.tres" id="2_s64wf"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_tr117"]
+size = Vector3(1.16, 0.94, 0.56)
+
+[sub_resource type="BoxMesh" id="BoxMesh_rofs0"]
+size = Vector3(1.16, 0.08, 0.6)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_885i5"]
+size = Vector3(1.16, 1.02, 0.6)
+
+[node name="EastBarNorth" type="Node3D"]
+metadata/layout = {
+"collision": true,
+"density": 0.84,
+"height": 1.02,
+"id": "EastBarNorth",
+"length": 1.16,
+"position": Vector3(6.04, 0, -3.555),
+"rotation": -90.0,
+"source": "plan-proportion estimate",
+"type": "bar",
+"width": 0.6,
+"zone": 5
+}
+
+[node name="Cabinet" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.47, 0)
+material_override = ExtResource("1_ddill")
+mesh = SubResource("BoxMesh_tr117")
+
+[node name="Countertop" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.98, 0)
+material_override = ExtResource("2_s64wf")
+mesh = SubResource("BoxMesh_rofs0")
+
+[node name="CounterCollision" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.51, 0)
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CounterCollision"]
+shape = SubResource("BoxShape3D_885i5")

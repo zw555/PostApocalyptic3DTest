@@ -1,0 +1,14 @@
+{
+  "shop_name": "王家便利店",
+  "subtitle": "烟酒副食 · 日用百货",
+  "font": "res://assets/fonts/NotoSansSC.ttf",
+  "product_names": {"water":"矿泉水","drink":"茶饮料","boxed_food":"桶装方便面","canned_food":"食品罐头"},
+  "highlight": {
+    "color": "E6A23C",
+    "alpha": 1.0,
+    "empty_color": "80633C",
+    "empty_alpha": 1.0,
+    "width_m": 0.018,
+    "padding_m": 0.035
+  }
+}

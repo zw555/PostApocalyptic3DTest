@@ -1,0 +1,13 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3]
+
+[ext_resource type="Shader" path="res://materials/surface.gdshader" id="1_bdscc"]
+
+[resource]
+resource_name = "skin"
+render_priority = 0
+shader = ExtResource("1_bdscc")
+shader_parameter/base_color = Color(0.7137255, 0.58431375, 0.4745098, 1)
+shader_parameter/grain = 0.07
+shader_parameter/surface_roughness = 0.98
+shader_parameter/floor_tiles = false
+shader_parameter/wood_grain = false

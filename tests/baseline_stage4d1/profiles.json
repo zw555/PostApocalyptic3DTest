@@ -1,0 +1,174 @@
+{
+  "seed": 41027,
+  "default_preset": "PARTIALLY_LOOTED",
+  "search_shelf": "Gondola2",
+  "interaction_distance": 1.25,
+  "loot_quantities": {
+    "water": 2,
+    "canned_food": 1,
+    "boxed_food": 1
+  },
+  "item_names": {
+    "water": "瓶装水",
+    "biscuits": "饼干",
+    "canned_food": "食品罐头",
+    "misc": "日用杂物包",
+    "battery": "电池",
+    "lighter": "打火机",
+    "drink": "饮料",
+    "boxed_food": "盒装食品"
+  },
+  "container_roles": {
+    "Gondola1": "food",
+    "Gondola2": "drinks",
+    "Gondola3": "supplies",
+    "WestShelfNorth": "food",
+    "WestShelfSouth": "supplies",
+    "SouthShelf1": "food",
+    "SouthShelf2": "supplies",
+    "SouthShelf3": "food"
+  },
+  "product_layers": {
+    "food": [
+      0,
+      2,
+      2,
+      0,
+      2
+    ],
+    "drinks": [
+      0,
+      1,
+      2,
+      1,
+      1
+    ],
+    "supplies": [
+      1,
+      2,
+      1,
+      2,
+      1
+    ],
+    "cold": [
+      0,
+      1
+    ],
+    "checkout": [
+      2
+    ]
+  },
+  "presets": {
+    "STOCKED": {
+      "food": 0.85,
+      "drinks": 0.84,
+      "supplies": 0.87,
+      "cold": 0.84,
+      "checkout": 0.85,
+      "band_variation": 0.02
+    },
+    "PARTIALLY_LOOTED": {
+      "food": 0.43,
+      "drinks": 0.32,
+      "supplies": 0.48,
+      "cold": 0.35,
+      "checkout": 0.25,
+      "band_variation": 0.16
+    },
+    "HEAVILY_LOOTED": {
+      "food": 0.18,
+      "drinks": 0.12,
+      "supplies": 0.22,
+      "cold": 0.15,
+      "checkout": 0.1,
+      "band_variation": 0.24
+    }
+  },
+  "fallen_containers": [
+    "Gondola1",
+    "Gondola3",
+    "WestShelfSouth"
+  ],
+  "fallen_positions": {
+    "Gondola1": [
+      -4.85,
+      0.065,
+      2.14
+    ],
+    "Gondola3": [
+      0.45,
+      0.065,
+      2.12
+    ],
+    "WestShelfSouth": [
+      -5.25,
+      0.065,
+      3.28
+    ]
+  },
+  "store_wide": true,
+  "store_regions": {
+    "cold": {
+      "items": [
+        "water",
+        "drink"
+      ],
+      "damaged": 0.1,
+      "spoiled": 0.74
+    },
+    "food": {
+      "items": [
+        "canned_food",
+        "boxed_food",
+        "biscuits"
+      ],
+      "damaged": 0.13,
+      "spoiled": 0.08
+    },
+    "checkout": {
+      "items": [
+        "battery",
+        "lighter",
+        "misc",
+        "battery"
+      ],
+      "damaged": 0.0,
+      "spoiled": 0.0
+    },
+    "drinks": {
+      "items": [
+        "water",
+        "drink"
+      ],
+      "damaged": 0.12,
+      "spoiled": 0.08
+    },
+    "supplies": {
+      "items": [
+        "battery",
+        "lighter",
+        "misc"
+      ],
+      "damaged": 0.2,
+      "spoiled": 0.0
+    }
+  },
+  "container_names": {
+    "NorthFreezer3": "北侧冷柜03",
+    "NorthFreezer1": "北侧冷柜01",
+    "SouthShelf2": "南墙02 · 日用品",
+    "Gondola1": "中央01 · 食品",
+    "Gondola3": "中央03 · 日用品",
+    "IslandHead": "岛柜北端",
+    "NorthFreezer2": "北侧冷柜02",
+    "NorthFreezer4": "北侧冷柜04",
+    "Gondola2": "中央02 · 饮料",
+    "Checkout": "收银台 · 小件物资",
+    "SouthShelf3": "南墙03 · 食品",
+    "WestShelfSouth": "西墙南段 · 日用品",
+    "SouthShelf1": "南墙01 · 食品",
+    "IslandEast": "岛柜东侧",
+    "WestShelfNorth": "西墙北段 · 食品",
+    "IslandWest": "岛柜西侧"
+  }
+}

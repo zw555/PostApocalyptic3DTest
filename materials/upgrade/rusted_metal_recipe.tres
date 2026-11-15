@@ -1,0 +1,12 @@
+[gd_resource type="Resource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/procedural/material_recipe.gd" id="1_tmspe"]
+
+[resource]
+script = ExtResource("1_tmspe")
+family = "RustedMetal"
+base_color = Color(0.38431373, 0.42352942, 0.3882353, 1)
+roughness = 0.91
+wear_amount = 0.45
+dust_amount = 0.23
+rust_amount = 0.55

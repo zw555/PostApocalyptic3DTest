@@ -1,0 +1,13 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3]
+
+[ext_resource type="Shader" path="res://materials/surface.gdshader" id="1_c4eag"]
+
+[resource]
+resource_name = "metal_dark"
+render_priority = 0
+shader = ExtResource("1_c4eag")
+shader_parameter/base_color = Color(0.19607843, 0.24705882, 0.25882354, 1)
+shader_parameter/grain = 0.1
+shader_parameter/surface_roughness = 0.68
+shader_parameter/floor_tiles = false
+shader_parameter/wood_grain = false

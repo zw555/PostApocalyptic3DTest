@@ -1,0 +1,48 @@
+[gd_scene load_steps=8 format=3]
+
+[ext_resource type="Material" path="res://materials/cardboard.tres" id="1_lwgo1"]
+[ext_resource type="Material" path="res://materials/paper.tres" id="2_qfrsd"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_mwchd"]
+size = Vector3(0.52, 0.43, 0.43)
+
+[sub_resource type="BoxMesh" id="BoxMesh_obprr"]
+size = Vector3(0.09, 0.007, 0.435)
+
+[sub_resource type="BoxMesh" id="BoxMesh_bpvnj"]
+size = Vector3(0.09, 0.18, 0.004)
+
+[sub_resource type="BoxMesh" id="BoxMesh_c1aph"]
+size = Vector3(0.18, 0.12, 0.005)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_edauy"]
+size = Vector3(0.52, 0.43, 0.43)
+
+[node name="CardboardBox" type="Node3D"]
+
+[node name="Box" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.215, 0)
+material_override = ExtResource("1_lwgo1")
+mesh = SubResource("BoxMesh_mwchd")
+
+[node name="Tape" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.434, 0)
+material_override = ExtResource("2_qfrsd")
+mesh = SubResource("BoxMesh_obprr")
+
+[node name="SideTape" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.34, 0.217)
+material_override = ExtResource("2_qfrsd")
+mesh = SubResource("BoxMesh_bpvnj")
+
+[node name="ShippingLabel" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.12, 0.19, 0.218)
+material_override = ExtResource("2_qfrsd")
+mesh = SubResource("BoxMesh_c1aph")
+
+[node name="BoxCollision" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.215, 0)
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BoxCollision"]
+shape = SubResource("BoxShape3D_edauy")

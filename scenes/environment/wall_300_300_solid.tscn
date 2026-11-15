@@ -1,0 +1,53 @@
+[gd_scene load_steps=11 format=3]
+
+[ext_resource type="Script" path="res://scripts/procedural/wall_generator.gd" id="1_bdytb"]
+[ext_resource type="Material" path="res://materials/wall.tres" id="2_2068f"]
+[ext_resource type="Material" path="res://materials/wall_lower.tres" id="3_dri44"]
+[ext_resource type="Material" path="res://materials/metal_dark.tres" id="4_ofswq"]
+[ext_resource type="Material" path="res://materials/rail.tres" id="5_8eb5u"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_bdytb"]
+size = Vector3(3, 3, 0.2)
+
+[sub_resource type="BoxMesh" id="BoxMesh_2068f"]
+size = Vector3(3, 0.8, 0.208)
+
+[sub_resource type="BoxMesh" id="BoxMesh_dri44"]
+size = Vector3(3, 0.13, 0.235)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ofswq"]
+size = Vector3(3, 0.045, 0.214)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8eb5u"]
+size = Vector3(3, 3, 0.2)
+
+[node name="ModularWall" type="Node3D"]
+script = ExtResource("1_bdytb")
+metadata/parameters = "3.0000/3.0000/0.2000/false"
+
+[node name="Plaster" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+material_override = ExtResource("2_2068f")
+mesh = SubResource("BoxMesh_bdytb")
+
+[node name="LowerPaint" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.47, 0)
+material_override = ExtResource("3_dri44")
+mesh = SubResource("BoxMesh_2068f")
+
+[node name="Skirting" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.065, 0)
+material_override = ExtResource("4_ofswq")
+mesh = SubResource("BoxMesh_dri44")
+
+[node name="PaintBand" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.89, 0)
+material_override = ExtResource("5_8eb5u")
+mesh = SubResource("BoxMesh_ofswq")
+
+[node name="WallCollision" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="WallCollision"]
+shape = SubResource("BoxShape3D_8eb5u")

@@ -1,0 +1,24 @@
+[gd_resource type="StandardMaterial3D" load_steps=4 format=3]
+
+[sub_resource type="Gradient" id="Gradient_p14jl"]
+offsets = PackedFloat32Array(0, 0.55, 1, 0.22)
+colors = PackedColorArray(0.35664314, 0.3930353, 0.36028236, 1, 0.38431373, 0.42352942, 0.3882353, 1, 0.42428163, 0.45727816, 0.4182681, 1, 0.39878047, 0.37870166, 0.31700101, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_dqhdk"]
+seed = 1703
+frequency = 0.04
+fractal_octaves = 2
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_yao11"]
+width = 128
+height = 128
+noise = SubResource("FastNoiseLite_dqhdk")
+color_ramp = SubResource("Gradient_p14jl")
+seamless = true
+
+[resource]
+resource_name = "RustedMetal / shared low-frequency wear"
+albedo_texture = SubResource("NoiseTexture2D_yao11")
+metallic = 0.18
+metallic_specular = 0.25
+roughness = 0.91

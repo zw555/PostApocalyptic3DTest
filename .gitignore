@@ -1,0 +1,19 @@
+.godot/
+*.tmp
+
+# Godot/editor and local temporary files
+*.temp
+*.bak
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Generated test runs and logs
+tests/results/
+*.log
+
+# Local export output
+/build/
+*.exe
+*.pck

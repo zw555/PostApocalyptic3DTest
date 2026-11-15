@@ -1,0 +1,103 @@
+extends RefCounted
+## Pure session data. Slot IDs address full capacity, not compact GPU indices.
+const Layout = preload("res://scripts/cad/store_layout_data.gd")
+const ITEM_TYPES := ["canned_food","water","boxed_food"]
+
+static func config() -> Dictionary:
+	return JSON.parse_string(FileAccess.get_file_as_string("res://data/loot_display_profiles.json"))
+
+static func generate(settings: Dictionary, preset: String) -> Dictionary:
+	var containers: Dictionary = {}
+	var capacity := 0
+	var occupied := 0
+	for entry in Layout.furniture():
+		if entry.type not in ["gondola","wall_shelf","chest_freezer","checkout"]:
+			continue
+		var role: String = settings.container_roles.get(entry.id,"cold" if entry.type == "chest_freezer" else "checkout")
+		var is_cold: bool = entry.type == "chest_freezer"
+		var is_counter: bool = entry.type == "checkout"
+		var levels := 1 if is_counter else (2 if is_cold else (4 if entry.type == "gondola" else 5))
+		var sides := 2 if entry.type == "gondola" or is_cold else 1
+		var rows := 2 if sides == 2 else 1
+		var columns := 4 if is_counter else maxi(3,int((entry.length-0.14)/0.18))
+		var id: String = "cad/"+entry.id
+		var seed_value: int = int(settings.seed)+int(entry.id.hash()%10000)
+		var mask_rng := RandomNumberGenerator.new()
+		mask_rng.seed = seed_value
+		var shape_rng := RandomNumberGenerator.new()
+		shape_rng.seed = seed_value+19031
+		var slots: Array[Dictionary] = []
+		var pose := Transform3D(Basis(Vector3.UP,deg_to_rad(entry.rotation)),entry.position)
+		for level in levels:
+			for face in sides:
+				for row in rows:
+					var density: float = settings.presets[preset][role]
+					var variation: float = settings.presets[preset].band_variation
+					var count := clampi(roundi(columns*density*mask_rng.randf_range(1.0-variation,1.0+variation)),0,columns)
+					var from_left := mask_rng.randf() < 0.5
+					for column in columns:
+						var rank := column if from_left else columns-1-column
+						var visible := rank < count
+						var types: Array = settings.product_layers[role]
+						var kind: int = types[level%types.size()]
+						var variant: int = (column/5+level+seed_value%5)%5
+						var x := lerpf(-entry.length*0.5+0.12,entry.length*0.5-0.12,float(column)/maxi(1,columns-1))
+						var z: float = (1.0 if face == 0 else -1.0)*(0.12+row*0.14) if sides == 2 else (-entry.width*0.5+0.11)
+						var spacing: float = (entry.height-0.55)/maxi(1,levels-1)
+						var y: float = 0.189+level*spacing
+						var scale_value := minf(shape_rng.randf_range(0.88,1.04),(spacing-0.045)/0.30)
+						if is_cold:
+							y = 0.195 if level == 0 else 0.415
+							scale_value = shape_rng.randf_range(0.72,0.81)
+						if is_counter:
+							x = -0.20+column*0.18
+							z = 0.20
+							y = entry.height+0.003
+							scale_value = 0.90
+						var yaw := (PI if face == 1 else 0.0)+shape_rng.randf_range(-0.05,0.05)
+						var transform_value := pose*Transform3D(Basis(Vector3.UP,yaw).scaled(Vector3.ONE*scale_value),Vector3(x,y,z))
+						slots.append({"slot_id":"%s/level_%02d/face_%d/row_%d/slot_%02d"%[id,level,face,row,column],"product_type":ITEM_TYPES[kind],"kind":kind,"variant":variant,"transform":transform_value,"visible":visible,"level":level,"face":face,"row":row,"column":column,"loot_binding_id":"","condition":"unusable_display"})
+						capacity += 1
+						occupied += int(visible)
+		if preset != "STOCKED" and entry.id in settings.fallen_containers:
+			for slot in slots:
+				if slot.visible and slot.level == 0:
+					var p: Array = settings.fallen_positions[entry.id]
+					slot.transform = Transform3D(Basis(Vector3.FORWARD,PI*0.5).scaled(Vector3.ONE*0.88),Vector3(p[0],p[1],p[2]))
+					slot.condition = "fallen_unusable"
+					break
+		containers[id] = {"container_id":id,"shelf_id":entry.id,"random_seed":seed_value,"role":role,"slots":slots,"searchable":entry.id == settings.search_shelf,"search_state":"UNSEARCHED","loot_inventory":{},"entry":entry}
+	var target_id: String = "cad/"+str(settings.search_shelf)
+	if containers.has(target_id):
+		bind_loot(containers[target_id],settings.loot_quantities)
+	return {"preset":preset,"seed":settings.seed,"containers":containers,"capacity":capacity,"occupied":occupied,"occupancy":float(occupied)/maxi(1,capacity),"target_id":target_id}
+
+static func bind_loot(container: Dictionary, quantities: Dictionary) -> void:
+	for item_type in quantities:
+		var candidates: Array = container.slots.filter(func(slot): return slot.visible and slot.product_type == item_type and slot.condition != "fallen_unusable")
+		# Prefer the uppermost remaining products at the near/south end.
+		candidates.sort_custom(func(a,b):
+			if a.level != b.level:
+				return a.level > b.level
+			if not is_equal_approx(a.transform.origin.z,b.transform.origin.z):
+				return a.transform.origin.z > b.transform.origin.z
+			return a.slot_id < b.slot_id
+		)
+		var ids: Array[String] = []
+		var loot_id: String = container.container_id+"/loot/"+item_type
+		for i in mini(int(quantities[item_type]),candidates.size()):
+			candidates[i].loot_binding_id = loot_id
+			candidates[i].condition = "usable"
+			ids.append(candidates[i].slot_id)
+		if not ids.is_empty():
+			container.loot_inventory[loot_id] = {"loot_id":loot_id,"item_type":item_type,"quantity":ids.size(),"remaining_slot_ids":ids}
+
+static func visible_count(container: Dictionary) -> int:
+	return container.slots.filter(func(s): return s.visible).size()
+
+static func signature(data: Dictionary) -> String:
+	var parts := ""
+	for id in data.containers:
+		for slot in data.containers[id].slots:
+			parts += "%s|%s|%d|%s|%s|%s;"%[slot.slot_id,slot.product_type,slot.variant,slot.transform,slot.visible,slot.loot_binding_id]
+	return parts.sha256_text()

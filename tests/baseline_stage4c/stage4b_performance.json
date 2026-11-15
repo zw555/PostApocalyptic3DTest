@@ -1,0 +1,311 @@
+{
+	"adapter": "NVIDIA GeForce RTX 4060 Laptop GPU",
+	"claim_evidence": {
+		"first_water_slot": [
+			"cad/Gondola2/level_03/face_0/row_0/slot_13"
+		],
+		"remaining": 0,
+		"removed_slot_ids": [
+			"cad/Gondola2/level_03/face_0/row_0/slot_13",
+			"cad/Gondola2/level_03/face_1/row_1/slot_13",
+			"cad/Gondola2/level_00/face_0/row_1/slot_00",
+			"cad/Gondola2/level_02/face_0/row_1/slot_00"
+		],
+		"state": "DEPLETED",
+		"supplies": {
+			"boxed_food": 1,
+			"canned_food": 1,
+			"water": 2
+		},
+		"visible_products": 721
+	},
+	"conditions": "common character pose and fixed 65-degree orthographic size 13.8; original lights/shadows ON; UI closed during timings; vsync off, 240-frame warmup, three 600-frame windows per stage",
+	"metrics": [
+		{
+			"camera_size": 13.8000001907349,
+			"camera_transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 0.422618, -0.906308), Z: (0.0, 0.906308, 0.422618), O: (-3.15, 20.68877, 8.247602)]",
+			"player_position": "(-3.15, 0.0, 1.25)",
+			"scene_nodes": 870,
+			"search_ui_open": false,
+			"stage": "stage_4a",
+			"visible_products": 1560,
+			"windows": [
+				{
+					"draw_calls": 1567.0,
+					"fps_from_mean": 300.464518145052,
+					"frames": 600,
+					"mean_ms": 3.32818,
+					"p50_ms": 2.091,
+					"p95_ms": 4.173,
+					"primitives": 501650.0
+				},
+				{
+					"draw_calls": 1567.0,
+					"fps_from_mean": 356.770159743839,
+					"frames": 600,
+					"mean_ms": 2.802925,
+					"p50_ms": 1.98,
+					"p95_ms": 3.801,
+					"primitives": 501650.0
+				},
+				{
+					"draw_calls": 1567.0,
+					"fps_from_mean": 384.096607978839,
+					"frames": 600,
+					"mean_ms": 2.60351166666667,
+					"p50_ms": 2.124,
+					"p95_ms": 3.56,
+					"primitives": 501650.0
+				}
+			]
+		},
+		{
+			"camera_size": 13.8000001907349,
+			"camera_transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 0.422618, -0.906308), Z: (0.0, 0.906308, 0.422618), O: (-3.15, 20.68877, 8.247602)]",
+			"player_position": "(-3.15, 0.0, 1.25)",
+			"scene_nodes": 923,
+			"search_ui_open": false,
+			"stage": "stage_4b_partial",
+			"visible_products": 725,
+			"windows": [
+				{
+					"draw_calls": 1659.0,
+					"fps_from_mean": 470.127694517293,
+					"frames": 600,
+					"mean_ms": 2.12708166666667,
+					"p50_ms": 1.925,
+					"p95_ms": 3.08,
+					"primitives": 280548.0
+				},
+				{
+					"draw_calls": 1659.0,
+					"fps_from_mean": 453.970425340024,
+					"frames": 600,
+					"mean_ms": 2.20278666666666,
+					"p50_ms": 1.977,
+					"p95_ms": 3.108,
+					"primitives": 280548.0
+				},
+				{
+					"draw_calls": 1659.0,
+					"fps_from_mean": 485.585790464876,
+					"frames": 600,
+					"mean_ms": 2.05936833333333,
+					"p50_ms": 1.973,
+					"p95_ms": 3.079,
+					"primitives": 280548.0
+				}
+			]
+		},
+		{
+			"camera_size": 13.8000001907349,
+			"camera_transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 0.422618, -0.906308), Z: (0.0, 0.906308, 0.422618), O: (-3.15, 20.68877, 8.247602)]",
+			"player_position": "(-3.15, 0.0, 1.25)",
+			"scene_nodes": 923,
+			"search_ui_open": false,
+			"stage": "search_before",
+			"visible_products": 725,
+			"windows": [
+				{
+					"draw_calls": 1659.0,
+					"fps_from_mean": 485.61055005107,
+					"frames": 600,
+					"mean_ms": 2.05926333333333,
+					"p50_ms": 1.93,
+					"p95_ms": 3.071,
+					"primitives": 280548.0
+				},
+				{
+					"draw_calls": 1659.0,
+					"fps_from_mean": 492.682029587198,
+					"frames": 600,
+					"mean_ms": 2.02970666666667,
+					"p50_ms": 1.923,
+					"p95_ms": 3.158,
+					"primitives": 280548.0
+				},
+				{
+					"draw_calls": 1659.0,
+					"fps_from_mean": 499.608639898747,
+					"frames": 600,
+					"mean_ms": 2.00156666666666,
+					"p50_ms": 1.88,
+					"p95_ms": 3.264,
+					"primitives": 280548.0
+				}
+			]
+		},
+		{
+			"camera_size": 13.8000001907349,
+			"camera_transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 0.422618, -0.906308), Z: (0.0, 0.906308, 0.422618), O: (-3.15, 20.68877, 8.247602)]",
+			"player_position": "(-3.15, 0.0, 1.25)",
+			"scene_nodes": 923,
+			"search_ui_open": false,
+			"stage": "search_after",
+			"visible_products": 721,
+			"windows": [
+				{
+					"draw_calls": 1659.0,
+					"fps_from_mean": 508.279448652339,
+					"frames": 600,
+					"mean_ms": 1.96742166666667,
+					"p50_ms": 1.88,
+					"p95_ms": 2.937,
+					"primitives": 279100.0
+				},
+				{
+					"draw_calls": 1659.0,
+					"fps_from_mean": 510.957048098942,
+					"frames": 600,
+					"mean_ms": 1.95711166666667,
+					"p50_ms": 1.88,
+					"p95_ms": 2.913,
+					"primitives": 279100.0
+				},
+				{
+					"draw_calls": 1659.0,
+					"fps_from_mean": 475.585802812614,
+					"frames": 600,
+					"mean_ms": 2.10267,
+					"p50_ms": 1.933,
+					"p95_ms": 3.534,
+					"primitives": 279100.0
+				}
+			]
+		}
+	],
+	"renderer": "forward_plus",
+	"resolution": "1440x1000",
+	"screenshots": [
+		{
+			"camera_transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 0.422618, -0.906308), Z: (0.0, 0.906308, 0.422618), O: (-3.15, 20.68877, 8.247602)]",
+			"file": "stage_4a_cad_65.png",
+			"focus": "(-3.15, 0.75, -1.05)",
+			"lights": true,
+			"mode": 2,
+			"player_position": "(-3.15, 0.0, 1.25)",
+			"shadows": true,
+			"size": 13.8000001907349
+		},
+		{
+			"camera_transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 0.422618, -0.906308), Z: (0.0, 0.906308, 0.422618), O: (-3.15, 20.68877, 8.247602)]",
+			"file": "partially_looted_65.png",
+			"focus": "(-3.15, 0.75, -1.05)",
+			"lights": true,
+			"mode": 2,
+			"player_position": "(-3.15, 0.0, 1.25)",
+			"shadows": true,
+			"size": 13.8000001907349
+		},
+		{
+			"camera_transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 0.422618, -0.906308), Z: (0.0, 0.906308, 0.422618), O: (0.0, 20.68877, 9.297602)]",
+			"file": "partially_looted_overview.png",
+			"focus": "(0.0, 0.75, 0.0)",
+			"lights": true,
+			"mode": 2,
+			"player_position": "(0.0, 0.0, 2.3)",
+			"shadows": true,
+			"size": 13.8000001907349
+		},
+		{
+			"camera_transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 0.087156, -0.996195), Z: (0.0, 0.996195, 0.087156), O: (-3.15, 22.66628, 0.867426)]",
+			"file": "partially_looted_85.png",
+			"focus": "(-3.15, 0.75, -1.05)",
+			"lights": true,
+			"mode": 1,
+			"player_position": "(-3.15, 0.0, 1.25)",
+			"shadows": true,
+			"size": 13.8000001907349
+		},
+		{
+			"camera_transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 0.422618, -0.906308), Z: (0.0, 0.906308, 0.422618), O: (-3.15, 20.68877, 8.247602)]",
+			"file": "products_close_65.png",
+			"focus": "(-3.15, 0.75, -1.05)",
+			"lights": true,
+			"mode": 2,
+			"player_position": "(-3.15, 0.0, 1.25)",
+			"shadows": true,
+			"size": 8.27999973297119
+		},
+		{
+			"camera_transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 0.087156, -0.996195), Z: (0.0, 0.996195, 0.087156), O: (-3.15, 22.66628, 0.867426)]",
+			"file": "products_close_85.png",
+			"focus": "(-3.15, 0.75, -1.05)",
+			"lights": true,
+			"mode": 1,
+			"player_position": "(-3.15, 0.0, 1.25)",
+			"shadows": true,
+			"size": 8.27999973297119
+		},
+		{
+			"camera_transform": "[X: (-0.0, 0.0, -1.0), Y: (-0.906308, 0.422618, 0.0), Z: (0.422618, 0.906308, -0.0), O: (7.197602, 20.68877, 0.0)]",
+			"file": "shelf_side_diagnostic.png",
+			"focus": "(-3.15, 0.75, -1.05)",
+			"lights": true,
+			"mode": 2,
+			"player_position": "(-3.15, 0.0, 1.25)",
+			"shadows": true,
+			"size": 8.27999973297119
+		},
+		{
+			"camera_transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 0.422618, -0.906308), Z: (0.0, 0.906308, 0.422618), O: (-3.15, 20.68877, 8.247602)]",
+			"file": "search_before.png",
+			"focus": "(-3.15, 0.75, -1.05)",
+			"lights": true,
+			"mode": 2,
+			"player_position": "(-3.15, 0.0, 1.25)",
+			"shadows": true,
+			"size": 13.8000001907349
+		},
+		{
+			"camera_transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 0.422618, -0.906308), Z: (0.0, 0.906308, 0.422618), O: (-3.15, 20.68877, 8.247602)]",
+			"file": "search_before_close.png",
+			"focus": "(-3.15, 0.75, -1.05)",
+			"lights": true,
+			"mode": 2,
+			"player_position": "(-3.15, 0.0, 1.25)",
+			"shadows": true,
+			"size": 8.27999973297119
+		},
+		{
+			"camera_transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 0.422618, -0.906308), Z: (0.0, 0.906308, 0.422618), O: (-3.15, 20.68877, 8.247602)]",
+			"file": "search_after_one_water_close.png",
+			"focus": "(-3.15, 0.75, -1.05)",
+			"lights": true,
+			"mode": 2,
+			"player_position": "(-3.15, 0.0, 1.25)",
+			"shadows": true,
+			"size": 8.27999973297119
+		},
+		{
+			"camera_transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 0.422618, -0.906308), Z: (0.0, 0.906308, 0.422618), O: (-3.15, 20.68877, 8.247602)]",
+			"file": "search_after_one_water.png",
+			"focus": "(-3.15, 0.75, -1.05)",
+			"lights": true,
+			"mode": 2,
+			"player_position": "(-3.15, 0.0, 1.25)",
+			"shadows": true,
+			"size": 13.8000001907349
+		},
+		{
+			"camera_transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 0.422618, -0.906308), Z: (0.0, 0.906308, 0.422618), O: (-3.15, 20.68877, 8.247602)]",
+			"file": "search_after_all.png",
+			"focus": "(-3.15, 0.75, -1.05)",
+			"lights": true,
+			"mode": 2,
+			"player_position": "(-3.15, 0.0, 1.25)",
+			"shadows": true,
+			"size": 13.8000001907349
+		},
+		{
+			"camera_transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 0.422618, -0.906308), Z: (0.0, 0.906308, 0.422618), O: (-3.15, 20.68877, 8.247602)]",
+			"file": "after_claim_scene.png",
+			"focus": "(-3.15, 0.75, -1.05)",
+			"lights": true,
+			"mode": 2,
+			"player_position": "(-3.15, 0.0, 1.25)",
+			"shadows": true,
+			"size": 13.8000001907349
+		}
+	]
+}

@@ -1,0 +1,13 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3]
+
+[ext_resource type="Shader" path="res://materials/surface.gdshader" id="1_27m04"]
+
+[resource]
+resource_name = "rail"
+render_priority = 0
+shader = ExtResource("1_27m04")
+shader_parameter/base_color = Color(0.6666667, 0.6039216, 0.44705883, 1)
+shader_parameter/grain = 0.1
+shader_parameter/surface_roughness = 0.85
+shader_parameter/floor_tiles = false
+shader_parameter/wood_grain = false

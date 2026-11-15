@@ -1,0 +1,14 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3]
+
+[ext_resource type="Shader" path="res://materials/upgrade/architectural_finish.gdshader" id="1_vkls6"]
+
+[resource]
+resource_name = "Concrete / continuous wall_lower_finish"
+render_priority = 0
+shader = ExtResource("1_vkls6")
+shader_parameter/base_color = Color(0.29803923, 0.39607844, 0.36078432, 1)
+shader_parameter/roughness = null
+shader_parameter/wear_amount = 0.35
+shader_parameter/dust_amount = 0.32
+shader_parameter/noise_scale = null
+shader_parameter/floor_surface = false

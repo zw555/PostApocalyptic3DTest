@@ -1,0 +1,21 @@
+{
+  "seed": 41027,
+  "default_preset": "PARTIALLY_LOOTED",
+  "search_shelf": "Gondola2",
+  "interaction_distance": 1.25,
+  "loot_quantities": {"water": 2, "canned_food": 1, "boxed_food": 1},
+  "item_names": {"water": "瓶装水", "canned_food": "食品罐头", "boxed_food": "盒装食品"},
+  "container_roles": {
+    "Gondola1": "food", "Gondola2": "drinks", "Gondola3": "supplies",
+    "WestShelfNorth": "food", "WestShelfSouth": "supplies",
+    "SouthShelf1": "food", "SouthShelf2": "supplies", "SouthShelf3": "food"
+  },
+  "product_layers": {"food": [0,2,2,0,2], "drinks": [0,1,2,1,1], "supplies": [1,2,1,2,1], "cold": [0,1], "checkout": [2]},
+  "presets": {
+    "STOCKED": {"food": 0.85, "drinks": 0.84, "supplies": 0.87, "cold": 0.84, "checkout": 0.85, "band_variation": 0.02},
+    "PARTIALLY_LOOTED": {"food": 0.43, "drinks": 0.32, "supplies": 0.48, "cold": 0.35, "checkout": 0.25, "band_variation": 0.16},
+    "HEAVILY_LOOTED": {"food": 0.18, "drinks": 0.12, "supplies": 0.22, "cold": 0.15, "checkout": 0.10, "band_variation": 0.24}
+  },
+  "fallen_containers": ["Gondola1", "Gondola3", "WestShelfSouth"],
+  "fallen_positions": {"Gondola1": [-4.85,0.065,2.14], "Gondola3": [0.45,0.065,2.12], "WestShelfSouth": [-5.25,0.065,3.28]}
+}

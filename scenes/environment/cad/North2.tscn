@@ -1,0 +1,55 @@
+[gd_scene load_steps=11 format=3]
+
+[ext_resource type="Script" path="res://scripts/procedural/wall_generator.gd" id="1_0s0t5"]
+[ext_resource type="Material" path="res://materials/upgrade/wall_finish.tres" id="2_vldqd"]
+[ext_resource type="Material" path="res://materials/upgrade/wall_lower_finish.tres" id="3_tjcpq"]
+[ext_resource type="Material" path="res://materials/metal_dark.tres" id="4_usr3v"]
+[ext_resource type="Material" path="res://materials/rail.tres" id="5_hmgmx"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_nd2je"]
+size = Vector3(3.29, 3, 0.24)
+
+[sub_resource type="BoxMesh" id="BoxMesh_dssc3"]
+size = Vector3(3.29, 0.8, 0.248)
+
+[sub_resource type="BoxMesh" id="BoxMesh_x2vfi"]
+size = Vector3(3.29, 0.13, 0.275)
+
+[sub_resource type="BoxMesh" id="BoxMesh_dd604"]
+size = Vector3(3.29, 0.045, 0.254)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qmw7w"]
+size = Vector3(3.29, 3, 0.24)
+
+[node name="North2" type="Node3D"]
+script = ExtResource("1_0s0t5")
+wall_length = 3.29
+wall_thickness = 0.24
+metadata/parameters = "3.2900/3.0000/0.2400/false"
+
+[node name="Plaster" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+material_override = ExtResource("2_vldqd")
+mesh = SubResource("BoxMesh_nd2je")
+
+[node name="LowerPaint" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.47, 0)
+material_override = ExtResource("3_tjcpq")
+mesh = SubResource("BoxMesh_dssc3")
+
+[node name="Skirting" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.065, 0)
+material_override = ExtResource("4_usr3v")
+mesh = SubResource("BoxMesh_x2vfi")
+
+[node name="PaintBand" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.89, 0)
+material_override = ExtResource("5_hmgmx")
+mesh = SubResource("BoxMesh_dd604")
+
+[node name="WallCollision" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="WallCollision"]
+shape = SubResource("BoxShape3D_qmw7w")

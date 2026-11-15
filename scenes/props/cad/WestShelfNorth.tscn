@@ -1,0 +1,435 @@
+[gd_scene load_steps=61 format=3]
+
+[ext_resource type="Script" path="res://scripts/procedural/shelf_generator.gd" id="1_wdii6"]
+[ext_resource type="Material" path="res://materials/upgrade/painted_metal.tres" id="2_1nimw"]
+[ext_resource type="Material" path="res://materials/upgrade/rusted_metal.tres" id="3_wgvsh"]
+[ext_resource type="Material" path="res://materials/metal_dark.tres" id="4_may7n"]
+[ext_resource type="Material" path="res://materials/rail.tres" id="5_hxa7l"]
+[ext_resource type="ArrayMesh" path="res://scenes/props/cad/sku_0_1.res" id="6_il7e3"]
+[ext_resource type="Script" path="res://scripts/procedural/stock_instances.gd" id="7_5pk2k"]
+[ext_resource type="ArrayMesh" path="res://scenes/props/cad/sku_0_2.res" id="8_gyxkj"]
+[ext_resource type="ArrayMesh" path="res://scenes/props/cad/sku_0_3.res" id="9_q3dpv"]
+[ext_resource type="ArrayMesh" path="res://scenes/props/cad/sku_0_4.res" id="10_nqaoj"]
+[ext_resource type="ArrayMesh" path="res://scenes/props/cad/sku_1_2.res" id="11_b45q5"]
+[ext_resource type="ArrayMesh" path="res://scenes/props/cad/sku_1_3.res" id="12_3gvcw"]
+[ext_resource type="ArrayMesh" path="res://scenes/props/cad/sku_1_4.res" id="13_keros"]
+[ext_resource type="ArrayMesh" path="res://scenes/props/cad/sku_1_0.res" id="14_cr8r1"]
+[ext_resource type="ArrayMesh" path="res://scenes/props/cad/sku_2_3.res" id="15_eyh1l"]
+[ext_resource type="ArrayMesh" path="res://scenes/props/cad/sku_2_4.res" id="16_wl77s"]
+[ext_resource type="ArrayMesh" path="res://scenes/props/cad/sku_2_0.res" id="17_ejyif"]
+[ext_resource type="ArrayMesh" path="res://scenes/props/cad/sku_2_1.res" id="18_7tkgy"]
+[ext_resource type="ArrayMesh" path="res://scenes/props/cad/sku_2_2.res" id="19_k62a4"]
+[ext_resource type="ArrayMesh" path="res://scenes/props/cad/sku_1_1.res" id="20_bsbkh"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_5kl4s"]
+size = Vector3(3.72, 0.14, 0.34)
+
+[sub_resource type="BoxMesh" id="BoxMesh_xwp1d"]
+size = Vector3(3.62, 1.67, 0.045)
+
+[sub_resource type="BoxMesh" id="BoxMesh_l3ksj"]
+size = Vector3(0.055, 1.85, 0.055)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ogyo2"]
+size = Vector3(0.055, 1.85, 0.055)
+
+[sub_resource type="BoxMesh" id="BoxMesh_d5x7c"]
+size = Vector3(0.055, 1.85, 0.055)
+
+[sub_resource type="BoxMesh" id="BoxMesh_lv4x5"]
+size = Vector3(0.055, 1.85, 0.055)
+
+[sub_resource type="BoxMesh" id="BoxMesh_f5ctb"]
+size = Vector3(0.04, 1.85, 0.045)
+
+[sub_resource type="BoxMesh" id="BoxMesh_s4lw4"]
+size = Vector3(0.04, 1.85, 0.045)
+
+[sub_resource type="BoxMesh" id="BoxMesh_cjvwc"]
+size = Vector3(0.04, 1.85, 0.045)
+
+[sub_resource type="BoxMesh" id="BoxMesh_3nogj"]
+size = Vector3(0.04, 1.85, 0.045)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fiwen"]
+size = Vector3(3.72, 1.85, 0.34)
+
+[sub_resource type="BoxMesh" id="BoxMesh_l2ayt"]
+size = Vector3(3.65, 0.038, 0.31)
+
+[sub_resource type="BoxMesh" id="BoxMesh_api1b"]
+size = Vector3(3.66, 0.065, 0.025)
+
+[sub_resource type="BoxMesh" id="BoxMesh_chcsy"]
+size = Vector3(3.66, 0.065, 0.025)
+
+[sub_resource type="BoxMesh" id="BoxMesh_rbude"]
+size = Vector3(3.65, 0.038, 0.31)
+
+[sub_resource type="BoxMesh" id="BoxMesh_qrvlf"]
+size = Vector3(3.66, 0.065, 0.025)
+
+[sub_resource type="BoxMesh" id="BoxMesh_kvdnr"]
+size = Vector3(3.66, 0.065, 0.025)
+
+[sub_resource type="BoxMesh" id="BoxMesh_6ahs2"]
+size = Vector3(3.65, 0.038, 0.31)
+
+[sub_resource type="BoxMesh" id="BoxMesh_rs8c8"]
+size = Vector3(3.66, 0.065, 0.025)
+
+[sub_resource type="BoxMesh" id="BoxMesh_euja6"]
+size = Vector3(3.66, 0.065, 0.025)
+
+[sub_resource type="BoxMesh" id="BoxMesh_wl2p2"]
+size = Vector3(3.65, 0.038, 0.31)
+
+[sub_resource type="BoxMesh" id="BoxMesh_rdg85"]
+size = Vector3(3.66, 0.065, 0.025)
+
+[sub_resource type="BoxMesh" id="BoxMesh_dlal3"]
+size = Vector3(3.66, 0.065, 0.025)
+
+[sub_resource type="BoxMesh" id="BoxMesh_lbama"]
+size = Vector3(3.65, 0.038, 0.31)
+
+[sub_resource type="BoxMesh" id="BoxMesh_7cgmo"]
+size = Vector3(3.66, 0.065, 0.025)
+
+[sub_resource type="BoxMesh" id="BoxMesh_nccd2"]
+size = Vector3(3.66, 0.065, 0.025)
+
+[sub_resource type="MultiMesh" id="MultiMesh_563cm"]
+transform_format = 1
+instance_count = 3
+mesh = ExtResource("6_il7e3")
+
+[sub_resource type="MultiMesh" id="MultiMesh_00g2t"]
+transform_format = 1
+instance_count = 4
+mesh = ExtResource("8_gyxkj")
+
+[sub_resource type="MultiMesh" id="MultiMesh_lrpip"]
+transform_format = 1
+instance_count = 5
+mesh = ExtResource("9_q3dpv")
+
+[sub_resource type="MultiMesh" id="MultiMesh_jste3"]
+transform_format = 1
+instance_count = 4
+mesh = ExtResource("10_nqaoj")
+
+[sub_resource type="MultiMesh" id="MultiMesh_j8qkh"]
+transform_format = 1
+instance_count = 8
+mesh = ExtResource("11_b45q5")
+
+[sub_resource type="MultiMesh" id="MultiMesh_67ghx"]
+transform_format = 1
+instance_count = 8
+mesh = ExtResource("12_3gvcw")
+
+[sub_resource type="MultiMesh" id="MultiMesh_xbref"]
+transform_format = 1
+instance_count = 5
+mesh = ExtResource("13_keros")
+
+[sub_resource type="MultiMesh" id="MultiMesh_ae8cx"]
+transform_format = 1
+instance_count = 6
+mesh = ExtResource("14_cr8r1")
+
+[sub_resource type="MultiMesh" id="MultiMesh_fex36"]
+transform_format = 1
+instance_count = 5
+mesh = ExtResource("15_eyh1l")
+
+[sub_resource type="MultiMesh" id="MultiMesh_a3h2u"]
+transform_format = 1
+instance_count = 10
+mesh = ExtResource("16_wl77s")
+
+[sub_resource type="MultiMesh" id="MultiMesh_2ttky"]
+transform_format = 1
+instance_count = 7
+mesh = ExtResource("17_ejyif")
+
+[sub_resource type="MultiMesh" id="MultiMesh_fxvba"]
+transform_format = 1
+instance_count = 7
+mesh = ExtResource("18_7tkgy")
+
+[sub_resource type="MultiMesh" id="MultiMesh_5p6q1"]
+transform_format = 1
+instance_count = 3
+mesh = ExtResource("19_k62a4")
+
+[sub_resource type="MultiMesh" id="MultiMesh_dhits"]
+transform_format = 1
+instance_count = 5
+mesh = ExtResource("20_bsbkh")
+
+[node name="WestShelfNorth" type="Node3D"]
+script = ExtResource("1_wdii6")
+shelf_width = 3.72
+shelf_depth = 0.34
+shelf_height = 1.85
+shelf_levels = 5
+product_seed = 6441
+stock_density = 0.84
+grouped_multimesh_stock = true
+double_sided = false
+structural_bays = 3
+stock_visible = false
+metadata/layout = {
+"collision": true,
+"density": 0.84,
+"height": 1.85,
+"id": "WestShelfNorth",
+"length": 3.72,
+"position": Vector3(-6.17, 0, -2.245),
+"rotation": 90.0,
+"source": "plan-proportion estimate",
+"type": "wall_shelf",
+"width": 0.34,
+"zone": 1
+}
+
+[node name="Geometry" type="Node3D" parent="."]
+metadata/parameters = "3.7200/0.3400/1.8500/5/6441/0.8400/true/false/1/3/true"
+
+[node name="Plinth" type="MeshInstance3D" parent="Geometry"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.07, 0)
+material_override = ExtResource("2_1nimw")
+mesh = SubResource("BoxMesh_5kl4s")
+
+[node name="BackSpine" type="MeshInstance3D" parent="Geometry"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.965, -0.147)
+material_override = ExtResource("3_wgvsh")
+mesh = SubResource("BoxMesh_xwp1d")
+
+[node name="Upright" type="MeshInstance3D" parent="Geometry"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.825, 0.925, -0.135)
+material_override = ExtResource("4_may7n")
+mesh = SubResource("BoxMesh_l3ksj")
+
+[node name="Upright2" type="MeshInstance3D" parent="Geometry"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.825, 0.925, 0.135)
+material_override = ExtResource("4_may7n")
+mesh = SubResource("BoxMesh_ogyo2")
+
+[node name="Upright3" type="MeshInstance3D" parent="Geometry"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.825, 0.925, -0.135)
+material_override = ExtResource("4_may7n")
+mesh = SubResource("BoxMesh_d5x7c")
+
+[node name="Upright4" type="MeshInstance3D" parent="Geometry"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.825, 0.925, 0.135)
+material_override = ExtResource("4_may7n")
+mesh = SubResource("BoxMesh_lv4x5")
+
+[node name="BayPost" type="MeshInstance3D" parent="Geometry"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.62, 0.925, -0.135)
+material_override = ExtResource("4_may7n")
+mesh = SubResource("BoxMesh_f5ctb")
+
+[node name="BayPost2" type="MeshInstance3D" parent="Geometry"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.62, 0.925, 0.135)
+material_override = ExtResource("4_may7n")
+mesh = SubResource("BoxMesh_s4lw4")
+
+[node name="BayPost3" type="MeshInstance3D" parent="Geometry"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.62, 0.925, -0.135)
+material_override = ExtResource("4_may7n")
+mesh = SubResource("BoxMesh_cjvwc")
+
+[node name="BayPost4" type="MeshInstance3D" parent="Geometry"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.62, 0.925, 0.135)
+material_override = ExtResource("4_may7n")
+mesh = SubResource("BoxMesh_3nogj")
+
+[node name="ShelfCollision" type="StaticBody3D" parent="Geometry"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.925, 0)
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Geometry/ShelfCollision"]
+shape = SubResource("BoxShape3D_fiwen")
+
+[node name="Deck0" type="MeshInstance3D" parent="Geometry"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.17, 0)
+material_override = ExtResource("2_1nimw")
+mesh = SubResource("BoxMesh_l2ayt")
+
+[node name="PriceRail" type="MeshInstance3D" parent="Geometry"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.16, -0.158)
+material_override = ExtResource("5_hxa7l")
+mesh = SubResource("BoxMesh_api1b")
+
+[node name="PriceRail2" type="MeshInstance3D" parent="Geometry"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.16, 0.158)
+material_override = ExtResource("5_hxa7l")
+mesh = SubResource("BoxMesh_chcsy")
+
+[node name="Deck1" type="MeshInstance3D" parent="Geometry"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.495, 0)
+material_override = ExtResource("2_1nimw")
+mesh = SubResource("BoxMesh_rbude")
+
+[node name="PriceRail3" type="MeshInstance3D" parent="Geometry"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.485, -0.158)
+material_override = ExtResource("5_hxa7l")
+mesh = SubResource("BoxMesh_qrvlf")
+
+[node name="PriceRail4" type="MeshInstance3D" parent="Geometry"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.485, 0.158)
+material_override = ExtResource("5_hxa7l")
+mesh = SubResource("BoxMesh_kvdnr")
+
+[node name="Deck2" type="MeshInstance3D" parent="Geometry"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.82, 0)
+material_override = ExtResource("2_1nimw")
+mesh = SubResource("BoxMesh_6ahs2")
+
+[node name="PriceRail5" type="MeshInstance3D" parent="Geometry"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.81, -0.158)
+material_override = ExtResource("5_hxa7l")
+mesh = SubResource("BoxMesh_rs8c8")
+
+[node name="PriceRail6" type="MeshInstance3D" parent="Geometry"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.81, 0.158)
+material_override = ExtResource("5_hxa7l")
+mesh = SubResource("BoxMesh_euja6")
+
+[node name="Deck3" type="MeshInstance3D" parent="Geometry"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.145, 0)
+material_override = ExtResource("2_1nimw")
+mesh = SubResource("BoxMesh_wl2p2")
+
+[node name="PriceRail7" type="MeshInstance3D" parent="Geometry"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.135, -0.158)
+material_override = ExtResource("5_hxa7l")
+mesh = SubResource("BoxMesh_rdg85")
+
+[node name="PriceRail8" type="MeshInstance3D" parent="Geometry"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.135, 0.158)
+material_override = ExtResource("5_hxa7l")
+mesh = SubResource("BoxMesh_dlal3")
+
+[node name="Deck4" type="MeshInstance3D" parent="Geometry"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.47, 0)
+material_override = ExtResource("2_1nimw")
+mesh = SubResource("BoxMesh_lbama")
+
+[node name="PriceRail9" type="MeshInstance3D" parent="Geometry"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.46, -0.158)
+material_override = ExtResource("5_hxa7l")
+mesh = SubResource("BoxMesh_7cgmo")
+
+[node name="PriceRail10" type="MeshInstance3D" parent="Geometry"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.46, 0.158)
+material_override = ExtResource("5_hxa7l")
+mesh = SubResource("BoxMesh_nccd2")
+
+[node name="Stock" type="Node3D" parent="Geometry"]
+visible = false
+metadata/capacity = 95
+metadata/occupied = 80
+metadata/occupancy = 0.8421052631578947
+
+[node name="SKU_0_1" type="MultiMeshInstance3D" parent="Geometry/Stock"]
+custom_aabb = AABB(-1.801419, 0.189, -0.12141904, 0.50871325, 0.16986667, 0.122838095)
+multimesh = SubResource("MultiMesh_563cm")
+script = ExtResource("7_5pk2k")
+instance_transforms = Array[Transform3D]([Transform3D(0.9332606, 0, 0.011647856, 0, 0.93333334, 0, -0.011647856, 0, 0.9332606, -1.74, 0.189, -0.06), Transform3D(0.88599735, 0, 0.022385903, 0, 0.8862801, 0, -0.022385903, 0, 0.88599735, -1.5466666, 0.189, -0.06), Transform3D(0.91323143, 0, 0.019500336, 0, 0.91343963, 0, -0.019500336, 0, 0.91323143, -1.3533334, 0.189, -0.06)])
+metadata/sku = "0_1"
+
+[node name="SKU_0_2" type="MultiMeshInstance3D" parent="Geometry/Stock"]
+custom_aabb = AABB(-0.64201266, 0.189, -0.122012705, 0.70296365, 0.16986667, 0.12402541)
+multimesh = SubResource("MultiMesh_00g2t")
+script = ExtResource("7_5pk2k")
+instance_transforms = Array[Transform3D]([Transform3D(0.9330984, 0, 0.020943321, 0, 0.93333334, 0, -0.020943321, 0, 0.9330984, -0.58, 0.189, -0.06), Transform3D(0.9016872, 0, 0.028272407, 0, 0.9021303, 0, -0.028272407, 0, 0.9016872, -0.38666666, 0.189, -0.06), Transform3D(0.9124359, 0, -0.011497142, 0, 0.9125083, 0, 0.011497142, 0, 0.9124359, -0.19333333, 0.189, -0.06), Transform3D(0.933323, 0, -0.004385033, 0, 0.93333334, 0, 0.004385033, 0, 0.933323, 0, 0.189, -0.06)])
+metadata/sku = "0_2"
+
+[node name="SKU_0_3" type="MultiMeshInstance3D" parent="Geometry/Stock"]
+custom_aabb = AABB(0.13081993, 0.189, -0.12251341, 0.898111, 0.16986667, 0.12502682)
+multimesh = SubResource("MultiMesh_lrpip")
+script = ExtResource("7_5pk2k")
+instance_transforms = Array[Transform3D]([Transform3D(0.93288714, 0, -0.028857687, 0, 0.93333334, 0, 0.028857687, 0, 0.93288714, 0.19333333, 0.189, -0.06), Transform3D(0.90963423, 0, 0.018820288, 0, 0.9098289, 0, -0.018820288, 0, 0.90963423, 0.38666666, 0.189, -0.06), Transform3D(0.9043325, 0, -0.026232231, 0, 0.9047129, 0, 0.026232231, 0, 0.9043325, 0.58, 0.189, -0.06), Transform3D(0.9332443, 0, -0.012894616, 0, 0.93333334, 0, 0.012894616, 0, 0.9332443, 0.7733333, 0.189, -0.06), Transform3D(0.9330008, 0, -0.024910353, 0, 0.93333334, 0, 0.024910353, 0, 0.9330008, 0.96666664, 0.189, -0.06)])
+metadata/sku = "0_3"
+
+[node name="SKU_0_4" type="MultiMeshInstance3D" parent="Geometry/Stock"]
+custom_aabb = AABB(1.0991443, 0.189, -0.122506335, 0.7020842, 0.16986667, 0.12501268)
+multimesh = SubResource("MultiMesh_jste3")
+script = ExtResource("7_5pk2k")
+instance_transforms = Array[Transform3D]([Transform3D(0.93332875, 0, 0.0029123337, 0, 0.93333334, 0, -0.0029123337, 0, 0.93332875, 1.16, 0.189, -0.06), Transform3D(0.93297184, 0, -0.025973339, 0, 0.93333334, 0, 0.025973339, 0, 0.93297184, 1.3533334, 0.189, -0.06), Transform3D(0.9328906, 0, 0.028745448, 0, 0.93333334, 0, -0.028745448, 0, 0.9328906, 1.5466666, 0.189, -0.06), Transform3D(0.9332929, 0, -0.008683594, 0, 0.93333334, 0, 0.008683594, 0, 0.9332929, 1.74, 0.189, -0.06)])
+metadata/sku = "0_4"
+
+[node name="SKU_1_2" type="MultiMeshInstance3D" parent="Geometry/Stock"]
+custom_aabb = AABB(-1.7914503, 0.514, -0.11300391, 2.420424, 1.2526667, 0.106007814)
+multimesh = SubResource("MultiMesh_j8qkh")
+script = ExtResource("7_5pk2k")
+instance_transforms = Array[Transform3D]([Transform3D(0.9333309, 0, -0.002129372, 0, 0.93333334, 0, 0.002129372, 0, 0.9333309, -1.74, 0.514, -0.06), Transform3D(0.9328459, 0, 0.030161113, 0, 0.93333334, 0, -0.030161113, 0, 0.9328459, -1.5466666, 0.514, -0.06), Transform3D(0.93302655, 0, -0.023930304, 0, 0.93333334, 0, 0.023930304, 0, 0.93302655, -1.3533334, 0.514, -0.06), Transform3D(0.925844, 0, 0.01612789, 0, 0.9259845, 0, -0.01612789, 0, 0.925844, -1.16, 0.514, -0.06), Transform3D(0.8939074, 0, 0.018637225, 0, 0.8941017, 0, -0.018637225, 0, 0.8939074, -0.96666664, 0.514, -0.06), Transform3D(0.9332622, 0, -0.011521166, 0, 0.93333334, 0, 0.011521166, 0, 0.9332622, 0.19333333, 1.489, -0.06), Transform3D(0.9328222, 0, 0.030885195, 0, 0.93333334, 0, -0.030885195, 0, 0.9328222, 0.38666666, 1.489, -0.06), Transform3D(0.8803307, 0, -0.010101896, 0, 0.8803886, 0, 0.010101896, 0, 0.8803307, 0.58, 1.489, -0.06)])
+metadata/sku = "1_2"
+
+[node name="SKU_1_3" type="MultiMeshInstance3D" parent="Geometry/Stock"]
+custom_aabb = AABB(-0.82492024, 0.514, -0.11305428, 2.6179745, 1.2526667, 0.10610857)
+multimesh = SubResource("MultiMesh_67ghx")
+script = ExtResource("7_5pk2k")
+instance_transforms = Array[Transform3D]([Transform3D(0.9333219, 0, -0.0046225386, 0, 0.93333334, 0, 0.0046225386, 0, 0.9333219, -0.7733333, 0.514, -0.06), Transform3D(0.9329278, 0, 0.027510243, 0, 0.93333334, 0, -0.027510243, 0, 0.9329278, -0.58, 0.514, -0.06), Transform3D(0.9327966, 0, 0.031647746, 0, 0.93333334, 0, -0.031647746, 0, 0.9327966, -0.38666666, 0.514, -0.06), Transform3D(0.93325454, 0, 0.012124398, 0, 0.93333334, 0, -0.012124398, 0, 0.93325454, -0.19333333, 0.514, -0.06), Transform3D(0.88004977, 0, 0.003428037, 0, 0.88005644, 0, -0.003428037, 0, 0.88004977, 0, 0.514, -0.06), Transform3D(0.8915579, 0, 0.020159852, 0, 0.89178574, 0, -0.020159852, 0, 0.8915579, 1.3533334, 1.489, -0.06), Transform3D(0.933333, 0, 0.00079275906, 0, 0.93333334, 0, -0.00079275906, 0, 0.933333, 1.5466666, 1.489, -0.06), Transform3D(0.93279034, 0, -0.03183299, 0, 0.93333334, 0, 0.03183299, 0, 0.93279034, 1.74, 1.489, -0.06)])
+metadata/sku = "1_3"
+
+[node name="SKU_1_4" type="MultiMeshInstance3D" parent="Geometry/Stock"]
+custom_aabb = AABB(0.14236782, 0.514, -0.113068044, 0.8773668, 0.2776667, 0.10613609)
+multimesh = SubResource("MultiMesh_xbref")
+script = ExtResource("7_5pk2k")
+instance_transforms = Array[Transform3D]([Transform3D(0.9000183, 0, -0.026627343, 0, 0.9004121, 0, 0.026627343, 0, 0.9000183, 0.19333333, 0.514, -0.06), Transform3D(0.8804791, 0, -0.0029619467, 0, 0.8804841, 0, 0.0029619467, 0, 0.8804791, 0.38666666, 0.514, -0.06), Transform3D(0.9332326, 0, 0.013713901, 0, 0.93333334, 0, -0.013713901, 0, 0.9332326, 0.58, 0.514, -0.06), Transform3D(0.9332544, 0, 0.012139917, 0, 0.93333334, 0, -0.012139917, 0, 0.9332544, 0.7733333, 0.514, -0.06), Transform3D(0.9327814, 0, 0.03209214, 0, 0.93333334, 0, -0.03209214, 0, 0.9327814, 0.96666664, 0.514, -0.06)])
+metadata/sku = "1_4"
+
+[node name="SKU_1_0" type="MultiMeshInstance3D" parent="Geometry/Stock"]
+custom_aabb = AABB(-1.7915545, 0.514, -0.1130752, 3.0040412, 1.2526667, 0.1061504)
+multimesh = SubResource("MultiMesh_ae8cx")
+script = ExtResource("7_5pk2k")
+instance_transforms = Array[Transform3D]([Transform3D(0.93309236, 0, 0.021209532, 0, 0.93333334, 0, -0.021209532, 0, 0.93309236, 1.16, 0.514, -0.06), Transform3D(0.93332464, 0, -0.004029678, 0, 0.93333334, 0, 0.004029678, 0, 0.93332464, -1.74, 1.489, -0.06), Transform3D(0.9116049, 0, -0.0141704865, 0, 0.91171503, 0, 0.0141704865, 0, 0.9116049, -1.5466666, 1.489, -0.06), Transform3D(0.9327768, 0, 0.032226864, 0, 0.93333334, 0, -0.032226864, 0, 0.9327768, -1.3533334, 1.489, -0.06), Transform3D(0.8905984, 0, -0.0041693915, 0, 0.8906082, 0, 0.0041693915, 0, 0.8905984, -1.16, 1.489, -0.06), Transform3D(0.93283755, 0, 0.030418135, 0, 0.93333334, 0, -0.030418135, 0, 0.93283755, -0.96666664, 1.489, -0.06)])
+metadata/sku = "1_0"
+
+[node name="SKU_2_3" type="MultiMeshInstance3D" parent="Geometry/Stock"]
+custom_aabb = AABB(-1.8010051, 0.839, -0.10606724, 0.89221317, 0.23146665, 0.09633273)
+multimesh = SubResource("MultiMesh_fex36")
+script = ExtResource("7_5pk2k")
+instance_transforms = Array[Transform3D]([Transform3D(0.93330586, 0, 0.007162828, 0, 0.93333334, 0, -0.007162828, 0, 0.93330586, -1.74, 0.839, -0.06), Transform3D(0.9329439, 0, 0.026960038, 0, 0.93333334, 0, -0.026960038, 0, 0.9329439, -1.5466666, 0.839, -0.06), Transform3D(0.9329666, 0, 0.026163625, 0, 0.93333334, 0, -0.026163625, 0, 0.9329666, -1.3533334, 0.839, -0.06), Transform3D(0.9330771, 0, 0.021869648, 0, 0.93333334, 0, -0.021869648, 0, 0.9330771, -1.16, 0.839, -0.06), Transform3D(0.8887429, 0, -0.0022402583, 0, 0.8887457, 0, 0.0022402583, 0, 0.8887429, -0.96666664, 0.839, -0.06)])
+metadata/sku = "2_3"
+
+[node name="SKU_2_4" type="MultiMeshInstance3D" parent="Geometry/Stock"]
+custom_aabb = AABB(-1.7987759, 0.839, -0.10608232, 1.8579681, 0.5564667, 0.09636287)
+multimesh = SubResource("MultiMesh_a3h2u")
+script = ExtResource("7_5pk2k")
+instance_transforms = Array[Transform3D]([Transform3D(0.9331952, 0, -0.01606007, 0, 0.93333334, 0, 0.01606007, 0, 0.9331952, -0.7733333, 0.839, -0.06), Transform3D(0.9089405, 0, 0.014659598, 0, 0.90905875, 0, -0.014659598, 0, 0.9089405, -0.58, 0.839, -0.06), Transform3D(0.93327326, 0, -0.010589864, 0, 0.93333334, 0, 0.010589864, 0, 0.93327326, -0.38666666, 0.839, -0.06), Transform3D(0.93293697, 0, 0.027197251, 0, 0.93333334, 0, -0.027197251, 0, 0.93293697, -0.19333333, 0.839, -0.06), Transform3D(0.896809, 0, -0.018937958, 0, 0.8970089, 0, 0.018937958, 0, 0.896809, 0, 0.839, -0.06), Transform3D(0.8841717, 0, 0.027468868, 0, 0.8845983, 0, -0.027468868, 0, 0.8841717, -1.74, 1.164, -0.06), Transform3D(0.9265689, 0, 0.022098254, 0, 0.9268324, 0, -0.022098254, 0, 0.9265689, -1.5466666, 1.164, -0.06), Transform3D(0.9333331, 0, 0.0006641611, 0, 0.93333334, 0, -0.0006641611, 0, 0.9333331, -1.3533334, 1.164, -0.06), Transform3D(0.91333765, 0, 0.028932681, 0, 0.9137958, 0, -0.028932681, 0, 0.91333765, -1.16, 1.164, -0.06), Transform3D(0.93324006, 0, 0.0131971985, 0, 0.93333334, 0, -0.0131971985, 0, 0.93324006, -0.96666664, 1.164, -0.06)])
+metadata/sku = "2_4"
+
+[node name="SKU_2_0" type="MultiMeshInstance3D" parent="Geometry/Stock"]
+custom_aabb = AABB(-0.8352522, 0.839, -0.10590948, 1.283025, 0.5564667, 0.09601752)
+multimesh = SubResource("MultiMesh_2ttky")
+script = ExtResource("7_5pk2k")
+instance_transforms = Array[Transform3D]([Transform3D(0.933322, 0, 0.004596983, 0, 0.93333334, 0, -0.004596983, 0, 0.933322, 0.19333333, 0.839, -0.06), Transform3D(0.9332946, 0, 0.008500008, 0, 0.93333334, 0, -0.008500008, 0, 0.9332946, 0.38666666, 0.839, -0.06), Transform3D(0.9330122, 0, -0.024483051, 0, 0.93333334, 0, 0.024483051, 0, 0.9330122, -0.7733333, 1.164, -0.06), Transform3D(0.9331571, 0, 0.018136226, 0, 0.93333334, 0, -0.018136226, 0, 0.9331571, -0.58, 1.164, -0.06), Transform3D(0.90386295, 0, -0.011327173, 0, 0.9039339, 0, 0.011327173, 0, 0.90386295, -0.38666666, 1.164, -0.06), Transform3D(0.9333117, 0, -0.0063570705, 0, 0.93333334, 0, 0.0063570705, 0, 0.9333117, -0.19333333, 1.164, -0.06), Transform3D(0.9299794, 0, 0.0048771077, 0, 0.9299922, 0, -0.0048771077, 0, 0.9299794, 0, 1.164, -0.06)])
+metadata/sku = "2_0"
+
+[node name="SKU_2_1" type="MultiMeshInstance3D" parent="Geometry/Stock"]
+custom_aabb = AABB(0.13211457, 0.839, -0.106188595, 1.6694194, 0.5564667, 0.096575186)
+multimesh = SubResource("MultiMesh_fxvba")
+script = ExtResource("7_5pk2k")
+instance_transforms = Array[Transform3D]([Transform3D(0.9328867, 0, -0.028868929, 0, 0.93333334, 0, 0.028868929, 0, 0.9328867, 1.16, 0.839, -0.06), Transform3D(0.9125788, 0, -0.018177865, 0, 0.91275984, 0, 0.018177865, 0, 0.9125788, 1.3533334, 0.839, -0.06), Transform3D(0.8843875, 0, -0.00871747, 0, 0.88443047, 0, 0.00871747, 0, 0.8843875, 1.5466666, 0.839, -0.06), Transform3D(0.9331809, 0, 0.016868802, 0, 0.93333334, 0, -0.016868802, 0, 0.9331809, 1.74, 0.839, -0.06), Transform3D(0.93327206, 0, -0.010693702, 0, 0.93333334, 0, 0.010693702, 0, 0.93327206, 0.19333333, 1.164, -0.06), Transform3D(0.8857069, 0, -0.029893534, 0, 0.8862113, 0, 0.029893534, 0, 0.8857069, 0.38666666, 1.164, -0.06), Transform3D(0.9328995, 0, -0.0284551, 0, 0.93333334, 0, 0.0284551, 0, 0.9328995, 0.58, 1.164, -0.06)])
+metadata/sku = "2_1"
+
+[node name="SKU_2_2" type="MultiMeshInstance3D" parent="Geometry/Stock"]
+custom_aabb = AABB(1.2913874, 1.164, -0.10607, 0.50884783, 0.23146665, 0.09632165)
+multimesh = SubResource("MultiMesh_5p6q1")
+script = ExtResource("7_5pk2k")
+instance_transforms = Array[Transform3D]([Transform3D(0.92925686, 0, -0.029696824, 0, 0.92973125, 0, 0.029696824, 0, 0.92925686, 1.3533334, 1.164, -0.06), Transform3D(0.9330747, 0, -0.0219715, 0, 0.93333334, 0, 0.0219715, 0, 0.9330747, 1.5466666, 1.164, -0.06), Transform3D(0.92516065, 0, 0.0019193197, 0, 0.9251626, 0, -0.0019193197, 0, 0.92516065, 1.74, 1.164, -0.06)])
+metadata/sku = "2_2"
+
+[node name="SKU_1_1" type="MultiMeshInstance3D" parent="Geometry/Stock"]
+custom_aabb = AABB(-0.8252437, 1.489, -0.11295568, 0.87764907, 0.2776667, 0.10591137)
+multimesh = SubResource("MultiMesh_dhits")
+script = ExtResource("7_5pk2k")
+instance_transforms = Array[Transform3D]([Transform3D(0.9332737, 0, -0.010551695, 0, 0.93333334, 0, 0.010551695, 0, 0.9332737, -0.7733333, 1.489, -0.06), Transform3D(0.93285173, 0, -0.029978935, 0, 0.93333334, 0, 0.029978935, 0, 0.93285173, -0.58, 1.489, -0.06), Transform3D(0.93312305, 0, -0.019810416, 0, 0.93333334, 0, 0.019810416, 0, 0.93312305, -0.38666666, 1.489, -0.06), Transform3D(0.9332393, 0, 0.013249379, 0, 0.93333334, 0, -0.013249379, 0, 0.9332393, -0.19333333, 1.489, -0.06), Transform3D(0.9331254, 0, -0.019699696, 0, 0.93333334, 0, 0.019699696, 0, 0.9331254, 0, 1.489, -0.06)])
+metadata/sku = "1_1"

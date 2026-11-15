@@ -1,0 +1,163 @@
+extends Node3D
+const Catalog = preload("res://scripts/loot/display_catalog.gd")
+const State = preload("res://scripts/loot/shelf_loot_state.gd")
+const Instances = preload("res://scripts/procedural/stock_instances.gd")
+@export_enum("STOCKED","PARTIALLY_LOOTED","HEAVILY_LOOTED") var preset := "PARTIALLY_LOOTED"
+var settings: Dictionary
+var catalog: Dictionary
+var player_supplies: Dictionary = {}
+var state: RefCounted
+var batches: Dictionary = {}
+var immutable_batches: Dictionary = {}
+var slots_by_id: Dictionary = {}
+var initialized := false
+var startup_error := ""
+var update_count := 0
+var inject_failure_after_first_batch := false # Test hook: validates rollback.
+var last_removed_ids: Array[String] = []
+
+func _ready() -> void:
+	initialize()
+
+func sku_key(slot: Dictionary) -> String:
+	return "%d_%d"%[slot.kind,slot.variant]
+
+func create_batch(parent: Node3D, key: String, transforms: Array[Transform3D]) -> MultiMeshInstance3D:
+	var node := MultiMeshInstance3D.new()
+	node.set_script(Instances)
+	node.name = "SKU_"+key
+	var resource := MultiMesh.new()
+	resource.transform_format = MultiMesh.TRANSFORM_3D
+	resource.mesh = load("res://scenes/props/loot/sku_%s.res"%key)
+	resource.instance_count = transforms.size()
+	node.multimesh = resource
+	node.instance_transforms = transforms.duplicate()
+	parent.add_child(node)
+	node.restore_instances()
+	node.visible = not transforms.is_empty()
+	return node
+
+func initialize() -> Dictionary:
+	if initialized:
+		return {"ok":false,"error":"Session already initialized; search cannot reroll inventory."}
+	settings = Catalog.config()
+	if not settings.presets.has(preset):
+		startup_error = "Unknown display preset: "+preset
+		return {"ok":false,"error":startup_error}
+	catalog = Catalog.generate(settings,preset)
+	var immutable := Node3D.new()
+	immutable.name = "StaticDisplay"
+	add_child(immutable)
+	var searchable := Node3D.new()
+	searchable.name = "SearchShelfDisplay"
+	add_child(searchable)
+	var static_groups: Dictionary = {}
+	var target_groups: Dictionary = {}
+	for container in catalog.containers.values():
+		for slot in container.slots:
+			slots_by_id[slot.slot_id] = slot
+			if not slot.visible:
+				continue
+			var groups: Dictionary = target_groups if container.searchable else static_groups
+			var key := sku_key(slot)
+			if not groups.has(key):
+				groups[key] = [] as Array[Transform3D]
+			groups[key].append(slot.transform)
+	for key in static_groups:
+		immutable_batches[key] = create_batch(immutable,key,static_groups[key])
+	for key in target_groups:
+		batches[key] = create_batch(searchable,key,target_groups[key])
+	state = State.new(catalog.containers[catalog.target_id],player_supplies)
+	# Keep Stage 4-A resources intact; hide only this scene instance's old draw layer.
+	get_parent().get_node("ConvenienceStore/GroupedProducts").visible = false
+	initialized = true
+	return {"ok":true}
+
+func can_interact(player_position: Vector3) -> bool:
+	if not initialized or absf(player_position.y) > 1.0:
+		return false
+	var entry: Dictionary = state.container.entry
+	var p: Vector2 = Vector2(entry.position.x,entry.position.z)
+	var extent := Vector2(entry.width,entry.length)*0.5 # Target is a CAD Z-axis gondola.
+	var player_point := Vector2(player_position.x,player_position.z)
+	var closest := player_point.clamp(p-extent,p+extent)
+	if player_point.is_equal_approx(closest) or closest.distance_to(player_point) > settings.interaction_distance:
+		return false
+	var end := Vector3(closest.x,1.0,closest.y)
+	var query := PhysicsRayQueryParameters3D.create(player_position+Vector3(0,1.0,0),(end+(entry.position+Vector3(0,1,0)-end)*0.01),1)
+	var hit := get_world_3d().direct_space_state.intersect_ray(query)
+	var body := get_parent().get_node("ConvenienceStore/Furniture/"+str(settings.search_shelf)+"/Geometry/ShelfCollision")
+	return hit.is_empty() or hit.collider == body
+
+func search(player_position: Vector3) -> Dictionary:
+	if not can_interact(player_position):
+		return {"ok":false,"error":"距离过远或被遮挡，请靠近中央第二列货架。"}
+	return state.open_search()
+
+func take(player_position: Vector3, requests: Dictionary) -> Dictionary:
+	if not can_interact(player_position):
+		return {"ok":false,"error":"距离过远，未领取任何物资。"}
+	return state.claim(requests,self)
+
+func hide_slots(container_id: String, ids: Array[String]) -> Dictionary:
+	if container_id != catalog.target_id or ids.is_empty():
+		return {"ok":false,"error":"Only the test shelf can update."}
+	var touched: Dictionary = {}
+	for id in ids:
+		if not slots_by_id.has(id) or not id.begins_with(container_id+"/") or not slots_by_id[id].visible:
+			return {"ok":false,"error":"Missing, hidden, or wrong-container slot: "+id}
+		touched[sku_key(slots_by_id[id])] = true
+	var snapshots: Dictionary = {}
+	var replacements: Dictionary = {}
+	for key in touched:
+		if not batches.has(key) or not is_instance_valid(batches[key]) or batches[key].multimesh == null or batches[key].multimesh.mesh == null:
+			return {"ok":false,"error":"Missing MultiMesh batch: "+key}
+		var node: MultiMeshInstance3D = batches[key]
+		var expected: Array = state.container.slots.filter(func(s): return s.visible and sku_key(s) == key)
+		if node.instance_transforms.size() != expected.size() or node.multimesh.instance_count != expected.size():
+			return {"ok":false,"error":"Batch count differs from slot state: "+key}
+		snapshots[key] = {"transforms":node.instance_transforms.duplicate(),"visible":node.visible}
+		var transforms: Array[Transform3D] = []
+		for slot in expected:
+			if slot.slot_id not in ids:
+				transforms.append(slot.transform)
+		replacements[key] = transforms
+	var failure := ""
+	for key in replacements:
+		var node: MultiMeshInstance3D = batches[key]
+		node.instance_transforms = replacements[key]
+		node.restore_instances()
+		node.visible = not replacements[key].is_empty()
+		if inject_failure_after_first_batch:
+			inject_failure_after_first_batch = false
+			failure = "Injected visual write failure (rollback test)."
+			break
+		if node.multimesh.instance_count != replacements[key].size():
+			failure = "GPU instance count verification failed."
+			break
+	if not failure.is_empty():
+		for key in snapshots:
+			batches[key].instance_transforms = snapshots[key].transforms
+			batches[key].restore_instances()
+			batches[key].visible = snapshots[key].visible
+		return {"ok":false,"error":failure}
+	for id in ids:
+		slots_by_id[id].visible = false
+	last_removed_ids = ids.duplicate()
+	update_count += 1
+	return {"ok":true}
+
+func visible_products() -> int:
+	var count := 0
+	for slot in slots_by_id.values():
+		count += int(slot.visible)
+	return count
+
+func visual_signature(container_id: String = "") -> String:
+	var content := ""
+	for container in catalog.containers.values():
+		if not container_id.is_empty() and container.container_id != container_id:
+			continue
+		for slot in container.slots:
+			content += "%s:%s;"%[slot.slot_id,slot.visible]
+	return content.sha256_text()

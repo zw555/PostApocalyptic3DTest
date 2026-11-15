@@ -1,0 +1,13 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3]
+
+[ext_resource type="Shader" path="res://materials/surface.gdshader" id="1_6sawq"]
+
+[resource]
+resource_name = "coat"
+render_priority = 0
+shader = ExtResource("1_6sawq")
+shader_parameter/base_color = Color(0.2627451, 0.36862746, 0.3137255, 1)
+shader_parameter/grain = 0.13
+shader_parameter/surface_roughness = 0.98
+shader_parameter/floor_tiles = false
+shader_parameter/wood_grain = false

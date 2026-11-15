@@ -1,0 +1,13 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3]
+
+[ext_resource type="Shader" path="res://materials/surface.gdshader" id="1_i4j3d"]
+
+[resource]
+resource_name = "product_1"
+render_priority = 0
+shader = ExtResource("1_i4j3d")
+shader_parameter/base_color = Color(0.41568628, 0.5254902, 0.48235294, 1)
+shader_parameter/grain = 0.1
+shader_parameter/surface_roughness = 0.8
+shader_parameter/floor_tiles = false
+shader_parameter/wood_grain = false
