@@ -6,6 +6,7 @@ extends CharacterBody3D
 var controls_enabled := true
 var face_movement := true
 var gravity := 9.8
+var combat_component: Node
 @onready var visual: Node3D = $Visual
 
 func _ready() -> void:
@@ -27,6 +28,10 @@ static func camera_relative_direction(axis: Vector2, camera_basis: Basis) -> Vec
 	return (right.normalized() * axis.x + back.normalized() * axis.y).limit_length(1.0)
 
 func step_motion(axis: Vector2, delta: float) -> void:
+	if is_instance_valid(combat_component) and not combat_component.can_move():
+		velocity.x = 0
+		velocity.z = 0
+		return
 	var camera := get_viewport().get_camera_3d()
 	var basis_value := camera.global_basis if camera else Basis.IDENTITY
 	var direction := camera_relative_direction(axis, basis_value)

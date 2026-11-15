@@ -35,6 +35,8 @@ func screen_to_world(screen_position: Vector2) -> Vector3:
 	return origin + direction * distance
 
 func update_from_screen(screen_position: Vector2, delta := 0.016) -> Vector3:
+	if is_instance_valid(player.combat_component) and not player.combat_component.can_move():
+		return last_world_target
 	var world := screen_to_world(screen_position)
 	var flat := world - player.global_position
 	flat.y = 0.0

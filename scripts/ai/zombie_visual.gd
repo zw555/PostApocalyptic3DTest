@@ -18,6 +18,13 @@ func _ready() -> void:
 			})
 
 func _process(delta: float) -> void:
+	# get_real_velocity() retains the last move_and_slide result after the dead
+	# controller stops moving. Never feed that cached velocity back into gait.
+	if dead_visual:
+		rotation.x = lerpf(rotation.x, -1.15, 1.0-exp(-6.0*delta))
+		if absf(rotation.x+1.15) < 0.003:
+			rotation.x = -1.15
+		return
 	clock += delta
 	attack_clock += delta
 	hit_flash_remaining = maxf(0.0, hit_flash_remaining-delta)
@@ -27,12 +34,11 @@ func _process(delta: float) -> void:
 	gait_weight = move_toward(gait_weight,clampf(speed/0.65,0,1),delta*5)
 	phase += delta*speed*0.60/0.50*TAU
 	pose_at(phase,gait_weight*3.2,clock)
-	if dead_visual:
-		rotation.x = lerpf(rotation.x, -1.15, 1.0-exp(-6.0*delta))
-	else:
-		rotation.x = lerpf(rotation.x, 0.0, 1.0-exp(-8.0*delta))
+	rotation.x = lerpf(rotation.x, 0.0, 1.0-exp(-8.0*delta))
 
 func pose_at(cycle: float, speed: float, idle_time: float = 0.0) -> void:
+	if dead_visual:
+		return
 	super.pose_at(cycle,speed,idle_time)
 	$UpperBody.rotation.x = -0.17
 	$UpperBody.rotation.z = sin(idle_time*1.2)*0.018
@@ -86,13 +92,26 @@ func _restore_hit_materials() -> void:
 		material.emission_energy_multiplier = entry["energy"]
 
 func attack(duration: float = 0.7) -> void:
+	if dead_visual:
+		return
 	attack_duration = maxf(0.1,duration)
 	attack_clock = 0
 
 func hit_feedback() -> void:
+	if dead_visual:
+		return
 	hit_pose_remaining = 0.25
 	hit_flash_remaining = 0.10
 
 func death_feedback() -> void:
-	dead_visual = true
+	if dead_visual:
+		return
 	attack_clock = attack_duration
+	hit_flash_remaining = 0.0
+	hit_pose_remaining = 0.0
+	gait_weight = 0.0
+	phase = 0.0
+	# Choose one grounded, non-attacking local pose, then latch it. Only the
+	# existing visual-root fall continues; no limbs are hidden or removed.
+	pose_at(0.0,0.0,0.0)
+	dead_visual = true

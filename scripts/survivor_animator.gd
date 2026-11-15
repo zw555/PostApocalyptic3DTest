@@ -6,6 +6,7 @@ extends Node3D
 var clock := 0.0
 var gait_weight := 0.0
 var phase := 0.0
+var external_upper_pose := false # Opt-in final pose owner in C.3-B only.
 @onready var body: CharacterBody3D = get_parent()
 
 func _process(delta: float) -> void:
@@ -19,8 +20,9 @@ func pose_at(cycle: float, speed: float, idle_time: float = 0.0) -> void:
 	var weight := clampf(speed / 3.2, 0.0, 1.0)
 	var breathing := sin(idle_time * 1.7) * 0.0035 * (1.0 - weight)
 	$UpperBody.position.y = 0.94 + breathing + absf(sin(cycle)) * 0.006 * weight
-	$UpperBody.rotation.z = sin(cycle) * 0.018 * weight
-	$UpperBody.rotation.x = -0.035 * weight
+	if not external_upper_pose:
+		$UpperBody.rotation.z = sin(cycle) * 0.018 * weight
+		$UpperBody.rotation.x = -0.035 * weight
 	$Pelvis.rotation.y = sin(cycle) * 0.035 * weight
 	for side in [-1, 1]:
 		var prefix := "Left" if side == -1 else "Right"

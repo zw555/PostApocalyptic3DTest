@@ -9,6 +9,7 @@ var upper_body: Node3D
 var attack_time := 99.0
 var attack_duration := 0.55
 var base_upper_rotation := Vector3.ZERO
+var external_upper_pose := false
 
 func setup(actor_visual: Node3D) -> void:
 	player_visual = actor_visual
@@ -60,12 +61,12 @@ func _process(delta: float) -> void:
 		var eased := 1.0 - pow(1.0 - t, 2.0)
 		weapon_pivot.rotation.y = lerpf(-0.95, 0.95, eased)
 		weapon_pivot.rotation.x = sin(t * PI) * -0.28
-		if upper_body:
+		if upper_body and not external_upper_pose:
 			upper_body.rotation = base_upper_rotation + Vector3(0, sin(t * PI) * 0.18, sin(t * PI) * -0.06)
 		_update_trail(t)
 	else:
 		weapon_pivot.rotation = Vector3.ZERO
-		if upper_body:
+		if upper_body and not external_upper_pose:
 			upper_body.rotation = base_upper_rotation
 		trail.visible = false
 

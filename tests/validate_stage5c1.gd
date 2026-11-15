@@ -23,6 +23,10 @@ func run() -> void:
 	root.add_child(game)
 	await frames(14)
 	zombie = game.zombie
+	# C.1 tests aim/input/geometry, not damage. Since C.2 adds health to the
+	# shared zombie, repeated clicks otherwise kill this fixture before the
+	# original shelf/wall assertions. Keep it alive; C.2 covers real damage.
+	game.melee_controller.base_damage = 0.0
 	game.player.controls_enabled = true
 	game.zombie.ai_enabled = false
 	game.player.set_physics_process(false)

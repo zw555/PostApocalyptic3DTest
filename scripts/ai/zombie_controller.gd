@@ -42,6 +42,7 @@ var knockback_velocity := Vector3.ZERO
 var last_damage := 0.0
 var last_hit_direction := Vector3.ZERO
 var last_damage_source: Node
+var melee_component: Node
 
 func _ready() -> void:
 	settings = JSON.parse_string(FileAccess.get_file_as_string("res://data/zombie_validation.json"))
@@ -121,6 +122,8 @@ func transition(value: String) -> void:
 func think(delta: float) -> void:
 	if is_dead or hit_stun_remaining > 0.0:
 		return
+	if is_instance_valid(melee_component) and melee_component.busy():
+		return
 	last_los = can_see_player()
 	acquired = acquired+delta if last_los else 0.0
 	unseen = 0.0 if last_los else unseen+delta
@@ -159,6 +162,9 @@ func think(delta: float) -> void:
 	target = last_seen if state in ["CHASE","INVESTIGATE","ATTACK"] else home
 
 func perform_attack() -> void:
+	if is_instance_valid(melee_component):
+		melee_component.try_start()
+		return
 	if is_dead or hit_stun_remaining > 0.0 or attack_timer > 0 or global_position.distance_to(player.global_position) > float(settings.attack_exit_distance) or not clear_player_ray():
 		return
 	attack_timer = settings.attack_cooldown
@@ -172,6 +178,8 @@ func apply_damage(amount: float, source: Node = null, hit_direction: Vector3 = V
 	return health_component.apply_damage(amount, source, hit_direction)
 
 func _on_damage_applied(amount: float, source: Node, hit_direction: Vector3, _health: float, killed: bool) -> void:
+	if is_instance_valid(melee_component):
+		melee_component.cancel("hit_stun")
 	last_damage = amount
 	last_damage_source = source
 	last_hit_direction = hit_direction
@@ -185,6 +193,8 @@ func _on_damage_applied(amount: float, source: Node, hit_direction: Vector3, _he
 		visual.hit_feedback()
 
 func _on_died(_source: Node, hit_direction: Vector3) -> void:
+	if is_instance_valid(melee_component):
+		melee_component.cancel("death")
 	is_dead = true
 	hit_stun_remaining = 0.0
 	knockback_velocity = Vector3.ZERO
@@ -232,6 +242,10 @@ func update_navigation(delta: float) -> Vector3:
 	return direction
 
 func _physics_process(delta: float) -> void:
+	if is_instance_valid(melee_component) and melee_component.receiver.is_dead():
+		melee_component.cancel("player_dead")
+		velocity = Vector3.ZERO
+		return
 	if is_dead:
 		velocity = Vector3.ZERO
 		return
@@ -253,6 +267,12 @@ func _physics_process(delta: float) -> void:
 		total_update_usec += update_usec
 		update_frames += 1
 		return
+	if is_instance_valid(melee_component) and melee_component.busy():
+		velocity.x = 0
+		velocity.z = 0
+		velocity.y = -0.1 if is_on_floor() else velocity.y-9.8*delta
+		move_and_slide()
+		return
 	if think_timer >= float(settings.think_interval):
 		think(think_timer)
 		think_timer = 0
@@ -268,7 +288,7 @@ func _physics_process(delta: float) -> void:
 	stuck_time = stuck_time+delta if direction.length() > 0.1 and flat.length() < 0.001 else 0.0
 	if flat.length() > 0.001:
 		visual.rotation.y = lerp_angle(visual.rotation.y,atan2(-flat.x,-flat.z),1-exp(-float(settings.turn_speed)*delta))
-	elif state == "ATTACK":
+	elif state == "ATTACK" and (not is_instance_valid(melee_component) or not melee_component.busy()):
 		var offset := player.global_position-global_position
 		visual.rotation.y = lerp_angle(visual.rotation.y,atan2(-offset.x,-offset.z),1-exp(-float(settings.turn_speed)*delta))
 	elif state == "IDLE":

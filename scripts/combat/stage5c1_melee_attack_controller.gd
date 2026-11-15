@@ -78,7 +78,7 @@ func _unhandled_input(event: InputEvent) -> void:
 		last_input_ignored_ui = true
 		return
 	last_input_ignored_ui = false
-	if player.controls_enabled and cooldown_remaining <= 0.0 and attack_elapsed >= attack_cooldown:
+	if attack_allowed() and cooldown_remaining <= 0.0 and attack_elapsed >= attack_cooldown:
 		attack_elapsed = 0.0
 		attack_resolved_once = false
 		attack_count += 1
@@ -93,6 +93,8 @@ func _ui_has_mouse() -> bool:
 	return is_instance_valid(hovered) and hovered.mouse_filter != Control.MOUSE_FILTER_IGNORE
 
 func _physics_process(delta: float) -> void:
+	if is_instance_valid(player.combat_component) and not attack_allowed():
+		cancel_pending_attack()
 	debug_mesh.visible = debug_enabled
 	debug_label.visible = debug_enabled
 	cooldown_remaining = maxf(0.0, cooldown_remaining - delta)
@@ -105,8 +107,9 @@ func _physics_process(delta: float) -> void:
 		var result := resolve_and_apply_hit()
 		last_target = result.target
 		last_blocked_target = result.blocked
-		attack_resolved.emit(result.target, result.blocked)
 		last_damage_result = result
+		# Synchronous signal subscribers must see this hit, not the previous one.
+		attack_resolved.emit(result.target, result.blocked)
 		damage_resolved.emit(result)
 	if debug_enabled:
 		_update_debug()
@@ -142,6 +145,8 @@ func resolve_hit() -> Dictionary:
 	return {"target": nearest, "blocked": blocked}
 
 func resolve_and_apply_hit() -> Dictionary:
+	if is_instance_valid(player.combat_component) and not attack_allowed():
+		return {"target":null,"blocked":null,"applied":false,"amount":0.0,"reason":"player_locked"}
 	var result := resolve_hit()
 	var target: Node3D = result.target
 	result["damage"] = 0.0
@@ -157,6 +162,16 @@ func resolve_and_apply_hit() -> Dictionary:
 		var damage_result: Dictionary = target.apply_damage(base_damage, player, direction)
 		result.merge(damage_result, true)
 	return result
+
+func attack_allowed() -> bool:
+	return player.controls_enabled and (not is_instance_valid(player.combat_component) or player.combat_component.can_attack())
+
+func cancel_pending_attack() -> void:
+	attack_resolved_once = true
+	# Keep the original elapsed/cooldown timeline; cancelling is not a reset.
+	if is_instance_valid(visual):
+		visual.attack_time = visual.attack_duration
+		visual.trail.hide()
 
 func _update_debug() -> void:
 	if not is_instance_valid(debug_mesh) or not is_instance_valid(player):
