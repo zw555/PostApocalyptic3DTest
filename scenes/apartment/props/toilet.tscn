@@ -1,0 +1,92 @@
+[gd_scene load_steps=12 format=3]
+
+[ext_resource type="Material" path="res://materials/apartment/ceramic.tres" id="1_5hj2b"]
+[ext_resource type="Material" path="res://materials/apartment/dark.tres" id="2_si1xi"]
+[ext_resource type="Material" path="res://materials/apartment/metal.tres" id="3_5br8r"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rn5r6"]
+size = Vector3(0.5, 0.72, 0.7)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_qhstj"]
+top_radius = 0.22
+bottom_radius = 0.16
+height = 0.26
+radial_segments = 8
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_cr5p0"]
+top_radius = 0.25
+bottom_radius = 0.17
+height = 0.22
+radial_segments = 8
+rings = 1
+
+[sub_resource type="TorusMesh" id="TorusMesh_mhhs6"]
+inner_radius = 0.15
+outer_radius = 0.25
+rings = 24
+ring_segments = 12
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_v4wer"]
+top_radius = 0.15
+bottom_radius = 0.15
+height = 0.006
+radial_segments = 8
+rings = 1
+
+[sub_resource type="BoxMesh" id="BoxMesh_k4g4h"]
+size = Vector3(0.43, 0.62, 0.19)
+
+[sub_resource type="BoxMesh" id="BoxMesh_5ths1"]
+size = Vector3(0.46, 0.025, 0.22)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_427lf"]
+top_radius = 0.025
+bottom_radius = 0.025
+height = 0.012
+radial_segments = 8
+rings = 1
+
+[node name="Toilet" type="Node3D"]
+
+[node name="BowlCollision" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.36, 0)
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BowlCollision"]
+shape = SubResource("BoxShape3D_rn5r6")
+
+[node name="Pedestal" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.13, 0.04)
+material_override = ExtResource("1_5hj2b")
+mesh = SubResource("CylinderMesh_qhstj")
+
+[node name="Bowl" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.34, 0.06)
+material_override = ExtResource("1_5hj2b")
+mesh = SubResource("CylinderMesh_cr5p0")
+
+[node name="SeatRing" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.28, 0, 0, 0, 1.18, 0, 0.46, 0.06)
+material_override = ExtResource("1_5hj2b")
+mesh = SubResource("TorusMesh_mhhs6")
+
+[node name="BowlWater" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.44, 0.06)
+material_override = ExtResource("2_si1xi")
+mesh = SubResource("CylinderMesh_v4wer")
+
+[node name="Tank" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.43, -0.26)
+material_override = ExtResource("1_5hj2b")
+mesh = SubResource("BoxMesh_k4g4h")
+
+[node name="TankLid" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.75, -0.26)
+material_override = ExtResource("1_5hj2b")
+mesh = SubResource("BoxMesh_5ths1")
+
+[node name="Flush" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, 0.77, -0.26)
+material_override = ExtResource("3_5br8r")
+mesh = SubResource("CylinderMesh_427lf")

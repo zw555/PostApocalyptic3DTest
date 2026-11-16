@@ -1,0 +1,109 @@
+[gd_scene load_steps=16 format=3]
+
+[ext_resource type="Material" path="res://materials/apartment/fabric.tres" id="1_read1"]
+[ext_resource type="Material" path="res://materials/apartment/blanket.tres" id="2_gxgl4"]
+[ext_resource type="Material" path="res://materials/apartment/linen.tres" id="3_akgj7"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_bjnpx"]
+size = Vector3(2.15, 0.37, 0.68)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8swfn"]
+size = Vector3(2.15, 0.37, 0.68)
+
+[sub_resource type="BoxMesh" id="BoxMesh_apbrf"]
+size = Vector3(2.15, 0.72, 0.15)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_h2j6p"]
+size = Vector3(2.15, 0.72, 0.15)
+
+[sub_resource type="BoxMesh" id="BoxMesh_u1jku"]
+size = Vector3(0.65, 0.42, 1.23)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_axk4j"]
+size = Vector3(0.65, 0.42, 1.23)
+
+[sub_resource type="BoxMesh" id="BoxMesh_6q2md"]
+size = Vector3(0.59, 0.13, 0.49)
+
+[sub_resource type="BoxMesh" id="BoxMesh_byfgb"]
+size = Vector3(0.59, 0.13, 0.49)
+
+[sub_resource type="BoxMesh" id="BoxMesh_fj50s"]
+size = Vector3(0.59, 0.13, 0.49)
+
+[sub_resource type="BoxMesh" id="BoxMesh_r465f"]
+size = Vector3(0.13, 0.43, 0.67)
+
+[sub_resource type="BoxMesh" id="BoxMesh_rwjp4"]
+size = Vector3(0.13, 0.43, 0.67)
+
+[sub_resource type="BoxMesh" id="BoxMesh_w8x56"]
+size = Vector3(0.31, 0.3, 0.11)
+
+[node name="Sofa" type="Node3D"]
+
+[node name="Base" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.26, 0)
+material_override = ExtResource("1_read1")
+mesh = SubResource("BoxMesh_bjnpx")
+
+[node name="BaseCollision" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.26, 0)
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BaseCollision"]
+shape = SubResource("BoxShape3D_8swfn")
+
+[node name="Back" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.48, 0.26)
+material_override = ExtResource("1_read1")
+mesh = SubResource("BoxMesh_apbrf")
+
+[node name="BackCollision" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.48, 0.26)
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BackCollision"]
+shape = SubResource("BoxShape3D_h2j6p")
+
+[node name="Chaise" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.75, 0.25, -0.4)
+material_override = ExtResource("1_read1")
+mesh = SubResource("BoxMesh_u1jku")
+
+[node name="ChaiseCollision" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.75, 0.25, -0.4)
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ChaiseCollision"]
+shape = SubResource("BoxShape3D_axk4j")
+
+[node name="SeatCushion" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6, 0.49, -0.04)
+material_override = ExtResource("2_gxgl4")
+mesh = SubResource("BoxMesh_6q2md")
+
+[node name="SeatCushion2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.02, 0.49, -0.04)
+material_override = ExtResource("2_gxgl4")
+mesh = SubResource("BoxMesh_byfgb")
+
+[node name="SeatCushion3" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7, 0.49, -0.04)
+material_override = ExtResource("2_gxgl4")
+mesh = SubResource("BoxMesh_fj50s")
+
+[node name="Armrest" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.01, 0.44, 0)
+material_override = ExtResource("1_read1")
+mesh = SubResource("BoxMesh_r465f")
+
+[node name="Armrest2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.01, 0.44, 0)
+material_override = ExtResource("1_read1")
+mesh = SubResource("BoxMesh_rwjp4")
+
+[node name="LooseCushion" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.9855848, -0.16918235, 0, 0.16918235, 0.9855848, 0, 0, 0, 1, -0.65, 0.71, 0.12)
+material_override = ExtResource("3_akgj7")
+mesh = SubResource("BoxMesh_w8x56")

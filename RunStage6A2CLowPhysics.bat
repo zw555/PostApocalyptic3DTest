@@ -1,0 +1,9 @@
+@echo off
+setlocal
+set "GODOT_BIN=E:\Godot_v4.5.2-stable_win64.exe\Godot_v4.5.2-stable_win64.exe"
+if not exist "%GODOT_BIN%" (
+    echo Godot 4.5.2 not found. Update GODOT_BIN to your installed engine.
+    pause
+    exit /b 1
+)
+start "Stage 6-A.2-C - 10 Hz Physics Test" "%GODOT_BIN%" --path "%~dp0." --script res://tests/run_stage6a2c_low_physics.gd

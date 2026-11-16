@@ -1,0 +1,121 @@
+[gd_scene load_steps=18 format=3]
+
+[ext_resource type="Material" path="res://materials/apartment/cabinet.tres" id="1_400ch"]
+[ext_resource type="Material" path="res://materials/apartment/countertop.tres" id="2_y1y26"]
+[ext_resource type="Material" path="res://materials/apartment/metal.tres" id="3_3ife2"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_iti2d"]
+size = Vector3(2.15, 0.8, 0.61)
+
+[sub_resource type="BoxMesh" id="BoxMesh_axoy6"]
+size = Vector3(2.15, 0.06, 0.61)
+
+[sub_resource type="BoxMesh" id="BoxMesh_jpfap"]
+size = Vector3(2.15, 0.76, 0.035)
+
+[sub_resource type="BoxMesh" id="BoxMesh_h4ghu"]
+size = Vector3(0.03, 0.76, 0.61)
+
+[sub_resource type="BoxMesh" id="BoxMesh_s1hiu"]
+size = Vector3(0.03, 0.76, 0.61)
+
+[sub_resource type="BoxMesh" id="BoxMesh_63iye"]
+size = Vector3(2.18, 0.05, 0.65)
+
+[sub_resource type="BoxMesh" id="BoxMesh_mdi61"]
+size = Vector3(0.5195, 0.67, 0.025)
+
+[sub_resource type="BoxMesh" id="BoxMesh_njlrd"]
+size = Vector3(0.12, 0.018, 0.026)
+
+[sub_resource type="BoxMesh" id="BoxMesh_n5gmg"]
+size = Vector3(0.5195, 0.67, 0.025)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ns6l5"]
+size = Vector3(0.12, 0.018, 0.026)
+
+[sub_resource type="BoxMesh" id="BoxMesh_iifwk"]
+size = Vector3(0.5195, 0.67, 0.025)
+
+[sub_resource type="BoxMesh" id="BoxMesh_lc780"]
+size = Vector3(0.12, 0.018, 0.026)
+
+[sub_resource type="BoxMesh" id="BoxMesh_17kct"]
+size = Vector3(0.5195, 0.67, 0.025)
+
+[sub_resource type="BoxMesh" id="BoxMesh_w4p20"]
+size = Vector3(0.12, 0.018, 0.026)
+
+[node name="DryCabinet" type="Node3D"]
+
+[node name="CabinetCollision" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.43, 0)
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CabinetCollision"]
+shape = SubResource("BoxShape3D_iti2d")
+
+[node name="CabinetBase" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.06, 0)
+material_override = ExtResource("1_400ch")
+mesh = SubResource("BoxMesh_axoy6")
+
+[node name="CabinetBack" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.43, -0.29)
+material_override = ExtResource("1_400ch")
+mesh = SubResource("BoxMesh_jpfap")
+
+[node name="CabinetSide" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.06, 0.43, 0)
+material_override = ExtResource("1_400ch")
+mesh = SubResource("BoxMesh_h4ghu")
+
+[node name="CabinetSide2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.06, 0.43, 0)
+material_override = ExtResource("1_400ch")
+mesh = SubResource("BoxMesh_s1hiu")
+
+[node name="Counter" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.86, 0)
+material_override = ExtResource("2_y1y26")
+mesh = SubResource("BoxMesh_63iye")
+
+[node name="DoorFront" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.80625, 0.45, 0.32)
+material_override = ExtResource("1_400ch")
+mesh = SubResource("BoxMesh_mdi61")
+
+[node name="Handle" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.80625, 0.7, 0.343)
+material_override = ExtResource("3_3ife2")
+mesh = SubResource("BoxMesh_njlrd")
+
+[node name="DoorFront2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.26875, 0.45, 0.32)
+material_override = ExtResource("1_400ch")
+mesh = SubResource("BoxMesh_n5gmg")
+
+[node name="Handle2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.26875, 0.7, 0.343)
+material_override = ExtResource("3_3ife2")
+mesh = SubResource("BoxMesh_ns6l5")
+
+[node name="DoorFront3" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.26875, 0.45, 0.32)
+material_override = ExtResource("1_400ch")
+mesh = SubResource("BoxMesh_iifwk")
+
+[node name="Handle3" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.26875, 0.7, 0.343)
+material_override = ExtResource("3_3ife2")
+mesh = SubResource("BoxMesh_lc780")
+
+[node name="DoorFront4" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.80625, 0.45, 0.32)
+material_override = ExtResource("1_400ch")
+mesh = SubResource("BoxMesh_17kct")
+
+[node name="Handle4" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.80625, 0.7, 0.343)
+material_override = ExtResource("3_3ife2")
+mesh = SubResource("BoxMesh_w4p20")

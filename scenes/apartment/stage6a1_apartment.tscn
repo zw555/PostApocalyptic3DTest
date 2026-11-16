@@ -1,0 +1,55 @@
+[gd_scene load_steps=6 format=3]
+[ext_resource type="Script" path="res://scripts/apartment/apartment_main.gd" id="1_main"]
+[ext_resource type="PackedScene" path="res://scenes/apartment/apartment_shell.tscn" id="2_shell"]
+[ext_resource type="PackedScene" path="res://scenes/player/player_visual_v2.tscn" id="3_player"]
+[ext_resource type="Script" path="res://scripts/apartment/apartment_camera.gd" id="4_camera"]
+
+[sub_resource type="Environment" id="Environment_home"]
+background_mode = 1
+background_color = Color(0.11,0.13,0.14,1)
+ambient_light_source = 2
+ambient_light_color = Color(0.76,0.79,0.77,1)
+ambient_light_energy = 0.62
+tonemap_mode = 2
+
+[node name="ApartmentValidation" type="Node3D"]
+script = ExtResource("1_main")
+
+[node name="Apartment" parent="." instance=ExtResource("2_shell")]
+
+[node name="Player" parent="." instance=ExtResource("3_player")]
+position = Vector3(-3.95,0.02,1.05)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+projection = 1
+size = 9.2
+near = 0.1
+far = 70.0
+script = ExtResource("4_camera")
+view_size = 9.2
+target_path = NodePath("../Player")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_home")
+
+[node name="Daylight" type="DirectionalLight3D" parent="." groups=["shadow_lights"]]
+rotation_degrees = Vector3(-58,-35,0)
+light_color = Color(0.90,0.91,0.83,1)
+light_energy = 0.80
+light_angular_distance = 0.5
+shadow_enabled = true
+shadow_normal_bias = 0.5
+directional_shadow_max_distance = 30.0
+
+[node name="RoomLight" type="OmniLight3D" parent="." groups=["local_lights","shadow_lights"]]
+position = Vector3(-1.5,2.35,-0.2)
+light_color = Color(1,0.84,0.65,1)
+light_energy = 0.55
+omni_range = 5.2
+shadow_enabled = true
+
+[node name="BathLight" type="OmniLight3D" parent="." groups=["local_lights"]]
+position = Vector3(3.1,2.3,1.1)
+light_color = Color(0.84,0.91,0.92,1)
+light_energy = 0.50
+omni_range = 1.7

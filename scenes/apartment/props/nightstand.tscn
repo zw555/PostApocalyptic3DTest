@@ -1,0 +1,79 @@
+[gd_scene load_steps=13 format=3]
+
+[ext_resource type="Material" path="res://materials/apartment/oak.tres" id="1_i721f"]
+[ext_resource type="Material" path="res://materials/apartment/cabinet.tres" id="2_uuh5n"]
+[ext_resource type="Material" path="res://materials/apartment/metal.tres" id="3_ahein"]
+[ext_resource type="Material" path="res://materials/apartment/dark.tres" id="4_depuh"]
+[ext_resource type="Material" path="res://materials/apartment/linen.tres" id="5_tlmiw"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_kgdps"]
+size = Vector3(0.34, 0.48, 0.38)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hhhr1"]
+size = Vector3(0.34, 0.48, 0.38)
+
+[sub_resource type="BoxMesh" id="BoxMesh_xchxp"]
+size = Vector3(0.31, 0.17, 0.012)
+
+[sub_resource type="BoxMesh" id="BoxMesh_otvln"]
+size = Vector3(0.1, 0.015, 0.025)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_uhm1n"]
+top_radius = 0.075
+bottom_radius = 0.075
+height = 0.025
+radial_segments = 8
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_q5jv4"]
+top_radius = 0.012
+bottom_radius = 0.012
+height = 0.19
+radial_segments = 8
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_auvl2"]
+top_radius = 0.07
+bottom_radius = 0.1
+height = 0.14
+radial_segments = 8
+rings = 1
+
+[node name="Nightstand" type="Node3D"]
+
+[node name="Case" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.24, 0)
+material_override = ExtResource("1_i721f")
+mesh = SubResource("BoxMesh_kgdps")
+
+[node name="CaseCollision" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.24, 0)
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CaseCollision"]
+shape = SubResource("BoxShape3D_hhhr1")
+
+[node name="Drawer" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.34, -0.197)
+material_override = ExtResource("2_uuh5n")
+mesh = SubResource("BoxMesh_xchxp")
+
+[node name="Handle" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.34, -0.214)
+material_override = ExtResource("3_ahein")
+mesh = SubResource("BoxMesh_otvln")
+
+[node name="LampBase" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+material_override = ExtResource("4_depuh")
+mesh = SubResource("CylinderMesh_uhm1n")
+
+[node name="LampStem" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
+material_override = ExtResource("3_ahein")
+mesh = SubResource("CylinderMesh_q5jv4")
+
+[node name="LampShade" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.75, 0)
+material_override = ExtResource("5_tlmiw")
+mesh = SubResource("CylinderMesh_auvl2")

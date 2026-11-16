@@ -1,0 +1,6 @@
+# E.1回归测试的只读旧版样本
+
+floor5_smooth_peek_before.gd 是修复前E显示策略的逐字节副本，SHA256与 tests/results/stage6a2e1_start_hashes.json 记录一致：
+D3D21D26E1A344CB357EE8DA9CA467F3B4A07F1794D995B9BD3FB7021A298995
+
+仅用于重现旧缺陷，正常入口不加载它。baseline_main.gd只把策略工厂指向该快照；实体shell、门物理、玩家和相机继续复用原场景。不要将旧样本的黑屏行为当作新版预期。

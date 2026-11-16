@@ -1,0 +1,90 @@
+[gd_scene load_steps=13 format=3]
+
+[ext_resource type="Material" path="res://materials/apartment/ceramic.tres" id="1_0q127"]
+[ext_resource type="Material" path="res://materials/apartment/dark.tres" id="2_qq55m"]
+[ext_resource type="Material" path="res://materials/apartment/metal.tres" id="3_264r8"]
+[ext_resource type="Material" path="res://materials/apartment/glass.tres" id="4_ylx28"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_p1yp6"]
+size = Vector3(0.88, 0.06, 0.88)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ox1ac"]
+size = Vector3(0.88, 0.06, 0.88)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_okt55"]
+top_radius = 0.035
+bottom_radius = 0.035
+height = 0.005
+radial_segments = 8
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_wuoyg"]
+top_radius = 0.012
+bottom_radius = 0.012
+height = 1.28
+radial_segments = 8
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_xh5o8"]
+top_radius = 0.014
+bottom_radius = 0.014
+height = 0.26000002
+radial_segments = 8
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_rg1d0"]
+top_radius = 0.085
+bottom_radius = 0.085
+height = 0.025
+radial_segments = 8
+rings = 1
+
+[sub_resource type="BoxMesh" id="BoxMesh_w1n6g"]
+size = Vector3(0.17, 0.06, 0.05)
+
+[sub_resource type="BoxMesh" id="BoxMesh_qgehg"]
+size = Vector3(0.015, 1.62, 0.85)
+
+[node name="Shower" type="Node3D"]
+
+[node name="FlushTray" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.03, 0)
+material_override = ExtResource("1_0q127")
+mesh = SubResource("BoxMesh_p1yp6")
+
+[node name="FlushTrayCollision" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.03, 0)
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="FlushTrayCollision"]
+shape = SubResource("BoxShape3D_ox1ac")
+
+[node name="Drain" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.004, 0)
+material_override = ExtResource("2_qq55m")
+mesh = SubResource("CylinderMesh_okt55")
+
+[node name="Pipe" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.36, 1.39, 0.31)
+material_override = ExtResource("3_264r8")
+mesh = SubResource("CylinderMesh_wuoyg")
+
+[node name="Arm" type="MeshInstance3D" parent="."]
+transform = Transform3D(0, 1, 0, -1, 0, 0, 0, 0, 1, -0.23, 2.03, 0.31)
+material_override = ExtResource("3_264r8")
+mesh = SubResource("CylinderMesh_xh5o8")
+
+[node name="ShowerHead" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.09, 2.01, 0.31)
+material_override = ExtResource("3_264r8")
+mesh = SubResource("CylinderMesh_rg1d0")
+
+[node name="Mixer" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.36, 0.96, 0.31)
+material_override = ExtResource("3_264r8")
+mesh = SubResource("BoxMesh_w1n6g")
+
+[node name="SideScreen" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.43, 0.87, 0)
+material_override = ExtResource("4_ylx28")
+mesh = SubResource("BoxMesh_qgehg")

@@ -1,0 +1,3666 @@
+[gd_scene load_steps=335 format=3]
+
+[ext_resource type="Material" path="res://materials/apartment/floor.tres" id="1_a2x84"]
+[ext_resource type="Material" path="res://materials/apartment/bath_tile.tres" id="2_il0mn"]
+[ext_resource type="Material" path="res://materials/apartment/plaster.tres" id="3_uddix"]
+[ext_resource type="Material" path="res://materials/apartment/oak.tres" id="4_78pd5"]
+[ext_resource type="Material" path="res://materials/apartment/metal.tres" id="5_jeooh"]
+[ext_resource type="Material" path="res://materials/apartment/cabinet.tres" id="6_xhn7d"]
+[ext_resource type="Material" path="res://materials/apartment/lamp.tres" id="7_3eana"]
+[ext_resource type="Material" path="res://materials/apartment/glass.tres" id="8_bl1kl"]
+[ext_resource type="Material" path="res://materials/apartment/countertop.tres" id="9_oqps1"]
+[ext_resource type="PackedScene" path="res://scenes/apartment/floor5_door.tscn" id="10_mnnqi"]
+[ext_resource type="Script" path="res://scripts/apartment/floor5_door.gd" id="11_1ciju"]
+[ext_resource type="Material" path="res://materials/apartment/dark.tres" id="12_15j17"]
+[ext_resource type="FontVariation" path="res://assets/fonts/WangjiaUI.tres" id="13_a7crn"]
+[ext_resource type="PackedScene" path="res://scenes/apartment/props/bed.tscn" id="14_fgohh"]
+[ext_resource type="PackedScene" path="res://scenes/apartment/props/nightstand.tscn" id="15_us36p"]
+[ext_resource type="PackedScene" path="res://scenes/apartment/props/sofa.tscn" id="16_ga1va"]
+[ext_resource type="PackedScene" path="res://scenes/apartment/props/coffee_table.tscn" id="17_plovc"]
+[ext_resource type="PackedScene" path="res://scenes/apartment/props/dry_cabinet.tscn" id="18_s7ss0"]
+[ext_resource type="PackedScene" path="res://scenes/apartment/props/small_cabinet.tscn" id="19_0q6jy"]
+[ext_resource type="PackedScene" path="res://scenes/apartment/props/wet_kitchen.tscn" id="20_mmchp"]
+[ext_resource type="PackedScene" path="res://scenes/apartment/props/fridge.tscn" id="21_k1i00"]
+[ext_resource type="PackedScene" path="res://scenes/apartment/props/toilet.tscn" id="22_klgsv"]
+[ext_resource type="PackedScene" path="res://scenes/apartment/props/basin.tscn" id="23_jw4yh"]
+[ext_resource type="PackedScene" path="res://scenes/apartment/props/shower.tscn" id="24_s7m6f"]
+[ext_resource type="Material" path="res://materials/apartment/fabric.tres" id="25_i2qaq"]
+[ext_resource type="Material" path="res://materials/apartment/basket.tres" id="26_2maok"]
+[ext_resource type="Material" path="res://materials/apartment/linen.tres" id="27_42mu3"]
+[ext_resource type="Material" path="res://materials/apartment/paper.tres" id="28_ay8ls"]
+[ext_resource type="Material" path="res://materials/apartment/blanket.tres" id="29_u3cor"]
+[ext_resource type="Material" path="res://materials/apartment/floor5_firepaint.tres" id="30_vafwk"]
+[ext_resource type="Material" path="res://materials/apartment/floor5_unopened.tres" id="31_11e8j"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_no0in"]
+size = Vector3(9.2, 0.16, 4.2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7we1c"]
+size = Vector3(9.2, 0.16, 4.2)
+
+[sub_resource type="BoxMesh" id="BoxMesh_43jex"]
+size = Vector3(2.91, 0.012, 1.85)
+
+[sub_resource type="BoxMesh" id="BoxMesh_fxry6"]
+size = Vector3(9.04, 0.001, 0.006)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ck46a"]
+size = Vector3(9.04, 0.001, 0.006)
+
+[sub_resource type="BoxMesh" id="BoxMesh_euyam"]
+size = Vector3(9.04, 0.001, 0.006)
+
+[sub_resource type="BoxMesh" id="BoxMesh_1q7x0"]
+size = Vector3(9.04, 0.001, 0.006)
+
+[sub_resource type="BoxMesh" id="BoxMesh_fnlkm"]
+size = Vector3(9.04, 0.001, 0.006)
+
+[sub_resource type="BoxMesh" id="BoxMesh_x2c4r"]
+size = Vector3(9.04, 0.001, 0.006)
+
+[sub_resource type="BoxMesh" id="BoxMesh_yljsj"]
+size = Vector3(9.04, 0.001, 0.006)
+
+[sub_resource type="BoxMesh" id="BoxMesh_hudux"]
+size = Vector3(9.04, 0.001, 0.006)
+
+[sub_resource type="BoxMesh" id="BoxMesh_vky0r"]
+size = Vector3(9.04, 0.001, 0.006)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ns1ox"]
+size = Vector3(9.04, 0.001, 0.006)
+
+[sub_resource type="BoxMesh" id="BoxMesh_xykby"]
+size = Vector3(9.04, 0.001, 0.006)
+
+[sub_resource type="BoxMesh" id="BoxMesh_b57ft"]
+size = Vector3(9.04, 0.001, 0.006)
+
+[sub_resource type="BoxMesh" id="BoxMesh_itmy5"]
+size = Vector3(0.15, 0.24, 0.15)
+
+[sub_resource type="BoxMesh" id="BoxMesh_su581"]
+size = Vector3(0.15, 2.41, 0.15)
+
+[sub_resource type="BoxMesh" id="BoxMesh_t07qx"]
+size = Vector3(0.15, 0.065, 0.17)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1iqi3"]
+size = Vector3(0.15, 2.65, 0.15)
+
+[sub_resource type="BoxMesh" id="BoxMesh_2jhn4"]
+size = Vector3(0.2, 0.24, 0.15)
+
+[sub_resource type="BoxMesh" id="BoxMesh_5vfsu"]
+size = Vector3(0.2, 2.41, 0.15)
+
+[sub_resource type="BoxMesh" id="BoxMesh_o6cjg"]
+size = Vector3(0.2, 0.065, 0.17)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8cc0k"]
+size = Vector3(0.2, 2.65, 0.15)
+
+[sub_resource type="BoxMesh" id="BoxMesh_61062"]
+size = Vector3(0.36, 0.24, 0.15)
+
+[sub_resource type="BoxMesh" id="BoxMesh_omc4d"]
+size = Vector3(0.36, 2.41, 0.15)
+
+[sub_resource type="BoxMesh" id="BoxMesh_60jmo"]
+size = Vector3(0.36, 0.065, 0.17)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jqgfx"]
+size = Vector3(0.36, 2.65, 0.15)
+
+[sub_resource type="BoxMesh" id="BoxMesh_mb4xk"]
+size = Vector3(1.95, 0.24, 0.15)
+
+[sub_resource type="BoxMesh" id="BoxMesh_aeby4"]
+size = Vector3(1.95, 2.41, 0.15)
+
+[sub_resource type="BoxMesh" id="BoxMesh_f8ers"]
+size = Vector3(1.95, 0.065, 0.17)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5wadu"]
+size = Vector3(1.95, 2.65, 0.15)
+
+[sub_resource type="BoxMesh" id="BoxMesh_m88nl"]
+size = Vector3(1.95, 0.22, 0.012)
+
+[sub_resource type="BoxMesh" id="BoxMesh_mkg4f"]
+size = Vector3(1.95, 0.86, 0.012)
+
+[sub_resource type="BoxMesh" id="BoxMesh_vorcw"]
+size = Vector3(1.95, 0.025, 0.018)
+
+[sub_resource type="BoxMesh" id="BoxMesh_y5nga"]
+size = Vector3(0.9, 0.24, 0.15)
+
+[sub_resource type="BoxMesh" id="BoxMesh_drp61"]
+size = Vector3(0.9, 2.41, 0.15)
+
+[sub_resource type="BoxMesh" id="BoxMesh_rlo5u"]
+size = Vector3(0.9, 0.065, 0.17)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4usrp"]
+size = Vector3(0.9, 2.65, 0.15)
+
+[sub_resource type="BoxMesh" id="BoxMesh_dmmio"]
+size = Vector3(0.9, 0.22, 0.012)
+
+[sub_resource type="BoxMesh" id="BoxMesh_5wrqb"]
+size = Vector3(0.9, 0.86, 0.012)
+
+[sub_resource type="BoxMesh" id="BoxMesh_6pcjt"]
+size = Vector3(0.9, 0.025, 0.018)
+
+[sub_resource type="BoxMesh" id="BoxMesh_11tgi"]
+size = Vector3(1.175, 0.24, 0.15)
+
+[sub_resource type="BoxMesh" id="BoxMesh_2h6vm"]
+size = Vector3(1.175, 2.41, 0.15)
+
+[sub_resource type="BoxMesh" id="BoxMesh_g5p7y"]
+size = Vector3(1.175, 0.065, 0.17)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_gsjky"]
+size = Vector3(1.175, 2.65, 0.15)
+
+[sub_resource type="BoxMesh" id="BoxMesh_tjfsj"]
+size = Vector3(1.175, 0.22, 0.012)
+
+[sub_resource type="BoxMesh" id="BoxMesh_j3gru"]
+size = Vector3(1.175, 0.86, 0.012)
+
+[sub_resource type="BoxMesh" id="BoxMesh_4yqus"]
+size = Vector3(1.175, 0.025, 0.018)
+
+[sub_resource type="BoxMesh" id="BoxMesh_rjjhn"]
+size = Vector3(0.9, 0.48, 0.15)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_nqa2m"]
+size = Vector3(0.9, 0.48, 0.15)
+
+[sub_resource type="BoxMesh" id="BoxMesh_bgssf"]
+size = Vector3(0.05, 0.24, 0.2)
+
+[sub_resource type="BoxMesh" id="BoxMesh_odtfw"]
+size = Vector3(0.05, 0.24, 0.2)
+
+[sub_resource type="BoxMesh" id="BoxMesh_uyvnp"]
+size = Vector3(0.2, 2.18, 0.055)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ckubh"]
+size = Vector3(0.2, 2.18, 0.055)
+
+[sub_resource type="BoxMesh" id="BoxMesh_k3vui"]
+size = Vector3(0.15, 0.47, 1.1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7im8s"]
+size = Vector3(0.15, 0.47, 1.1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_nssmg"]
+size = Vector3(0.82, 2.08, 0.045)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_e2q8r"]
+size = Vector3(0.82, 2.08, 0.045)
+
+[sub_resource type="BoxMesh" id="BoxMesh_578co"]
+size = Vector3(0.66, 1.48, 0.012)
+
+[sub_resource type="BoxMesh" id="BoxMesh_kn0y2"]
+size = Vector3(0.1, 0.018, 0.04)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ijc8a"]
+size = Vector3(0.66, 1.48, 0.012)
+
+[sub_resource type="BoxMesh" id="BoxMesh_7udcf"]
+size = Vector3(0.1, 0.018, 0.04)
+
+[sub_resource type="BoxMesh" id="BoxMesh_1pgbb"]
+size = Vector3(0.025, 0.12, 0.065)
+
+[sub_resource type="BoxMesh" id="BoxMesh_41v7e"]
+size = Vector3(0.025, 0.12, 0.065)
+
+[sub_resource type="BoxMesh" id="BoxMesh_mmj6m"]
+size = Vector3(0.2, 0.07, 1.175)
+
+[sub_resource type="BoxMesh" id="BoxMesh_2aqyw"]
+size = Vector3(0.05, 1.94, 0.2)
+
+[sub_resource type="BoxMesh" id="BoxMesh_5shxx"]
+size = Vector3(0.05, 1.94, 0.2)
+
+[sub_resource type="BoxMesh" id="BoxMesh_1epqb"]
+size = Vector3(0.99, 0.07, 0.2)
+
+[sub_resource type="BoxMesh" id="BoxMesh_cndkp"]
+size = Vector3(0.3, 0.12, 0.06)
+
+[sub_resource type="BoxMesh" id="BoxMesh_0ei3k"]
+size = Vector3(0.24, 0.075, 0.065)
+
+[sub_resource type="BoxMesh" id="BoxMesh_5il10"]
+size = Vector3(0.3, 0.12, 0.06)
+
+[sub_resource type="BoxMesh" id="BoxMesh_lakfe"]
+size = Vector3(0.24, 0.075, 0.065)
+
+[sub_resource type="BoxMesh" id="BoxMesh_f7nbt"]
+size = Vector3(2.25, 0.24, 0.15)
+
+[sub_resource type="BoxMesh" id="BoxMesh_go6w3"]
+size = Vector3(2.25, 2.41, 0.15)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ws5by"]
+size = Vector3(2.25, 0.065, 0.17)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1rvi5"]
+size = Vector3(2.25, 2.65, 0.15)
+
+[sub_resource type="BoxMesh" id="BoxMesh_k8f73"]
+size = Vector3(2.6, 0.24, 0.15)
+
+[sub_resource type="BoxMesh" id="BoxMesh_nor41"]
+size = Vector3(2.6, 2.41, 0.15)
+
+[sub_resource type="BoxMesh" id="BoxMesh_gloob"]
+size = Vector3(2.6, 0.065, 0.17)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_dbw61"]
+size = Vector3(2.6, 2.65, 0.15)
+
+[sub_resource type="BoxMesh" id="BoxMesh_oh6hw"]
+size = Vector3(4.4, 0.24, 0.15)
+
+[sub_resource type="BoxMesh" id="BoxMesh_mc0r6"]
+size = Vector3(4.4, 2.41, 0.15)
+
+[sub_resource type="BoxMesh" id="BoxMesh_45kao"]
+size = Vector3(4.4, 0.065, 0.17)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_iidci"]
+size = Vector3(4.4, 2.65, 0.15)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ob3ok"]
+size = Vector3(2.2, 1.03, 0.15)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_o2ki7"]
+size = Vector3(2.2, 1.03, 0.15)
+
+[sub_resource type="BoxMesh" id="BoxMesh_bq2x1"]
+size = Vector3(2.2, 0.38, 0.15)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4cxnc"]
+size = Vector3(2.2, 0.38, 0.15)
+
+[sub_resource type="BoxMesh" id="BoxMesh_n4blk"]
+size = Vector3(2.15, 1.19, 0.012)
+
+[sub_resource type="BoxMesh" id="BoxMesh_fg233"]
+size = Vector3(0.045, 1.24, 0.085)
+
+[sub_resource type="BoxMesh" id="BoxMesh_s3fa4"]
+size = Vector3(0.045, 1.24, 0.085)
+
+[sub_resource type="BoxMesh" id="BoxMesh_mdrjv"]
+size = Vector3(0.045, 1.24, 0.085)
+
+[sub_resource type="BoxMesh" id="BoxMesh_rlxoe"]
+size = Vector3(2.245, 0.045, 0.085)
+
+[sub_resource type="BoxMesh" id="BoxMesh_6gako"]
+size = Vector3(2.245, 0.045, 0.085)
+
+[sub_resource type="BoxMesh" id="BoxMesh_37srl"]
+size = Vector3(2.28, 0.035, 0.23)
+
+[sub_resource type="BoxMesh" id="BoxMesh_shxfi"]
+size = Vector3(2.125, 0.24, 0.15)
+
+[sub_resource type="BoxMesh" id="BoxMesh_u07cj"]
+size = Vector3(2.125, 2.41, 0.15)
+
+[sub_resource type="BoxMesh" id="BoxMesh_nxdet"]
+size = Vector3(2.125, 0.065, 0.17)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_dulop"]
+size = Vector3(2.125, 2.65, 0.15)
+
+[sub_resource type="BoxMesh" id="BoxMesh_1cxj2"]
+size = Vector3(1.925, 0.24, 0.15)
+
+[sub_resource type="BoxMesh" id="BoxMesh_1px2x"]
+size = Vector3(1.925, 2.41, 0.15)
+
+[sub_resource type="BoxMesh" id="BoxMesh_s2mis"]
+size = Vector3(1.925, 0.065, 0.17)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ikloc"]
+size = Vector3(1.925, 2.65, 0.15)
+
+[sub_resource type="BoxMesh" id="BoxMesh_mbvjl"]
+size = Vector3(6.15, 0.24, 0.15)
+
+[sub_resource type="BoxMesh" id="BoxMesh_adbmr"]
+size = Vector3(6.15, 2.41, 0.15)
+
+[sub_resource type="BoxMesh" id="BoxMesh_sjm68"]
+size = Vector3(6.15, 0.065, 0.17)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ypbsc"]
+size = Vector3(6.15, 2.65, 0.15)
+
+[sub_resource type="BoxMesh" id="BoxMesh_tsads"]
+size = Vector3(3.05, 0.24, 0.15)
+
+[sub_resource type="BoxMesh" id="BoxMesh_dorr7"]
+size = Vector3(3.05, 2.41, 0.15)
+
+[sub_resource type="BoxMesh" id="BoxMesh_nr2jo"]
+size = Vector3(3.05, 0.065, 0.17)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_nrhc4"]
+size = Vector3(3.05, 2.65, 0.15)
+
+[sub_resource type="BoxMesh" id="BoxMesh_5fhx8"]
+size = Vector3(0.018, 0.18, 0.34)
+
+[sub_resource type="BoxMesh" id="BoxMesh_jae3y"]
+size = Vector3(0.34, 0.025, 0.24)
+
+[sub_resource type="BoxMesh" id="BoxMesh_8mpc0"]
+size = Vector3(0.34, 0.22, 0.018)
+
+[sub_resource type="BoxMesh" id="BoxMesh_5tppa"]
+size = Vector3(0.53, 0.008, 0.75)
+
+[sub_resource type="BoxMesh" id="BoxMesh_3ohj5"]
+size = Vector3(0.35, 0.4, 0.35)
+
+[sub_resource type="BoxMesh" id="BoxMesh_iw5aj"]
+size = Vector3(0.3, 0.08, 0.25)
+
+[sub_resource type="BoxMesh" id="BoxMesh_8h6d8"]
+size = Vector3(0.018, 1.64, 0.018)
+
+[sub_resource type="BoxMesh" id="BoxMesh_cpvy2"]
+size = Vector3(0.018, 1.64, 0.018)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ixjo8"]
+size = Vector3(0.018, 0.018, 0.85)
+
+[sub_resource type="BoxMesh" id="BoxMesh_effiu"]
+size = Vector3(0.2, 0.025, 0.5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_d62aa"]
+size = Vector3(0.2, 0.025, 0.5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_qwkgk"]
+size = Vector3(0.2, 0.27, 0.025)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ar44v"]
+size = Vector3(0.2, 0.27, 0.025)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ugrwh"]
+size = Vector3(0.2, 0.28, 0.5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_h7a0e"]
+size = Vector3(0.19, 0.065, 0.075)
+
+[sub_resource type="BoxMesh" id="BoxMesh_hl4w6"]
+size = Vector3(0.075, 0.09, 0.07)
+
+[sub_resource type="BoxMesh" id="BoxMesh_oq36v"]
+size = Vector3(0.19, 0.065, 0.075)
+
+[sub_resource type="BoxMesh" id="BoxMesh_f6jb7"]
+size = Vector3(0.075, 0.09, 0.07)
+
+[sub_resource type="BoxMesh" id="BoxMesh_u4t7a"]
+size = Vector3(0.025, 0.07, 0.3)
+
+[sub_resource type="BoxMesh" id="BoxMesh_23csp"]
+size = Vector3(0.07, 0.025, 0.025)
+
+[sub_resource type="BoxMesh" id="BoxMesh_qv3t1"]
+size = Vector3(0.07, 0.025, 0.025)
+
+[sub_resource type="BoxMesh" id="BoxMesh_xkkyl"]
+size = Vector3(0.07, 0.025, 0.025)
+
+[sub_resource type="BoxMesh" id="BoxMesh_3nquw"]
+size = Vector3(0.075, 0.56, 0.25)
+
+[sub_resource type="BoxMesh" id="BoxMesh_xju6p"]
+size = Vector3(0.075, 0.43, 0.095)
+
+[sub_resource type="BoxMesh" id="BoxMesh_o5drd"]
+size = Vector3(0.075, 0.43, 0.095)
+
+[sub_resource type="BoxMesh" id="BoxMesh_io5ya"]
+size = Vector3(0.34, 0.5, 0.2)
+
+[sub_resource type="BoxMesh" id="BoxMesh_v68na"]
+size = Vector3(0.345, 0.018, 0.205)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_o6cli"]
+top_radius = 0.036
+bottom_radius = 0.036
+height = 0.032
+radial_segments = 8
+rings = 1
+
+[sub_resource type="BoxMesh" id="BoxMesh_8vikh"]
+size = Vector3(0.012, 0.13, 0.012)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_xqm1m"]
+top_radius = 0.036
+bottom_radius = 0.036
+height = 0.032
+radial_segments = 8
+rings = 1
+
+[sub_resource type="BoxMesh" id="BoxMesh_q2qf7"]
+size = Vector3(0.012, 0.13, 0.012)
+
+[sub_resource type="BoxMesh" id="BoxMesh_aqppk"]
+size = Vector3(0.26, 0.025, 0.03)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wvd4l"]
+size = Vector3(0.34, 0.54, 0.2)
+
+[sub_resource type="BoxMesh" id="BoxMesh_fxp7r"]
+size = Vector3(0.28, 0.2, 0.22)
+
+[sub_resource type="BoxMesh" id="BoxMesh_dl5ji"]
+size = Vector3(0.045, 0.003, 0.225)
+
+[sub_resource type="BoxMesh" id="BoxMesh_2v5ji"]
+size = Vector3(0.1, 0.004, 0.075)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_cma7r"]
+top_radius = 0.11
+bottom_radius = 0.1
+height = 0.29
+radial_segments = 8
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_v6o0u"]
+top_radius = 0.112
+bottom_radius = 0.112
+height = 0.025
+radial_segments = 8
+rings = 1
+
+[sub_resource type="BoxMesh" id="BoxMesh_ijjvq"]
+size = Vector3(0.09, 0.004, 0.035)
+
+[sub_resource type="BoxMesh" id="BoxMesh_t1kve"]
+size = Vector3(0.15, 0.018, 0.085)
+
+[sub_resource type="BoxMesh" id="BoxMesh_nw051"]
+size = Vector3(0.02, 0.022, 0.085)
+
+[sub_resource type="BoxMesh" id="BoxMesh_35wai"]
+size = Vector3(0.24, 0.045, 0.28)
+
+[sub_resource type="BoxMesh" id="BoxMesh_w0fsw"]
+size = Vector3(0.03, 0.16, 0.1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_5kvkg"]
+size = Vector3(2.6, 0.04, 0.7)
+
+[sub_resource type="BoxMesh" id="BoxMesh_s117f"]
+size = Vector3(0.08, 0.65, 0.08)
+
+[sub_resource type="BoxMesh" id="BoxMesh_vea54"]
+size = Vector3(0.08, 0.65, 0.08)
+
+[sub_resource type="BoxMesh" id="BoxMesh_veu05"]
+size = Vector3(2.05, 0.16, 10.8)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_816ly"]
+size = Vector3(2.05, 0.16, 10.8)
+
+[sub_resource type="BoxMesh" id="BoxMesh_wot3a"]
+size = Vector3(2.65, 0.24, 0.15)
+
+[sub_resource type="BoxMesh" id="BoxMesh_tvy4m"]
+size = Vector3(2.65, 2.41, 0.15)
+
+[sub_resource type="BoxMesh" id="BoxMesh_0vphq"]
+size = Vector3(2.65, 0.065, 0.17)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_dx7hh"]
+size = Vector3(2.65, 2.65, 0.15)
+
+[sub_resource type="BoxMesh" id="BoxMesh_x37x6"]
+size = Vector3(3.23, 0.24, 0.15)
+
+[sub_resource type="BoxMesh" id="BoxMesh_bcglv"]
+size = Vector3(3.23, 2.41, 0.15)
+
+[sub_resource type="BoxMesh" id="BoxMesh_n3687"]
+size = Vector3(3.23, 0.065, 0.17)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0dxxn"]
+size = Vector3(3.23, 2.65, 0.15)
+
+[sub_resource type="BoxMesh" id="BoxMesh_o8kxn"]
+size = Vector3(2.68, 0.24, 0.15)
+
+[sub_resource type="BoxMesh" id="BoxMesh_t6b30"]
+size = Vector3(2.68, 2.41, 0.15)
+
+[sub_resource type="BoxMesh" id="BoxMesh_rnn3a"]
+size = Vector3(2.68, 0.065, 0.17)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_caa7q"]
+size = Vector3(2.68, 2.65, 0.15)
+
+[sub_resource type="BoxMesh" id="BoxMesh_juesq"]
+size = Vector3(2.8, 0.24, 0.15)
+
+[sub_resource type="BoxMesh" id="BoxMesh_1fwc2"]
+size = Vector3(2.8, 2.41, 0.15)
+
+[sub_resource type="BoxMesh" id="BoxMesh_blohx"]
+size = Vector3(2.8, 0.065, 0.17)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_cotqy"]
+size = Vector3(2.8, 2.65, 0.15)
+
+[sub_resource type="BoxMesh" id="BoxMesh_dfruo"]
+size = Vector3(2.68, 0.24, 0.15)
+
+[sub_resource type="BoxMesh" id="BoxMesh_fnlk7"]
+size = Vector3(2.68, 2.41, 0.15)
+
+[sub_resource type="BoxMesh" id="BoxMesh_u6441"]
+size = Vector3(2.68, 0.065, 0.17)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1av15"]
+size = Vector3(2.68, 2.65, 0.15)
+
+[sub_resource type="BoxMesh" id="BoxMesh_abh01"]
+size = Vector3(2.05, 0.24, 0.15)
+
+[sub_resource type="BoxMesh" id="BoxMesh_rd5gm"]
+size = Vector3(2.05, 2.41, 0.15)
+
+[sub_resource type="BoxMesh" id="BoxMesh_pnkqd"]
+size = Vector3(2.05, 0.065, 0.17)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mi8oa"]
+size = Vector3(2.05, 2.65, 0.15)
+
+[sub_resource type="BoxMesh" id="BoxMesh_xu6xy"]
+size = Vector3(0.465, 0.24, 0.15)
+
+[sub_resource type="BoxMesh" id="BoxMesh_x1buj"]
+size = Vector3(0.465, 2.41, 0.15)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ewt2r"]
+size = Vector3(0.465, 0.065, 0.17)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rg5d6"]
+size = Vector3(0.465, 2.65, 0.15)
+
+[sub_resource type="BoxMesh" id="BoxMesh_i1j8p"]
+size = Vector3(0.465, 0.24, 0.15)
+
+[sub_resource type="BoxMesh" id="BoxMesh_txhff"]
+size = Vector3(0.465, 2.41, 0.15)
+
+[sub_resource type="BoxMesh" id="BoxMesh_0h1os"]
+size = Vector3(0.465, 0.065, 0.17)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qgq6d"]
+size = Vector3(0.465, 2.65, 0.15)
+
+[sub_resource type="BoxMesh" id="BoxMesh_0udny"]
+size = Vector3(0.15, 0.48, 1.12)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6qj4k"]
+size = Vector3(0.15, 0.48, 1.12)
+
+[sub_resource type="BoxMesh" id="BoxMesh_wmphw"]
+size = Vector3(0.15, 0.48, 1.12)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wnabk"]
+size = Vector3(0.15, 0.48, 1.12)
+
+[sub_resource type="BoxMesh" id="BoxMesh_o45xt"]
+size = Vector3(0.15, 0.48, 1.12)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_du0a7"]
+size = Vector3(0.15, 0.48, 1.12)
+
+[sub_resource type="BoxMesh" id="BoxMesh_layv2"]
+size = Vector3(1.12, 0.48, 0.15)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_dv14f"]
+size = Vector3(1.12, 0.48, 0.15)
+
+[sub_resource type="BoxMesh" id="BoxMesh_lvw76"]
+size = Vector3(0.2, 2.18, 0.055)
+
+[sub_resource type="BoxMesh" id="BoxMesh_fexef"]
+size = Vector3(0.2, 2.18, 0.055)
+
+[sub_resource type="BoxMesh" id="BoxMesh_iq6pm"]
+size = Vector3(0.2, 0.07, 1.175)
+
+[sub_resource type="BoxMesh" id="BoxMesh_xyxyx"]
+size = Vector3(0.018, 0.18, 0.34)
+
+[sub_resource type="BoxMesh" id="BoxMesh_rv0j3"]
+size = Vector3(0.2, 2.18, 0.055)
+
+[sub_resource type="BoxMesh" id="BoxMesh_8cpqc"]
+size = Vector3(0.2, 2.18, 0.055)
+
+[sub_resource type="BoxMesh" id="BoxMesh_dyv6c"]
+size = Vector3(0.2, 0.07, 1.175)
+
+[sub_resource type="BoxMesh" id="BoxMesh_wa5hg"]
+size = Vector3(0.018, 0.18, 0.34)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ptwfs"]
+size = Vector3(0.2, 2.18, 0.055)
+
+[sub_resource type="BoxMesh" id="BoxMesh_8ilip"]
+size = Vector3(0.2, 2.18, 0.055)
+
+[sub_resource type="BoxMesh" id="BoxMesh_f6xcs"]
+size = Vector3(0.2, 0.07, 1.175)
+
+[sub_resource type="BoxMesh" id="BoxMesh_16iqo"]
+size = Vector3(0.018, 0.18, 0.34)
+
+[sub_resource type="BoxMesh" id="BoxMesh_60af3"]
+size = Vector3(0.055, 2.18, 0.2)
+
+[sub_resource type="BoxMesh" id="BoxMesh_cd1id"]
+size = Vector3(0.055, 2.18, 0.2)
+
+[sub_resource type="BoxMesh" id="BoxMesh_4eppt"]
+size = Vector3(1.175, 0.07, 0.2)
+
+[sub_resource type="BoxMesh" id="BoxMesh_65xvt"]
+size = Vector3(0.42, 0.18, 0.018)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ototd"]
+size = Vector3(1.75, 0.08, 2.16)
+
+[sub_resource type="BoxMesh" id="BoxMesh_145ks"]
+size = Vector3(1.75, 0.08, 2.16)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ln5ih"]
+size = Vector3(1.75, 0.08, 2.16)
+
+[sub_resource type="BoxMesh" id="BoxMesh_wu6tl"]
+size = Vector3(1.75, 0.08, 2.16)
+
+[sub_resource type="BoxMesh" id="BoxMesh_unsn8"]
+size = Vector3(1.75, 0.08, 2.16)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ci8f7"]
+size = Vector3(0.46, 0.008, 0.62)
+
+[sub_resource type="BoxMesh" id="BoxMesh_2l57k"]
+size = Vector3(0.46, 0.008, 0.62)
+
+[sub_resource type="BoxMesh" id="BoxMesh_myb6t"]
+size = Vector3(0.12, 0.62, 0.43)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0rk4m"]
+size = Vector3(0.12, 0.62, 0.43)
+
+[sub_resource type="BoxMesh" id="BoxMesh_4rvw1"]
+size = Vector3(0.014, 0.43, 0.3)
+
+[sub_resource type="BoxMesh" id="BoxMesh_4qi76"]
+size = Vector3(0.08, 0.55, 0.4)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lnu4d"]
+size = Vector3(0.08, 0.55, 0.4)
+
+[sub_resource type="BoxMesh" id="BoxMesh_eyvsv"]
+size = Vector3(0.014, 0.06, 0.018)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ywqvm"]
+size = Vector3(0.28, 0.3, 0.3)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kgpak"]
+size = Vector3(0.28, 0.3, 0.3)
+
+[sub_resource type="BoxMesh" id="BoxMesh_s78ym"]
+size = Vector3(0.05, 0.004, 0.3)
+
+[sub_resource type="BoxMesh" id="BoxMesh_2kdjc"]
+size = Vector3(0.08, 0.16, 0.28)
+
+[sub_resource type="BoxMesh" id="BoxMesh_v84el"]
+size = Vector3(0.07, 0.11, 0.2)
+
+[sub_resource type="BoxMesh" id="BoxMesh_f6eol"]
+size = Vector3(0.08, 0.16, 0.28)
+
+[sub_resource type="BoxMesh" id="BoxMesh_4tnn5"]
+size = Vector3(0.07, 0.11, 0.2)
+
+[sub_resource type="BoxMesh" id="BoxMesh_rpwm8"]
+size = Vector3(0.08, 0.16, 0.28)
+
+[sub_resource type="BoxMesh" id="BoxMesh_2plyg"]
+size = Vector3(0.07, 0.11, 0.2)
+
+[sub_resource type="BoxMesh" id="BoxMesh_lg6br"]
+size = Vector3(9.2, 0.16, 4.2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_s42yn"]
+size = Vector3(9.2, 0.16, 4.2)
+
+[sub_resource type="BoxMesh" id="BoxMesh_vt221"]
+size = Vector3(9.2, 0.24, 0.15)
+
+[sub_resource type="BoxMesh" id="BoxMesh_agwsx"]
+size = Vector3(9.2, 2.41, 0.15)
+
+[sub_resource type="BoxMesh" id="BoxMesh_v3sbk"]
+size = Vector3(9.2, 0.065, 0.17)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_dekrn"]
+size = Vector3(9.2, 2.65, 0.15)
+
+[sub_resource type="BoxMesh" id="BoxMesh_5a1pn"]
+size = Vector3(9.2, 0.24, 0.15)
+
+[sub_resource type="BoxMesh" id="BoxMesh_wu1su"]
+size = Vector3(9.2, 2.41, 0.15)
+
+[sub_resource type="BoxMesh" id="BoxMesh_4qxbp"]
+size = Vector3(9.2, 0.065, 0.17)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wdjhx"]
+size = Vector3(9.2, 2.65, 0.15)
+
+[sub_resource type="BoxMesh" id="BoxMesh_s0p3x"]
+size = Vector3(4.0499997, 0.24, 0.15)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ydo1j"]
+size = Vector3(4.0499997, 2.41, 0.15)
+
+[sub_resource type="BoxMesh" id="BoxMesh_qwqj8"]
+size = Vector3(4.0499997, 0.065, 0.17)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8lgm4"]
+size = Vector3(4.0499997, 2.65, 0.15)
+
+[sub_resource type="BoxMesh" id="BoxMesh_oe5ub"]
+size = Vector3(2.3, 0.08, 2.1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_7s8ng"]
+size = Vector3(2.3, 0.08, 2.1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_t20xf"]
+size = Vector3(2.3, 0.08, 2.1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_tffwb"]
+size = Vector3(2.3, 0.08, 2.1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_wgi2f"]
+size = Vector3(2.3, 0.08, 2.1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_p5507"]
+size = Vector3(2.3, 0.08, 2.1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_sv5pn"]
+size = Vector3(2.3, 0.08, 2.1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_sft25"]
+size = Vector3(2.3, 0.08, 2.1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_hf1hc"]
+size = Vector3(9.2, 0.16, 4.2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_cc854"]
+size = Vector3(9.2, 0.16, 4.2)
+
+[sub_resource type="BoxMesh" id="BoxMesh_jqeuv"]
+size = Vector3(9.2, 0.24, 0.15)
+
+[sub_resource type="BoxMesh" id="BoxMesh_07wsr"]
+size = Vector3(9.2, 2.41, 0.15)
+
+[sub_resource type="BoxMesh" id="BoxMesh_2h0gk"]
+size = Vector3(9.2, 0.065, 0.17)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2c5p3"]
+size = Vector3(9.2, 2.65, 0.15)
+
+[sub_resource type="BoxMesh" id="BoxMesh_nrfsy"]
+size = Vector3(9.2, 0.24, 0.15)
+
+[sub_resource type="BoxMesh" id="BoxMesh_pfpmc"]
+size = Vector3(9.2, 2.41, 0.15)
+
+[sub_resource type="BoxMesh" id="BoxMesh_p1nu2"]
+size = Vector3(9.2, 0.065, 0.17)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rus5b"]
+size = Vector3(9.2, 2.65, 0.15)
+
+[sub_resource type="BoxMesh" id="BoxMesh_0s7yy"]
+size = Vector3(4.0499997, 0.24, 0.15)
+
+[sub_resource type="BoxMesh" id="BoxMesh_usb0l"]
+size = Vector3(4.0499997, 2.41, 0.15)
+
+[sub_resource type="BoxMesh" id="BoxMesh_tryjt"]
+size = Vector3(4.0499997, 0.065, 0.17)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mu148"]
+size = Vector3(4.0499997, 2.65, 0.15)
+
+[sub_resource type="BoxMesh" id="BoxMesh_8hhfu"]
+size = Vector3(2.3, 0.08, 2.1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_a5fer"]
+size = Vector3(2.3, 0.08, 2.1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_7cb2b"]
+size = Vector3(2.3, 0.08, 2.1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_2c0d5"]
+size = Vector3(2.3, 0.08, 2.1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_2460c"]
+size = Vector3(2.3, 0.08, 2.1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_xy8ot"]
+size = Vector3(2.3, 0.08, 2.1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_xrkk5"]
+size = Vector3(2.3, 0.08, 2.1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_nxuxb"]
+size = Vector3(2.3, 0.08, 2.1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ywhny"]
+size = Vector3(9.2, 0.16, 4.2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_j5n07"]
+size = Vector3(9.2, 0.16, 4.2)
+
+[sub_resource type="BoxMesh" id="BoxMesh_a32gj"]
+size = Vector3(9.2, 0.24, 0.15)
+
+[sub_resource type="BoxMesh" id="BoxMesh_vomo8"]
+size = Vector3(9.2, 2.41, 0.15)
+
+[sub_resource type="BoxMesh" id="BoxMesh_5rg1w"]
+size = Vector3(9.2, 0.065, 0.17)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fpfab"]
+size = Vector3(9.2, 2.65, 0.15)
+
+[sub_resource type="BoxMesh" id="BoxMesh_rmj3h"]
+size = Vector3(9.2, 0.24, 0.15)
+
+[sub_resource type="BoxMesh" id="BoxMesh_lggsp"]
+size = Vector3(9.2, 2.41, 0.15)
+
+[sub_resource type="BoxMesh" id="BoxMesh_sxwju"]
+size = Vector3(9.2, 0.065, 0.17)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_uikj4"]
+size = Vector3(9.2, 2.65, 0.15)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ow5nu"]
+size = Vector3(4.0499997, 0.24, 0.15)
+
+[sub_resource type="BoxMesh" id="BoxMesh_pos30"]
+size = Vector3(4.0499997, 2.41, 0.15)
+
+[sub_resource type="BoxMesh" id="BoxMesh_phogn"]
+size = Vector3(4.0499997, 0.065, 0.17)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0quae"]
+size = Vector3(4.0499997, 2.65, 0.15)
+
+[sub_resource type="BoxMesh" id="BoxMesh_tdfo6"]
+size = Vector3(2.3, 0.08, 2.1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_cdm4b"]
+size = Vector3(2.3, 0.08, 2.1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_b5wdi"]
+size = Vector3(2.3, 0.08, 2.1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ptdgr"]
+size = Vector3(2.3, 0.08, 2.1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_35gee"]
+size = Vector3(2.3, 0.08, 2.1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_m87d4"]
+size = Vector3(2.3, 0.08, 2.1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_upmdt"]
+size = Vector3(2.3, 0.08, 2.1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_uakb8"]
+size = Vector3(2.3, 0.08, 2.1)
+
+[node name="Apartment" type="Node3D"]
+metadata/building_id = "building_01"
+metadata/floor_id = "building_01_f05"
+
+[node name="Architecture" type="Node3D" parent="."]
+
+[node name="Floor" type="MeshInstance3D" parent="Architecture"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08, 0)
+material_override = ExtResource("1_a2x84")
+mesh = SubResource("BoxMesh_no0in")
+metadata/region_presentation = "interior_501"
+
+[node name="FloorCollision" type="StaticBody3D" parent="Architecture"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08, 0)
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Architecture/FloorCollision"]
+shape = SubResource("BoxShape3D_7we1c")
+
+[node name="BathFloor" type="MeshInstance3D" parent="Architecture"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0.006, 1.05)
+material_override = ExtResource("2_il0mn")
+mesh = SubResource("BoxMesh_43jex")
+metadata/region_presentation = "interior_501"
+
+[node name="PlankSeam" type="MeshInstance3D" parent="Architecture"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.001, -1.65)
+material_override = ExtResource("1_a2x84")
+mesh = SubResource("BoxMesh_fxry6")
+metadata/region_presentation = "interior_501"
+
+[node name="PlankSeam2" type="MeshInstance3D" parent="Architecture"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.001, -1.35)
+material_override = ExtResource("1_a2x84")
+mesh = SubResource("BoxMesh_ck46a")
+metadata/region_presentation = "interior_501"
+
+[node name="PlankSeam3" type="MeshInstance3D" parent="Architecture"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.001, -1.05)
+material_override = ExtResource("1_a2x84")
+mesh = SubResource("BoxMesh_euyam")
+metadata/region_presentation = "interior_501"
+
+[node name="PlankSeam4" type="MeshInstance3D" parent="Architecture"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.001, -0.75)
+material_override = ExtResource("1_a2x84")
+mesh = SubResource("BoxMesh_1q7x0")
+metadata/region_presentation = "interior_501"
+
+[node name="PlankSeam5" type="MeshInstance3D" parent="Architecture"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.001, -0.45)
+material_override = ExtResource("1_a2x84")
+mesh = SubResource("BoxMesh_fnlkm")
+metadata/region_presentation = "interior_501"
+
+[node name="PlankSeam6" type="MeshInstance3D" parent="Architecture"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.001, -0.15)
+material_override = ExtResource("1_a2x84")
+mesh = SubResource("BoxMesh_x2c4r")
+metadata/region_presentation = "interior_501"
+
+[node name="PlankSeam7" type="MeshInstance3D" parent="Architecture"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.001, 0.15)
+material_override = ExtResource("1_a2x84")
+mesh = SubResource("BoxMesh_yljsj")
+metadata/region_presentation = "interior_501"
+
+[node name="PlankSeam8" type="MeshInstance3D" parent="Architecture"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.001, 0.45)
+material_override = ExtResource("1_a2x84")
+mesh = SubResource("BoxMesh_hudux")
+metadata/region_presentation = "interior_501"
+
+[node name="PlankSeam9" type="MeshInstance3D" parent="Architecture"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.001, 0.75)
+material_override = ExtResource("1_a2x84")
+mesh = SubResource("BoxMesh_vky0r")
+metadata/region_presentation = "interior_501"
+
+[node name="PlankSeam10" type="MeshInstance3D" parent="Architecture"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.001, 1.05)
+material_override = ExtResource("1_a2x84")
+mesh = SubResource("BoxMesh_ns1ox")
+metadata/region_presentation = "interior_501"
+
+[node name="PlankSeam11" type="MeshInstance3D" parent="Architecture"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.001, 1.35)
+material_override = ExtResource("1_a2x84")
+mesh = SubResource("BoxMesh_xykby")
+metadata/region_presentation = "interior_501"
+
+[node name="PlankSeam12" type="MeshInstance3D" parent="Architecture"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.001, 1.65)
+material_override = ExtResource("1_a2x84")
+mesh = SubResource("BoxMesh_b57ft")
+metadata/region_presentation = "interior_501"
+
+[node name="WestNorth" type="Node3D" parent="Architecture"]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -4.525, 0, -1.975)
+metadata/cut_normal = Vector3(0, 0, 0)
+metadata/visibility_target = true
+metadata/visibility_regions = Array[String](["apartment_501", "corridor_f05"])
+
+[node name="Lower" type="MeshInstance3D" parent="Architecture/WestNorth"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.12, 0)
+material_override = ExtResource("3_uddix")
+mesh = SubResource("BoxMesh_itmy5")
+metadata/region_presentation = "boundary"
+
+[node name="Upper" type="MeshInstance3D" parent="Architecture/WestNorth"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.445, 0)
+material_override = ExtResource("3_uddix")
+mesh = SubResource("BoxMesh_su581")
+metadata/cut_upper = true
+metadata/region_presentation = "boundary"
+
+[node name="Skirting" type="MeshInstance3D" parent="Architecture/WestNorth"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.034, 0)
+material_override = ExtResource("4_78pd5")
+mesh = SubResource("BoxMesh_t07qx")
+metadata/region_presentation = "boundary"
+
+[node name="WallCollision" type="StaticBody3D" parent="Architecture/WestNorth"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.325, 0)
+collision_mask = 2
+metadata/occlusion_source = "../Upper"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Architecture/WestNorth/WallCollision"]
+shape = SubResource("BoxShape3D_1iqi3")
+
+[node name="WestMiddle" type="Node3D" parent="Architecture"]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -4.525, 0, 0.45)
+metadata/cut_normal = Vector3(0, 0, 0)
+metadata/visibility_target = true
+metadata/visibility_regions = Array[String](["apartment_501", "corridor_f05"])
+
+[node name="Lower" type="MeshInstance3D" parent="Architecture/WestMiddle"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.12, 0)
+material_override = ExtResource("3_uddix")
+mesh = SubResource("BoxMesh_2jhn4")
+metadata/region_presentation = "boundary"
+
+[node name="Upper" type="MeshInstance3D" parent="Architecture/WestMiddle"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.445, 0)
+material_override = ExtResource("3_uddix")
+mesh = SubResource("BoxMesh_5vfsu")
+metadata/cut_upper = true
+metadata/region_presentation = "boundary"
+
+[node name="Skirting" type="MeshInstance3D" parent="Architecture/WestMiddle"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.034, 0)
+material_override = ExtResource("4_78pd5")
+mesh = SubResource("BoxMesh_o6cjg")
+metadata/region_presentation = "boundary"
+
+[node name="WallCollision" type="StaticBody3D" parent="Architecture/WestMiddle"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.325, 0)
+collision_mask = 2
+metadata/occlusion_source = "../Upper"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Architecture/WestMiddle/WallCollision"]
+shape = SubResource("BoxShape3D_8cc0k")
+
+[node name="WestSouth" type="Node3D" parent="Architecture"]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -4.525, 0, 1.845)
+metadata/cut_normal = Vector3(0, 0, 0)
+metadata/visibility_target = true
+metadata/visibility_regions = Array[String](["apartment_501", "corridor_f05"])
+
+[node name="Lower" type="MeshInstance3D" parent="Architecture/WestSouth"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.12, 0)
+material_override = ExtResource("3_uddix")
+mesh = SubResource("BoxMesh_61062")
+metadata/region_presentation = "boundary"
+
+[node name="Upper" type="MeshInstance3D" parent="Architecture/WestSouth"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.445, 0)
+material_override = ExtResource("3_uddix")
+mesh = SubResource("BoxMesh_omc4d")
+metadata/cut_upper = true
+metadata/region_presentation = "boundary"
+
+[node name="Skirting" type="MeshInstance3D" parent="Architecture/WestSouth"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.034, 0)
+material_override = ExtResource("4_78pd5")
+mesh = SubResource("BoxMesh_60jmo")
+metadata/region_presentation = "boundary"
+
+[node name="WallCollision" type="StaticBody3D" parent="Architecture/WestSouth"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.325, 0)
+collision_mask = 2
+metadata/occlusion_source = "../Upper"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Architecture/WestSouth/WallCollision"]
+shape = SubResource("BoxShape3D_jqgfx")
+
+[node name="BathWest" type="Node3D" parent="Architecture"]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1.55, 0, 1.05)
+metadata/cut_normal = Vector3(1, 0, 0)
+metadata/bathroom_wall = true
+metadata/visibility_target = true
+metadata/visibility_regions = Array[String](["apartment_501"])
+
+[node name="Lower" type="MeshInstance3D" parent="Architecture/BathWest"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.12, 0)
+material_override = ExtResource("3_uddix")
+mesh = SubResource("BoxMesh_mb4xk")
+metadata/region_presentation = "interior_501"
+
+[node name="Upper" type="MeshInstance3D" parent="Architecture/BathWest"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.445, 0)
+material_override = ExtResource("3_uddix")
+mesh = SubResource("BoxMesh_aeby4")
+metadata/cut_upper = true
+metadata/region_presentation = "interior_501"
+
+[node name="Skirting" type="MeshInstance3D" parent="Architecture/BathWest"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.034, 0)
+material_override = ExtResource("4_78pd5")
+mesh = SubResource("BoxMesh_f8ers")
+metadata/region_presentation = "interior_501"
+
+[node name="WallCollision" type="StaticBody3D" parent="Architecture/BathWest"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.325, 0)
+collision_mask = 2
+metadata/occlusion_source = "../Upper"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Architecture/BathWest/WallCollision"]
+shape = SubResource("BoxShape3D_5wadu")
+
+[node name="TileBase" type="MeshInstance3D" parent="Architecture/BathWest"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.13, -0.082)
+material_override = ExtResource("2_il0mn")
+mesh = SubResource("BoxMesh_m88nl")
+metadata/region_presentation = "interior_501"
+
+[node name="TileLining" type="MeshInstance3D" parent="Architecture/BathWest"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.68, -0.082)
+material_override = ExtResource("2_il0mn")
+mesh = SubResource("BoxMesh_mkg4f")
+metadata/cut_owner = NodePath("..")
+metadata/region_presentation = "interior_501"
+
+[node name="TileEdge" type="MeshInstance3D" parent="Architecture/BathWest"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.12, -0.084)
+material_override = ExtResource("5_jeooh")
+mesh = SubResource("BoxMesh_vorcw")
+metadata/cut_owner = NodePath("..")
+metadata/region_presentation = "interior_501"
+
+[node name="BathNorthWest" type="Node3D" parent="Architecture"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0.1)
+metadata/cut_normal = Vector3(0, 0, 1)
+metadata/bathroom_wall = true
+metadata/visibility_target = true
+metadata/visibility_regions = Array[String](["apartment_501"])
+
+[node name="Lower" type="MeshInstance3D" parent="Architecture/BathNorthWest"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.12, 0)
+material_override = ExtResource("3_uddix")
+mesh = SubResource("BoxMesh_y5nga")
+metadata/region_presentation = "interior_501"
+
+[node name="Upper" type="MeshInstance3D" parent="Architecture/BathNorthWest"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.445, 0)
+material_override = ExtResource("3_uddix")
+mesh = SubResource("BoxMesh_drp61")
+metadata/cut_upper = true
+metadata/region_presentation = "interior_501"
+
+[node name="Skirting" type="MeshInstance3D" parent="Architecture/BathNorthWest"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.034, 0)
+material_override = ExtResource("4_78pd5")
+mesh = SubResource("BoxMesh_rlo5u")
+metadata/region_presentation = "interior_501"
+
+[node name="WallCollision" type="StaticBody3D" parent="Architecture/BathNorthWest"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.325, 0)
+collision_mask = 2
+metadata/occlusion_source = "../Upper"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Architecture/BathNorthWest/WallCollision"]
+shape = SubResource("BoxShape3D_4usrp")
+
+[node name="TileBase" type="MeshInstance3D" parent="Architecture/BathNorthWest"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.13, 0.082)
+material_override = ExtResource("2_il0mn")
+mesh = SubResource("BoxMesh_dmmio")
+metadata/region_presentation = "interior_501"
+
+[node name="TileLining" type="MeshInstance3D" parent="Architecture/BathNorthWest"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.68, 0.082)
+material_override = ExtResource("2_il0mn")
+mesh = SubResource("BoxMesh_5wrqb")
+metadata/cut_owner = NodePath("..")
+metadata/region_presentation = "interior_501"
+
+[node name="TileEdge" type="MeshInstance3D" parent="Architecture/BathNorthWest"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.12, 0.084)
+material_override = ExtResource("5_jeooh")
+mesh = SubResource("BoxMesh_6pcjt")
+metadata/cut_owner = NodePath("..")
+metadata/region_presentation = "interior_501"
+
+[node name="BathNorthEast" type="Node3D" parent="Architecture"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.9375, 0, 0.1)
+metadata/cut_normal = Vector3(0, 0, 1)
+metadata/bathroom_wall = true
+metadata/visibility_target = true
+metadata/visibility_regions = Array[String](["apartment_501"])
+
+[node name="Lower" type="MeshInstance3D" parent="Architecture/BathNorthEast"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.12, 0)
+material_override = ExtResource("3_uddix")
+mesh = SubResource("BoxMesh_11tgi")
+metadata/region_presentation = "interior_501"
+
+[node name="Upper" type="MeshInstance3D" parent="Architecture/BathNorthEast"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.445, 0)
+material_override = ExtResource("3_uddix")
+mesh = SubResource("BoxMesh_2h6vm")
+metadata/cut_upper = true
+metadata/region_presentation = "interior_501"
+
+[node name="Skirting" type="MeshInstance3D" parent="Architecture/BathNorthEast"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.034, 0)
+material_override = ExtResource("4_78pd5")
+mesh = SubResource("BoxMesh_g5p7y")
+metadata/region_presentation = "interior_501"
+
+[node name="WallCollision" type="StaticBody3D" parent="Architecture/BathNorthEast"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.325, 0)
+collision_mask = 2
+metadata/occlusion_source = "../Upper"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Architecture/BathNorthEast/WallCollision"]
+shape = SubResource("BoxShape3D_gsjky")
+
+[node name="TileBase" type="MeshInstance3D" parent="Architecture/BathNorthEast"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.13, 0.082)
+material_override = ExtResource("2_il0mn")
+mesh = SubResource("BoxMesh_tjfsj")
+metadata/region_presentation = "interior_501"
+
+[node name="TileLining" type="MeshInstance3D" parent="Architecture/BathNorthEast"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.68, 0.082)
+material_override = ExtResource("2_il0mn")
+mesh = SubResource("BoxMesh_j3gru")
+metadata/cut_owner = NodePath("..")
+metadata/region_presentation = "interior_501"
+
+[node name="TileEdge" type="MeshInstance3D" parent="Architecture/BathNorthEast"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.12, 0.084)
+material_override = ExtResource("5_jeooh")
+mesh = SubResource("BoxMesh_4yqus")
+metadata/cut_owner = NodePath("..")
+metadata/region_presentation = "interior_501"
+
+[node name="BathLintel" type="MeshInstance3D" parent="Architecture"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.9, 2.41, 0.1)
+material_override = ExtResource("3_uddix")
+mesh = SubResource("BoxMesh_rjjhn")
+metadata/bathroom_lintel = true
+metadata/visibility_target = true
+metadata/visibility_regions = Array[String](["apartment_501"])
+metadata/region_presentation = "interior_501"
+
+[node name="BathLintelCollision" type="StaticBody3D" parent="Architecture"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.9, 2.41, 0.1)
+collision_mask = 2
+metadata/occlusion_source = NodePath("../BathLintel")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Architecture/BathLintelCollision"]
+shape = SubResource("BoxShape3D_nqa2m")
+
+[node name="BathDoorFrame" type="MeshInstance3D" parent="Architecture"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.43, 0.12, 0.1)
+material_override = ExtResource("4_78pd5")
+mesh = SubResource("BoxMesh_bgssf")
+metadata/region_presentation = "interior_501"
+
+[node name="BathDoorFrame2" type="MeshInstance3D" parent="Architecture"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.37, 0.12, 0.1)
+material_override = ExtResource("4_78pd5")
+mesh = SubResource("BoxMesh_odtfw")
+metadata/region_presentation = "interior_501"
+
+[node name="EntryFrame" type="MeshInstance3D" parent="Architecture"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.525, 1.09, 0.55)
+material_override = ExtResource("4_78pd5")
+mesh = SubResource("BoxMesh_uyvnp")
+metadata/region_presentation = "boundary"
+
+[node name="EntryFrame2" type="MeshInstance3D" parent="Architecture"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.525, 1.09, 1.67)
+material_override = ExtResource("4_78pd5")
+mesh = SubResource("BoxMesh_ckubh")
+metadata/region_presentation = "boundary"
+
+[node name="EntryLintel" type="MeshInstance3D" parent="Architecture"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.525, 2.415, 1.11)
+material_override = ExtResource("3_uddix")
+mesh = SubResource("BoxMesh_k3vui")
+metadata/visibility_target = true
+metadata/visibility_regions = Array[String](["apartment_501", "corridor_f05"])
+metadata/region_presentation = "boundary"
+
+[node name="EntryLintelCollision" type="StaticBody3D" parent="Architecture"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.525, 2.415, 1.11)
+collision_mask = 2
+metadata/occlusion_source = NodePath("../EntryLintel")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Architecture/EntryLintelCollision"]
+shape = SubResource("BoxShape3D_7im8s")
+
+[node name="BathroomDoor" type="Node3D" parent="Architecture"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.37, 0, -0.02)
+
+[node name="Leaf" type="MeshInstance3D" parent="Architecture/BathroomDoor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.41, 1.04, 0)
+material_override = ExtResource("4_78pd5")
+mesh = SubResource("BoxMesh_nssmg")
+metadata/visibility_target = true
+metadata/visibility_regions = Array[String](["apartment_501"])
+metadata/region_presentation = "interior_501"
+
+[node name="LeafCollision" type="StaticBody3D" parent="Architecture/BathroomDoor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.41, 1.04, 0)
+collision_mask = 2
+metadata/occlusion_source = NodePath("../Leaf")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Architecture/BathroomDoor/LeafCollision"]
+shape = SubResource("BoxShape3D_e2q8r")
+
+[node name="Panel" type="MeshInstance3D" parent="Architecture/BathroomDoor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 1.05, -0.029)
+material_override = ExtResource("6_xhn7d")
+mesh = SubResource("BoxMesh_578co")
+metadata/region_presentation = "interior_501"
+
+[node name="Handle" type="MeshInstance3D" parent="Architecture/BathroomDoor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.69, 0.95, -0.0464)
+material_override = ExtResource("5_jeooh")
+mesh = SubResource("BoxMesh_kn0y2")
+metadata/region_presentation = "interior_501"
+
+[node name="Panel2" type="MeshInstance3D" parent="Architecture/BathroomDoor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 1.05, 0.029)
+material_override = ExtResource("6_xhn7d")
+mesh = SubResource("BoxMesh_ijc8a")
+metadata/region_presentation = "interior_501"
+
+[node name="Handle2" type="MeshInstance3D" parent="Architecture/BathroomDoor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.69, 0.95, 0.0464)
+material_override = ExtResource("5_jeooh")
+mesh = SubResource("BoxMesh_7udcf")
+metadata/region_presentation = "interior_501"
+
+[node name="Hinge" type="MeshInstance3D" parent="Architecture/BathroomDoor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.025, 0.3, 0)
+material_override = ExtResource("5_jeooh")
+mesh = SubResource("BoxMesh_1pgbb")
+metadata/region_presentation = "interior_501"
+
+[node name="Hinge2" type="MeshInstance3D" parent="Architecture/BathroomDoor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.025, 1.65, 0)
+material_override = ExtResource("5_jeooh")
+mesh = SubResource("BoxMesh_41v7e")
+metadata/region_presentation = "interior_501"
+
+[node name="EntryFrameHeader" type="MeshInstance3D" parent="Architecture"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.525, 2.145, 1.11)
+material_override = ExtResource("4_78pd5")
+mesh = SubResource("BoxMesh_mmj6m")
+metadata/region_presentation = "boundary"
+
+[node name="BathDoorFrameUpper" type="MeshInstance3D" parent="Architecture"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.43, 1.21, 0.1)
+material_override = ExtResource("4_78pd5")
+mesh = SubResource("BoxMesh_2aqyw")
+metadata/cut_owner = NodePath("BathNorthWest")
+metadata/region_presentation = "interior_501"
+
+[node name="BathDoorFrame2Upper" type="MeshInstance3D" parent="Architecture"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.37, 1.21, 0.1)
+material_override = ExtResource("4_78pd5")
+mesh = SubResource("BoxMesh_5shxx")
+metadata/cut_owner = NodePath("BathNorthEast")
+metadata/region_presentation = "interior_501"
+
+[node name="BathFrameHeader" type="MeshInstance3D" parent="Architecture"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.9, 2.145, 0.1)
+material_override = ExtResource("4_78pd5")
+mesh = SubResource("BoxMesh_1epqb")
+metadata/cut_owner = NodePath("BathLintel")
+metadata/region_presentation = "interior_501"
+
+[node name="RoomLampBase" type="MeshInstance3D" parent="Architecture"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.65, 2.38, -1.925)
+material_override = ExtResource("6_xhn7d")
+cast_shadow = 0
+mesh = SubResource("BoxMesh_cndkp")
+metadata/region_presentation = "interior_501"
+
+[node name="RoomLampDiffuser" type="MeshInstance3D" parent="Architecture"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.65, 2.38, -1.907)
+material_override = ExtResource("7_3eana")
+cast_shadow = 0
+mesh = SubResource("BoxMesh_0ei3k")
+metadata/region_presentation = "interior_501"
+
+[node name="BathroomLampBase" type="MeshInstance3D" parent="Architecture"]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 4.42, 2.2, 1.05)
+material_override = ExtResource("6_xhn7d")
+cast_shadow = 0
+mesh = SubResource("BoxMesh_5il10")
+metadata/cut_owner = NodePath("EastBath")
+metadata/shadowless_fixture = true
+metadata/region_presentation = "interior_501"
+
+[node name="BathroomLampDiffuser" type="MeshInstance3D" parent="Architecture"]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 4.402, 2.2, 1.05)
+material_override = ExtResource("7_3eana")
+cast_shadow = 0
+mesh = SubResource("BoxMesh_lakfe")
+metadata/cut_owner = NodePath("EastBath")
+metadata/shadowless_fixture = true
+metadata/region_presentation = "interior_501"
+
+[node name="WestWindowInfill" type="Node3D" parent="Architecture"]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -4.525, 0, -0.775)
+metadata/cut_normal = Vector3(0, 0, 0)
+metadata/bathroom_wall = false
+metadata/visibility_target = true
+metadata/visibility_regions = Array[String](["apartment_501", "corridor_f05"])
+
+[node name="Lower" type="MeshInstance3D" parent="Architecture/WestWindowInfill"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.12, 0)
+material_override = ExtResource("3_uddix")
+mesh = SubResource("BoxMesh_f7nbt")
+metadata/region_presentation = "boundary"
+
+[node name="Upper" type="MeshInstance3D" parent="Architecture/WestWindowInfill"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.445, 0)
+material_override = ExtResource("3_uddix")
+mesh = SubResource("BoxMesh_go6w3")
+metadata/region_presentation = "boundary"
+
+[node name="Skirting" type="MeshInstance3D" parent="Architecture/WestWindowInfill"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.034, 0)
+material_override = ExtResource("4_78pd5")
+mesh = SubResource("BoxMesh_ws5by")
+metadata/region_presentation = "boundary"
+
+[node name="WallCollision" type="StaticBody3D" parent="Architecture/WestWindowInfill"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.325, 0)
+collision_mask = 2
+metadata/occlusion_source = "../Upper"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Architecture/WestWindowInfill/WallCollision"]
+shape = SubResource("BoxShape3D_1rvi5")
+
+[node name="NorthLeft" type="Node3D" parent="Architecture"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.3, 0, -2.025)
+metadata/cut_normal = Vector3(0, 0, 0)
+metadata/bathroom_wall = false
+metadata/visibility_target = true
+metadata/visibility_regions = Array[String](["apartment_501"])
+
+[node name="Lower" type="MeshInstance3D" parent="Architecture/NorthLeft"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.12, 0)
+material_override = ExtResource("3_uddix")
+mesh = SubResource("BoxMesh_k8f73")
+metadata/region_presentation = "interior_501"
+
+[node name="Upper" type="MeshInstance3D" parent="Architecture/NorthLeft"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.445, 0)
+material_override = ExtResource("3_uddix")
+mesh = SubResource("BoxMesh_nor41")
+metadata/region_presentation = "interior_501"
+
+[node name="Skirting" type="MeshInstance3D" parent="Architecture/NorthLeft"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.034, 0)
+material_override = ExtResource("4_78pd5")
+mesh = SubResource("BoxMesh_gloob")
+metadata/region_presentation = "interior_501"
+
+[node name="WallCollision" type="StaticBody3D" parent="Architecture/NorthLeft"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.325, 0)
+collision_mask = 2
+metadata/occlusion_source = "../Upper"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Architecture/NorthLeft/WallCollision"]
+shape = SubResource("BoxShape3D_dbw61")
+
+[node name="NorthRight" type="Node3D" parent="Architecture"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4, 0, -2.025)
+metadata/cut_normal = Vector3(0, 0, 0)
+metadata/bathroom_wall = false
+metadata/visibility_target = true
+metadata/visibility_regions = Array[String](["apartment_501"])
+
+[node name="Lower" type="MeshInstance3D" parent="Architecture/NorthRight"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.12, 0)
+material_override = ExtResource("3_uddix")
+mesh = SubResource("BoxMesh_oh6hw")
+metadata/region_presentation = "interior_501"
+
+[node name="Upper" type="MeshInstance3D" parent="Architecture/NorthRight"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.445, 0)
+material_override = ExtResource("3_uddix")
+mesh = SubResource("BoxMesh_mc0r6")
+metadata/region_presentation = "interior_501"
+
+[node name="Skirting" type="MeshInstance3D" parent="Architecture/NorthRight"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.034, 0)
+material_override = ExtResource("4_78pd5")
+mesh = SubResource("BoxMesh_45kao")
+metadata/region_presentation = "interior_501"
+
+[node name="WallCollision" type="StaticBody3D" parent="Architecture/NorthRight"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.325, 0)
+collision_mask = 2
+metadata/occlusion_source = "../Upper"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Architecture/NorthRight/WallCollision"]
+shape = SubResource("BoxShape3D_iidci")
+
+[node name="NorthWindowSill" type="MeshInstance3D" parent="Architecture"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9, 0.515, -2.025)
+material_override = ExtResource("3_uddix")
+mesh = SubResource("BoxMesh_ob3ok")
+metadata/visibility_target = true
+metadata/visibility_regions = Array[String](["apartment_501"])
+metadata/region_presentation = "interior_501"
+
+[node name="NorthWindowSillCollision" type="StaticBody3D" parent="Architecture"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9, 0.515, -2.025)
+collision_mask = 2
+metadata/occlusion_source = NodePath("../NorthWindowSill")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Architecture/NorthWindowSillCollision"]
+shape = SubResource("BoxShape3D_o2ki7")
+
+[node name="NorthWindowHeader" type="MeshInstance3D" parent="Architecture"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9, 2.46, -2.025)
+material_override = ExtResource("3_uddix")
+mesh = SubResource("BoxMesh_bq2x1")
+metadata/region_presentation = "interior_501"
+
+[node name="NorthWindowHeaderCollision" type="StaticBody3D" parent="Architecture"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9, 2.46, -2.025)
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Architecture/NorthWindowHeaderCollision"]
+shape = SubResource("BoxShape3D_4cxnc")
+
+[node name="WindowGlass" type="MeshInstance3D" parent="Architecture"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9, 1.65, -2.025)
+material_override = ExtResource("8_bl1kl")
+cast_shadow = 0
+mesh = SubResource("BoxMesh_n4blk")
+metadata/interaction_id = "apartment.window"
+metadata/exterior_direction = Vector3(0, 0, -1)
+metadata/region_presentation = "interior_501"
+
+[node name="NorthWindowMullion" type="MeshInstance3D" parent="Architecture"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1.65, -2.025)
+material_override = ExtResource("6_xhn7d")
+mesh = SubResource("BoxMesh_fg233")
+metadata/region_presentation = "interior_501"
+
+[node name="NorthWindowMullion2" type="MeshInstance3D" parent="Architecture"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9, 1.65, -2.025)
+material_override = ExtResource("6_xhn7d")
+mesh = SubResource("BoxMesh_s3fa4")
+metadata/region_presentation = "interior_501"
+
+[node name="NorthWindowMullion3" type="MeshInstance3D" parent="Architecture"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 1.65, -2.025)
+material_override = ExtResource("6_xhn7d")
+mesh = SubResource("BoxMesh_mdrjv")
+metadata/region_presentation = "interior_501"
+
+[node name="NorthWindowFrame" type="MeshInstance3D" parent="Architecture"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9, 1.03, -2.025)
+material_override = ExtResource("6_xhn7d")
+mesh = SubResource("BoxMesh_rlxoe")
+metadata/region_presentation = "interior_501"
+
+[node name="NorthWindowFrame2" type="MeshInstance3D" parent="Architecture"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9, 2.27, -2.025)
+material_override = ExtResource("6_xhn7d")
+mesh = SubResource("BoxMesh_6gako")
+metadata/region_presentation = "interior_501"
+
+[node name="WindowLedge" type="MeshInstance3D" parent="Architecture"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9, 1.015, -1.98)
+material_override = ExtResource("9_oqps1")
+mesh = SubResource("BoxMesh_37srl")
+metadata/region_presentation = "interior_501"
+
+[node name="EastLiving" type="Node3D" parent="Architecture"]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 4.525, 0, -0.9625)
+metadata/cut_normal = Vector3(1, 0, 0)
+metadata/bathroom_wall = false
+metadata/visibility_target = true
+metadata/visibility_regions = Array[String](["apartment_501"])
+
+[node name="Lower" type="MeshInstance3D" parent="Architecture/EastLiving"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.12, 0)
+material_override = ExtResource("3_uddix")
+mesh = SubResource("BoxMesh_shxfi")
+metadata/region_presentation = "interior_501"
+
+[node name="Upper" type="MeshInstance3D" parent="Architecture/EastLiving"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.445, 0)
+material_override = ExtResource("3_uddix")
+mesh = SubResource("BoxMesh_u07cj")
+metadata/region_presentation = "interior_501"
+
+[node name="Skirting" type="MeshInstance3D" parent="Architecture/EastLiving"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.034, 0)
+material_override = ExtResource("4_78pd5")
+mesh = SubResource("BoxMesh_nxdet")
+metadata/region_presentation = "interior_501"
+
+[node name="WallCollision" type="StaticBody3D" parent="Architecture/EastLiving"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.325, 0)
+collision_mask = 2
+metadata/occlusion_source = "../Upper"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Architecture/EastLiving/WallCollision"]
+shape = SubResource("BoxShape3D_dulop")
+
+[node name="EastBath" type="Node3D" parent="Architecture"]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 4.525, 0, 1.0625)
+metadata/cut_normal = Vector3(1, 0, 0)
+metadata/bathroom_wall = true
+metadata/visibility_target = true
+metadata/visibility_regions = Array[String](["apartment_501"])
+
+[node name="Lower" type="MeshInstance3D" parent="Architecture/EastBath"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.12, 0)
+material_override = ExtResource("3_uddix")
+mesh = SubResource("BoxMesh_1cxj2")
+metadata/region_presentation = "interior_501"
+
+[node name="Upper" type="MeshInstance3D" parent="Architecture/EastBath"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.445, 0)
+material_override = ExtResource("3_uddix")
+mesh = SubResource("BoxMesh_1px2x")
+metadata/region_presentation = "interior_501"
+
+[node name="Skirting" type="MeshInstance3D" parent="Architecture/EastBath"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.034, 0)
+material_override = ExtResource("4_78pd5")
+mesh = SubResource("BoxMesh_s2mis")
+metadata/region_presentation = "interior_501"
+
+[node name="WallCollision" type="StaticBody3D" parent="Architecture/EastBath"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.325, 0)
+collision_mask = 2
+metadata/occlusion_source = "../Upper"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Architecture/EastBath/WallCollision"]
+shape = SubResource("BoxShape3D_ikloc")
+
+[node name="SouthLiving" type="Node3D" parent="Architecture"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.525, 0, 2.025)
+metadata/cut_normal = Vector3(0, 0, 1)
+metadata/bathroom_wall = false
+metadata/visibility_target = true
+metadata/visibility_regions = Array[String](["apartment_501"])
+
+[node name="Lower" type="MeshInstance3D" parent="Architecture/SouthLiving"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.12, 0)
+material_override = ExtResource("3_uddix")
+mesh = SubResource("BoxMesh_mbvjl")
+metadata/region_presentation = "interior_501"
+
+[node name="Upper" type="MeshInstance3D" parent="Architecture/SouthLiving"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.445, 0)
+material_override = ExtResource("3_uddix")
+mesh = SubResource("BoxMesh_adbmr")
+metadata/region_presentation = "interior_501"
+
+[node name="Skirting" type="MeshInstance3D" parent="Architecture/SouthLiving"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.034, 0)
+material_override = ExtResource("4_78pd5")
+mesh = SubResource("BoxMesh_sjm68")
+metadata/region_presentation = "interior_501"
+
+[node name="WallCollision" type="StaticBody3D" parent="Architecture/SouthLiving"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.325, 0)
+collision_mask = 2
+metadata/occlusion_source = "../Upper"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Architecture/SouthLiving/WallCollision"]
+shape = SubResource("BoxShape3D_ypbsc")
+
+[node name="SouthBath" type="Node3D" parent="Architecture"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.075, 0, 2.025)
+metadata/cut_normal = Vector3(0, 0, 1)
+metadata/bathroom_wall = true
+metadata/visibility_target = true
+metadata/visibility_regions = Array[String](["apartment_501"])
+
+[node name="Lower" type="MeshInstance3D" parent="Architecture/SouthBath"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.12, 0)
+material_override = ExtResource("3_uddix")
+mesh = SubResource("BoxMesh_tsads")
+metadata/region_presentation = "interior_501"
+
+[node name="Upper" type="MeshInstance3D" parent="Architecture/SouthBath"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.445, 0)
+material_override = ExtResource("3_uddix")
+mesh = SubResource("BoxMesh_dorr7")
+metadata/region_presentation = "interior_501"
+
+[node name="Skirting" type="MeshInstance3D" parent="Architecture/SouthBath"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.034, 0)
+material_override = ExtResource("4_78pd5")
+mesh = SubResource("BoxMesh_nr2jo")
+metadata/region_presentation = "interior_501"
+
+[node name="WallCollision" type="StaticBody3D" parent="Architecture/SouthBath"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.325, 0)
+collision_mask = 2
+metadata/occlusion_source = "../Upper"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Architecture/SouthBath/WallCollision"]
+shape = SubResource("BoxShape3D_nrhc4")
+
+[node name="EntryDoor" type="Node3D" parent="Architecture" instance=ExtResource("10_mnnqi")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -4.48, 0, 1.64)
+script = ExtResource("11_1ciju")
+door_id = "building_01_f05_501_door"
+room_id = "building_01_f05_501"
+display_name = "501 房门"
+portal_point = Vector3(-4.525, 1, 1.11)
+floor_root_path = NodePath("../..")
+metadata/building_id = "building_01"
+metadata/floor_id = "building_01_f05"
+metadata/room_id = "building_01_f05_501"
+metadata/door_id = "building_01_f05_501_door"
+metadata/interaction_id = "apartment.entry_door"
+metadata/corridor_direction = Vector3(-1, 0, 0)
+
+[node name="Portal501" type="Node3D" parent="Architecture"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.525, 0, 1.11)
+metadata/building_id = "building_01"
+metadata/floor_id = "building_01_f05"
+metadata/room_id = "building_01_f05_501"
+
+[node name="NumberPlate" type="MeshInstance3D" parent="Architecture/Portal501"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.115, 1.8, 0)
+material_override = ExtResource("12_15j17")
+mesh = SubResource("BoxMesh_5fhx8")
+metadata/region_presentation = "boundary"
+
+[node name="Number" type="Label3D" parent="Architecture/Portal501"]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.195, 1.8, 0)
+pixel_size = 0.003
+billboard = 1
+modulate = Color(0.90588236, 0.8745098, 0.7764706, 1)
+text = "501"
+font = ExtResource("13_a7crn")
+font_size = 34
+outline_size = 0
+metadata/region_presentation = "boundary"
+
+[node name="Furniture" type="Node3D" parent="."]
+metadata/region_presentation = "interior_501"
+
+[node name="Bed" type="Node3D" parent="Furniture" instance=ExtResource("14_fgohh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.65, 0, 0.7)
+metadata/interaction_id = "apartment.bed"
+
+[node name="BedsideTable" type="Node3D" parent="Furniture" instance=ExtResource("15_us36p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.62, 0, 1.48)
+
+[node name="Sofa" type="Node3D" parent="Furniture" instance=ExtResource("16_ga1va")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.55)
+
+[node name="CoffeeTable" type="Node3D" parent="Furniture" instance=ExtResource("17_plovc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3, 0, 0.08)
+
+[node name="WorkCounter" type="Node3D" parent="Furniture" instance=ExtResource("18_s7ss0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.15, 0, -1.58)
+
+[node name="StorageCounter" type="Node3D" parent="Furniture" instance=ExtResource("19_0q6jy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9, 0, -1.58)
+metadata/interaction_id = "apartment.storage"
+
+[node name="Kitchen" type="Node3D" parent="Furniture" instance=ExtResource("20_mmchp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.95, 0, -1.58)
+metadata/interaction_id = "apartment.kitchen_cupboard"
+
+[node name="Fridge" type="Node3D" parent="Furniture" instance=ExtResource("21_k1i00")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1.58)
+metadata/interaction_id = "apartment.fridge"
+
+[node name="Toilet" type="Node3D" parent="Furniture" instance=ExtResource("22_klgsv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.05, 0, 0.72)
+
+[node name="Basin" type="Node3D" parent="Furniture" instance=ExtResource("23_jw4yh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.35, 0, 1.67)
+
+[node name="Shower" type="Node3D" parent="Furniture" instance=ExtResource("24_s7m6f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.15, 0, 1.45)
+
+[node name="LaptopBase" type="MeshInstance3D" parent="Furniture"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.22, 0.905, -1.53)
+material_override = ExtResource("12_15j17")
+mesh = SubResource("BoxMesh_jae3y")
+metadata/region_presentation = "interior_501"
+
+[node name="LaptopScreen" type="MeshInstance3D" parent="Furniture"]
+transform = Transform3D(1, 0, 0, 0, 0.9887711, 0.14943814, 0, -0.14943814, 0.9887711, -3.22, 1.02, -1.65)
+material_override = ExtResource("12_15j17")
+mesh = SubResource("BoxMesh_8mpc0")
+metadata/region_presentation = "interior_501"
+
+[node name="EntryMat" type="MeshInstance3D" parent="Furniture"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.12, 0.005, 1.05)
+material_override = ExtResource("25_i2qaq")
+mesh = SubResource("BoxMesh_5tppa")
+metadata/region_presentation = "interior_501"
+
+[node name="LaundryBasket" type="MeshInstance3D" parent="Furniture"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.18, 0.2, 1.65)
+material_override = ExtResource("26_2maok")
+mesh = SubResource("BoxMesh_3ohj5")
+metadata/region_presentation = "interior_501"
+
+[node name="FoldedTowel" type="MeshInstance3D" parent="Furniture"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.18, 0.43, 1.65)
+material_override = ExtResource("27_42mu3")
+mesh = SubResource("BoxMesh_iw5aj")
+metadata/region_presentation = "interior_501"
+
+[node name="FutureInteractionAnchors" type="Node3D" parent="."]
+
+[node name="Entry" type="Marker3D" parent="FutureInteractionAnchors"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.95, 0.02, 1.05)
+
+[node name="Bedside" type="Marker3D" parent="FutureInteractionAnchors"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.25, 0.02, 0.9)
+
+[node name="Living" type="Marker3D" parent="FutureInteractionAnchors"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.15, 0.02, -0.55)
+
+[node name="Kitchen" type="Marker3D" parent="FutureInteractionAnchors"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.8, 0.02, -0.65)
+
+[node name="Bathroom" type="Marker3D" parent="FutureInteractionAnchors"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.9, 0.02, 0.7)
+
+[node name="Basin" type="Marker3D" parent="FutureInteractionAnchors"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.35, 0.02, 1.05)
+
+[node name="Shower" type="Marker3D" parent="FutureInteractionAnchors"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.15, 0.02, 1.45)
+
+[node name="FridgeAccess" type="Marker3D" parent="FutureInteractionAnchors"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.02, -0.78)
+metadata/interaction_id = "apartment.fridge"
+metadata/target_path = NodePath("Furniture/Fridge")
+
+[node name="KitchenCupboardAccess" type="Marker3D" parent="FutureInteractionAnchors"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.8, 0.02, -0.65)
+metadata/interaction_id = "apartment.kitchen_cupboard"
+metadata/target_path = NodePath("Furniture/Kitchen")
+
+[node name="BedAccess" type="Marker3D" parent="FutureInteractionAnchors"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.25, 0.02, 0.9)
+metadata/interaction_id = "apartment.bed"
+metadata/target_path = NodePath("Furniture/Bed")
+
+[node name="EntryDoorAccess" type="Marker3D" parent="FutureInteractionAnchors"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.95, 0.02, 1.05)
+metadata/interaction_id = "apartment.entry_door"
+metadata/target_path = NodePath("Architecture/EntryDoor")
+
+[node name="WindowAccess" type="Marker3D" parent="FutureInteractionAnchors"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.02, 0.02, -1.4)
+metadata/interaction_id = "apartment.window"
+metadata/target_path = NodePath("Architecture/WindowGlass")
+
+[node name="StorageAccess" type="Marker3D" parent="FutureInteractionAnchors"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9, 0.02, -0.75)
+metadata/interaction_id = "apartment.storage"
+metadata/target_path = NodePath("Furniture/StorageCounter")
+
+[node name="ShowerScreenTrim" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.15, 0, 1.45)
+
+[node name="Upright" type="MeshInstance3D" parent="ShowerScreenTrim"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.43, 0.87, -0.425)
+material_override = ExtResource("5_jeooh")
+mesh = SubResource("BoxMesh_8h6d8")
+metadata/region_presentation = "interior_501"
+
+[node name="Upright2" type="MeshInstance3D" parent="ShowerScreenTrim"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.43, 0.87, 0.425)
+material_override = ExtResource("5_jeooh")
+mesh = SubResource("BoxMesh_cpvy2")
+metadata/region_presentation = "interior_501"
+
+[node name="Rail" type="MeshInstance3D" parent="ShowerScreenTrim"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.43, 1.69, 0)
+material_override = ExtResource("5_jeooh")
+mesh = SubResource("BoxMesh_ixjo8")
+metadata/region_presentation = "interior_501"
+
+[node name="LifeDetails" type="Node3D" parent="."]
+metadata/region_presentation = "interior_501"
+
+[node name="EntryShoeRack" type="Node3D" parent="LifeDetails"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.34, 0, 0.08)
+
+[node name="Shelf" type="MeshInstance3D" parent="LifeDetails/EntryShoeRack"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.05, 0)
+material_override = ExtResource("4_78pd5")
+mesh = SubResource("BoxMesh_effiu")
+metadata/region_presentation = "interior_501"
+
+[node name="Shelf2" type="MeshInstance3D" parent="LifeDetails/EntryShoeRack"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.26, 0)
+material_override = ExtResource("4_78pd5")
+mesh = SubResource("BoxMesh_d62aa")
+metadata/region_presentation = "interior_501"
+
+[node name="Side" type="MeshInstance3D" parent="LifeDetails/EntryShoeRack"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.135, -0.235)
+material_override = ExtResource("4_78pd5")
+mesh = SubResource("BoxMesh_qwkgk")
+metadata/region_presentation = "interior_501"
+
+[node name="Side2" type="MeshInstance3D" parent="LifeDetails/EntryShoeRack"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.135, 0.235)
+material_override = ExtResource("4_78pd5")
+mesh = SubResource("BoxMesh_ar44v")
+metadata/region_presentation = "interior_501"
+
+[node name="RackCollision" type="StaticBody3D" parent="LifeDetails/EntryShoeRack"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.14, 0)
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LifeDetails/EntryShoeRack/RackCollision"]
+shape = SubResource("BoxShape3D_ugrwh")
+
+[node name="Shoe" type="MeshInstance3D" parent="LifeDetails/EntryShoeRack"]
+transform = Transform3D(0.9950042, 0, 0.09983342, 0, 1, 0, -0.09983342, 0, 0.9950042, 0, 0.095, -0.11)
+material_override = ExtResource("12_15j17")
+mesh = SubResource("BoxMesh_h7a0e")
+metadata/region_presentation = "interior_501"
+
+[node name="ShoeHeel" type="MeshInstance3D" parent="LifeDetails/EntryShoeRack"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.045, 0.13, -0.11)
+material_override = ExtResource("25_i2qaq")
+mesh = SubResource("BoxMesh_hl4w6")
+metadata/region_presentation = "interior_501"
+
+[node name="Shoe2" type="MeshInstance3D" parent="LifeDetails/EntryShoeRack"]
+transform = Transform3D(0.9950042, 0, 0.09983342, 0, 1, 0, -0.09983342, 0, 0.9950042, 0, 0.095, 0.04)
+material_override = ExtResource("12_15j17")
+mesh = SubResource("BoxMesh_oq36v")
+metadata/region_presentation = "interior_501"
+
+[node name="ShoeHeel2" type="MeshInstance3D" parent="LifeDetails/EntryShoeRack"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.045, 0.13, 0.04)
+material_override = ExtResource("25_i2qaq")
+mesh = SubResource("BoxMesh_f6jb7")
+metadata/region_presentation = "interior_501"
+
+[node name="HangingJacket" type="Node3D" parent="LifeDetails"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.405, 0, 1.82)
+
+[node name="HookBoard" type="MeshInstance3D" parent="LifeDetails/HangingJacket"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.67, 0)
+material_override = ExtResource("4_78pd5")
+mesh = SubResource("BoxMesh_u4t7a")
+metadata/region_presentation = "interior_501"
+
+[node name="Hook" type="MeshInstance3D" parent="LifeDetails/HangingJacket"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.035, 1.66, -0.1)
+material_override = ExtResource("5_jeooh")
+mesh = SubResource("BoxMesh_23csp")
+metadata/region_presentation = "interior_501"
+
+[node name="Hook2" type="MeshInstance3D" parent="LifeDetails/HangingJacket"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.035, 1.66, 0)
+material_override = ExtResource("5_jeooh")
+mesh = SubResource("BoxMesh_qv3t1")
+metadata/region_presentation = "interior_501"
+
+[node name="Hook3" type="MeshInstance3D" parent="LifeDetails/HangingJacket"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.035, 1.66, 0.1)
+material_override = ExtResource("5_jeooh")
+mesh = SubResource("BoxMesh_xkkyl")
+metadata/region_presentation = "interior_501"
+
+[node name="Jacket" type="MeshInstance3D" parent="LifeDetails/HangingJacket"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.07, 1.28, 0)
+material_override = ExtResource("25_i2qaq")
+mesh = SubResource("BoxMesh_3nquw")
+metadata/region_presentation = "interior_501"
+
+[node name="Sleeve" type="MeshInstance3D" parent="LifeDetails/HangingJacket"]
+transform = Transform3D(1, 0, 0, 0, 0.98722726, -0.15931821, 0, 0.15931821, 0.98722726, 0.075, 1.29, -0.12)
+material_override = ExtResource("25_i2qaq")
+mesh = SubResource("BoxMesh_xju6p")
+metadata/region_presentation = "interior_501"
+
+[node name="Sleeve2" type="MeshInstance3D" parent="LifeDetails/HangingJacket"]
+transform = Transform3D(1, 0, 0, 0, 0.98722726, 0.15931821, 0, -0.15931821, 0.98722726, 0.075, 1.29, 0.12)
+material_override = ExtResource("25_i2qaq")
+mesh = SubResource("BoxMesh_o5drd")
+metadata/region_presentation = "interior_501"
+
+[node name="Suitcase" type="Node3D" parent="LifeDetails"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.57, 0, 1.81)
+
+[node name="Case" type="MeshInstance3D" parent="LifeDetails/Suitcase"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.29, 0)
+material_override = ExtResource("25_i2qaq")
+mesh = SubResource("BoxMesh_io5ya")
+metadata/visibility_target = true
+metadata/visibility_regions = Array[String]([])
+metadata/region_presentation = "interior_501"
+
+[node name="Seam" type="MeshInstance3D" parent="LifeDetails/Suitcase"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.35, 0)
+material_override = ExtResource("12_15j17")
+mesh = SubResource("BoxMesh_v68na")
+metadata/region_presentation = "interior_501"
+
+[node name="Wheel" type="MeshInstance3D" parent="LifeDetails/Suitcase"]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, -0.12, 0.036, 0.055)
+material_override = ExtResource("12_15j17")
+mesh = SubResource("CylinderMesh_o6cli")
+metadata/region_presentation = "interior_501"
+
+[node name="HandleRod" type="MeshInstance3D" parent="LifeDetails/Suitcase"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.12, 0.59, 0)
+material_override = ExtResource("5_jeooh")
+mesh = SubResource("BoxMesh_8vikh")
+metadata/region_presentation = "interior_501"
+
+[node name="Wheel2" type="MeshInstance3D" parent="LifeDetails/Suitcase"]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0.12, 0.036, 0.055)
+material_override = ExtResource("12_15j17")
+mesh = SubResource("CylinderMesh_xqm1m")
+metadata/region_presentation = "interior_501"
+
+[node name="HandleRod2" type="MeshInstance3D" parent="LifeDetails/Suitcase"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.12, 0.59, 0)
+material_override = ExtResource("5_jeooh")
+mesh = SubResource("BoxMesh_q2qf7")
+metadata/region_presentation = "interior_501"
+
+[node name="Handle" type="MeshInstance3D" parent="LifeDetails/Suitcase"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.66, 0)
+material_override = ExtResource("12_15j17")
+mesh = SubResource("BoxMesh_aqppk")
+metadata/region_presentation = "interior_501"
+
+[node name="CaseCollision" type="StaticBody3D" parent="LifeDetails/Suitcase"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.27, 0)
+collision_mask = 2
+metadata/occlusion_source = NodePath("../Case")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LifeDetails/Suitcase/CaseCollision"]
+shape = SubResource("BoxShape3D_wvd4l")
+
+[node name="DeliveryParcel" type="Node3D" parent="LifeDetails"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9, 0.885, -1.58)
+
+[node name="Carton" type="MeshInstance3D" parent="LifeDetails/DeliveryParcel"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0)
+material_override = ExtResource("26_2maok")
+mesh = SubResource("BoxMesh_fxp7r")
+metadata/region_presentation = "interior_501"
+
+[node name="Tape" type="MeshInstance3D" parent="LifeDetails/DeliveryParcel"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.202, 0)
+material_override = ExtResource("28_ay8ls")
+mesh = SubResource("BoxMesh_dl5ji")
+metadata/region_presentation = "interior_501"
+
+[node name="ShippingLabel" type="MeshInstance3D" parent="LifeDetails/DeliveryParcel"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.075, 0.203, 0.025)
+material_override = ExtResource("27_42mu3")
+mesh = SubResource("BoxMesh_2v5ji")
+metadata/region_presentation = "interior_501"
+
+[node name="KitchenBin" type="Node3D" parent="LifeDetails"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.46, 0, -1.42)
+
+[node name="Bin" type="MeshInstance3D" parent="LifeDetails/KitchenBin"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.145, 0)
+material_override = ExtResource("12_15j17")
+mesh = SubResource("CylinderMesh_cma7r")
+metadata/region_presentation = "interior_501"
+
+[node name="Lid" type="MeshInstance3D" parent="LifeDetails/KitchenBin"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3, 0)
+material_override = ExtResource("6_xhn7d")
+mesh = SubResource("CylinderMesh_v6o0u")
+metadata/region_presentation = "interior_501"
+
+[node name="LidOpening" type="MeshInstance3D" parent="LifeDetails/KitchenBin"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.314, 0)
+material_override = ExtResource("12_15j17")
+mesh = SubResource("BoxMesh_ijjvq")
+metadata/region_presentation = "interior_501"
+
+[node name="TableFoodWrapper" type="Node3D" parent="LifeDetails"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.12, 0.448, 0.22)
+
+[node name="Packet" type="MeshInstance3D" parent="LifeDetails/TableFoodWrapper"]
+transform = Transform3D(0.96377087, 0, 0.26673144, 0, 1, 0, -0.26673144, 0, 0.96377087, 0, 0, 0)
+material_override = ExtResource("28_ay8ls")
+mesh = SubResource("BoxMesh_t1kve")
+metadata/region_presentation = "interior_501"
+
+[node name="Fold" type="MeshInstance3D" parent="LifeDetails/TableFoodWrapper"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.065, 0, 0)
+material_override = ExtResource("29_u3cor")
+mesh = SubResource("BoxMesh_nw051")
+metadata/region_presentation = "interior_501"
+
+[node name="SofaClothing" type="Node3D" parent="LifeDetails"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.01, 0.6775, 1.55)
+
+[node name="FoldedShirt" type="MeshInstance3D" parent="LifeDetails/SofaClothing"]
+material_override = ExtResource("27_42mu3")
+mesh = SubResource("BoxMesh_35wai")
+metadata/region_presentation = "interior_501"
+
+[node name="DrapedSleeve" type="MeshInstance3D" parent="LifeDetails/SofaClothing"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1, -0.065, 0.07)
+material_override = ExtResource("27_42mu3")
+mesh = SubResource("BoxMesh_w0fsw")
+metadata/region_presentation = "interior_501"
+
+[node name="ExteriorDirectionReference" type="Node3D" parent="."]
+metadata/exterior_direction = Vector3(0, 0, -1)
+
+[node name="ReferencePad" type="MeshInstance3D" parent="ExteriorDirectionReference"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9, -0.02, -2.95)
+material_override = ExtResource("9_oqps1")
+mesh = SubResource("BoxMesh_5kvkg")
+metadata/region_presentation = "interior_501"
+
+[node name="ReferencePost" type="MeshInstance3D" parent="ExteriorDirectionReference"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7, 0.325, -3)
+material_override = ExtResource("5_jeooh")
+mesh = SubResource("BoxMesh_s117f")
+metadata/region_presentation = "interior_501"
+
+[node name="ReferencePost2" type="MeshInstance3D" parent="ExteriorDirectionReference"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1, 0.325, -3)
+material_override = ExtResource("5_jeooh")
+mesh = SubResource("BoxMesh_vea54")
+metadata/region_presentation = "interior_501"
+
+[node name="StreetDirectionLabel" type="Label3D" parent="ExteriorDirectionReference"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9, 0.9, -3)
+pixel_size = 0.0028
+modulate = Color(0.8666667, 0.8392157, 0.7372549, 1)
+text = "室外测试 · 街道预定侧 -Z"
+font = ExtResource("13_a7crn")
+font_size = 36
+outline_size = 0
+metadata/region_presentation = "interior_501"
+
+[node name="Room501" type="Node3D" parent="."]
+metadata/building_id = "building_01"
+metadata/floor_id = "building_01_f05"
+metadata/room_id = "building_01_f05_501"
+metadata/reserved_bounds = Rect2(-4.6, -2.1, 9.2, 4.2)
+metadata/architecture_path = NodePath("../Architecture")
+metadata/furniture_path = NodePath("../Furniture")
+metadata/region_id = "apartment_501"
+metadata/region_label = "501 公寓"
+metadata/region_bounds = Rect2(-4.6, -2.1, 9.2, 4.2)
+metadata/region_playable = true
+
+[node name="Corridor" type="Node3D" parent="."]
+metadata/building_id = "building_01"
+metadata/floor_id = "building_01_f05"
+
+[node name="Floor" type="MeshInstance3D" parent="Corridor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.475, -0.08, 3.3)
+material_override = ExtResource("1_a2x84")
+mesh = SubResource("BoxMesh_veu05")
+metadata/region_presentation = "boundary"
+
+[node name="FloorCollision" type="StaticBody3D" parent="Corridor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.475, -0.08, 3.3)
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Corridor/FloorCollision"]
+shape = SubResource("BoxShape3D_816ly")
+
+[node name="Architecture" type="Node3D" parent="Corridor"]
+
+[node name="WestNorth" type="Node3D" parent="Corridor/Architecture"]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -6.425, 0, -0.775)
+metadata/visibility_target = true
+metadata/visibility_regions = Array[String](["corridor_f05", "stairwell_f05", "apartment_502_placeholder", "apartment_504_placeholder"])
+
+[node name="Lower" type="MeshInstance3D" parent="Corridor/Architecture/WestNorth"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.12, 0)
+material_override = ExtResource("3_uddix")
+mesh = SubResource("BoxMesh_wot3a")
+metadata/region_presentation = "boundary"
+
+[node name="Upper" type="MeshInstance3D" parent="Corridor/Architecture/WestNorth"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.445, 0)
+material_override = ExtResource("3_uddix")
+mesh = SubResource("BoxMesh_tvy4m")
+metadata/region_presentation = "boundary"
+
+[node name="Skirting" type="MeshInstance3D" parent="Corridor/Architecture/WestNorth"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.034, 0)
+material_override = ExtResource("4_78pd5")
+mesh = SubResource("BoxMesh_0vphq")
+metadata/region_presentation = "boundary"
+
+[node name="WallCollision" type="StaticBody3D" parent="Corridor/Architecture/WestNorth"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.325, 0)
+collision_mask = 2
+metadata/occlusion_source = "../Upper"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Corridor/Architecture/WestNorth/WallCollision"]
+shape = SubResource("BoxShape3D_dx7hh")
+
+[node name="WestMiddle" type="Node3D" parent="Corridor/Architecture"]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -6.425, 0, 3.285)
+metadata/visibility_target = true
+metadata/visibility_regions = Array[String](["corridor_f05", "stairwell_f05", "apartment_502_placeholder", "apartment_504_placeholder"])
+
+[node name="Lower" type="MeshInstance3D" parent="Corridor/Architecture/WestMiddle"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.12, 0)
+material_override = ExtResource("3_uddix")
+mesh = SubResource("BoxMesh_x37x6")
+metadata/region_presentation = "boundary"
+
+[node name="Upper" type="MeshInstance3D" parent="Corridor/Architecture/WestMiddle"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.445, 0)
+material_override = ExtResource("3_uddix")
+mesh = SubResource("BoxMesh_bcglv")
+metadata/region_presentation = "boundary"
+
+[node name="Skirting" type="MeshInstance3D" parent="Corridor/Architecture/WestMiddle"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.034, 0)
+material_override = ExtResource("4_78pd5")
+mesh = SubResource("BoxMesh_n3687")
+metadata/region_presentation = "boundary"
+
+[node name="WallCollision" type="StaticBody3D" parent="Corridor/Architecture/WestMiddle"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.325, 0)
+collision_mask = 2
+metadata/occlusion_source = "../Upper"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Corridor/Architecture/WestMiddle/WallCollision"]
+shape = SubResource("BoxShape3D_0dxxn")
+
+[node name="WestSouth" type="Node3D" parent="Corridor/Architecture"]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -6.425, 0, 7.36)
+metadata/visibility_target = true
+metadata/visibility_regions = Array[String](["corridor_f05", "stairwell_f05", "apartment_502_placeholder", "apartment_504_placeholder"])
+
+[node name="Lower" type="MeshInstance3D" parent="Corridor/Architecture/WestSouth"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.12, 0)
+material_override = ExtResource("3_uddix")
+mesh = SubResource("BoxMesh_o8kxn")
+metadata/region_presentation = "boundary"
+
+[node name="Upper" type="MeshInstance3D" parent="Corridor/Architecture/WestSouth"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.445, 0)
+material_override = ExtResource("3_uddix")
+mesh = SubResource("BoxMesh_t6b30")
+metadata/region_presentation = "boundary"
+
+[node name="Skirting" type="MeshInstance3D" parent="Corridor/Architecture/WestSouth"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.034, 0)
+material_override = ExtResource("4_78pd5")
+mesh = SubResource("BoxMesh_rnn3a")
+metadata/region_presentation = "boundary"
+
+[node name="WallCollision" type="StaticBody3D" parent="Corridor/Architecture/WestSouth"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.325, 0)
+collision_mask = 2
+metadata/occlusion_source = "../Upper"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Corridor/Architecture/WestSouth/WallCollision"]
+shape = SubResource("BoxShape3D_caa7q")
+
+[node name="EastMiddle" type="Node3D" parent="Corridor/Architecture"]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -4.525, 0, 3.5)
+metadata/visibility_target = true
+metadata/visibility_regions = Array[String](["corridor_f05", "stairwell_f05", "apartment_503_placeholder"])
+
+[node name="Lower" type="MeshInstance3D" parent="Corridor/Architecture/EastMiddle"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.12, 0)
+material_override = ExtResource("3_uddix")
+mesh = SubResource("BoxMesh_juesq")
+metadata/region_presentation = "boundary"
+
+[node name="Upper" type="MeshInstance3D" parent="Corridor/Architecture/EastMiddle"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.445, 0)
+material_override = ExtResource("3_uddix")
+mesh = SubResource("BoxMesh_1fwc2")
+metadata/region_presentation = "boundary"
+
+[node name="Skirting" type="MeshInstance3D" parent="Corridor/Architecture/EastMiddle"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.034, 0)
+material_override = ExtResource("4_78pd5")
+mesh = SubResource("BoxMesh_blohx")
+metadata/region_presentation = "boundary"
+
+[node name="WallCollision" type="StaticBody3D" parent="Corridor/Architecture/EastMiddle"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.325, 0)
+collision_mask = 2
+metadata/occlusion_source = "../Upper"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Corridor/Architecture/EastMiddle/WallCollision"]
+shape = SubResource("BoxShape3D_cotqy")
+
+[node name="EastSouth" type="Node3D" parent="Corridor/Architecture"]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -4.525, 0, 7.36)
+metadata/visibility_target = true
+metadata/visibility_regions = Array[String](["corridor_f05", "stairwell_f05", "apartment_503_placeholder"])
+
+[node name="Lower" type="MeshInstance3D" parent="Corridor/Architecture/EastSouth"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.12, 0)
+material_override = ExtResource("3_uddix")
+mesh = SubResource("BoxMesh_dfruo")
+metadata/region_presentation = "boundary"
+
+[node name="Upper" type="MeshInstance3D" parent="Corridor/Architecture/EastSouth"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.445, 0)
+material_override = ExtResource("3_uddix")
+mesh = SubResource("BoxMesh_fnlk7")
+metadata/region_presentation = "boundary"
+
+[node name="Skirting" type="MeshInstance3D" parent="Corridor/Architecture/EastSouth"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.034, 0)
+material_override = ExtResource("4_78pd5")
+mesh = SubResource("BoxMesh_u6441")
+metadata/region_presentation = "boundary"
+
+[node name="WallCollision" type="StaticBody3D" parent="Corridor/Architecture/EastSouth"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.325, 0)
+collision_mask = 2
+metadata/occlusion_source = "../Upper"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Corridor/Architecture/EastSouth/WallCollision"]
+shape = SubResource("BoxShape3D_1av15")
+
+[node name="NorthEnd" type="Node3D" parent="Corridor/Architecture"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.475, 0, -2.025)
+metadata/visibility_target = true
+metadata/visibility_regions = Array[String](["corridor_f05", "stairwell_f05", "apartment_503_placeholder"])
+
+[node name="Lower" type="MeshInstance3D" parent="Corridor/Architecture/NorthEnd"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.12, 0)
+material_override = ExtResource("3_uddix")
+mesh = SubResource("BoxMesh_abh01")
+metadata/region_presentation = "boundary"
+
+[node name="Upper" type="MeshInstance3D" parent="Corridor/Architecture/NorthEnd"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.445, 0)
+material_override = ExtResource("3_uddix")
+mesh = SubResource("BoxMesh_rd5gm")
+metadata/region_presentation = "boundary"
+
+[node name="Skirting" type="MeshInstance3D" parent="Corridor/Architecture/NorthEnd"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.034, 0)
+material_override = ExtResource("4_78pd5")
+mesh = SubResource("BoxMesh_pnkqd")
+metadata/region_presentation = "boundary"
+
+[node name="WallCollision" type="StaticBody3D" parent="Corridor/Architecture/NorthEnd"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.325, 0)
+collision_mask = 2
+metadata/occlusion_source = "../Upper"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Corridor/Architecture/NorthEnd/WallCollision"]
+shape = SubResource("BoxShape3D_mi8oa")
+
+[node name="StairLeft" type="Node3D" parent="Corridor/Architecture"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.2675, 0, 8.625)
+metadata/visibility_target = true
+metadata/visibility_regions = Array[String](["corridor_f05", "stairwell_f05", "apartment_503_placeholder"])
+
+[node name="Lower" type="MeshInstance3D" parent="Corridor/Architecture/StairLeft"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.12, 0)
+material_override = ExtResource("3_uddix")
+mesh = SubResource("BoxMesh_xu6xy")
+metadata/region_presentation = "boundary"
+
+[node name="Upper" type="MeshInstance3D" parent="Corridor/Architecture/StairLeft"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.445, 0)
+material_override = ExtResource("3_uddix")
+mesh = SubResource("BoxMesh_x1buj")
+metadata/region_presentation = "boundary"
+
+[node name="Skirting" type="MeshInstance3D" parent="Corridor/Architecture/StairLeft"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.034, 0)
+material_override = ExtResource("4_78pd5")
+mesh = SubResource("BoxMesh_ewt2r")
+metadata/region_presentation = "boundary"
+
+[node name="WallCollision" type="StaticBody3D" parent="Corridor/Architecture/StairLeft"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.325, 0)
+collision_mask = 2
+metadata/occlusion_source = "../Upper"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Corridor/Architecture/StairLeft/WallCollision"]
+shape = SubResource("BoxShape3D_rg5d6")
+
+[node name="StairRight" type="Node3D" parent="Corridor/Architecture"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.6825, 0, 8.625)
+metadata/visibility_target = true
+metadata/visibility_regions = Array[String](["corridor_f05", "stairwell_f05", "apartment_503_placeholder"])
+
+[node name="Lower" type="MeshInstance3D" parent="Corridor/Architecture/StairRight"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.12, 0)
+material_override = ExtResource("3_uddix")
+mesh = SubResource("BoxMesh_i1j8p")
+metadata/region_presentation = "boundary"
+
+[node name="Upper" type="MeshInstance3D" parent="Corridor/Architecture/StairRight"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.445, 0)
+material_override = ExtResource("3_uddix")
+mesh = SubResource("BoxMesh_txhff")
+metadata/region_presentation = "boundary"
+
+[node name="Skirting" type="MeshInstance3D" parent="Corridor/Architecture/StairRight"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.034, 0)
+material_override = ExtResource("4_78pd5")
+mesh = SubResource("BoxMesh_0h1os")
+metadata/region_presentation = "boundary"
+
+[node name="WallCollision" type="StaticBody3D" parent="Corridor/Architecture/StairRight"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.325, 0)
+collision_mask = 2
+metadata/occlusion_source = "../Upper"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Corridor/Architecture/StairRight/WallCollision"]
+shape = SubResource("BoxShape3D_qgq6d")
+
+[node name="Lintel502" type="MeshInstance3D" parent="Corridor/Architecture"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.425, 2.41, 1.11)
+material_override = ExtResource("3_uddix")
+mesh = SubResource("BoxMesh_0udny")
+metadata/visibility_target = true
+metadata/visibility_regions = Array[String](["corridor_f05", "stairwell_f05", "apartment_503_placeholder"])
+metadata/region_presentation = "boundary"
+
+[node name="Lintel502Collision" type="StaticBody3D" parent="Corridor/Architecture"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.425, 2.41, 1.11)
+collision_mask = 2
+metadata/occlusion_source = NodePath("../Lintel502")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Corridor/Architecture/Lintel502Collision"]
+shape = SubResource("BoxShape3D_6qj4k")
+
+[node name="Lintel503" type="MeshInstance3D" parent="Corridor/Architecture"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.525, 2.41, 5.46)
+material_override = ExtResource("3_uddix")
+mesh = SubResource("BoxMesh_wmphw")
+metadata/visibility_target = true
+metadata/visibility_regions = Array[String](["corridor_f05", "stairwell_f05", "apartment_503_placeholder"])
+metadata/region_presentation = "boundary"
+
+[node name="Lintel503Collision" type="StaticBody3D" parent="Corridor/Architecture"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.525, 2.41, 5.46)
+collision_mask = 2
+metadata/occlusion_source = NodePath("../Lintel503")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Corridor/Architecture/Lintel503Collision"]
+shape = SubResource("BoxShape3D_wnabk")
+
+[node name="Lintel504" type="MeshInstance3D" parent="Corridor/Architecture"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.425, 2.41, 5.46)
+material_override = ExtResource("3_uddix")
+mesh = SubResource("BoxMesh_o45xt")
+metadata/visibility_target = true
+metadata/visibility_regions = Array[String](["corridor_f05", "stairwell_f05", "apartment_503_placeholder"])
+metadata/region_presentation = "boundary"
+
+[node name="Lintel504Collision" type="StaticBody3D" parent="Corridor/Architecture"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.425, 2.41, 5.46)
+collision_mask = 2
+metadata/occlusion_source = NodePath("../Lintel504")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Corridor/Architecture/Lintel504Collision"]
+shape = SubResource("BoxShape3D_du0a7")
+
+[node name="StairLintel" type="MeshInstance3D" parent="Corridor/Architecture"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.475, 2.41, 8.625)
+material_override = ExtResource("3_uddix")
+mesh = SubResource("BoxMesh_layv2")
+metadata/visibility_target = true
+metadata/visibility_regions = Array[String](["corridor_f05", "stairwell_f05", "apartment_503_placeholder"])
+metadata/region_presentation = "boundary"
+
+[node name="StairLintelCollision" type="StaticBody3D" parent="Corridor/Architecture"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.475, 2.41, 8.625)
+collision_mask = 2
+metadata/occlusion_source = NodePath("../StairLintel")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Corridor/Architecture/StairLintelCollision"]
+shape = SubResource("BoxShape3D_dv14f")
+
+[node name="Portal502" type="Node3D" parent="Corridor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.425, 0, 1.11)
+metadata/building_id = "building_01"
+metadata/floor_id = "building_01_f05"
+metadata/room_id = "building_01_f05_502"
+
+[node name="Jamb" type="MeshInstance3D" parent="Corridor/Portal502"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.09, -0.56)
+material_override = ExtResource("4_78pd5")
+mesh = SubResource("BoxMesh_lvw76")
+metadata/region_presentation = "boundary"
+
+[node name="Jamb2" type="MeshInstance3D" parent="Corridor/Portal502"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.09, 0.56)
+material_override = ExtResource("4_78pd5")
+mesh = SubResource("BoxMesh_fexef")
+metadata/region_presentation = "boundary"
+
+[node name="Header" type="MeshInstance3D" parent="Corridor/Portal502"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.145, 0)
+material_override = ExtResource("4_78pd5")
+mesh = SubResource("BoxMesh_iq6pm")
+metadata/region_presentation = "boundary"
+
+[node name="NumberPlate" type="MeshInstance3D" parent="Corridor/Portal502"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.115, 1.8, 0)
+material_override = ExtResource("12_15j17")
+mesh = SubResource("BoxMesh_xyxyx")
+metadata/region_presentation = "boundary"
+
+[node name="Number" type="Label3D" parent="Corridor/Portal502"]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.195, 1.8, 0)
+pixel_size = 0.003
+billboard = 1
+modulate = Color(0.90588236, 0.8745098, 0.7764706, 1)
+text = "502"
+font = ExtResource("13_a7crn")
+font_size = 34
+outline_size = 0
+metadata/region_presentation = "boundary"
+
+[node name="Portal503" type="Node3D" parent="Corridor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.525, 0, 5.46)
+metadata/building_id = "building_01"
+metadata/floor_id = "building_01_f05"
+metadata/room_id = "building_01_f05_503"
+
+[node name="Jamb" type="MeshInstance3D" parent="Corridor/Portal503"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.09, -0.56)
+material_override = ExtResource("4_78pd5")
+mesh = SubResource("BoxMesh_rv0j3")
+metadata/region_presentation = "boundary"
+
+[node name="Jamb2" type="MeshInstance3D" parent="Corridor/Portal503"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.09, 0.56)
+material_override = ExtResource("4_78pd5")
+mesh = SubResource("BoxMesh_8cpqc")
+metadata/region_presentation = "boundary"
+
+[node name="Header" type="MeshInstance3D" parent="Corridor/Portal503"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.145, 0)
+material_override = ExtResource("4_78pd5")
+mesh = SubResource("BoxMesh_dyv6c")
+metadata/region_presentation = "boundary"
+
+[node name="NumberPlate" type="MeshInstance3D" parent="Corridor/Portal503"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.115, 1.8, 0)
+material_override = ExtResource("12_15j17")
+mesh = SubResource("BoxMesh_wa5hg")
+metadata/region_presentation = "boundary"
+
+[node name="Number" type="Label3D" parent="Corridor/Portal503"]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.195, 1.8, 0)
+pixel_size = 0.003
+billboard = 1
+modulate = Color(0.90588236, 0.8745098, 0.7764706, 1)
+text = "503"
+font = ExtResource("13_a7crn")
+font_size = 34
+outline_size = 0
+metadata/region_presentation = "boundary"
+
+[node name="Portal504" type="Node3D" parent="Corridor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.425, 0, 5.46)
+metadata/building_id = "building_01"
+metadata/floor_id = "building_01_f05"
+metadata/room_id = "building_01_f05_504"
+
+[node name="Jamb" type="MeshInstance3D" parent="Corridor/Portal504"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.09, -0.56)
+material_override = ExtResource("4_78pd5")
+mesh = SubResource("BoxMesh_ptwfs")
+metadata/region_presentation = "boundary"
+
+[node name="Jamb2" type="MeshInstance3D" parent="Corridor/Portal504"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.09, 0.56)
+material_override = ExtResource("4_78pd5")
+mesh = SubResource("BoxMesh_8ilip")
+metadata/region_presentation = "boundary"
+
+[node name="Header" type="MeshInstance3D" parent="Corridor/Portal504"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.145, 0)
+material_override = ExtResource("4_78pd5")
+mesh = SubResource("BoxMesh_f6xcs")
+metadata/region_presentation = "boundary"
+
+[node name="NumberPlate" type="MeshInstance3D" parent="Corridor/Portal504"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.115, 1.8, 0)
+material_override = ExtResource("12_15j17")
+mesh = SubResource("BoxMesh_16iqo")
+metadata/region_presentation = "boundary"
+
+[node name="Number" type="Label3D" parent="Corridor/Portal504"]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.195, 1.8, 0)
+pixel_size = 0.003
+billboard = 1
+modulate = Color(0.90588236, 0.8745098, 0.7764706, 1)
+text = "504"
+font = ExtResource("13_a7crn")
+font_size = 34
+outline_size = 0
+metadata/region_presentation = "boundary"
+
+[node name="Portalstairs" type="Node3D" parent="Corridor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.475, 0, 8.625)
+metadata/building_id = "building_01"
+metadata/floor_id = "building_01_f05"
+metadata/room_id = "building_01_f05_stairs"
+
+[node name="Jamb" type="MeshInstance3D" parent="Corridor/Portalstairs"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.56, 1.09, 0)
+material_override = ExtResource("4_78pd5")
+mesh = SubResource("BoxMesh_60af3")
+metadata/region_presentation = "boundary"
+
+[node name="Jamb2" type="MeshInstance3D" parent="Corridor/Portalstairs"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.56, 1.09, 0)
+material_override = ExtResource("4_78pd5")
+mesh = SubResource("BoxMesh_cd1id")
+metadata/region_presentation = "boundary"
+
+[node name="Header" type="MeshInstance3D" parent="Corridor/Portalstairs"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.145, 0)
+material_override = ExtResource("4_78pd5")
+mesh = SubResource("BoxMesh_4eppt")
+metadata/region_presentation = "boundary"
+
+[node name="NumberPlate" type="MeshInstance3D" parent="Corridor/Portalstairs"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8, -0.115)
+material_override = ExtResource("12_15j17")
+mesh = SubResource("BoxMesh_65xvt")
+metadata/region_presentation = "boundary"
+
+[node name="Number" type="Label3D" parent="Corridor/Portalstairs"]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 1.8, -0.195)
+pixel_size = 0.003
+billboard = 1
+modulate = Color(0.90588236, 0.8745098, 0.7764706, 1)
+text = "楼梯间"
+font = ExtResource("13_a7crn")
+font_size = 34
+outline_size = 0
+metadata/region_presentation = "boundary"
+
+[node name="Doors" type="Node3D" parent="Corridor"]
+
+[node name="Door502" type="Node3D" parent="Corridor/Doors" instance=ExtResource("10_mnnqi")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -6.47, 0, 1.64)
+script = ExtResource("11_1ciju")
+door_id = "building_01_f05_502_door"
+room_id = "building_01_f05_502"
+display_name = "502 房门"
+locked = true
+portal_point = Vector3(-6.425, 1, 1.11)
+floor_root_path = NodePath("../../..")
+open_yaw = 3.041592653589793
+metadata/building_id = "building_01"
+metadata/floor_id = "building_01_f05"
+metadata/room_id = "building_01_f05_502"
+metadata/door_id = "building_01_f05_502_door"
+
+[node name="Door503" type="Node3D" parent="Corridor/Doors" instance=ExtResource("10_mnnqi")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -4.48, 0, 5.99)
+script = ExtResource("11_1ciju")
+door_id = "building_01_f05_503_door"
+room_id = "building_01_f05_503"
+display_name = "503 房门"
+locked = true
+portal_point = Vector3(-4.525, 1, 5.46)
+floor_root_path = NodePath("../../..")
+metadata/building_id = "building_01"
+metadata/floor_id = "building_01_f05"
+metadata/room_id = "building_01_f05_503"
+metadata/door_id = "building_01_f05_503_door"
+
+[node name="Door504" type="Node3D" parent="Corridor/Doors" instance=ExtResource("10_mnnqi")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -6.47, 0, 5.99)
+script = ExtResource("11_1ciju")
+door_id = "building_01_f05_504_door"
+room_id = "building_01_f05_504"
+display_name = "504 房门"
+locked = true
+portal_point = Vector3(-6.425, 1, 5.46)
+floor_root_path = NodePath("../../..")
+open_yaw = 3.041592653589793
+metadata/building_id = "building_01"
+metadata/floor_id = "building_01_f05"
+metadata/room_id = "building_01_f05_504"
+metadata/door_id = "building_01_f05_504_door"
+
+[node name="Doorstairs" type="Node3D" parent="Corridor/Doors" instance=ExtResource("10_mnnqi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 8.58)
+script = ExtResource("11_1ciju")
+door_id = "building_01_f05_stairs_door"
+room_id = "building_01_f05_stairs"
+display_name = "楼梯间"
+locked = true
+portal_point = Vector3(-5.475, 1, 8.625)
+portal_tangent = Vector3(1, 0, 0)
+floor_root_path = NodePath("../../..")
+closed_yaw = 0.0
+open_yaw = -1.5707963267948966
+metadata/building_id = "building_01"
+metadata/floor_id = "building_01_f05"
+metadata/room_id = "building_01_f05_stairs"
+metadata/door_id = "building_01_f05_stairs_door"
+
+[node name="Ceiling" type="Node3D" parent="Corridor"]
+
+[node name="Panel0" type="MeshInstance3D" parent="Corridor/Ceiling"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.475, 2.695, -1.0199999)
+material_override = ExtResource("3_uddix")
+mesh = SubResource("BoxMesh_ototd")
+metadata/visibility_target = true
+metadata/query_mesh = true
+metadata/roof_panel = true
+metadata/cover_floor_id = "building_01_f05"
+metadata/visibility_role = "floor_cover"
+metadata/region_presentation = "floor_cover"
+
+[node name="Panel1" type="MeshInstance3D" parent="Corridor/Ceiling"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.475, 2.695, 1.14)
+material_override = ExtResource("3_uddix")
+mesh = SubResource("BoxMesh_145ks")
+metadata/visibility_target = true
+metadata/query_mesh = true
+metadata/roof_panel = true
+metadata/cover_floor_id = "building_01_f05"
+metadata/visibility_role = "floor_cover"
+metadata/region_presentation = "floor_cover"
+
+[node name="Panel2" type="MeshInstance3D" parent="Corridor/Ceiling"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.475, 2.695, 3.3000002)
+material_override = ExtResource("3_uddix")
+mesh = SubResource("BoxMesh_ln5ih")
+metadata/visibility_target = true
+metadata/query_mesh = true
+metadata/roof_panel = true
+metadata/cover_floor_id = "building_01_f05"
+metadata/visibility_role = "floor_cover"
+metadata/region_presentation = "floor_cover"
+
+[node name="Panel3" type="MeshInstance3D" parent="Corridor/Ceiling"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.475, 2.695, 5.46)
+material_override = ExtResource("3_uddix")
+mesh = SubResource("BoxMesh_wu6tl")
+metadata/visibility_target = true
+metadata/query_mesh = true
+metadata/roof_panel = true
+metadata/cover_floor_id = "building_01_f05"
+metadata/visibility_role = "floor_cover"
+metadata/region_presentation = "floor_cover"
+
+[node name="Panel4" type="MeshInstance3D" parent="Corridor/Ceiling"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.475, 2.695, 7.62)
+material_override = ExtResource("3_uddix")
+mesh = SubResource("BoxMesh_unsn8")
+metadata/visibility_target = true
+metadata/query_mesh = true
+metadata/roof_panel = true
+metadata/cover_floor_id = "building_01_f05"
+metadata/visibility_role = "floor_cover"
+metadata/region_presentation = "floor_cover"
+
+[node name="LifeDetails" type="Node3D" parent="Corridor"]
+
+[node name="DoorMat" type="MeshInstance3D" parent="Corridor/LifeDetails"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0.005, 1.11)
+material_override = ExtResource("25_i2qaq")
+mesh = SubResource("BoxMesh_ci8f7")
+metadata/region_presentation = "boundary"
+
+[node name="DoorMat2" type="MeshInstance3D" parent="Corridor/LifeDetails"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.95, 0.005, 5.46)
+material_override = ExtResource("25_i2qaq")
+mesh = SubResource("BoxMesh_2l57k")
+metadata/region_presentation = "boundary"
+
+[node name="FireEquipment" type="Node3D" parent="Corridor/LifeDetails"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.69, 0, 3.05)
+
+[node name="Cabinet" type="MeshInstance3D" parent="Corridor/LifeDetails/FireEquipment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.26, 0)
+material_override = ExtResource("30_vafwk")
+mesh = SubResource("BoxMesh_myb6t")
+metadata/visibility_target = true
+metadata/visibility_regions = Array[String](["corridor_f05", "stairwell_f05", "apartment_503_placeholder"])
+metadata/region_presentation = "boundary"
+
+[node name="CabinetCollision" type="StaticBody3D" parent="Corridor/LifeDetails/FireEquipment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.26, 0)
+collision_mask = 2
+metadata/occlusion_source = NodePath("../Cabinet")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Corridor/LifeDetails/FireEquipment/CabinetCollision"]
+shape = SubResource("BoxShape3D_0rk4m")
+
+[node name="Recess" type="MeshInstance3D" parent="Corridor/LifeDetails/FireEquipment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.066, 1.27, 0)
+material_override = ExtResource("12_15j17")
+mesh = SubResource("BoxMesh_4rvw1")
+metadata/region_presentation = "boundary"
+
+[node name="Sign" type="Label3D" parent="Corridor/LifeDetails/FireEquipment"]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.078, 1.5, 0)
+pixel_size = 0.003
+modulate = Color(0.90588236, 0.8745098, 0.7764706, 1)
+text = "消火栓"
+font = ExtResource("13_a7crn")
+font_size = 26
+outline_size = 0
+metadata/region_presentation = "boundary"
+
+[node name="ElectricalPanel" type="Node3D" parent="Corridor/LifeDetails"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.3, 0, 3.65)
+
+[node name="Panel" type="MeshInstance3D" parent="Corridor/LifeDetails/ElectricalPanel"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.55, 0)
+material_override = ExtResource("5_jeooh")
+mesh = SubResource("BoxMesh_4qi76")
+metadata/visibility_target = true
+metadata/visibility_regions = Array[String](["corridor_f05", "stairwell_f05", "apartment_503_placeholder"])
+metadata/region_presentation = "boundary"
+
+[node name="PanelCollision" type="StaticBody3D" parent="Corridor/LifeDetails/ElectricalPanel"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.55, 0)
+collision_mask = 2
+metadata/occlusion_source = NodePath("../Panel")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Corridor/LifeDetails/ElectricalPanel/PanelCollision"]
+shape = SubResource("BoxShape3D_lnu4d")
+
+[node name="Latch" type="MeshInstance3D" parent="Corridor/LifeDetails/ElectricalPanel"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.047, 1.49, 0.13)
+material_override = ExtResource("12_15j17")
+mesh = SubResource("BoxMesh_eyvsv")
+metadata/region_presentation = "boundary"
+
+[node name="Parcel" type="Node3D" parent="Corridor/LifeDetails"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.12, 0, -1.55)
+
+[node name="Box" type="MeshInstance3D" parent="Corridor/LifeDetails/Parcel"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.15, 0)
+material_override = ExtResource("26_2maok")
+mesh = SubResource("BoxMesh_ywqvm")
+metadata/region_presentation = "boundary"
+
+[node name="BoxCollision" type="StaticBody3D" parent="Corridor/LifeDetails/Parcel"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.15, 0)
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Corridor/LifeDetails/Parcel/BoxCollision"]
+shape = SubResource("BoxShape3D_kgpak")
+
+[node name="Tape" type="MeshInstance3D" parent="Corridor/LifeDetails/Parcel"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.302, 0)
+material_override = ExtResource("28_ay8ls")
+mesh = SubResource("BoxMesh_s78ym")
+metadata/region_presentation = "boundary"
+
+[node name="WallLamp" type="Node3D" parent="Corridor/LifeDetails"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.65, 2.32, 0)
+
+[node name="Mount" type="MeshInstance3D" parent="Corridor/LifeDetails/WallLamp"]
+material_override = ExtResource("5_jeooh")
+mesh = SubResource("BoxMesh_2kdjc")
+metadata/region_presentation = "boundary"
+
+[node name="Diffuser" type="MeshInstance3D" parent="Corridor/LifeDetails/WallLamp"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.035, 0, 0)
+material_override = ExtResource("7_3eana")
+cast_shadow = 0
+mesh = SubResource("BoxMesh_v84el")
+metadata/region_presentation = "boundary"
+
+[node name="@Node3D@2" type="Node3D" parent="Corridor/LifeDetails"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.65, 2.32, 3.9)
+
+[node name="Mount" type="MeshInstance3D" parent="Corridor/LifeDetails/@Node3D@2"]
+material_override = ExtResource("5_jeooh")
+mesh = SubResource("BoxMesh_f6eol")
+metadata/region_presentation = "boundary"
+
+[node name="Diffuser" type="MeshInstance3D" parent="Corridor/LifeDetails/@Node3D@2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.035, 0, 0)
+material_override = ExtResource("7_3eana")
+cast_shadow = 0
+mesh = SubResource("BoxMesh_4tnn5")
+metadata/region_presentation = "boundary"
+
+[node name="@Node3D@3" type="Node3D" parent="Corridor/LifeDetails"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.65, 2.32, 7.35)
+
+[node name="Mount" type="MeshInstance3D" parent="Corridor/LifeDetails/@Node3D@3"]
+material_override = ExtResource("5_jeooh")
+mesh = SubResource("BoxMesh_rpwm8")
+metadata/region_presentation = "boundary"
+
+[node name="Diffuser" type="MeshInstance3D" parent="Corridor/LifeDetails/@Node3D@3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.035, 0, 0)
+material_override = ExtResource("7_3eana")
+cast_shadow = 0
+mesh = SubResource("BoxMesh_2plyg")
+metadata/region_presentation = "boundary"
+
+[node name="FloorSign" type="Label3D" parent="Corridor/LifeDetails"]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -6.3, 2.25, 7.3)
+pixel_size = 0.003
+modulate = Color(0.90588236, 0.8745098, 0.7764706, 1)
+text = "5F  五楼"
+font = ExtResource("13_a7crn")
+font_size = 42
+outline_size = 0
+metadata/region_presentation = "boundary"
+
+[node name="VisibilityRegions" type="Node3D" parent="Corridor"]
+
+[node name="corridor_f05" type="Node3D" parent="Corridor/VisibilityRegions"]
+metadata/region_id = "corridor_f05"
+metadata/region_label = "五楼公共楼道"
+metadata/region_bounds = Rect2(-6.35, -1.95, 1.75, 9.3)
+metadata/region_playable = true
+metadata/floor_id = "building_01_f05"
+
+[node name="stairwell_f05" type="Node3D" parent="Corridor/VisibilityRegions"]
+metadata/region_id = "stairwell_f05"
+metadata/region_label = "五楼楼梯入口"
+metadata/region_bounds = Rect2(-6.35, 7.35, 1.75, 1.2)
+metadata/region_playable = true
+metadata/floor_id = "building_01_f05"
+
+[node name="NeighborRooms" type="Node3D" parent="."]
+
+[node name="Room502" type="Node3D" parent="NeighborRooms"]
+metadata/building_id = "building_01"
+metadata/floor_id = "building_01_f05"
+metadata/room_id = "building_01_f05_502"
+metadata/reserved_bounds = Rect2(-15.55, -2.1, 9.2, 4.2)
+metadata/region_id = "apartment_502_placeholder"
+metadata/region_label = "502 未开放"
+metadata/region_bounds = Rect2(-15.55, -2.1, 9.2, 4.2)
+metadata/region_playable = false
+
+[node name="ClosedVolumeFloor" type="MeshInstance3D" parent="NeighborRooms/Room502"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.950001, -0.08, 0)
+material_override = ExtResource("31_11e8j")
+mesh = SubResource("BoxMesh_lg6br")
+metadata/visibility_role = "placeholder_floor"
+metadata/region_presentation = "unopened_envelope"
+
+[node name="ClosedVolumeFloorCollision" type="StaticBody3D" parent="NeighborRooms/Room502"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.950001, -0.08, 0)
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NeighborRooms/Room502/ClosedVolumeFloorCollision"]
+shape = SubResource("BoxShape3D_s42yn")
+
+[node name="North" type="Node3D" parent="NeighborRooms/Room502"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.950001, 0, -2.0249999)
+metadata/visibility_target = true
+metadata/visibility_regions = Array[String](["apartment_502_placeholder"])
+
+[node name="Lower" type="MeshInstance3D" parent="NeighborRooms/Room502/North"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.12, 0)
+material_override = ExtResource("3_uddix")
+mesh = SubResource("BoxMesh_vt221")
+metadata/region_presentation = "unopened_envelope"
+
+[node name="Upper" type="MeshInstance3D" parent="NeighborRooms/Room502/North"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.445, 0)
+material_override = ExtResource("3_uddix")
+mesh = SubResource("BoxMesh_agwsx")
+metadata/region_presentation = "unopened_envelope"
+
+[node name="Skirting" type="MeshInstance3D" parent="NeighborRooms/Room502/North"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.034, 0)
+material_override = ExtResource("4_78pd5")
+mesh = SubResource("BoxMesh_v3sbk")
+metadata/region_presentation = "unopened_envelope"
+
+[node name="WallCollision" type="StaticBody3D" parent="NeighborRooms/Room502/North"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.325, 0)
+collision_mask = 2
+metadata/occlusion_source = "../Upper"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NeighborRooms/Room502/North/WallCollision"]
+shape = SubResource("BoxShape3D_dekrn")
+
+[node name="South" type="Node3D" parent="NeighborRooms/Room502"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.950001, 0, 2.0249999)
+metadata/visibility_target = true
+metadata/visibility_regions = Array[String](["apartment_502_placeholder"])
+
+[node name="Lower" type="MeshInstance3D" parent="NeighborRooms/Room502/South"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.12, 0)
+material_override = ExtResource("3_uddix")
+mesh = SubResource("BoxMesh_5a1pn")
+metadata/region_presentation = "unopened_envelope"
+
+[node name="Upper" type="MeshInstance3D" parent="NeighborRooms/Room502/South"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.445, 0)
+material_override = ExtResource("3_uddix")
+mesh = SubResource("BoxMesh_wu1su")
+metadata/region_presentation = "unopened_envelope"
+
+[node name="Skirting" type="MeshInstance3D" parent="NeighborRooms/Room502/South"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.034, 0)
+material_override = ExtResource("4_78pd5")
+mesh = SubResource("BoxMesh_4qxbp")
+metadata/region_presentation = "unopened_envelope"
+
+[node name="WallCollision" type="StaticBody3D" parent="NeighborRooms/Room502/South"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.325, 0)
+collision_mask = 2
+metadata/occlusion_source = "../Upper"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NeighborRooms/Room502/South/WallCollision"]
+shape = SubResource("BoxShape3D_wdjhx")
+
+[node name="Outer" type="Node3D" parent="NeighborRooms/Room502"]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -15.475, 0, 0)
+metadata/visibility_target = true
+metadata/visibility_regions = Array[String](["apartment_502_placeholder"])
+
+[node name="Lower" type="MeshInstance3D" parent="NeighborRooms/Room502/Outer"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.12, 0)
+material_override = ExtResource("3_uddix")
+mesh = SubResource("BoxMesh_s0p3x")
+metadata/region_presentation = "unopened_envelope"
+
+[node name="Upper" type="MeshInstance3D" parent="NeighborRooms/Room502/Outer"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.445, 0)
+material_override = ExtResource("3_uddix")
+mesh = SubResource("BoxMesh_ydo1j")
+metadata/region_presentation = "unopened_envelope"
+
+[node name="Skirting" type="MeshInstance3D" parent="NeighborRooms/Room502/Outer"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.034, 0)
+material_override = ExtResource("4_78pd5")
+mesh = SubResource("BoxMesh_qwqj8")
+metadata/region_presentation = "unopened_envelope"
+
+[node name="WallCollision" type="StaticBody3D" parent="NeighborRooms/Room502/Outer"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.325, 0)
+collision_mask = 2
+metadata/occlusion_source = "../Upper"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NeighborRooms/Room502/Outer/WallCollision"]
+shape = SubResource("BoxShape3D_8lgm4")
+
+[node name="Roof00" type="MeshInstance3D" parent="NeighborRooms/Room502"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.400001, 2.695, -1.05)
+material_override = ExtResource("9_oqps1")
+mesh = SubResource("BoxMesh_oe5ub")
+metadata/visibility_target = true
+metadata/query_mesh = true
+metadata/roof_panel = true
+metadata/cover_floor_id = "building_01_f05"
+metadata/visibility_role = "floor_cover"
+metadata/region_presentation = "floor_cover"
+
+[node name="Roof01" type="MeshInstance3D" parent="NeighborRooms/Room502"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.400001, 2.695, 1.0500001)
+material_override = ExtResource("9_oqps1")
+mesh = SubResource("BoxMesh_7s8ng")
+metadata/visibility_target = true
+metadata/query_mesh = true
+metadata/roof_panel = true
+metadata/cover_floor_id = "building_01_f05"
+metadata/visibility_role = "floor_cover"
+metadata/region_presentation = "floor_cover"
+
+[node name="Roof10" type="MeshInstance3D" parent="NeighborRooms/Room502"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.1, 2.695, -1.05)
+material_override = ExtResource("9_oqps1")
+mesh = SubResource("BoxMesh_t20xf")
+metadata/visibility_target = true
+metadata/query_mesh = true
+metadata/roof_panel = true
+metadata/cover_floor_id = "building_01_f05"
+metadata/visibility_role = "floor_cover"
+metadata/region_presentation = "floor_cover"
+
+[node name="Roof11" type="MeshInstance3D" parent="NeighborRooms/Room502"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.1, 2.695, 1.0500001)
+material_override = ExtResource("9_oqps1")
+mesh = SubResource("BoxMesh_tffwb")
+metadata/visibility_target = true
+metadata/query_mesh = true
+metadata/roof_panel = true
+metadata/cover_floor_id = "building_01_f05"
+metadata/visibility_role = "floor_cover"
+metadata/region_presentation = "floor_cover"
+
+[node name="Roof20" type="MeshInstance3D" parent="NeighborRooms/Room502"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.8, 2.695, -1.05)
+material_override = ExtResource("9_oqps1")
+mesh = SubResource("BoxMesh_wgi2f")
+metadata/visibility_target = true
+metadata/query_mesh = true
+metadata/roof_panel = true
+metadata/cover_floor_id = "building_01_f05"
+metadata/visibility_role = "floor_cover"
+metadata/region_presentation = "floor_cover"
+
+[node name="Roof21" type="MeshInstance3D" parent="NeighborRooms/Room502"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.8, 2.695, 1.0500001)
+material_override = ExtResource("9_oqps1")
+mesh = SubResource("BoxMesh_p5507")
+metadata/visibility_target = true
+metadata/query_mesh = true
+metadata/roof_panel = true
+metadata/cover_floor_id = "building_01_f05"
+metadata/visibility_role = "floor_cover"
+metadata/region_presentation = "floor_cover"
+
+[node name="Roof30" type="MeshInstance3D" parent="NeighborRooms/Room502"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.5000005, 2.695, -1.05)
+material_override = ExtResource("9_oqps1")
+mesh = SubResource("BoxMesh_sv5pn")
+metadata/visibility_target = true
+metadata/query_mesh = true
+metadata/roof_panel = true
+metadata/cover_floor_id = "building_01_f05"
+metadata/visibility_role = "floor_cover"
+metadata/region_presentation = "floor_cover"
+
+[node name="Roof31" type="MeshInstance3D" parent="NeighborRooms/Room502"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.5000005, 2.695, 1.0500001)
+material_override = ExtResource("9_oqps1")
+mesh = SubResource("BoxMesh_sft25")
+metadata/visibility_target = true
+metadata/query_mesh = true
+metadata/roof_panel = true
+metadata/cover_floor_id = "building_01_f05"
+metadata/visibility_role = "floor_cover"
+metadata/region_presentation = "floor_cover"
+
+[node name="UnopenedContents" type="Node3D" parent="NeighborRooms/Room502"]
+metadata/visibility_role = "unopened_contents"
+metadata/region_id = "apartment_502_placeholder"
+
+[node name="Room503" type="Node3D" parent="NeighborRooms"]
+metadata/building_id = "building_01"
+metadata/floor_id = "building_01_f05"
+metadata/room_id = "building_01_f05_503"
+metadata/reserved_bounds = Rect2(-4.6, 2.25, 9.2, 4.2)
+metadata/region_id = "apartment_503_placeholder"
+metadata/region_label = "503 未开放"
+metadata/region_bounds = Rect2(-4.6, 2.25, 9.2, 4.2)
+metadata/region_playable = false
+
+[node name="ClosedVolumeFloor" type="MeshInstance3D" parent="NeighborRooms/Room503"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08, 4.35)
+material_override = ExtResource("31_11e8j")
+mesh = SubResource("BoxMesh_hf1hc")
+metadata/visibility_role = "placeholder_floor"
+metadata/region_presentation = "unopened_envelope"
+
+[node name="ClosedVolumeFloorCollision" type="StaticBody3D" parent="NeighborRooms/Room503"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08, 4.35)
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NeighborRooms/Room503/ClosedVolumeFloorCollision"]
+shape = SubResource("BoxShape3D_cc854")
+
+[node name="North" type="Node3D" parent="NeighborRooms/Room503"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.325)
+metadata/visibility_target = true
+metadata/visibility_regions = Array[String](["apartment_503_placeholder"])
+
+[node name="Lower" type="MeshInstance3D" parent="NeighborRooms/Room503/North"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.12, 0)
+material_override = ExtResource("3_uddix")
+mesh = SubResource("BoxMesh_jqeuv")
+metadata/region_presentation = "unopened_envelope"
+
+[node name="Upper" type="MeshInstance3D" parent="NeighborRooms/Room503/North"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.445, 0)
+material_override = ExtResource("3_uddix")
+mesh = SubResource("BoxMesh_07wsr")
+metadata/region_presentation = "unopened_envelope"
+
+[node name="Skirting" type="MeshInstance3D" parent="NeighborRooms/Room503/North"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.034, 0)
+material_override = ExtResource("4_78pd5")
+mesh = SubResource("BoxMesh_2h0gk")
+metadata/region_presentation = "unopened_envelope"
+
+[node name="WallCollision" type="StaticBody3D" parent="NeighborRooms/Room503/North"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.325, 0)
+collision_mask = 2
+metadata/occlusion_source = "../Upper"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NeighborRooms/Room503/North/WallCollision"]
+shape = SubResource("BoxShape3D_2c5p3")
+
+[node name="South" type="Node3D" parent="NeighborRooms/Room503"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6.375)
+metadata/visibility_target = true
+metadata/visibility_regions = Array[String](["apartment_503_placeholder"])
+
+[node name="Lower" type="MeshInstance3D" parent="NeighborRooms/Room503/South"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.12, 0)
+material_override = ExtResource("3_uddix")
+mesh = SubResource("BoxMesh_nrfsy")
+metadata/region_presentation = "unopened_envelope"
+
+[node name="Upper" type="MeshInstance3D" parent="NeighborRooms/Room503/South"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.445, 0)
+material_override = ExtResource("3_uddix")
+mesh = SubResource("BoxMesh_pfpmc")
+metadata/region_presentation = "unopened_envelope"
+
+[node name="Skirting" type="MeshInstance3D" parent="NeighborRooms/Room503/South"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.034, 0)
+material_override = ExtResource("4_78pd5")
+mesh = SubResource("BoxMesh_p1nu2")
+metadata/region_presentation = "unopened_envelope"
+
+[node name="WallCollision" type="StaticBody3D" parent="NeighborRooms/Room503/South"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.325, 0)
+collision_mask = 2
+metadata/occlusion_source = "../Upper"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NeighborRooms/Room503/South/WallCollision"]
+shape = SubResource("BoxShape3D_rus5b")
+
+[node name="Outer" type="Node3D" parent="NeighborRooms/Room503"]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 4.525, 0, 4.35)
+metadata/visibility_target = true
+metadata/visibility_regions = Array[String](["apartment_503_placeholder"])
+
+[node name="Lower" type="MeshInstance3D" parent="NeighborRooms/Room503/Outer"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.12, 0)
+material_override = ExtResource("3_uddix")
+mesh = SubResource("BoxMesh_0s7yy")
+metadata/region_presentation = "unopened_envelope"
+
+[node name="Upper" type="MeshInstance3D" parent="NeighborRooms/Room503/Outer"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.445, 0)
+material_override = ExtResource("3_uddix")
+mesh = SubResource("BoxMesh_usb0l")
+metadata/region_presentation = "unopened_envelope"
+
+[node name="Skirting" type="MeshInstance3D" parent="NeighborRooms/Room503/Outer"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.034, 0)
+material_override = ExtResource("4_78pd5")
+mesh = SubResource("BoxMesh_tryjt")
+metadata/region_presentation = "unopened_envelope"
+
+[node name="WallCollision" type="StaticBody3D" parent="NeighborRooms/Room503/Outer"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.325, 0)
+collision_mask = 2
+metadata/occlusion_source = "../Upper"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NeighborRooms/Room503/Outer/WallCollision"]
+shape = SubResource("BoxShape3D_mu148")
+
+[node name="Roof00" type="MeshInstance3D" parent="NeighborRooms/Room503"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.4499998, 2.695, 3.3)
+material_override = ExtResource("9_oqps1")
+mesh = SubResource("BoxMesh_8hhfu")
+metadata/visibility_target = true
+metadata/query_mesh = true
+metadata/roof_panel = true
+metadata/cover_floor_id = "building_01_f05"
+metadata/visibility_role = "floor_cover"
+metadata/region_presentation = "floor_cover"
+
+[node name="Roof01" type="MeshInstance3D" parent="NeighborRooms/Room503"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.4499998, 2.695, 5.3999996)
+material_override = ExtResource("9_oqps1")
+mesh = SubResource("BoxMesh_a5fer")
+metadata/visibility_target = true
+metadata/query_mesh = true
+metadata/roof_panel = true
+metadata/cover_floor_id = "building_01_f05"
+metadata/visibility_role = "floor_cover"
+metadata/region_presentation = "floor_cover"
+
+[node name="Roof10" type="MeshInstance3D" parent="NeighborRooms/Room503"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.15, 2.695, 3.3)
+material_override = ExtResource("9_oqps1")
+mesh = SubResource("BoxMesh_7cb2b")
+metadata/visibility_target = true
+metadata/query_mesh = true
+metadata/roof_panel = true
+metadata/cover_floor_id = "building_01_f05"
+metadata/visibility_role = "floor_cover"
+metadata/region_presentation = "floor_cover"
+
+[node name="Roof11" type="MeshInstance3D" parent="NeighborRooms/Room503"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.15, 2.695, 5.3999996)
+material_override = ExtResource("9_oqps1")
+mesh = SubResource("BoxMesh_2c0d5")
+metadata/visibility_target = true
+metadata/query_mesh = true
+metadata/roof_panel = true
+metadata/cover_floor_id = "building_01_f05"
+metadata/visibility_role = "floor_cover"
+metadata/region_presentation = "floor_cover"
+
+[node name="Roof20" type="MeshInstance3D" parent="NeighborRooms/Room503"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1500001, 2.695, 3.3)
+material_override = ExtResource("9_oqps1")
+mesh = SubResource("BoxMesh_2460c")
+metadata/visibility_target = true
+metadata/query_mesh = true
+metadata/roof_panel = true
+metadata/cover_floor_id = "building_01_f05"
+metadata/visibility_role = "floor_cover"
+metadata/region_presentation = "floor_cover"
+
+[node name="Roof21" type="MeshInstance3D" parent="NeighborRooms/Room503"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1500001, 2.695, 5.3999996)
+material_override = ExtResource("9_oqps1")
+mesh = SubResource("BoxMesh_xy8ot")
+metadata/visibility_target = true
+metadata/query_mesh = true
+metadata/roof_panel = true
+metadata/cover_floor_id = "building_01_f05"
+metadata/visibility_role = "floor_cover"
+metadata/region_presentation = "floor_cover"
+
+[node name="Roof30" type="MeshInstance3D" parent="NeighborRooms/Room503"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.4500003, 2.695, 3.3)
+material_override = ExtResource("9_oqps1")
+mesh = SubResource("BoxMesh_xrkk5")
+metadata/visibility_target = true
+metadata/query_mesh = true
+metadata/roof_panel = true
+metadata/cover_floor_id = "building_01_f05"
+metadata/visibility_role = "floor_cover"
+metadata/region_presentation = "floor_cover"
+
+[node name="Roof31" type="MeshInstance3D" parent="NeighborRooms/Room503"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.4500003, 2.695, 5.3999996)
+material_override = ExtResource("9_oqps1")
+mesh = SubResource("BoxMesh_nxuxb")
+metadata/visibility_target = true
+metadata/query_mesh = true
+metadata/roof_panel = true
+metadata/cover_floor_id = "building_01_f05"
+metadata/visibility_role = "floor_cover"
+metadata/region_presentation = "floor_cover"
+
+[node name="UnopenedContents" type="Node3D" parent="NeighborRooms/Room503"]
+metadata/visibility_role = "unopened_contents"
+metadata/region_id = "apartment_503_placeholder"
+
+[node name="Room504" type="Node3D" parent="NeighborRooms"]
+metadata/building_id = "building_01"
+metadata/floor_id = "building_01_f05"
+metadata/room_id = "building_01_f05_504"
+metadata/reserved_bounds = Rect2(-15.55, 2.25, 9.2, 4.2)
+metadata/region_id = "apartment_504_placeholder"
+metadata/region_label = "504 未开放"
+metadata/region_bounds = Rect2(-15.55, 2.25, 9.2, 4.2)
+metadata/region_playable = false
+
+[node name="ClosedVolumeFloor" type="MeshInstance3D" parent="NeighborRooms/Room504"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.950001, -0.08, 4.35)
+material_override = ExtResource("31_11e8j")
+mesh = SubResource("BoxMesh_ywhny")
+metadata/visibility_role = "placeholder_floor"
+metadata/region_presentation = "unopened_envelope"
+
+[node name="ClosedVolumeFloorCollision" type="StaticBody3D" parent="NeighborRooms/Room504"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.950001, -0.08, 4.35)
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NeighborRooms/Room504/ClosedVolumeFloorCollision"]
+shape = SubResource("BoxShape3D_j5n07")
+
+[node name="North" type="Node3D" parent="NeighborRooms/Room504"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.950001, 0, 2.325)
+metadata/visibility_target = true
+metadata/visibility_regions = Array[String](["apartment_504_placeholder"])
+
+[node name="Lower" type="MeshInstance3D" parent="NeighborRooms/Room504/North"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.12, 0)
+material_override = ExtResource("3_uddix")
+mesh = SubResource("BoxMesh_a32gj")
+metadata/region_presentation = "unopened_envelope"
+
+[node name="Upper" type="MeshInstance3D" parent="NeighborRooms/Room504/North"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.445, 0)
+material_override = ExtResource("3_uddix")
+mesh = SubResource("BoxMesh_vomo8")
+metadata/region_presentation = "unopened_envelope"
+
+[node name="Skirting" type="MeshInstance3D" parent="NeighborRooms/Room504/North"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.034, 0)
+material_override = ExtResource("4_78pd5")
+mesh = SubResource("BoxMesh_5rg1w")
+metadata/region_presentation = "unopened_envelope"
+
+[node name="WallCollision" type="StaticBody3D" parent="NeighborRooms/Room504/North"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.325, 0)
+collision_mask = 2
+metadata/occlusion_source = "../Upper"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NeighborRooms/Room504/North/WallCollision"]
+shape = SubResource("BoxShape3D_fpfab")
+
+[node name="South" type="Node3D" parent="NeighborRooms/Room504"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.950001, 0, 6.375)
+metadata/visibility_target = true
+metadata/visibility_regions = Array[String](["apartment_504_placeholder"])
+
+[node name="Lower" type="MeshInstance3D" parent="NeighborRooms/Room504/South"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.12, 0)
+material_override = ExtResource("3_uddix")
+mesh = SubResource("BoxMesh_rmj3h")
+metadata/region_presentation = "unopened_envelope"
+
+[node name="Upper" type="MeshInstance3D" parent="NeighborRooms/Room504/South"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.445, 0)
+material_override = ExtResource("3_uddix")
+mesh = SubResource("BoxMesh_lggsp")
+metadata/region_presentation = "unopened_envelope"
+
+[node name="Skirting" type="MeshInstance3D" parent="NeighborRooms/Room504/South"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.034, 0)
+material_override = ExtResource("4_78pd5")
+mesh = SubResource("BoxMesh_sxwju")
+metadata/region_presentation = "unopened_envelope"
+
+[node name="WallCollision" type="StaticBody3D" parent="NeighborRooms/Room504/South"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.325, 0)
+collision_mask = 2
+metadata/occlusion_source = "../Upper"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NeighborRooms/Room504/South/WallCollision"]
+shape = SubResource("BoxShape3D_uikj4")
+
+[node name="Outer" type="Node3D" parent="NeighborRooms/Room504"]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -15.475, 0, 4.35)
+metadata/visibility_target = true
+metadata/visibility_regions = Array[String](["apartment_504_placeholder"])
+
+[node name="Lower" type="MeshInstance3D" parent="NeighborRooms/Room504/Outer"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.12, 0)
+material_override = ExtResource("3_uddix")
+mesh = SubResource("BoxMesh_ow5nu")
+metadata/region_presentation = "unopened_envelope"
+
+[node name="Upper" type="MeshInstance3D" parent="NeighborRooms/Room504/Outer"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.445, 0)
+material_override = ExtResource("3_uddix")
+mesh = SubResource("BoxMesh_pos30")
+metadata/region_presentation = "unopened_envelope"
+
+[node name="Skirting" type="MeshInstance3D" parent="NeighborRooms/Room504/Outer"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.034, 0)
+material_override = ExtResource("4_78pd5")
+mesh = SubResource("BoxMesh_phogn")
+metadata/region_presentation = "unopened_envelope"
+
+[node name="WallCollision" type="StaticBody3D" parent="NeighborRooms/Room504/Outer"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.325, 0)
+collision_mask = 2
+metadata/occlusion_source = "../Upper"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NeighborRooms/Room504/Outer/WallCollision"]
+shape = SubResource("BoxShape3D_0quae")
+
+[node name="Roof00" type="MeshInstance3D" parent="NeighborRooms/Room504"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.400001, 2.695, 3.3)
+material_override = ExtResource("9_oqps1")
+mesh = SubResource("BoxMesh_tdfo6")
+metadata/visibility_target = true
+metadata/query_mesh = true
+metadata/roof_panel = true
+metadata/cover_floor_id = "building_01_f05"
+metadata/visibility_role = "floor_cover"
+metadata/region_presentation = "floor_cover"
+
+[node name="Roof01" type="MeshInstance3D" parent="NeighborRooms/Room504"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.400001, 2.695, 5.3999996)
+material_override = ExtResource("9_oqps1")
+mesh = SubResource("BoxMesh_cdm4b")
+metadata/visibility_target = true
+metadata/query_mesh = true
+metadata/roof_panel = true
+metadata/cover_floor_id = "building_01_f05"
+metadata/visibility_role = "floor_cover"
+metadata/region_presentation = "floor_cover"
+
+[node name="Roof10" type="MeshInstance3D" parent="NeighborRooms/Room504"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.1, 2.695, 3.3)
+material_override = ExtResource("9_oqps1")
+mesh = SubResource("BoxMesh_b5wdi")
+metadata/visibility_target = true
+metadata/query_mesh = true
+metadata/roof_panel = true
+metadata/cover_floor_id = "building_01_f05"
+metadata/visibility_role = "floor_cover"
+metadata/region_presentation = "floor_cover"
+
+[node name="Roof11" type="MeshInstance3D" parent="NeighborRooms/Room504"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.1, 2.695, 5.3999996)
+material_override = ExtResource("9_oqps1")
+mesh = SubResource("BoxMesh_ptdgr")
+metadata/visibility_target = true
+metadata/query_mesh = true
+metadata/roof_panel = true
+metadata/cover_floor_id = "building_01_f05"
+metadata/visibility_role = "floor_cover"
+metadata/region_presentation = "floor_cover"
+
+[node name="Roof20" type="MeshInstance3D" parent="NeighborRooms/Room504"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.8, 2.695, 3.3)
+material_override = ExtResource("9_oqps1")
+mesh = SubResource("BoxMesh_35gee")
+metadata/visibility_target = true
+metadata/query_mesh = true
+metadata/roof_panel = true
+metadata/cover_floor_id = "building_01_f05"
+metadata/visibility_role = "floor_cover"
+metadata/region_presentation = "floor_cover"
+
+[node name="Roof21" type="MeshInstance3D" parent="NeighborRooms/Room504"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.8, 2.695, 5.3999996)
+material_override = ExtResource("9_oqps1")
+mesh = SubResource("BoxMesh_m87d4")
+metadata/visibility_target = true
+metadata/query_mesh = true
+metadata/roof_panel = true
+metadata/cover_floor_id = "building_01_f05"
+metadata/visibility_role = "floor_cover"
+metadata/region_presentation = "floor_cover"
+
+[node name="Roof30" type="MeshInstance3D" parent="NeighborRooms/Room504"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.5000005, 2.695, 3.3)
+material_override = ExtResource("9_oqps1")
+mesh = SubResource("BoxMesh_upmdt")
+metadata/visibility_target = true
+metadata/query_mesh = true
+metadata/roof_panel = true
+metadata/cover_floor_id = "building_01_f05"
+metadata/visibility_role = "floor_cover"
+metadata/region_presentation = "floor_cover"
+
+[node name="Roof31" type="MeshInstance3D" parent="NeighborRooms/Room504"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.5000005, 2.695, 5.3999996)
+material_override = ExtResource("9_oqps1")
+mesh = SubResource("BoxMesh_uakb8")
+metadata/visibility_target = true
+metadata/query_mesh = true
+metadata/roof_panel = true
+metadata/cover_floor_id = "building_01_f05"
+metadata/visibility_role = "floor_cover"
+metadata/region_presentation = "floor_cover"
+
+[node name="UnopenedContents" type="Node3D" parent="NeighborRooms/Room504"]
+metadata/visibility_role = "unopened_contents"
+metadata/region_id = "apartment_504_placeholder"
+
+[node name="StairwellReserve" type="Node3D" parent="."]
+metadata/building_id = "building_01"
+metadata/floor_id = "building_01_f05"
+metadata/room_id = "building_01_f05_stairs"
+metadata/reserved_bounds = Rect2(-7.1, 8.7, 3.25, 4)

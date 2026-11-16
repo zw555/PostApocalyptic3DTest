@@ -1,0 +1,77 @@
+[gd_scene load_steps=13 format=3]
+
+[ext_resource type="Script" path="res://scripts/apartment/floor5_door.gd" id="1_ghuh4"]
+[ext_resource type="Material" path="res://materials/apartment/oak.tres" id="2_sl54o"]
+[ext_resource type="Material" path="res://materials/apartment/cabinet.tres" id="3_sc1uy"]
+[ext_resource type="Material" path="res://materials/apartment/metal.tres" id="4_ts347"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_obtj7"]
+size = Vector3(0.98, 2.1, 0.045)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4g1gh"]
+size = Vector3(0.98, 2.1, 0.045)
+
+[sub_resource type="BoxMesh" id="BoxMesh_eo142"]
+size = Vector3(0.82, 1.48, 0.012)
+
+[sub_resource type="BoxMesh" id="BoxMesh_w2u6i"]
+size = Vector3(0.1, 0.018, 0.04)
+
+[sub_resource type="BoxMesh" id="BoxMesh_wyimb"]
+size = Vector3(0.82, 1.48, 0.012)
+
+[sub_resource type="BoxMesh" id="BoxMesh_0f5qe"]
+size = Vector3(0.1, 0.018, 0.04)
+
+[sub_resource type="BoxMesh" id="BoxMesh_fca6x"]
+size = Vector3(0.025, 0.12, 0.065)
+
+[sub_resource type="BoxMesh" id="BoxMesh_tr0yr"]
+size = Vector3(0.025, 0.12, 0.065)
+
+[node name="EntryDoor" type="Node3D"]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
+script = ExtResource("1_ghuh4")
+
+[node name="Leaf" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.49, 1.05, 0)
+material_override = ExtResource("2_sl54o")
+mesh = SubResource("BoxMesh_obtj7")
+
+[node name="LeafCollision" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.49, 1.05, 0)
+collision_mask = 2
+metadata/door_leaf = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LeafCollision"]
+shape = SubResource("BoxShape3D_4g1gh")
+
+[node name="Panel" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.49, 1.05, -0.029)
+material_override = ExtResource("3_sc1uy")
+mesh = SubResource("BoxMesh_eo142")
+
+[node name="Handle" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.85, 0.95, -0.0464)
+material_override = ExtResource("4_ts347")
+mesh = SubResource("BoxMesh_w2u6i")
+
+[node name="Panel2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.49, 1.05, 0.029)
+material_override = ExtResource("3_sc1uy")
+mesh = SubResource("BoxMesh_wyimb")
+
+[node name="Handle2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.85, 0.95, 0.0464)
+material_override = ExtResource("4_ts347")
+mesh = SubResource("BoxMesh_0f5qe")
+
+[node name="Hinge" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.025, 0.3, 0)
+material_override = ExtResource("4_ts347")
+mesh = SubResource("BoxMesh_fca6x")
+
+[node name="Hinge2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.025, 1.65, 0)
+material_override = ExtResource("4_ts347")
+mesh = SubResource("BoxMesh_tr0yr")

@@ -1,0 +1,25 @@
+[gd_resource type="StandardMaterial3D" load_steps=4 format=3]
+
+[sub_resource type="Gradient" id="Gradient_n5pcy"]
+offsets = PackedFloat32Array(0, 0.55, 1)
+colors = PackedColorArray(0.79600316, 0.7693427, 0.71221334, 1, 0.81960785, 0.7921569, 0.73333335, 1, 0.81947064, 0.7917947, 0.7319121, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_1nqcl"]
+seed = 1703
+frequency = 0.04
+fractal_octaves = 2
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_liao5"]
+width = 128
+height = 128
+noise = SubResource("FastNoiseLite_1nqcl")
+color_ramp = SubResource("Gradient_n5pcy")
+seamless = true
+
+[resource]
+resource_name = "PaintedMetal / shared low-frequency wear"
+albedo_color = Color(0.5568628, 0.29411766, 0.24313726, 1)
+albedo_texture = SubResource("NoiseTexture2D_liao5")
+metallic = 0.18
+metallic_specular = 0.25
+roughness = 0.83

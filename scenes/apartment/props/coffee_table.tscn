@@ -1,0 +1,78 @@
+[gd_scene load_steps=13 format=3]
+
+[ext_resource type="Material" path="res://materials/apartment/oak.tres" id="1_j08b1"]
+[ext_resource type="Material" path="res://materials/apartment/dark.tres" id="2_0s76o"]
+[ext_resource type="Material" path="res://materials/apartment/paper.tres" id="3_bui4d"]
+[ext_resource type="Material" path="res://materials/apartment/ceramic.tres" id="4_2y1cs"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_yy5ne"]
+size = Vector3(0.92, 0.07, 0.55)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qe4bl"]
+size = Vector3(0.92, 0.07, 0.55)
+
+[sub_resource type="BoxMesh" id="BoxMesh_2hni3"]
+size = Vector3(0.045, 0.38, 0.045)
+
+[sub_resource type="BoxMesh" id="BoxMesh_nrgpt"]
+size = Vector3(0.045, 0.38, 0.045)
+
+[sub_resource type="BoxMesh" id="BoxMesh_p7pjb"]
+size = Vector3(0.045, 0.38, 0.045)
+
+[sub_resource type="BoxMesh" id="BoxMesh_fxvf4"]
+size = Vector3(0.045, 0.38, 0.045)
+
+[sub_resource type="BoxMesh" id="BoxMesh_rwf26"]
+size = Vector3(0.2, 0.025, 0.14)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_f2xcq"]
+top_radius = 0.042
+bottom_radius = 0.042
+height = 0.09
+radial_segments = 8
+rings = 1
+
+[node name="CoffeeTable" type="Node3D"]
+
+[node name="Top" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4, 0)
+material_override = ExtResource("1_j08b1")
+mesh = SubResource("BoxMesh_yy5ne")
+
+[node name="TopCollision" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4, 0)
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TopCollision"]
+shape = SubResource("BoxShape3D_qe4bl")
+
+[node name="Leg" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.37, 0.19, -0.2)
+material_override = ExtResource("2_0s76o")
+mesh = SubResource("BoxMesh_2hni3")
+
+[node name="Leg2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.37, 0.19, 0.2)
+material_override = ExtResource("2_0s76o")
+mesh = SubResource("BoxMesh_nrgpt")
+
+[node name="Leg3" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.37, 0.19, -0.2)
+material_override = ExtResource("2_0s76o")
+mesh = SubResource("BoxMesh_p7pjb")
+
+[node name="Leg4" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.37, 0.19, 0.2)
+material_override = ExtResource("2_0s76o")
+mesh = SubResource("BoxMesh_fxvf4")
+
+[node name="Notebook" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.14, 0.45, 0.03)
+material_override = ExtResource("3_bui4d")
+mesh = SubResource("BoxMesh_rwf26")
+
+[node name="Mug" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.23, 0.48, -0.09)
+material_override = ExtResource("4_2y1cs")
+mesh = SubResource("CylinderMesh_f2xcq")
