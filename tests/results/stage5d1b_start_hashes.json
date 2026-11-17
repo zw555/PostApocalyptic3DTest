@@ -1,0 +1,1094 @@
+[
+  {
+    "sha256": "9ED2EE24C3639FECCCB1008F961A0B604ED0DD5F50F941331C0A91746FB04419",
+    "path": "scripts/camera_controller.gd"
+  },
+  {
+    "sha256": "1050505B9E0347DE14A29355CD1DF530B75D27FEB8EBF9D9460BCE3142113772",
+    "path": "scripts/camera_visibility_debug.gd"
+  },
+  {
+    "sha256": "343848D444AA8C3E852BE8111E9C9FFD179DE3CCE5F75AF0D123A08D24120746",
+    "path": "scripts/environment_finish.gd"
+  },
+  {
+    "sha256": "76549BEEC3C9133E09B3DD7961AFEF36805877B2D2420BC1BDE091A8B873F81A",
+    "path": "scripts/main.gd"
+  },
+  {
+    "sha256": "B003826CB975F4EC85D54803BE0A5C962C25E75B42DEAD976319B36C85D72175",
+    "path": "scripts/player_controller.gd"
+  },
+  {
+    "sha256": "2A848CF90FD3413B6C07FFD2A6E1400E5D700D37B91CF5A0366DF1833C516154",
+    "path": "scripts/survivor_animator.gd"
+  },
+  {
+    "sha256": "FD83A786198CF09FE7A6E49E528DF729952798524C243F9510488B4521A81599",
+    "path": "scripts/ai/build_navigation.gd"
+  },
+  {
+    "sha256": "876A4324432AD3CD38311D2E130FD9D87D725E51F421ADF36514D180E95C9BFF",
+    "path": "scripts/ai/chase_validation_main.gd"
+  },
+  {
+    "sha256": "B7BB070B51BF90D0884D156CD470F5290B0250429DE50967CC0DF31760DC6338",
+    "path": "scripts/ai/store_navigation.gd"
+  },
+  {
+    "sha256": "C9B0DA583FFC287856A0715B6714A2C721901D39852B291CB1C1366A497B37E9",
+    "path": "scripts/ai/zombie_controller.gd"
+  },
+  {
+    "sha256": "52D7F52965F020F24F6CDA54D031687C223359BA28994AF240EDDA7B6A882C47",
+    "path": "scripts/ai/zombie_debug.gd"
+  },
+  {
+    "sha256": "64AFCA1BC1D06A7BDBD1C89FBBE67B6C996ADDE9A098A1E0C84451B5EC9BD1E9",
+    "path": "scripts/ai/zombie_model.gd"
+  },
+  {
+    "sha256": "5DFA3FCDB00B963729C14569A5CC93DAE4AC4164D4C73252294A3DD806C7C9E8",
+    "path": "scripts/ai/zombie_visual.gd"
+  },
+  {
+    "sha256": "846005ABE11EFFF430A93258CE2CF7383EB1C835007B1D785F5FEAD660A532B2",
+    "path": "scripts/cad/cad_main.gd"
+  },
+  {
+    "sha256": "662E574D131DF5CE10E4044C136842966F0F5D199244390CA78105A078840C71",
+    "path": "scripts/cad/store_layout_builder.gd"
+  },
+  {
+    "sha256": "9BF89EA5F74C0993ED87DD60C351630486B2AC60A982DE3C8803D06FABE1FF22",
+    "path": "scripts/cad/store_layout_data.gd"
+  },
+  {
+    "sha256": "A1B6EC5E2CCB759FCCF2100C6039AF9D857EEAC541BEA93DED12EF58F6028DC5",
+    "path": "scripts/combat/stage5c1_aim_controller.gd"
+  },
+  {
+    "sha256": "801B7F2E372CE86D6FB0EA7CE890E8D006BCCF672AE92B1C19AF54D90521B16B",
+    "path": "scripts/combat/stage5c1_character_attack_visual.gd"
+  },
+  {
+    "sha256": "DA4ECEB8C9AE29F943A75ED988359CA42786990C640126E8E6D7E8632BCC6182",
+    "path": "scripts/combat/stage5c1_melee_attack_controller.gd"
+  },
+  {
+    "sha256": "CED60961E8B9098DE5A0E57171BEBA6F25406073F31E1F7737BD20C138292555",
+    "path": "scripts/combat/stage5c1_validation_main.gd"
+  },
+  {
+    "sha256": "FDAAF465FFE1CD9160138F8611367D27C6E947645C5F2DD07F48888F27AD0285",
+    "path": "scripts/combat/stage5c2_health_component.gd"
+  },
+  {
+    "sha256": "D0D12E98E452869485E951C78F4F2D1E2BFB11355979144ECB3F9677E6045C1E",
+    "path": "scripts/combat/stage5c2_validation_main.gd"
+  },
+  {
+    "sha256": "8A93593B693CC880795F6C55DF9A7DFF843637F70673986086A8EFA2F6828E35",
+    "path": "scripts/combat/stage5c3_player_combat_component.gd"
+  },
+  {
+    "sha256": "D2D7F097AF64089279A5A0CA06D467768910257F566BE34A874CFF85B785A0A8",
+    "path": "scripts/combat/stage5c3_zombie_melee_controller.gd"
+  },
+  {
+    "sha256": "5641ABAFB5A752C0D3A7080821E2BF3617BEB2FA91860929B249969359654BFE",
+    "path": "scripts/combat/stage5c3a_validation_main.gd"
+  },
+  {
+    "sha256": "83CB7B074336A30D667B174BA3F93AD17852882B3873E944A38E993D205B4BD8",
+    "path": "scripts/combat/stage5c3b_health_hud.gd"
+  },
+  {
+    "sha256": "FD198B377DCF93026176ED5C661C0821FA1EA24E3001B0458A40916DB24194BC",
+    "path": "scripts/combat/stage5c3b_player_feedback.gd"
+  },
+  {
+    "sha256": "41E37C4F81F2C5D7BC51C303FB8FB22A46377D086389396F2430FC3ABFC8718A",
+    "path": "scripts/combat/stage5c3b_validation_main.gd"
+  },
+  {
+    "sha256": "8A69E271A5AE4256140AB1BD9C44CC916917A6BF6C5D3A73D3048513CC318627",
+    "path": "scripts/combat/stage5d1a_combat_metrics.gd"
+  },
+  {
+    "sha256": "692A31D6A3C00E9C807A713F57E827A15DB4F20E0DD7DC024C35233B37C27BB3",
+    "path": "scripts/combat/stage5d1a_experiment_main.gd"
+  },
+  {
+    "sha256": "03DB386CC19857CC7653C03757BAF966586FE7D3E32E83F2FB066F848313007B",
+    "path": "scripts/localization/art_localization.gd"
+  },
+  {
+    "sha256": "DE32A496E060A400C3F1E1D72936181D0073A5775BBE9E7D0B8CC93CFD660329",
+    "path": "scripts/localization/build_products.gd"
+  },
+  {
+    "sha256": "C29F869C1A072F46C97CAD0EBD080D1B9D39778A01A83F32545C8C10C70A1FF6",
+    "path": "scripts/localization/build_textures.py"
+  },
+  {
+    "sha256": "8BEF2D6E6C82109B57DD70DCA2482539268F4A5C6A033DBC9E9D24558752B325",
+    "path": "scripts/localization/verify_export.gd"
+  },
+  {
+    "sha256": "0F7ED43023D1144232ECDFE7AD7272C32380E46180FFD2B9733AB90A3F0C36DD",
+    "path": "scripts/loot/build_loot_scene.gd"
+  },
+  {
+    "sha256": "B95B942E8FE799D4BE20D29B99467FEB5B2DF1D694461522B50BDD2FC2D330D7",
+    "path": "scripts/loot/container_highlight.gd"
+  },
+  {
+    "sha256": "531DAA9B36ADA6CE19E487D56AB6048590F84C296DCAA8D30B950C091DCF8ED4",
+    "path": "scripts/loot/display_catalog.gd"
+  },
+  {
+    "sha256": "F6830A000EDD0C0F6B2A2C482949B710C967110202E625181543C32215309188",
+    "path": "scripts/loot/loot_display_manager.gd"
+  },
+  {
+    "sha256": "8558BCE6AB70038495C1AD9F753B845645564682C1B7C41F9BC429E7897D26F0",
+    "path": "scripts/loot/loot_main.gd"
+  },
+  {
+    "sha256": "B5FEF72B565C0BC7BE6EF1C88EC2006248422C8842C041F1D3198D876C74A728",
+    "path": "scripts/loot/packaging_builder.gd"
+  },
+  {
+    "sha256": "AEC41D372D9DFAFFBFBCF8FF4A0AD0CA8CC27BEA676BCDE98DD16399DBFAB0AB",
+    "path": "scripts/loot/shelf_loot_state.gd"
+  },
+  {
+    "sha256": "1F00802CCC12CF6BE676850F19627A4B87587CDF0CA2CF6BBC36CAB7DE10A103",
+    "path": "scripts/loot/store_product_visuals.gd"
+  },
+  {
+    "sha256": "0A821B1CF205F06483217651650866CFE7FD649D2850A54678D012FAE0BF1C6C",
+    "path": "scripts/occlusion/player_occlusion.gd"
+  },
+  {
+    "sha256": "8299F1B7A79E36216C43BD8E37DE903CABB80D3BD043CE8155E634611FF355A7",
+    "path": "scripts/procedural/build_finish_materials.gd"
+  },
+  {
+    "sha256": "C3D4796B8347F77381CBF7FC2555BC20BF9241C5E8D960474873632DA289105E",
+    "path": "scripts/procedural/environment_builder.gd"
+  },
+  {
+    "sha256": "B3D052AC07C988DE9CC7A70FC6278FE166941051413ED3E2E24793E2072D36B4",
+    "path": "scripts/procedural/loft_mesh.gd"
+  },
+  {
+    "sha256": "9B453766515360AB77F81742E86E02D5B50C047E71488A8DCF977839CB7CEAEF",
+    "path": "scripts/procedural/material_recipe.gd"
+  },
+  {
+    "sha256": "AEBA5465FD54EA50AAD8EEA51ECA96F3BDAB251C819613581C33B3A0B32EBDBC",
+    "path": "scripts/procedural/mesh_factory.gd"
+  },
+  {
+    "sha256": "C481F3EEE454B2A1E99D9A6785C47409F446EC3CD5BFB4F111A95B7A980BF189",
+    "path": "scripts/procedural/product_library.gd"
+  },
+  {
+    "sha256": "69CEBC1A62D9ECD4FBE6905C1BE9B000D016956B20F2569255C5558F4021A826",
+    "path": "scripts/procedural/shelf_generator.gd"
+  },
+  {
+    "sha256": "970D0B51ECBCB97E3B0A4C40972E935937D7EF825C639B6013498941B2F3845F",
+    "path": "scripts/procedural/stock_instances.gd"
+  },
+  {
+    "sha256": "ADC09760C9F1C7AD1ABEEEB5BE4480FF3559DCC4D0DA3BDADCB14CBC47B51027",
+    "path": "scripts/procedural/story_generator.gd"
+  },
+  {
+    "sha256": "708CC30FEFA2BD1C4CC1112CCDCEF6BD1F2C3F7D1A528AEFA5415DB67F92E063",
+    "path": "scripts/procedural/survivor_generator.gd"
+  },
+  {
+    "sha256": "A76F0010FB96DD3525EEEE0EA6CCC44CECD74104537EC67F18432F59033C07DD",
+    "path": "scripts/procedural/visual_upgrade_builder.gd"
+  },
+  {
+    "sha256": "C2117597ED8EAC3535043E70B3F49D682E62B0EE8CFB3622E945BB731A77D894",
+    "path": "scripts/procedural/wall_generator.gd"
+  },
+  {
+    "sha256": "AA951D91EFC7B4FD116C9EABE861EE6D7B7C953203AA8C17C4C782B808BCD03E",
+    "path": "scenes/cad_convenience_store.tscn"
+  },
+  {
+    "sha256": "C27036647D72C5D49B51DBE1EDF67DA16BBE16062BE102DB2EB1808463FCC63E",
+    "path": "scenes/looted_convenience_store.tscn"
+  },
+  {
+    "sha256": "959DFC32B7980BB811BCEACA6A3152FD9C75AD646891E9857FB49B1C69E42ED7",
+    "path": "scenes/main.tscn"
+  },
+  {
+    "sha256": "D634EC24F7FCC8CA85940C6330126F3977ABA2A5E33EE2DF6BCF1EEEF5716866",
+    "path": "scenes/zombie_chase_validation.tscn"
+  },
+  {
+    "sha256": "C07850CB7BC60846B36131DFD477B751DE8C10C02D8E1E8A4FB32A885746D1A8",
+    "path": "scenes/combat/stage5c1_melee_validation.tscn"
+  },
+  {
+    "sha256": "E9166453C581E5A60F889B2ED19DAF8CF1ED87FA3B66B94078DF675B3959D2CC",
+    "path": "scenes/combat/stage5c2_melee_validation.tscn"
+  },
+  {
+    "sha256": "5A61164BF19E9DEDD80EB6B42FAA6AA5193447E781BD8870E8714042C58F4FF6",
+    "path": "scenes/combat/stage5c3a_dual_combat_validation.tscn"
+  },
+  {
+    "sha256": "12E838FF2E3BE9EA304EFD74D6C32D1E2C2B5BFEF38BCA10726E1F565DFC1EEC",
+    "path": "scenes/combat/stage5c3b_feedback_validation.tscn"
+  },
+  {
+    "sha256": "0999C4835F13979F6A0386D19CCE3928381D501051FE27BDD8F90662C85AFB22",
+    "path": "scenes/combat/stage5d1a_experiment.tscn"
+  },
+  {
+    "sha256": "F431D68AC15E2B1861C657918E4C79481447A0F9448EF9C7AEFF2697490DD0F1",
+    "path": "scenes/environment/cad_store_environment.tscn"
+  },
+  {
+    "sha256": "AE137FABBCED4F3D04349E6DC248083D7F51D7FA8A5DD06A88102431242CEF2D",
+    "path": "scenes/environment/convenience_store.tscn"
+  },
+  {
+    "sha256": "69800F0CC225AD276D60521D1769321F06856D01EC3C44C6FA946887FBDB5F5B",
+    "path": "scenes/environment/environment_story.tscn"
+  },
+  {
+    "sha256": "DF09A312E115A20AB2953616F7119E07862A41D8D79E73780D7AE0C3D6E202D6",
+    "path": "scenes/environment/modular_wall.tscn"
+  },
+  {
+    "sha256": "04A462D5E9BCFDD189417005BEF6908E13243895A081B2B07693C805941DAE30",
+    "path": "scenes/environment/wall_160_300_cutaway.tscn"
+  },
+  {
+    "sha256": "BFFB281BF6A0C40A79CF70D504E642C5E3C8C92650ACDF9BA89D37EF48F8E89B",
+    "path": "scenes/environment/wall_170_140_solid.tscn"
+  },
+  {
+    "sha256": "1B8CD280DD922888049C3F3DA4A3F42964B76F84E232F073DC4B314D31123AE5",
+    "path": "scenes/environment/wall_200_300_solid.tscn"
+  },
+  {
+    "sha256": "65DFD85225F664045ED1D2DDE5F08F71A1CFFB72B867DB373DADB3600D3B510E",
+    "path": "scenes/environment/wall_300_300_cutaway.tscn"
+  },
+  {
+    "sha256": "6D86D0178E52B173A45618AF555488AFC25BAE394091E9A2FCA0CD583FF703A2",
+    "path": "scenes/environment/wall_300_300_solid.tscn"
+  },
+  {
+    "sha256": "83B33679DFA90EBC4AEC081A7DC2E881B96A8D696BF7ECD95F5FC1E182323025",
+    "path": "scenes/environment/wall_720_300_cutaway.tscn"
+  },
+  {
+    "sha256": "1130585CC561452AD841FB1ACEBA900EE74733DD52850CD12AA8A2DE907E2A93",
+    "path": "scenes/environment/cad/East13.tscn"
+  },
+  {
+    "sha256": "D36C7562C2BC2867B71EA28E4FB5DC838CF25BC8843D579EFE6B7BC6F5D6D853",
+    "path": "scenes/environment/cad/East14.tscn"
+  },
+  {
+    "sha256": "33C1C07EB8D2796DCED9FAD33F30C2262379415623A22AE795E4DFE353AFC80D",
+    "path": "scenes/environment/cad/East15.tscn"
+  },
+  {
+    "sha256": "6A864BA8F24A1A714A1EBB093400C444F2B112112CE3F37BCA7E19D3A9B78505",
+    "path": "scenes/environment/cad/EastLast.tscn"
+  },
+  {
+    "sha256": "CABC56C70D32C437C8A973AAE323BDD46D29463D91BAE9A0DA302F4935FF695B",
+    "path": "scenes/environment/cad/North0.tscn"
+  },
+  {
+    "sha256": "FDEF93DC2813C3D787E3BD7C5D283D1FF035C1FA7C78CF974C19776FA1B9D2D7",
+    "path": "scenes/environment/cad/North1.tscn"
+  },
+  {
+    "sha256": "AA669B8FB68D40687BA1BCAA10153B5821B64080C80CB0EF2BC9FA592597D5C3",
+    "path": "scenes/environment/cad/North2.tscn"
+  },
+  {
+    "sha256": "591AF1E4CC9EF252B5793741EF2A5F5531B4D6779CAB3E931F049CFA3ADBAA0C",
+    "path": "scenes/environment/cad/North3.tscn"
+  },
+  {
+    "sha256": "B8215CCCDC106DCFDFB461621DECA0D12B63C840E9AD1B249E1430C556F51DE0",
+    "path": "scenes/environment/cad/South0.tscn"
+  },
+  {
+    "sha256": "E587A812C9977CF0C549B5E934165EF8C2A1A3B2BB92634384C7D1CC1D3A7569",
+    "path": "scenes/environment/cad/South1.tscn"
+  },
+  {
+    "sha256": "74B2570B7663FFED9567CDF4E458C74B3442E5A6EA2911D577EE107B4F1B5B2D",
+    "path": "scenes/environment/cad/South2.tscn"
+  },
+  {
+    "sha256": "10CD739B8345FA0561F37DDDCB179663638284CB8C60AF3699F4B328240FE11F",
+    "path": "scenes/environment/cad/South3.tscn"
+  },
+  {
+    "sha256": "3A6A5C75474A91FEDB2340BCE96298288424D2B1A4462DBF54E5BBBB446DDB80",
+    "path": "scenes/environment/cad/West0.tscn"
+  },
+  {
+    "sha256": "107F99CEB0D8392B867DF5F9116F7442B7F37B7B76F4C78C1D6686F8F459EDAD",
+    "path": "scenes/environment/cad/West1.tscn"
+  },
+  {
+    "sha256": "E8D94A7A88E3281C66E93A55EFF5D015A46C402440A4D57FD3181D03643169E7",
+    "path": "scenes/player/player_visual_v2.tscn"
+  },
+  {
+    "sha256": "5344E412594663A6CDC2093E158FF650689CA897F12E8E8E425C7FECD384FD43",
+    "path": "scenes/player/player.tscn"
+  },
+  {
+    "sha256": "3A2B1F709A8ED7EB535E51E2525AC77AE008E9E75D3F5AE1F010F62BE3F31048",
+    "path": "scenes/player/survivor_visual.tscn"
+  },
+  {
+    "sha256": "9198AE7627F9F62907220B474620CB405462C698F4972B83BEE5CF664DEE183C",
+    "path": "scenes/props/cardboard_box.tscn"
+  },
+  {
+    "sha256": "EE8B6A692785D976E4544EF0E88E25F91C1FCE359A1D3C307B52F2775DDA8B89",
+    "path": "scenes/props/checkout_counter.tscn"
+  },
+  {
+    "sha256": "82349588870474468E7E455ED0111BB262DDDFB443697FED34E97E3D00356115",
+    "path": "scenes/props/refrigerator.tscn"
+  },
+  {
+    "sha256": "2D563A71D7BC89C86B7A7E456C8DAA74A06483F865A1DBAF6FD95DA3E166568A",
+    "path": "scenes/props/shelf_long.tscn"
+  },
+  {
+    "sha256": "591DA6AED35FE337A1396E09A3AAA649731806EB2909D99AEB8FE8EA25F004FB",
+    "path": "scenes/props/shelf.tscn"
+  },
+  {
+    "sha256": "A215694F8285C3243BDAECDA2E96D49C97E55B3E56C4FD1256385D7206B1DB3B",
+    "path": "scenes/props/cad/Checkout.tscn"
+  },
+  {
+    "sha256": "774880AED03B5A316CF20139ECED5971670BB0BDD59017A979A428B685546DDB",
+    "path": "scenes/props/cad/EastBarMiddle.tscn"
+  },
+  {
+    "sha256": "6BFC50D47167834AE8F519E20E10A8C9AACFE0C83625EF7B60EFC25DA8E315D0",
+    "path": "scenes/props/cad/EastBarNorth.tscn"
+  },
+  {
+    "sha256": "5BCEA32C0EDB8C57AE59806B97A3507CDC260905E87287EE2C1480DD09D7D3DE",
+    "path": "scenes/props/cad/EastStool1.tscn"
+  },
+  {
+    "sha256": "B5C728701FFCF3CFDFF638B62CBDD022775B1D9C8D1FD12D10B8B4823661096F",
+    "path": "scenes/props/cad/EastStool2.tscn"
+  },
+  {
+    "sha256": "6801161F5D48D6C4C857157562C3688BA62BC1F5BB13A2F8F9CF74D33DA6320D",
+    "path": "scenes/props/cad/EastStool3.tscn"
+  },
+  {
+    "sha256": "7A75DA34FADD7FB465CA8F80AB65F43FA801BF317416A9EE85F2B46AB026CB63",
+    "path": "scenes/props/cad/Gondola1.tscn"
+  },
+  {
+    "sha256": "784D92C0579D528CAAE2CF82515600FE71ED53D293DB1888ABFFA2364F863396",
+    "path": "scenes/props/cad/Gondola2.tscn"
+  },
+  {
+    "sha256": "1B3A287CB9DF4529454BB21F631D4073BC239DAB0A40C64C892E887C2479D9F5",
+    "path": "scenes/props/cad/Gondola3.tscn"
+  },
+  {
+    "sha256": "8B62E16F1800F2094544CBA390D5365736223CCAA3B0DDB968933FB1E2718C44",
+    "path": "scenes/props/cad/IslandEast.tscn"
+  },
+  {
+    "sha256": "7EF1B856D1913BB3EBF3D6C75F71B9EB2889037F8F5C29BD7F44EFE8665540C7",
+    "path": "scenes/props/cad/IslandHead.tscn"
+  },
+  {
+    "sha256": "09B49910081B2D7A120576240D2918326857826CDFE0AF1EF5ABE82AA5F49011",
+    "path": "scenes/props/cad/IslandWest.tscn"
+  },
+  {
+    "sha256": "DEB101A3CAD4CB4B0D9505B9F6E720297E19D88DF6E2BD9E93A7E5C40DB5C199",
+    "path": "scenes/props/cad/NorthFreezer1.tscn"
+  },
+  {
+    "sha256": "41BD90D5436CB476A465E48586D8657F380C1436EC891AFB73A1FB0BA2D913A2",
+    "path": "scenes/props/cad/NorthFreezer2.tscn"
+  },
+  {
+    "sha256": "684304186170010137AC9846F6FC30814DE77697FC4A30875CC637AF10043722",
+    "path": "scenes/props/cad/NorthFreezer3.tscn"
+  },
+  {
+    "sha256": "D57A01FE20F039CC990FD6718DA0205A10E2D64D88A0AA44B8DC0CDA0D11E153",
+    "path": "scenes/props/cad/NorthFreezer4.tscn"
+  },
+  {
+    "sha256": "C5A5B282907BA50BD66D27C92EF8A57AE1300B7A04D38A851A091E8A35B992CB",
+    "path": "scenes/props/cad/NorthStool1.tscn"
+  },
+  {
+    "sha256": "DD0F50979D8FBE03F4F6D8D2D35079E9FD7B0C376D665248D3546674DE9D688D",
+    "path": "scenes/props/cad/NorthStool2.tscn"
+  },
+  {
+    "sha256": "5E412B52EBA4BA4DB278567144947DED8FED3C62C5F00AD2600A99DE55DD9594",
+    "path": "scenes/props/cad/PrepBench.tscn"
+  },
+  {
+    "sha256": "E4CAB7E301FE0403D40BE2A1F345085249F8DCF03AC6A714FB526065AF9F686F",
+    "path": "scenes/props/cad/ServiceReturn.tscn"
+  },
+  {
+    "sha256": "63AC4D73C5032A1F3580D1EA38292AF7CFC3D00C1963A7B814DB564614E9D5D9",
+    "path": "scenes/props/cad/sku_0_0.res"
+  },
+  {
+    "sha256": "CF67A7C3B6AD49FEC8574BA2BBA254775B8A4B0CA90334ED6A76359F84233648",
+    "path": "scenes/props/cad/sku_0_1.res"
+  },
+  {
+    "sha256": "12546A7965F9192809CC54E7AD1B1D038C705D9E4CAF7E0B00A9400D1F4A6833",
+    "path": "scenes/props/cad/sku_0_2.res"
+  },
+  {
+    "sha256": "F5309115BA7E771FB0A52A87E675BA7D105DCA43626EBC91D1224990FD20B878",
+    "path": "scenes/props/cad/sku_0_3.res"
+  },
+  {
+    "sha256": "D00FA5B94FBB1133672FEDB3612CE6A37ED957321A3D12C6B69B146DC2F89CF7",
+    "path": "scenes/props/cad/sku_0_4.res"
+  },
+  {
+    "sha256": "41CDB249CF332B8CA869C5105C789133BAB04FBB750645B88B065F47EF9C2703",
+    "path": "scenes/props/cad/sku_1_0.res"
+  },
+  {
+    "sha256": "9121C6A7BF687D6E5D35E5FC2981859555730C985D7CDC7ACBF8463F4FC0A85F",
+    "path": "scenes/props/cad/sku_1_1.res"
+  },
+  {
+    "sha256": "F518AFA10FFDD24622011B5B60744EAAF7AFB07CB33019C8ACE3C7386610972C",
+    "path": "scenes/props/cad/sku_1_2.res"
+  },
+  {
+    "sha256": "F9506E2DE268EDCE3F28935CC1EEC649073955C2F820D01015F6B29C79182629",
+    "path": "scenes/props/cad/sku_1_3.res"
+  },
+  {
+    "sha256": "CCD3C834F001FD24E72852C0CB739778D55E642E06AFA5117BEDAF3C689464E0",
+    "path": "scenes/props/cad/sku_1_4.res"
+  },
+  {
+    "sha256": "6EA64D26B16A46948175F6054110B63088BDF80392384F54B0F6939A935E2FC4",
+    "path": "scenes/props/cad/sku_2_0.res"
+  },
+  {
+    "sha256": "2827665A50DCE711CD2EB0354B94F05B3A3212ECB4C9F4201CEC1CE10F5B86D3",
+    "path": "scenes/props/cad/sku_2_1.res"
+  },
+  {
+    "sha256": "1F5DE6D0EC65AC66D72362550BB323BB47AF5ED602D0979E30F003F5601FE3C3",
+    "path": "scenes/props/cad/sku_2_2.res"
+  },
+  {
+    "sha256": "46DEBBC7C7F7600318D081478949A9B673C9E074E4F0DF24B888B307E93E8E59",
+    "path": "scenes/props/cad/sku_2_3.res"
+  },
+  {
+    "sha256": "F94B205AC44E81AD5FEC5546377AE524E1B2BB69A426853196426FA3571A8FF3",
+    "path": "scenes/props/cad/sku_2_4.res"
+  },
+  {
+    "sha256": "1317C0634A5F67628C977C868045EE1B10F07C7F15B1212F48AE69A3F160B611",
+    "path": "scenes/props/cad/SouthBar.tscn"
+  },
+  {
+    "sha256": "D2AA2C1786D40B59B6C8A1E167E10FEAB1AC793D28BA467A6F8DB646ED8E7004",
+    "path": "scenes/props/cad/SouthShelf1.tscn"
+  },
+  {
+    "sha256": "023FF13D028FCE75437FBB5D61728BE83F02A9181AACC2BD02F6136B313145EF",
+    "path": "scenes/props/cad/SouthShelf2.tscn"
+  },
+  {
+    "sha256": "135FBB1C0121AAF191DC0FF7B1D906C85DF66AFD1F5EEE6256B6679130ED69D4",
+    "path": "scenes/props/cad/SouthShelf3.tscn"
+  },
+  {
+    "sha256": "DFAECD01FC390F533A88FA21D1AD73D089882AB7FDCAFD1E45AE40ACA12317AD",
+    "path": "scenes/props/cad/SouthStool1.tscn"
+  },
+  {
+    "sha256": "BB6F4ED202992CD512A817B135A776A1062064778DAE66BD216639DE1378ABF7",
+    "path": "scenes/props/cad/SouthStool2.tscn"
+  },
+  {
+    "sha256": "5EF9CC509BD829DFA94A5F365330371E56004E3AD667964E882ABF9C48690DF4",
+    "path": "scenes/props/cad/SouthStool3.tscn"
+  },
+  {
+    "sha256": "A28B21F00D2BD6B4CFC82546B3F6BC772236A75FA3D4EBD7BD270BD77F601367",
+    "path": "scenes/props/cad/SouthStool4.tscn"
+  },
+  {
+    "sha256": "339AA6247D347EDEAE5B1639B13C00F284D598675354C7CDFB301239119C0EEF",
+    "path": "scenes/props/cad/SouthStool5.tscn"
+  },
+  {
+    "sha256": "95836C67F79E79C75CABBABDD08D2A8336C6467B4C4B30B3BDF8CC47CDFADD41",
+    "path": "scenes/props/cad/SouthStool6.tscn"
+  },
+  {
+    "sha256": "A3F95B483B57751012353B6A6FB9330D1446007F241B72CB189CD77430F28915",
+    "path": "scenes/props/cad/WestShelfNorth.tscn"
+  },
+  {
+    "sha256": "6BD7DE0F1827A938511595228E9895CD323E0773F8EF3C11FD280E1E9C9D19A0",
+    "path": "scenes/props/cad/WestShelfSouth.tscn"
+  },
+  {
+    "sha256": "A9BF76C7728D4F2EDCA1CF9A1116A6DEB4FF1CF8F5A23F54E89DBB3EAE60772E",
+    "path": "scenes/props/loot/sku_0_0.res"
+  },
+  {
+    "sha256": "E6635734CD8FB3CB8A1A5EA95C090B530F560ADB72037FF493E3A22E309F9891",
+    "path": "scenes/props/loot/sku_0_1.res"
+  },
+  {
+    "sha256": "7FF6A55C5372E49D24384C13BF9F4B76502BDCC4A56AA9F54501F9B24A589297",
+    "path": "scenes/props/loot/sku_0_2.res"
+  },
+  {
+    "sha256": "88569FCCC2EB59E4A31DE1FE49403C2429FE376C0BEBDE8F243348832E6D70F0",
+    "path": "scenes/props/loot/sku_0_3.res"
+  },
+  {
+    "sha256": "CF9ED919F1CF49D91520A4BEB067B88703EDF8E6A48C18F391811BA0F69060AE",
+    "path": "scenes/props/loot/sku_0_4.res"
+  },
+  {
+    "sha256": "22180A6EE313884BC9BAFA042076F8D6B25F9E70EFF419DC342A81D1778C2713",
+    "path": "scenes/props/loot/sku_1_0.res"
+  },
+  {
+    "sha256": "871308244220DCE1AA07CDC9E58F8FE2E5A3B00CB97E4BF3D5D9D71D4240D216",
+    "path": "scenes/props/loot/sku_1_1.res"
+  },
+  {
+    "sha256": "E5920918B4E5C8473F63ECB3B1C5262C4903F485AA0D5409105BD36FDE90AE06",
+    "path": "scenes/props/loot/sku_1_2.res"
+  },
+  {
+    "sha256": "5F05A73C94110ABC3B8399A3126279F9EF744AF705A758848F9FFAB58B58404C",
+    "path": "scenes/props/loot/sku_1_3.res"
+  },
+  {
+    "sha256": "92E9D5181D2AA29312A632E0904E05DA4BF35FAB36B9AB95E1C550BE1264922D",
+    "path": "scenes/props/loot/sku_1_4.res"
+  },
+  {
+    "sha256": "E446295D2DF89DEDF4986256A971B5AD2E1BD407D945CBE298675E7BD6D2BF91",
+    "path": "scenes/props/loot/sku_2_0.res"
+  },
+  {
+    "sha256": "AFFBE83AD0AC6FAF678C6C625C42AD4A26C1AC921EBF8B053A27F501AA627B8E",
+    "path": "scenes/props/loot/sku_2_1.res"
+  },
+  {
+    "sha256": "6DE2F92333A353D25F84A96DF54202107E3D067A6CDAE03865BC2A2E452CEA8C",
+    "path": "scenes/props/loot/sku_2_2.res"
+  },
+  {
+    "sha256": "CF4B67AC6A07F7CF98296FA58BE6974E676FE4597C921AB2FF9C4B541E384137",
+    "path": "scenes/props/loot/sku_2_3.res"
+  },
+  {
+    "sha256": "227F36E6A2FA918706466BB9AE1EF6421AB50AA17B39E0FA9C0393DC59141BE6",
+    "path": "scenes/props/loot/sku_2_4.res"
+  },
+  {
+    "sha256": "D45A459B3E23DEC4835E0430F5716DD389C1B727CB82843FBFA5A9356A2B8ECC",
+    "path": "scenes/props/story/shopping_basket.tscn"
+  },
+  {
+    "sha256": "7CB21EE71311FE52AEAD80E409A9AE2B754F178351BBD4AD0A1640E6EDC6BD33",
+    "path": "scenes/props/story/waste_bin.tscn"
+  },
+  {
+    "sha256": "D66BA574336AAEE88BD523907A4484796ED86A4A8B5144F526CCC63AD3935D03",
+    "path": "materials/backpack.tres"
+  },
+  {
+    "sha256": "4B9447176BF6501692903040624390F4C2A0C7E85A43141F304DE5022B968CA2",
+    "path": "materials/cardboard.tres"
+  },
+  {
+    "sha256": "1ECC740AE07F646632BE8044A35DBF283B6A7C3BED568F67F8E7E477EFC90C33",
+    "path": "materials/coat.tres"
+  },
+  {
+    "sha256": "22630F032C46B853C3FBA3A58552650454E4FC73AE5AA14C77F98217C8A9C5FB",
+    "path": "materials/damage.tres"
+  },
+  {
+    "sha256": "06B099F27B4527139A4D398AC2A4032FEE3484B52978F266D7CD9F8F660F9B0B",
+    "path": "materials/floor.tres"
+  },
+  {
+    "sha256": "4E34560B9CCFBC47C1483EA8D9F7D2FA0DADEBF8557264EA086C98CAB79E4BF6",
+    "path": "materials/foundation.tres"
+  },
+  {
+    "sha256": "07F4A67367240B1425AFDBE3F69C1BBABEA84D95249E4EB6353BAE6BCE512A1D",
+    "path": "materials/glass.tres"
+  },
+  {
+    "sha256": "ADD741C830F416E8B5C9BC7E22F409583AA3090AB83BA3EC18746AF414DC80EB",
+    "path": "materials/hair.tres"
+  },
+  {
+    "sha256": "9C3A52ACEDB6A45080F1977BD5A4005011F909A41699DD2FA198624F6BBEEDB7",
+    "path": "materials/lamp.tres"
+  },
+  {
+    "sha256": "84E0F5DED7567593AB3BA6BAD3D33CC708D28F18FD3B5CCCB0141D3331BBF92C",
+    "path": "materials/metal_dark.tres"
+  },
+  {
+    "sha256": "7293E61E74404FB717462F285F7FBD2B6CBE1A5C37445864E5E7D027A62D6C7B",
+    "path": "materials/metal_light.tres"
+  },
+  {
+    "sha256": "3E5D5FD237CF46C9835E7CD2F7F49374459794E846DB0FBD96473678B53CBA05",
+    "path": "materials/pants.tres"
+  },
+  {
+    "sha256": "25ED719CFA4D6B34A1820DFF7E02CF2310DBECE4055AC048D3B933DA10DE001A",
+    "path": "materials/paper.tres"
+  },
+  {
+    "sha256": "96991259F1C7776D075FA73D998DA34570C94048EA4EB4612B00393CD0901824",
+    "path": "materials/player_occlusion_mask.gdshader"
+  },
+  {
+    "sha256": "B74F05CA77E01DDD0CE63BBAFBDAF9F1A4EEC26B4DBB37625C3B2728319A7662",
+    "path": "materials/player_occlusion_outline.gdshader"
+  },
+  {
+    "sha256": "257AB43BE7B98A78A3DB22162223C2EDA34A7A27BE91508F910F34EB41E5A300",
+    "path": "materials/product_0.tres"
+  },
+  {
+    "sha256": "DED415E7DC9EA5C1E4D740D4B57AB4A747D358365553143C3ECB9BADD93AD3D7",
+    "path": "materials/product_1.tres"
+  },
+  {
+    "sha256": "5D30768783FB347AB3680CB5A9D669A74D295553B37DA92850575701C1EBFBCB",
+    "path": "materials/product_2.tres"
+  },
+  {
+    "sha256": "CD4292CD83019B97D03421E8F7591A5A9CC552994774F9D3ADB6210ACFAFC171",
+    "path": "materials/product_3.tres"
+  },
+  {
+    "sha256": "92DB1E0ABFD6E80611D4908F0C834B5569A5628450AAD2D3A943383B2AD4B300",
+    "path": "materials/product_4.tres"
+  },
+  {
+    "sha256": "9645E056BFA58048BE8FDE18BE77112F0E2465951BF9381A2CA56460B4B07082",
+    "path": "materials/rail.tres"
+  },
+  {
+    "sha256": "49A9ACC649CDAC5D42FE52112E3ADA138AEFB723F2B7A6041EE86D2B28932019",
+    "path": "materials/shelf_back.tres"
+  },
+  {
+    "sha256": "43C336FD2CBB2E3D056CBF75FAC36A7D1E3830DB20D76669BC71391A561AF933",
+    "path": "materials/shelf.tres"
+  },
+  {
+    "sha256": "2E4E9CBC649B72A543EB40E9D4B37374D2E607B87E1A79AC92469BABBFC461BD",
+    "path": "materials/skin.tres"
+  },
+  {
+    "sha256": "A40968D2834313523B4041AD1304BD715CB09A4FA49D480320AFE98AFE622BB2",
+    "path": "materials/stain.tres"
+  },
+  {
+    "sha256": "2759F44EA8BADA4D071E625ED305117B40CDEEACCDA23EF6D6A6D8F3F68AE8B5",
+    "path": "materials/surface.gdshader"
+  },
+  {
+    "sha256": "6D8AA94B703F2148CA67C5B58BA8B7A23E692B8C9E44795506F32BAA08FB33CA",
+    "path": "materials/wall_lower.tres"
+  },
+  {
+    "sha256": "D4A7D964F5D3189EFE57EA5733F48070BF699AA6AAFBDF1DC8CC679AFAFD2A9E",
+    "path": "materials/wall.tres"
+  },
+  {
+    "sha256": "CD04A05B28054D664A6AC26B99DCF1BC702047318055C093AECBD7EAE8CD6B41",
+    "path": "materials/wood.tres"
+  },
+  {
+    "sha256": "A0F74996BF4114FDA156D6AED671B62E72C269ABCEBEF85F0382EB05367CD9F1",
+    "path": "materials/loot/bottle.tres"
+  },
+  {
+    "sha256": "639415514AC9D51ECCF6F4630AB61596A7C055AE583DE18FCC63D00F11B22178",
+    "path": "materials/loot/cap.tres"
+  },
+  {
+    "sha256": "E2E4D10530038A27C45329B510F43C6A7BD8BC59DDF3A2170E96A79A1ABDEE2A",
+    "path": "materials/loot/cardboard.tres"
+  },
+  {
+    "sha256": "5A0CB2FBC5E42D3A114FB343AAB90F6A93FA8191C6BDE0A1EB4A584503D7D44D",
+    "path": "materials/loot/metal.tres"
+  },
+  {
+    "sha256": "FD5C7C9C83A3A9B2C061D82170B46FC4EE4133BF229DB98839129DE71CE9AC99",
+    "path": "materials/loot/packaging_atlas.png"
+  },
+  {
+    "sha256": "90D549E199A7CDD262C7860835D9870795B68D35DB69E356BAF4CA306CF2B7BF",
+    "path": "materials/loot/packaging.tres"
+  },
+  {
+    "sha256": "1E7D1418C6A6A718CB3AAB8B171BC24D23CA731204892E1CDAC4887AF1A6C399",
+    "path": "materials/upgrade/architectural_finish.gdshader"
+  },
+  {
+    "sha256": "A656040250B44ADF487F8CF3AAD7B2FEDC430A2A5D8AE4BF466E8505FDF4E02E",
+    "path": "materials/upgrade/cad_display_glass.tres"
+  },
+  {
+    "sha256": "27B145CFA5D4CF1039B0054BF30DDE8DFC31D8A0A7401E4B8A92E4798521CBCC",
+    "path": "materials/upgrade/cardboard_recipe.tres"
+  },
+  {
+    "sha256": "9C8039432EFB25814E039BA27129216C55B6752A150D4CBD7FF2CA78346080EC",
+    "path": "materials/upgrade/cardboard.tres"
+  },
+  {
+    "sha256": "79277B6CB1F89195EC8169B93918FEF6255EFD9D10280ED4C66F0C23762DC7CB",
+    "path": "materials/upgrade/concrete_recipe.tres"
+  },
+  {
+    "sha256": "C18BBB5F0FF8DBACFCE21AEDE0F2431F790BF232BFFF2050CD57C6A4B3B7E76F",
+    "path": "materials/upgrade/concrete.tres"
+  },
+  {
+    "sha256": "7EF68A72A4F4F643CFC5A8FD74A2FD13DD8C6EA84BB55D35B2E77CCE35D741AC",
+    "path": "materials/upgrade/fabric_recipe.tres"
+  },
+  {
+    "sha256": "724AEF4EB014B058133B2C1B1AC2AC079204753DDDCF2E8AF201398F92C6FA47",
+    "path": "materials/upgrade/fabric.tres"
+  },
+  {
+    "sha256": "A87CF4283BCFFB96183B75BB83D10AB844840AF4B4A139738055DE683DDBCF73",
+    "path": "materials/upgrade/floor_finish.tres"
+  },
+  {
+    "sha256": "1E2AF63259C789AC7B8CFBB6C9200B1413930F3660271AC11928897E01CCB773",
+    "path": "materials/upgrade/old_wood_recipe.tres"
+  },
+  {
+    "sha256": "80C44B0F7ACF800D431F721BA0F4E4E92E013E466509C107A8E899A7826758B2",
+    "path": "materials/upgrade/old_wood.tres"
+  },
+  {
+    "sha256": "0C2AEF28DE5FA6138311A26F3BFDB3E09720B830A5F4F6A9C6F22AA28A1B3E60",
+    "path": "materials/upgrade/painted_metal_recipe.tres"
+  },
+  {
+    "sha256": "E02193BDA9E9913415B7CF2268C6DBB562A5325A446A79D3F4DC142D6A9494DB",
+    "path": "materials/upgrade/painted_metal.tres"
+  },
+  {
+    "sha256": "EF7DB622F126FBCB536367D5008AA9BF7F2A0729779531FD774E69093EFD9D51",
+    "path": "materials/upgrade/paper_recipe.tres"
+  },
+  {
+    "sha256": "D48E2390A876356FADDF4D71513F71D29D29410FD3D269E679A4D15537D09E35",
+    "path": "materials/upgrade/paper.tres"
+  },
+  {
+    "sha256": "B2752748C3FAEC3150C445C8462273DBC8DF831D2FDE0808D961C2DDC4768277",
+    "path": "materials/upgrade/plastic_recipe.tres"
+  },
+  {
+    "sha256": "6D6721D79D0E6627248ADE4C83C30C15F50F2FB0EB49896CBCCD5F5A5A3715BE",
+    "path": "materials/upgrade/plastic.tres"
+  },
+  {
+    "sha256": "201FCB72969C6CE4FC0BE3B4C17EB28A5875EE3A66BC315A1FDCF6425615E332",
+    "path": "materials/upgrade/rusted_metal_recipe.tres"
+  },
+  {
+    "sha256": "36283157F12558B3C2CDB7B5271F0DC868D8C77336735B7EDD7287F6502595D1",
+    "path": "materials/upgrade/rusted_metal.tres"
+  },
+  {
+    "sha256": "49E2D0243F8CD98CA2A9F07A001C3D55A35422B3AC8D43A466AD5D22DA9202E4",
+    "path": "materials/upgrade/survivor_canvas_recipe.tres"
+  },
+  {
+    "sha256": "AC86539F60C6687B6D80936F1952C30CCBD9038BDAC5ACD63FC49F3A4E5C2FA1",
+    "path": "materials/upgrade/survivor_canvas.tres"
+  },
+  {
+    "sha256": "F1AEF88A27D1E64007B5B09E7D01A1D7374C61A305EAF784EE32E9E8573A5AAB",
+    "path": "materials/upgrade/survivor_coat_recipe.tres"
+  },
+  {
+    "sha256": "C488AF9BC2DCA4CF14728C30AEEB818417011582192078122E6C4F654C360C71",
+    "path": "materials/upgrade/survivor_coat.tres"
+  },
+  {
+    "sha256": "D78D3573CFFDB62BA7A151A8BCD1A5617FE96F1B0CEA0C81E7E183645BA80022",
+    "path": "materials/upgrade/survivor_hair_recipe.tres"
+  },
+  {
+    "sha256": "CE174FD54521DD19EAB8D24D91757184BB30C39600F7F85232898CFF5F3E85AE",
+    "path": "materials/upgrade/survivor_hair.tres"
+  },
+  {
+    "sha256": "32A92B43D091B4D9A080EF057753E5AE60F29F5902D0BF8186677B6CC0088500",
+    "path": "materials/upgrade/survivor_leather_recipe.tres"
+  },
+  {
+    "sha256": "3C550383418BD88537720A1EB48D72E00849A3FE02CDE436E3323C9AD940A568",
+    "path": "materials/upgrade/survivor_leather.tres"
+  },
+  {
+    "sha256": "ED9324C6466573FC2E28DE6823A2E37BA480F3A9AA5064A7F4ECF07492DBF2A0",
+    "path": "materials/upgrade/survivor_pants_recipe.tres"
+  },
+  {
+    "sha256": "BAE9AB7536DE78003B3D23222BEE3FABEE5C6D66C09ADD2B2237E84C489105E7",
+    "path": "materials/upgrade/survivor_pants.tres"
+  },
+  {
+    "sha256": "754E484B8480240B105D0B6F8934413DD4D0D837F5829AE99C20BF252669FA38",
+    "path": "materials/upgrade/survivor_skin_recipe.tres"
+  },
+  {
+    "sha256": "156B837316B7BD6F164C4979A1703DD5E93E338C2C72C7890DEFD737F7FF1F4B",
+    "path": "materials/upgrade/survivor_skin.tres"
+  },
+  {
+    "sha256": "947BFE68F3330B9F1454A99D9F7A70F20A39D4D45D778059C0C64C2903305A07",
+    "path": "materials/upgrade/survivor_trim_recipe.tres"
+  },
+  {
+    "sha256": "8C80918BD2E770F58EAF6A26384BBACED9335E3A8EB667557706D047AD588DF0",
+    "path": "materials/upgrade/survivor_trim.tres"
+  },
+  {
+    "sha256": "8EB1454EA6A3DD01F2D734D46023A62C2FA5CC1EA1CD2679E904F18219357255",
+    "path": "materials/upgrade/wall_finish.tres"
+  },
+  {
+    "sha256": "06FF201C41E14DC4A66BAEFAA614C52CF516FBAEAF09950A10BEB1F2C68F35EE",
+    "path": "materials/upgrade/wall_lower_finish.tres"
+  },
+  {
+    "sha256": "CD31B7B69D47C1B0B0F63AA3B0F7F378521AE21B9140F5CA126EE15B58E6CC73",
+    "path": "data/art_localization.json"
+  },
+  {
+    "sha256": "CADB1883008F2A54A307E86A2BC3427E6D7FE23074E1DA7C2BEBA9BC870E6988",
+    "path": "data/camera_presets.json"
+  },
+  {
+    "sha256": "6DCF65AC94668FBE431A70162396F17197154C9D96B31912FF4BCF1C68B98732",
+    "path": "data/loot_display_profiles.json"
+  },
+  {
+    "sha256": "E60FCD638EA9EF1A6F1C39B8D47F1D24210C187B10587FD76C7F5071C208C377",
+    "path": "data/player_occlusion.json"
+  },
+  {
+    "sha256": "5B73FB22FEA10D531291035E145E30A0A63D21547B2C5ACFC9F9129988390A4C",
+    "path": "data/store_navigation_manifest.json"
+  },
+  {
+    "sha256": "50E6A287C71212913E27FD49FA1C0C92F1FB2F1408B8FFA546994E196EEEE40E",
+    "path": "data/zombie_validation.json"
+  },
+  {
+    "sha256": "A873D83501459249AED85ECAF927F99A2611E909C457105F2D0CF7EBE65FB28A",
+    "path": "assets/fonts/FONT_NOTICE.md"
+  },
+  {
+    "sha256": "A3041811A78C361B1DE50F953C805E0244951C21C5BD412F7232EF0D899AF0DA",
+    "path": "assets/fonts/NotoSansSC.ttf"
+  },
+  {
+    "sha256": "1C05C68C34F9708415AADA51F17E1B0092D2CEA709BF4A94CD38114F9E73D7D9",
+    "path": "assets/fonts/OFL.txt"
+  },
+  {
+    "sha256": "2D3079A5D8CD4E38EDE36C6C9237FDA536111DB3405BD6CF63DC04E89C4EBB68",
+    "path": "assets/fonts/SOURCE.json"
+  },
+  {
+    "sha256": "E805404A34B03F68844AAC6E2636212ECC987866A4B07DD205A8005A04C1DCCA",
+    "path": "assets/fonts/WangjiaUI.tres"
+  },
+  {
+    "sha256": "F2DA836462312231448485AB52D8611A067BBC2A8E9024C90AC412AD293FD087",
+    "path": "assets/localization/chinese_packaging.png"
+  },
+  {
+    "sha256": "C7F8EAA880A9CDD254F84B07D7B03489776CCB6449B19C55D278D2560427141E",
+    "path": "assets/localization/chinese_packaging.tres"
+  },
+  {
+    "sha256": "360ADF31821D0AF26F55BC65A2090FA72591143E923BC5CFEBE5A8ACB5B7C97E",
+    "path": "assets/localization/cn_boxed_food_0.res"
+  },
+  {
+    "sha256": "6CAF0A8E553EEA99779D5C6B27F22F9C9D1693C469F1A90CF715964DF560CA58",
+    "path": "assets/localization/cn_boxed_food_1.res"
+  },
+  {
+    "sha256": "8EA11977C0849C69C2EE9970EA2D8224BF50A78F0E0999376D9BE136DE550D5E",
+    "path": "assets/localization/cn_boxed_food_2.res"
+  },
+  {
+    "sha256": "98334EC80867B3B287E9410B64F8C02BF56529A899743FEC1332666EB92C14E6",
+    "path": "assets/localization/cn_boxed_food_3.res"
+  },
+  {
+    "sha256": "5A99CD9400E4C855B3B328567269E8D8B5AF0229A8C96118477E1361239444F5",
+    "path": "assets/localization/cn_boxed_food_4.res"
+  },
+  {
+    "sha256": "1A6BAFADC11357E47311BD1BDBA1ED8FF53C8E3A591AA1A467BC4189FAE5EF4E",
+    "path": "assets/localization/cn_canned_food_0.res"
+  },
+  {
+    "sha256": "173F28A3AE9137FD47687C431EF206BDA37DA770CC359B2CCCDA04FE73E1A3BA",
+    "path": "assets/localization/cn_canned_food_1.res"
+  },
+  {
+    "sha256": "9C89D1EA5F507C1DF4BEA614E1C79CFC923A9D1F767C8096DB329AFD4673D22B",
+    "path": "assets/localization/cn_canned_food_2.res"
+  },
+  {
+    "sha256": "F55F16BFB13D3CBC3C40D01182FFEE8B7B51BDDE27C162AE02BA60AC486D2A0E",
+    "path": "assets/localization/cn_canned_food_3.res"
+  },
+  {
+    "sha256": "B58472928A0ABECEF9A4350A1DF352B84AC7F8A37FC1F46D3D2CBC12EBB37A93",
+    "path": "assets/localization/cn_canned_food_4.res"
+  },
+  {
+    "sha256": "086E89E3DE5A59076FAA785B901DEAE73823EAC97ABE0FF089A7D8047196EC77",
+    "path": "assets/localization/cn_drink_0.res"
+  },
+  {
+    "sha256": "495BE9063ECA199F58CC04060A2663C43EB3C67BEBE54B57166E2B9828B6BDA3",
+    "path": "assets/localization/cn_drink_1.res"
+  },
+  {
+    "sha256": "A7B348E24897E50D88CD0658937491FE7D94B523B938F4D1F020835C514E66EA",
+    "path": "assets/localization/cn_drink_2.res"
+  },
+  {
+    "sha256": "29DBF4AC3516AE819B1AAB9CE7B50626F2CC18437D24D534E33DB22769F49D3C",
+    "path": "assets/localization/cn_drink_3.res"
+  },
+  {
+    "sha256": "F584D8D2E9501D375D958CC05BCCF5E5ADE5D752DAE8031D7A4BF86DF933885D",
+    "path": "assets/localization/cn_drink_4.res"
+  },
+  {
+    "sha256": "D60A8D84BF5FF99EA46F9B82574C9EC091AB6F573CAFF3E63F1FC84EEDE76B7E",
+    "path": "assets/localization/cn_water_0.res"
+  },
+  {
+    "sha256": "8188F528C924A5D8C3DD6BD2EEA8F9BCF55433F518915A23C20D0B7ECE26E900",
+    "path": "assets/localization/cn_water_1.res"
+  },
+  {
+    "sha256": "38E4C56063CE7DC6A2812860B08E4C11CD6F7994D9DEE79A6C7534A234ABE278",
+    "path": "assets/localization/cn_water_2.res"
+  },
+  {
+    "sha256": "07EB6153F92742779CFDCAAAEBF057F34DEBB2584FEB535CA1A3A4C71487D75C",
+    "path": "assets/localization/cn_water_3.res"
+  },
+  {
+    "sha256": "54282A8EAB98B835D4CC77F1E7314A9EDE030697814341DFA5F234967003575B",
+    "path": "assets/localization/cn_water_4.res"
+  },
+  {
+    "sha256": "333E8396F586CD72902544F9F6087680D58532AFC05B1702AEE07AA10D22C314",
+    "path": "assets/localization/shop_sign.png"
+  },
+  {
+    "sha256": "ECFBB3DDC0EC256E346FEC0D060239DB7E656111C47E24CBADA0943A666AC4E8",
+    "path": "assets/localization/sign_0.png"
+  },
+  {
+    "sha256": "480A000198FB063FFD3717DD6FC6DBCB16AA5607A390DDFCFCC5D7358312DF38",
+    "path": "assets/localization/sign_1.png"
+  },
+  {
+    "sha256": "7609973DA5D74BC6D3679632529255F90D0C4764845EC50E723081233BD11F0B",
+    "path": "assets/localization/sign_2.png"
+  },
+  {
+    "sha256": "453446265C51E8D1A36D1358F369A932324791ABFB57C3D59C3D0871BBAFE2D2",
+    "path": "assets/localization/sign_3.png"
+  },
+  {
+    "sha256": "A587585B6A3FCA292F93B9D6FAE37010AB95DDEF1D9BE26D97E9F429E94AE282",
+    "path": "assets/localization/sign_4.png"
+  },
+  {
+    "sha256": "3E672CB6F385AB5C72F447BC75F0B108B1750E3F29EA00CBF070D539E954E9D9",
+    "path": "assets/localization/sign_5.png"
+  },
+  {
+    "sha256": "0C9E4F259D9C61429334915730D490EC5AB2D5F91BE48075D93BA7CB412FEFC8",
+    "path": "assets/localization/sign_6.png"
+  },
+  {
+    "sha256": "00D432EAED0E300BCBAB66AB3B322B612F7B3895B0162DBC8833B28B643D2F52",
+    "path": "assets/localization/sign_7.png"
+  },
+  {
+    "sha256": "C260DC8E63E93BC1C2058504BB727E58E301BF1009C3D71080B78FF4ACDF3F7F",
+    "path": "assets/navigation/store_navigation.tres"
+  }
+]

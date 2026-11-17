@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="ArrayMesh" path="res://item_art_a2_1/baseball_bat/model/bat_mesh.res" id="1_77q0j"]
+
+[node name="BaseballBatA21" type="Node3D"]
+metadata/item_id = "baseball_bat"
+metadata/stage = "Item-Art A2.1 - MANUAL ACCEPTANCE PENDING"
+metadata/length_m = 0.82
+metadata/wood_axis = "-Z; one continuous object-space grain field"
+
+[node name="ContinuousWoodBat" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_77q0j")
+
+[node name="GripReference" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.045)

@@ -1,0 +1,8 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3]
+
+[ext_resource type="Shader" path="res://item_art_a2_2/models/battery/cell_sleeve.gdshader" id="1_bqvpf"]
+
+[resource]
+resource_name = "Muted olive dry-cell sleeve"
+render_priority = 0
+shader = ExtResource("1_bqvpf")

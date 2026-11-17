@@ -1,0 +1,14 @@
+[gd_resource type="Resource" load_steps=2 format=3]
+[ext_resource type="Script" path="res://stage6b3a/scripts/weapon_combat_profile.gd" id="profile"]
+[resource]
+script = ExtResource("profile")
+weapon_id = "baseball_bat"
+damage = 18.0
+attack_range = 1.75
+attack_half_angle = 47.5
+windup_duration = 0.32
+hit_window_start = 0.32
+hit_window_end = 0.48
+recovery_duration = 0.42
+attack_interval = 0.90
+knockback_strength = 2.1

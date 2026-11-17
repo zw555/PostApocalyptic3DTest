@@ -1,0 +1,11 @@
+[gd_resource type="Resource" load_steps=8 format=3]
+[ext_resource type="Script" path="res://scripts/items/item_catalog.gd" id="script"]
+[ext_resource type="Resource" path="res://data/items/water_bottle.tres" id="water_bottle"]
+[ext_resource type="Resource" path="res://data/items/canned_food.tres" id="canned_food"]
+[ext_resource type="Resource" path="res://data/items/bandage.tres" id="bandage"]
+[ext_resource type="Resource" path="res://data/items/battery.tres" id="battery"]
+[ext_resource type="Resource" path="res://data/items/combat_knife.tres" id="combat_knife"]
+[ext_resource type="Resource" path="res://data/items/baseball_bat.tres" id="baseball_bat"]
+[resource]
+script = ExtResource("script")
+definitions = Array[Resource]([ExtResource("water_bottle"),ExtResource("canned_food"),ExtResource("bandage"),ExtResource("battery"),ExtResource("combat_knife"),ExtResource("baseball_bat")])

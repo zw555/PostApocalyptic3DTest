@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3]
+
+[ext_resource type="Texture2D" path="res://item_art_a2_2_r1/models/canned_food/beef_label_texture.res" id="1_b3uui"]
+
+[resource]
+albedo_texture = ExtResource("1_b3uui")
+roughness = 0.9

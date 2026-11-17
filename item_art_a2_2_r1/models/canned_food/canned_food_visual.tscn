@@ -1,0 +1,129 @@
+[gd_scene load_steps=20 format=3]
+
+[ext_resource type="Material" path="res://item_art_a2_2_r1/models/canned_food/steel.tres" id="1_6xx7l"]
+[ext_resource type="ArrayMesh" path="res://item_art_a2_2_r1/models/canned_food/pressed_lid.res" id="2_ttkto"]
+[ext_resource type="Material" path="res://item_art_a2_2_r1/models/canned_food/tab_steel.tres" id="3_tgs7d"]
+[ext_resource type="ArrayMesh" path="res://item_art_a2_2_r1/models/canned_food/oval_pull_tab.res" id="4_kxm6m"]
+[ext_resource type="Material" path="res://item_art_a2_2_r1/models/canned_food/compact_paper.tres" id="5_jyjrr"]
+[ext_resource type="ArrayMesh" path="res://item_art_a2_2_r1/models/canned_food/round_label_mesh.res" id="6_4pop2"]
+[ext_resource type="Material" path="res://item_art_a2_2_r1/models/canned_food/compact_border.tres" id="7_q6qis"]
+[ext_resource type="Material" path="res://item_art_a2_2_r1/models/canned_food/beef_packaging.tres" id="8_we1sx"]
+[ext_resource type="ArrayMesh" path="res://item_art_a2_2_r1/models/canned_food/compact_beef_illustration.res" id="9_g7wdt"]
+[ext_resource type="ArrayMesh" path="res://item_art_a2_2_r1/models/canned_food/compact_beef_title.res" id="10_anwbf"]
+[ext_resource type="ArrayMesh" path="res://item_art_a2_2_r1/models/canned_food/compact_packaging_brand.res" id="11_meh21"]
+[ext_resource type="ArrayMesh" path="res://item_art_a2_2_r1/models/canned_food/compact_packaging_description.res" id="12_ofny0"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_drjbm"]
+top_radius = 0.0435
+bottom_radius = 0.0435
+height = 0.037
+rings = 1
+cap_top = false
+
+[sub_resource type="TorusMesh" id="TorusMesh_4w5c5"]
+inner_radius = 0.0428
+outer_radius = 0.045
+ring_segments = 8
+
+[sub_resource type="TorusMesh" id="TorusMesh_r60b0"]
+inner_radius = 0.0428
+outer_radius = 0.045
+ring_segments = 8
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_w5ott"]
+top_radius = 0.0013
+bottom_radius = 0.0013
+height = 0.0016
+radial_segments = 32
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_2lthh"]
+top_radius = 0.0022
+bottom_radius = 0.0027
+height = 0.0009
+radial_segments = 32
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_gpdye"]
+top_radius = 0.04394
+bottom_radius = 0.04394
+height = 0.00055
+rings = 1
+cap_top = false
+cap_bottom = false
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_5cu16"]
+top_radius = 0.04394
+bottom_radius = 0.04394
+height = 0.00055
+rings = 1
+cap_top = false
+cap_bottom = false
+
+[node name="CannedFoodR1" type="Node3D"]
+metadata/item_id = "canned_food"
+metadata/units = "metres"
+metadata/stage = "A2.2-R1 - MANUAL ACCEPTANCE PENDING"
+
+[node name="CanBody" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0195, 0)
+material_override = ExtResource("1_6xx7l")
+mesh = SubResource("CylinderMesh_drjbm")
+
+[node name="CircularLid" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_6xx7l")
+mesh = ExtResource("2_ttkto")
+
+[node name="RolledMetalRim" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0384, 0)
+material_override = ExtResource("1_6xx7l")
+mesh = SubResource("TorusMesh_4w5c5")
+
+[node name="LowerMetalRim" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0011, 0)
+material_override = ExtResource("1_6xx7l")
+mesh = SubResource("TorusMesh_r60b0")
+
+[node name="OvalPullTab" type="MeshInstance3D" parent="."]
+material_override = ExtResource("3_tgs7d")
+mesh = ExtResource("4_kxm6m")
+
+[node name="TabRivetStem" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0379, -0.012)
+material_override = ExtResource("1_6xx7l")
+mesh = SubResource("CylinderMesh_w5ott")
+
+[node name="TabRivet" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.03895, -0.012)
+material_override = ExtResource("1_6xx7l")
+mesh = SubResource("CylinderMesh_2lthh")
+
+[node name="ChineseWrapLabel" type="MeshInstance3D" parent="."]
+material_override = ExtResource("5_jyjrr")
+mesh = ExtResource("6_4pop2")
+
+[node name="LabelBorder63" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0063, 0)
+material_override = ExtResource("7_q6qis")
+mesh = SubResource("CylinderMesh_gpdye")
+
+[node name="LabelBorder332" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0332, 0)
+material_override = ExtResource("7_q6qis")
+mesh = SubResource("CylinderMesh_5cu16")
+
+[node name="BeefIllustration" type="MeshInstance3D" parent="."]
+material_override = ExtResource("8_we1sx")
+mesh = ExtResource("9_g7wdt")
+
+[node name="BeefTitle" type="MeshInstance3D" parent="."]
+material_override = ExtResource("8_we1sx")
+mesh = ExtResource("10_anwbf")
+
+[node name="PackagingBrand" type="MeshInstance3D" parent="."]
+material_override = ExtResource("8_we1sx")
+mesh = ExtResource("11_meh21")
+
+[node name="PackagingDescription" type="MeshInstance3D" parent="."]
+material_override = ExtResource("8_we1sx")
+mesh = ExtResource("12_ofny0")

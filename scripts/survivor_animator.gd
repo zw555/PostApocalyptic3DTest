@@ -7,6 +7,7 @@ var clock := 0.0
 var gait_weight := 0.0
 var phase := 0.0
 var external_upper_pose := false # Opt-in final pose owner in C.3-B only.
+var external_right_arm_pose := false # Opt-in pose ownership; legacy gait is default.
 @onready var body: CharacterBody3D = get_parent()
 
 func _process(delta: float) -> void:
@@ -42,6 +43,8 @@ func pose_at(cycle: float, speed: float, idle_time: float = 0.0) -> void:
 		var knee := midpoint + Vector3(0, 0, -bend)
 		orient_segment(upper, hip, knee, 0.37)
 		orient_segment(lower, knee, ankle, 0.37)
+		if side == 1 and external_right_arm_pose:
+			continue
 		var arm: Node3D = get_node(prefix + "Arm")
 		arm.rotation.x = -sin(t) * 0.29 * weight + sin(idle_time * 1.4 + side * 0.4) * 0.012 * (1.0 - weight)
 		arm.rotation.z = side * -0.055

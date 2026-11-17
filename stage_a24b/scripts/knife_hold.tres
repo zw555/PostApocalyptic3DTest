@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="" load_steps=3 format=3]
+[ext_resource type="Script" path="res://stage_a24b/scripts/weapon_hold_profile.gd" id="profile"]
+[ext_resource type="PackedScene" path="res://item_art_a1/combat_knife/model/combat_knife_visual.tscn" id="visual"]
+[resource]
+script = ExtResource("profile")
+item_id = "combat_knife"
+visual_scene = ExtResource("visual")
+upper_arm_rotation = Vector3(0.10,0,0.12)
+forearm_rotation = Vector3(0.72,0,0)
+model_rotation = Vector3(-0.55,-0.17,0)

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="AHItemDefinition" load_steps=3 format=3]
+[ext_resource type="Script" path="res://scripts/items/item_definition.gd" id="1"]
+[ext_resource type="PackedScene" path="res://item_art_a2_2_r1/models/water_bottle/water_bottle_visual.tscn" id="visual"]
+[resource]
+script = ExtResource("1")
+item_id = "water_bottle"
+display_name = "瓶装水"
+description = "一瓶密封的饮用水。"
+category = 1
+max_stack = 5
+world_visual = ExtResource("visual")

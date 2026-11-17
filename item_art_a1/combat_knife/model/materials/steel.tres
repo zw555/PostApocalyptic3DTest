@@ -1,0 +1,13 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3]
+
+[ext_resource type="Shader" path="res://item_art_a1/combat_knife/model/knife_surface.gdshader" id="1_v2nko"]
+
+[resource]
+resource_name = "Steel"
+render_priority = 0
+shader = ExtResource("1_v2nko")
+shader_parameter/base_color = Color(0.52156866, 0.5411765, 0.53333336, 1)
+shader_parameter/metalness = 0.82
+shader_parameter/base_roughness = 0.48
+shader_parameter/grip = false
+shader_parameter/wear = 0.12

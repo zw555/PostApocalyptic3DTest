@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="ArrayMesh" path="res://item_art_a2_2/models/bandage/bandage_mesh.res" id="1_cle12"]
+
+[node name="BandageVisual" type="Node3D"]
+metadata/item_id = "bandage"
+metadata/units = "metres"
+metadata/stage = "Item-Art A2.2 - MANUAL ACCEPTANCE PENDING"
+
+[node name="RolledGauzeWithOpenCore" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_cle12")

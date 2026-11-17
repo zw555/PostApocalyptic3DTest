@@ -1,0 +1,40 @@
+[gd_scene load_steps=9 format=3]
+
+[ext_resource type="ArrayMesh" path="res://item_art_a1/combat_knife/model/meshes/blade.res" id="1_g3iki"]
+[ext_resource type="ArrayMesh" path="res://item_art_a1/combat_knife/model/meshes/full_tang.res" id="2_hf54j"]
+[ext_resource type="ArrayMesh" path="res://item_art_a1/combat_knife/model/meshes/grip_scale_upper.res" id="3_y3cen"]
+[ext_resource type="ArrayMesh" path="res://item_art_a1/combat_knife/model/meshes/grip_scale_lower.res" id="4_y7cs3"]
+[ext_resource type="ArrayMesh" path="res://item_art_a1/combat_knife/model/meshes/finger_guard.res" id="5_16s38"]
+[ext_resource type="ArrayMesh" path="res://item_art_a1/combat_knife/model/meshes/front_fastener.res" id="6_jtbyx"]
+[ext_resource type="ArrayMesh" path="res://item_art_a1/combat_knife/model/meshes/rear_fastener.res" id="7_qicbj"]
+[ext_resource type="ArrayMesh" path="res://item_art_a1/combat_knife/model/meshes/lanyard_eye.res" id="8_182mq"]
+
+[node name="CombatKnifeA1" type="Node3D"]
+metadata/item_id = "combat_knife"
+metadata/stage = "Item-Art A1 - MANUAL ACCEPTANCE PENDING"
+
+[node name="Blade" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_g3iki")
+
+[node name="FullTang" type="MeshInstance3D" parent="."]
+mesh = ExtResource("2_hf54j")
+
+[node name="GripScaleUpper" type="MeshInstance3D" parent="."]
+mesh = ExtResource("3_y3cen")
+
+[node name="GripScaleLower" type="MeshInstance3D" parent="."]
+mesh = ExtResource("4_y7cs3")
+
+[node name="FingerGuard" type="MeshInstance3D" parent="."]
+mesh = ExtResource("5_16s38")
+
+[node name="FrontFastener" type="MeshInstance3D" parent="."]
+mesh = ExtResource("6_jtbyx")
+
+[node name="RearFastener" type="MeshInstance3D" parent="."]
+mesh = ExtResource("7_qicbj")
+
+[node name="LanyardEye" type="MeshInstance3D" parent="."]
+mesh = ExtResource("8_182mq")
+
+[node name="GripReference" type="Marker3D" parent="."]

@@ -1,0 +1,13 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3]
+
+[ext_resource type="Shader" path="res://item_art_a1/combat_knife/model/knife_surface.gdshader" id="1_f88w1"]
+
+[resource]
+resource_name = "Guard"
+render_priority = 0
+shader = ExtResource("1_f88w1")
+shader_parameter/base_color = Color(0.28235295, 0.30588236, 0.28627452, 1)
+shader_parameter/metalness = 0.78
+shader_parameter/base_roughness = 0.6
+shader_parameter/grip = false
+shader_parameter/wear = 0.2

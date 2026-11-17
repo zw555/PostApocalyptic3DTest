@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="" load_steps=3 format=3]
+[ext_resource type="Script" path="res://stage_a24b/scripts/weapon_hold_profile.gd" id="profile"]
+[ext_resource type="PackedScene" path="res://item_art_a2_1/baseball_bat/model/baseball_bat_visual.tscn" id="visual"]
+[resource]
+script = ExtResource("profile")
+item_id = "baseball_bat"
+visual_scene = ExtResource("visual")
+upper_arm_rotation = Vector3(0.10,0,0.10)
+forearm_rotation = Vector3(0.60,0,0)
+model_rotation = Vector3(0,-0.55,0)

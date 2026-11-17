@@ -1,0 +1,6 @@
+[gd_resource type="StandardMaterial3D" format=3]
+
+[resource]
+resource_name = "Matte cardboard core"
+albedo_color = Color(0.53333336, 0.48235294, 0.38039216, 1)
+roughness = 0.98

@@ -1,0 +1,9 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3]
+
+[ext_resource type="Shader" path="res://item_art_a2_1/baseball_bat/model/aged_wood.gdshader" id="1_cxox2"]
+
+[resource]
+resource_name = "Aged unfinished ash wood"
+render_priority = 0
+shader = ExtResource("1_cxox2")
+shader_parameter/wood_color = null

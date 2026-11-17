@@ -1,0 +1,13 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3]
+
+[ext_resource type="Shader" path="res://item_art_a1/combat_knife/model/knife_surface.gdshader" id="1_4jtse"]
+
+[resource]
+resource_name = "Grind"
+render_priority = 0
+shader = ExtResource("1_4jtse")
+shader_parameter/base_color = Color(0.6313726, 0.64705884, 0.6313726, 1)
+shader_parameter/metalness = 0.88
+shader_parameter/base_roughness = 0.36
+shader_parameter/grip = false
+shader_parameter/wear = 0.06

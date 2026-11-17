@@ -1,0 +1,13 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3]
+
+[ext_resource type="Shader" path="res://item_art_a1/combat_knife/model/knife_surface.gdshader" id="1_smxu2"]
+
+[resource]
+resource_name = "Spine"
+render_priority = 0
+shader = ExtResource("1_smxu2")
+shader_parameter/base_color = Color(0.3764706, 0.40784314, 0.39607844, 1)
+shader_parameter/metalness = 0.76
+shader_parameter/base_roughness = 0.58
+shader_parameter/grip = false
+shader_parameter/wear = 0.2

@@ -1,0 +1,13 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3]
+
+[ext_resource type="Shader" path="res://item_art_a1/combat_knife/model/knife_surface.gdshader" id="1_oovuy"]
+
+[resource]
+resource_name = "Edge"
+render_priority = 0
+shader = ExtResource("1_oovuy")
+shader_parameter/base_color = Color(0.72156864, 0.7372549, 0.7137255, 1)
+shader_parameter/metalness = 0.91
+shader_parameter/base_roughness = 0.24
+shader_parameter/grip = false
+shader_parameter/wear = 0.025

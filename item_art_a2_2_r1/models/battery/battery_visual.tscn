@@ -1,0 +1,97 @@
+[gd_scene load_steps=13 format=3]
+
+[ext_resource type="Material" path="res://item_art_a2_2/models/battery/steel.tres" id="1_pusnt"]
+[ext_resource type="Material" path="res://item_art_a2_2/models/battery/sleeve.tres" id="2_lvqx3"]
+[ext_resource type="Material" path="res://item_art_a2_2/models/battery/insulator.tres" id="3_jq5cm"]
+[ext_resource type="Material" path="res://item_art_a2_2_r1/models/battery/polarity_ink.tres" id="4_330ou"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_0elsq"]
+top_radius = 0.0175
+bottom_radius = 0.0175
+height = 0.075
+radial_segments = 32
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_coawh"]
+top_radius = 0.0177
+bottom_radius = 0.0177
+height = 0.063
+radial_segments = 32
+rings = 1
+cap_top = false
+cap_bottom = false
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_py8py"]
+top_radius = 0.012
+bottom_radius = 0.012
+height = 0.0016
+radial_segments = 32
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_2xr0n"]
+top_radius = 0.0055
+bottom_radius = 0.0055
+height = 0.0032
+radial_segments = 32
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_p5vff"]
+top_radius = 0.014
+bottom_radius = 0.014
+height = 0.0003
+radial_segments = 32
+rings = 1
+
+[sub_resource type="BoxMesh" id="BoxMesh_5jlsa"]
+size = Vector3(0.006, 4e-05, 0.0012)
+
+[sub_resource type="BoxMesh" id="BoxMesh_kgxg4"]
+size = Vector3(0.0012, 4e-05, 0.006)
+
+[sub_resource type="BoxMesh" id="BoxMesh_roel0"]
+size = Vector3(0.01, 4e-05, 0.0015)
+
+[node name="BatteryR1" type="Node3D"]
+metadata/item_id = "battery"
+metadata/units = "metres"
+metadata/stage = "A2.2-R1 - MANUAL ACCEPTANCE PENDING"
+
+[node name="RoundCellBody" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0375, 0)
+material_override = ExtResource("1_pusnt")
+mesh = SubResource("CylinderMesh_0elsq")
+
+[node name="GreenSleeve" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0375, 0)
+material_override = ExtResource("2_lvqx3")
+mesh = SubResource("CylinderMesh_coawh")
+
+[node name="PositiveInsulator" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0755, 0)
+material_override = ExtResource("3_jq5cm")
+mesh = SubResource("CylinderMesh_py8py")
+
+[node name="PositiveButton" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0772, 0)
+material_override = ExtResource("1_pusnt")
+mesh = SubResource("CylinderMesh_2xr0n")
+
+[node name="FlatNegativeContact" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.00015, 0)
+material_override = ExtResource("1_pusnt")
+mesh = SubResource("CylinderMesh_p5vff")
+
+[node name="PositivePlusHorizontal" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.07886, 0)
+material_override = ExtResource("4_330ou")
+mesh = SubResource("BoxMesh_5jlsa")
+
+[node name="PositivePlusVertical" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.07889, 0)
+material_override = ExtResource("4_330ou")
+mesh = SubResource("BoxMesh_kgxg4")
+
+[node name="NegativeMinus" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.00036, 0)
+material_override = ExtResource("4_330ou")
+mesh = SubResource("BoxMesh_roel0")

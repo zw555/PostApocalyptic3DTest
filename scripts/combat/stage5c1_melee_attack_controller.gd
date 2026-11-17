@@ -104,11 +104,24 @@ func setup(actor: CharacterBody3D, view_camera: Camera3D, aim_controller: Node, 
 	camera = view_camera
 	aim = aim_controller
 	world_root = root_node
-	visual = AttackVisual.new()
+	visual = create_attack_visual()
 	visual.name = "CharacterAttackVisual"
 	player.add_child(visual)
 	visual.setup(player.visual)
 	_build_debug()
+
+# Opt-in assembly hooks. Historical scenes retain their exact defaults.
+func create_attack_visual() -> Node:
+	return AttackVisual.new()
+
+func candidate_is_eligible(_candidate: Node3D) -> bool:
+	return true
+
+func attack_candidates() -> Array:
+	return get_tree().get_nodes_in_group("validation_zombie")
+
+func apply_target_damage(target: Node3D, direction: Vector3) -> Dictionary:
+	return target.apply_damage(base_damage, player, direction)
 
 func _build_debug() -> void:
 	debug_mesh = MeshInstance3D.new()
@@ -217,10 +230,12 @@ func resolve_hit() -> Dictionary:
 	var nearest: Node3D
 	var blocked: Node3D
 	var best_distance := INF
-	for candidate in get_tree().get_nodes_in_group("validation_zombie"):
+	for candidate in attack_candidates():
 		if not candidate is Node3D or not is_instance_valid(candidate):
 			continue
 		if candidate.get("is_dead") == true:
+			continue
+		if not candidate_is_eligible(candidate):
 			continue
 		var offset: Vector3 = candidate.global_position - player.global_position
 		offset.y = 0.0
@@ -255,7 +270,7 @@ func resolve_and_apply_hit() -> Dictionary:
 		direction.y = 0.0
 		if direction.length_squared() > 0.000001:
 			direction = direction.normalized()
-		var damage_result: Dictionary = target.apply_damage(base_damage, player, direction)
+		var damage_result: Dictionary = apply_target_damage(target, direction)
 		result.merge(damage_result, true)
 	return result
 

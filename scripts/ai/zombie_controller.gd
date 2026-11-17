@@ -43,6 +43,7 @@ var last_damage := 0.0
 var last_hit_direction := Vector3.ZERO
 var last_damage_source: Node
 var melee_component: Node
+var _hit_knockback_strength := -1.0 # Negative preserves the historical response.
 
 func _ready() -> void:
 	settings = JSON.parse_string(FileAccess.get_file_as_string("res://data/zombie_validation.json"))
@@ -172,10 +173,14 @@ func perform_attack() -> void:
 	attack_count += 1
 	attack_feedback.emit() # Visible feedback only: no health/damage receiver.
 
-func apply_damage(amount: float, source: Node = null, hit_direction: Vector3 = Vector3.ZERO) -> Dictionary:
+func apply_damage(amount: float, source: Node = null, hit_direction: Vector3 = Vector3.ZERO, knockback_strength: float = -1.0) -> Dictionary:
 	if is_dead or not is_instance_valid(health_component):
 		return {"applied": false, "amount": 0.0, "health": health_component.health if is_instance_valid(health_component) else 0.0, "max_health": health_component.max_health if is_instance_valid(health_component) else 0.0, "killed": is_dead, "reason": "dead"}
-	return health_component.apply_damage(amount, source, hit_direction)
+	var previous_strength := _hit_knockback_strength
+	_hit_knockback_strength = knockback_strength if is_finite(knockback_strength) else -1.0
+	var result: Dictionary = health_component.apply_damage(amount, source, hit_direction)
+	_hit_knockback_strength = previous_strength
+	return result
 
 func _on_damage_applied(amount: float, source: Node, hit_direction: Vector3, _health: float, killed: bool) -> void:
 	if is_instance_valid(melee_component):
@@ -188,7 +193,8 @@ func _on_damage_applied(amount: float, source: Node, hit_direction: Vector3, _he
 	hit_stun_remaining = 0.25
 	var direction := hit_direction
 	direction.y = 0.0
-	knockback_velocity = direction.normalized() * (0.3 / 0.25) if direction.length_squared() > 0.000001 else Vector3.ZERO
+	var strength := _hit_knockback_strength if _hit_knockback_strength >= 0.0 else (0.3 / 0.25)
+	knockback_velocity = direction.normalized() * strength if direction.length_squared() > 0.000001 else Vector3.ZERO
 	if is_instance_valid(visual) and visual.has_method("hit_feedback"):
 		visual.hit_feedback()
 
@@ -266,13 +272,7 @@ func _physics_process(delta: float) -> void:
 	state_elapsed += delta
 	attack_timer -= delta
 	think_timer += delta
-	if hit_stun_remaining > 0.0:
-		hit_stun_remaining = maxf(0.0, hit_stun_remaining - delta)
-		velocity.x = knockback_velocity.x
-		velocity.z = knockback_velocity.z
-		velocity.y = -0.1 if is_on_floor() else velocity.y-9.8*delta
-		move_and_slide()
-		knockback_velocity = knockback_velocity.move_toward(Vector3.ZERO, 1.2 * delta)
+	if advance_hit_response(delta):
 		update_usec = Time.get_ticks_usec()-started
 		total_update_usec += update_usec
 		update_frames += 1
@@ -307,3 +307,15 @@ func _physics_process(delta: float) -> void:
 	update_usec = Time.get_ticks_usec()-started
 	total_update_usec += update_usec
 	update_frames += 1
+
+# Reused by controlled training actors without navigation or AI advancement.
+func advance_hit_response(delta: float) -> bool:
+	if is_dead or hit_stun_remaining <= 0.0:
+		return false
+	hit_stun_remaining = maxf(0.0, hit_stun_remaining - delta)
+	velocity.x = knockback_velocity.x
+	velocity.z = knockback_velocity.z
+	velocity.y = -0.1 if is_on_floor() else velocity.y-9.8*delta
+	move_and_slide()
+	knockback_velocity = knockback_velocity.move_toward(Vector3.ZERO, 1.2 * delta)
+	return true

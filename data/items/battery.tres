@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="AHItemDefinition" load_steps=3 format=3]
+[ext_resource type="Script" path="res://scripts/items/item_definition.gd" id="1"]
+[ext_resource type="PackedScene" path="res://item_art_a2_2_r1/models/battery/battery_visual.tscn" id="visual"]
+[resource]
+script = ExtResource("1")
+item_id = "battery"
+display_name = "电池"
+description = "可为小型设备供电的电池。"
+category = 2
+max_stack = 10
+world_visual = ExtResource("visual")

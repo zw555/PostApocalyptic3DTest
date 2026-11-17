@@ -1,0 +1,69 @@
+[gd_scene load_steps=9 format=3]
+
+[ext_resource type="Material" path="res://materials/loot/bottle.tres" id="1_y3jb8"]
+[ext_resource type="Material" path="res://materials/loot/cap.tres" id="2_uwovi"]
+[ext_resource type="Material" path="res://assets/localization/chinese_packaging.tres" id="3_pwsxi"]
+[ext_resource type="ArrayMesh" path="res://item_art_a2_2_r1/models/water_bottle/round_label_mesh.res" id="4_nemgf"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_nmxd1"]
+top_radius = 0.0394
+bottom_radius = 0.0394
+height = 0.14
+radial_segments = 32
+rings = 1
+cap_top = false
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_xhjig"]
+top_radius = 0.0168
+bottom_radius = 0.0394
+height = 0.0322
+radial_segments = 32
+rings = 1
+cap_top = false
+cap_bottom = false
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_40b6x"]
+top_radius = 0.0154
+bottom_radius = 0.0168
+height = 0.0203
+radial_segments = 32
+rings = 1
+cap_top = false
+cap_bottom = false
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_pyemm"]
+top_radius = 0.0168
+bottom_radius = 0.0168
+height = 0.0161
+radial_segments = 32
+rings = 1
+cap_bottom = false
+
+[node name="WaterBottleR1" type="Node3D"]
+metadata/item_id = "water_bottle"
+metadata/units = "metres"
+metadata/stage = "A2.2-R1 - MANUAL ACCEPTANCE PENDING"
+
+[node name="BottleBody" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.07, 0)
+material_override = ExtResource("1_y3jb8")
+mesh = SubResource("CylinderMesh_nmxd1")
+
+[node name="BottleShoulder" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1561, 0)
+material_override = ExtResource("1_y3jb8")
+mesh = SubResource("CylinderMesh_xhjig")
+
+[node name="BottleNeck" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.18235, 0)
+material_override = ExtResource("1_y3jb8")
+mesh = SubResource("CylinderMesh_40b6x")
+
+[node name="BlueCap" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.19845, 0)
+material_override = ExtResource("2_uwovi")
+mesh = SubResource("CylinderMesh_pyemm")
+
+[node name="ChineseWrapLabel" type="MeshInstance3D" parent="."]
+material_override = ExtResource("3_pwsxi")
+mesh = ExtResource("4_nemgf")
