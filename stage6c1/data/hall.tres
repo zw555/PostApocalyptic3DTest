@@ -1,0 +1,15 @@
+[gd_resource type="Resource" load_steps=5 format=3]
+[ext_resource type="Script" path="res://scripts/interaction/container_definition.gd" id="container"]
+[ext_resource type="Script" path="res://scripts/items/item_amount.gd" id="amount"]
+[ext_resource type="Resource" path="res://data/items/bandage.tres" id="bandage"]
+[sub_resource type="Resource" id="bandage_amount"]
+script = ExtResource("amount")
+definition = ExtResource("bandage")
+quantity = 1
+[resource]
+script = ExtResource("container")
+container_id = "supply_hall"
+display_name = "五楼急救箱"
+region_id = "corridor_f05"
+position = Vector3(-6.08, 0, 3.5)
+contents = Array[Resource]([SubResource("bandage_amount")])

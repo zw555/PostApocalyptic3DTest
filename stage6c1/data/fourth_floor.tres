@@ -1,0 +1,20 @@
+[gd_resource type="Resource" load_steps=7 format=3]
+[ext_resource type="Script" path="res://scripts/interaction/container_definition.gd" id="container"]
+[ext_resource type="Script" path="res://scripts/items/item_amount.gd" id="amount"]
+[ext_resource type="Resource" path="res://data/items/water_bottle.tres" id="water"]
+[ext_resource type="Resource" path="res://data/items/canned_food.tres" id="food"]
+[sub_resource type="Resource" id="water_amount"]
+script = ExtResource("amount")
+definition = ExtResource("water")
+quantity = 1
+[sub_resource type="Resource" id="food_amount"]
+script = ExtResource("amount")
+definition = ExtResource("food")
+quantity = 1
+[resource]
+script = ExtResource("container")
+container_id = "supply_upper"
+display_name = "四楼补给箱"
+region_id = "stairs_landing_f04"
+position = Vector3(-6.75, -3, 9.05)
+contents = Array[Resource]([SubResource("water_amount"), SubResource("food_amount")])

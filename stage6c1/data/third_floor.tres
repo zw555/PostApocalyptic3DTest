@@ -1,0 +1,30 @@
+[gd_resource type="Resource" load_steps=11 format=3]
+[ext_resource type="Script" path="res://scripts/interaction/container_definition.gd" id="container"]
+[ext_resource type="Script" path="res://scripts/items/item_amount.gd" id="amount"]
+[ext_resource type="Resource" path="res://data/items/battery.tres" id="battery"]
+[ext_resource type="Resource" path="res://data/items/water_bottle.tres" id="water"]
+[ext_resource type="Resource" path="res://data/items/canned_food.tres" id="food"]
+[ext_resource type="Resource" path="res://data/items/bandage.tres" id="bandage"]
+[sub_resource type="Resource" id="battery_amount"]
+script = ExtResource("amount")
+definition = ExtResource("battery")
+quantity = 1
+[sub_resource type="Resource" id="water_amount"]
+script = ExtResource("amount")
+definition = ExtResource("water")
+quantity = 1
+[sub_resource type="Resource" id="food_amount"]
+script = ExtResource("amount")
+definition = ExtResource("food")
+quantity = 1
+[sub_resource type="Resource" id="bandage_amount"]
+script = ExtResource("amount")
+definition = ExtResource("bandage")
+quantity = 1
+[resource]
+script = ExtResource("container")
+container_id = "supply_lower"
+display_name = "三楼应急物资箱"
+region_id = "stairs_landing_f03"
+position = Vector3(-6.75, -6, 9.05)
+contents = Array[Resource]([SubResource("battery_amount"), SubResource("water_amount"), SubResource("food_amount"), SubResource("bandage_amount")])

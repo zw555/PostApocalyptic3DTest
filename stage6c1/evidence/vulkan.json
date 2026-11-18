@@ -1,0 +1,3553 @@
+{
+	"captures": [
+		{
+			"camera_mode": 2,
+			"file": "01_safehouse_starter.png",
+			"inventory": {
+
+			},
+			"player": "(-3.931593, 0.000824, -0.603832)",
+			"prompt": "E 领取 · 501 武器储物箱",
+			"region": "apartment_501",
+			"zombie_alive": true,
+			"zombie_state": "IDLE"
+		},
+		{
+			"camera_mode": 2,
+			"file": "02_fifth_floor_bandage.png",
+			"inventory": {
+				"baseball_bat": 1
+			},
+			"player": "(-5.021009, 0.000141, 3.377061)",
+			"prompt": "E 领取 · 五楼急救箱",
+			"region": "corridor_f05",
+			"zombie_alive": true,
+			"zombie_state": "ATTACK"
+		},
+		{
+			"camera_mode": 2,
+			"file": "03_fourth_floor_supplies.png",
+			"inventory": {
+				"bandage": 1,
+				"baseball_bat": 1
+			},
+			"player": "(-5.480261, -2.999888, 9.205917)",
+			"prompt": "E 领取 · 四楼补给箱",
+			"region": "stairs_landing_f04",
+			"zombie_alive": true,
+			"zombie_state": "IDLE"
+		},
+		{
+			"camera_mode": 5,
+			"file": "04_third_floor_supplies.png",
+			"inventory": {
+				"bandage": 1,
+				"baseball_bat": 1,
+				"canned_food": 1,
+				"water_bottle": 1
+			},
+			"player": "(-5.480225, -5.999882, 9.205989)",
+			"prompt": "E 领取 · 三楼应急物资箱",
+			"region": "stairs_landing_f03",
+			"zombie_alive": true,
+			"zombie_state": "IDLE"
+		},
+		{
+			"camera_mode": 5,
+			"file": "05_inventory_after_loot.png",
+			"inventory": {
+				"bandage": 2,
+				"baseball_bat": 1,
+				"battery": 1,
+				"canned_food": 2,
+				"water_bottle": 2
+			},
+			"player": "(-5.480225, -5.999882, 9.205989)",
+			"prompt": "",
+			"region": "stairs_landing_f03",
+			"zombie_alive": true,
+			"zombie_state": "IDLE"
+		},
+		{
+			"camera_mode": 1,
+			"file": "06_return_to_fourth.png",
+			"inventory": {
+				"bandage": 2,
+				"baseball_bat": 1,
+				"battery": 1,
+				"canned_food": 2,
+				"water_bottle": 2
+			},
+			"player": "(-5.466797, -2.999161, 9.221632)",
+			"prompt": "E 查看 · 四楼补给箱（空）",
+			"region": "stairs_landing_f04",
+			"zombie_alive": true,
+			"zombie_state": "IDLE"
+		},
+		{
+			"camera_mode": 1,
+			"file": "07_return_to_fifth.png",
+			"inventory": {
+				"bandage": 2,
+				"baseball_bat": 1,
+				"battery": 1,
+				"canned_food": 2,
+				"water_bottle": 2
+			},
+			"player": "(-5.466719, 0.000838, 9.22165)",
+			"prompt": "E 关门 · 楼梯间",
+			"region": "stairs_landing_f05",
+			"zombie_alive": true,
+			"zombie_state": "IDLE"
+		},
+		{
+			"camera_mode": 2,
+			"file": "08_return_to_safehouse.png",
+			"inventory": {
+				"bandage": 2,
+				"baseball_bat": 1,
+				"battery": 1,
+				"canned_food": 2,
+				"water_bottle": 2
+			},
+			"player": "(-4.037958, 0.000068, 1.109727)",
+			"prompt": "E 关门 · 501 房门",
+			"region": "apartment_501",
+			"zombie_alive": true,
+			"zombie_state": "IDLE"
+		},
+		{
+			"camera_mode": 2,
+			"file": "04_player_hurt.png",
+			"inventory": {
+				"bandage": 2,
+				"baseball_bat": 1,
+				"combat_knife": 1
+			},
+			"player": "(-5.475, 0.02, 2.0)",
+			"prompt": "",
+			"region": "corridor_f05",
+			"zombie_alive": true,
+			"zombie_state": "ATTACK"
+		},
+		{
+			"camera_mode": 2,
+			"file": "05_healed_in_backpack.png",
+			"inventory": {
+				"bandage": 1,
+				"baseball_bat": 1,
+				"combat_knife": 1
+			},
+			"player": "(-5.475, 0.02, 2.0)",
+			"prompt": "",
+			"region": "corridor_f05",
+			"zombie_alive": true,
+			"zombie_state": "ATTACK"
+		},
+		{
+			"camera_mode": 2,
+			"file": "06_knife_counter.png",
+			"inventory": {
+				"bandage": 1,
+				"baseball_bat": 1
+			},
+			"player": "(-5.475, 0.02, 3.5)",
+			"prompt": "E 领取 · 五楼急救箱",
+			"region": "corridor_f05",
+			"zombie_alive": true,
+			"zombie_state": "CHASE"
+		},
+		{
+			"camera_mode": 1,
+			"file": "07_bat_fatal.png",
+			"inventory": {
+				"bandage": 1,
+				"combat_knife": 1
+			},
+			"player": "(-5.475, 0.02, 3.5)",
+			"prompt": "E 领取 · 五楼急救箱",
+			"region": "corridor_f05",
+			"zombie_alive": false,
+			"zombie_state": "DEAD"
+		},
+		{
+			"camera_mode": 1,
+			"file": "08_walk_past_corpse.png",
+			"inventory": {
+				"bandage": 1,
+				"combat_knife": 1
+			},
+			"player": "(-5.475, 0.000117, 5.016444)",
+			"prompt": "E 查看 · 503 房门",
+			"region": "corridor_f05",
+			"zombie_alive": false,
+			"zombie_state": "DEAD"
+		}
+	],
+	"checks": [
+		{
+			"detail": "",
+			"passed": true,
+			"test": "exactly four configured endpoints and 12 inventory slots"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "only 501 holds the starter weapons"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "supply_501_starter rests on floor without overlapping architecture"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "supply_hall rests on floor without overlapping architecture"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "supply_upper rests on floor without overlapping architecture"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "supply_lower rests on floor without overlapping architecture"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "fourth and third item models fit and are registered before visibility cache"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "501 blocks lower stock and closed-corridor models"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "walk to the starter chest inside 501"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "E chest prompt without opening 501 door"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "Vulkan screenshot 01_safehouse_starter"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "supply_501_starter E transfers exact stock"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "supply_501_starter repeat E stays empty"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "players can equip the looted knife inside 501"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "ordinary E opens 501"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "walk from 501 to left side of the corridor"
+		},
+		{
+			"detail": "(-5.74509, 0.000094, 2.175092)",
+			"passed": true,
+			"test": "zombie commits a real attack on the left lane"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "walk around the zombie to hall supply"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "hall bandage box and real fifth floor encounter"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "Vulkan screenshot 02_fifth_floor_bandage"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "supply_hall E transfers exact stock"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "supply_hall repeat E stays empty"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "same corridor is passable with the zombie alive"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "ordinary E opens stair door and disengages zombie"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "physical descent from fifth to fourth"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "fourth prompt, grounded height and stock permissions"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "Vulkan screenshot 03_fourth_floor_supplies"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "capacity with 0 free slots cannot partially loot"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "capacity with 1 free slots cannot partially loot"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "supply_upper E transfers exact stock"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "supply_upper repeat E stays empty"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "fourth models disappear after stock update"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "physical descent from fourth to third"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "third prompt, grounded height and stock permissions"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "Vulkan screenshot 04_third_floor_supplies"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "supply_lower E transfers exact stock"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "supply_lower repeat E stays empty"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "third stock merges same IDs into correct stacks"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "backpack opens with 12 slots"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "backpack shows matching name, amount and icon for bandage"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "backpack shows matching name, amount and icon for baseball_bat"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "backpack shows matching name, amount and icon for water_bottle"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "backpack shows matching name, amount and icon for canned_food"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "backpack shows matching name, amount and icon for battery"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "Vulkan screenshot 05_inventory_after_loot"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "physical return from third to fourth"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "fourth stays visibly empty on return"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "Vulkan screenshot 06_return_to_fourth"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "supply_upper repeat E stays empty"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "physical return from fourth to fifth"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "fifth landing, cross-floor supplies hidden"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "Vulkan screenshot 07_return_to_fifth"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "physical retreat into 501 with loot and without killing the zombie"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "unchanged loot, live zombie and safehouse permission on return"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "Vulkan screenshot 08_return_to_safehouse"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "real chase produces Stage 5-C enemy strike against existing HP"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "Vulkan screenshot 04_player_hurt"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "real hurt → modal bandage → same HP and inventory commit"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "Vulkan screenshot 05_healed_in_backpack"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "full health refuses second use in live encounter"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "06_knife_counter valid single hit and feedback"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "Vulkan screenshot 06_knife_counter"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "knife uses original damage"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "second enemy windup actually starts"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "07_bat_fatal valid single hit and feedback"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "Vulkan screenshot 07_bat_fatal"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "bat kills in windup and cancels before damage"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "dead AI, no duplicate hit, corpse traversable with native movement"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "Vulkan screenshot 08_walk_past_corpse"
+		},
+		{
+			"detail": "",
+			"passed": true,
+			"test": "coordinator hides corpse across storeys and dead agent does not repath"
+		}
+	],
+	"device": "NVIDIA GeForce RTX 4060 Laptop GPU",
+	"failed": 0,
+	"inventory_after_round_trip": {
+		"bandage": 2,
+		"baseball_bat": 1,
+		"battery": 1,
+		"canned_food": 2,
+		"water_bottle": 2
+	},
+	"largest_vertical_step": 0.0224733352661133,
+	"passed": 70,
+	"route": [
+		{
+			"camera_y": 0.850439488887787,
+			"confirmed": "apartment_501",
+			"grounded": true,
+			"hidden": [
+				"Architecture/SouthLiving"
+			],
+			"label": "starter chest",
+			"position": "(-3.948477, 0.00082, 0.014444)",
+			"region": "apartment_501",
+			"tread_error": 0.0,
+			"y": 0.00082021375419572
+		},
+		{
+			"camera_y": 0.850458383560181,
+			"confirmed": "apartment_501",
+			"grounded": true,
+			"hidden": [
+				"Architecture/SouthLiving"
+			],
+			"label": "starter chest",
+			"position": "(-3.938751, 0.000129, -0.227983)",
+			"region": "apartment_501",
+			"tread_error": 0.0,
+			"y": 0.000129479798488319
+		},
+		{
+			"camera_y": 0.850399553775787,
+			"confirmed": "apartment_501",
+			"grounded": true,
+			"hidden": [
+				"Architecture/SouthLiving"
+			],
+			"label": "starter chest",
+			"position": "(-3.931593, 0.000825, -0.556327)",
+			"region": "apartment_501",
+			"tread_error": 0.0,
+			"y": 0.000825167342554778
+		},
+		{
+			"camera_y": 0.850822865962982,
+			"confirmed": "apartment_501",
+			"grounded": true,
+			"hidden": [
+				"Architecture/SouthLiving"
+			],
+			"label": "501 door approach",
+			"position": "(-3.933009, 0.000076, -0.598276)",
+			"region": "apartment_501",
+			"tread_error": 0.0,
+			"y": 0.0000755792134441435
+		},
+		{
+			"camera_y": 0.85060977935791,
+			"confirmed": "apartment_501",
+			"grounded": true,
+			"hidden": [
+				"Architecture/SouthLiving"
+			],
+			"label": "501 door approach",
+			"position": "(-3.942028, 0.000492, -0.355842)",
+			"region": "apartment_501",
+			"tread_error": 0.0,
+			"y": 0.000491714337840676
+		},
+		{
+			"camera_y": 0.850535571575165,
+			"confirmed": "apartment_501",
+			"grounded": true,
+			"hidden": [
+				"Architecture/SouthLiving"
+			],
+			"label": "501 door approach",
+			"position": "(-3.948573, 0.000141, -0.027484)",
+			"region": "apartment_501",
+			"tread_error": 0.0,
+			"y": 0.000140719232149422
+		},
+		{
+			"camera_y": 0.850829601287842,
+			"confirmed": "apartment_501",
+			"grounded": true,
+			"hidden": [
+				"Architecture/SouthLiving"
+			],
+			"label": "501 inside",
+			"position": "(-3.95302, 0.00009, 0.025584)",
+			"region": "apartment_501",
+			"tread_error": 0.0,
+			"y": 0.0000903850886970758
+		},
+		{
+			"camera_y": 0.850615262985229,
+			"confirmed": "apartment_501",
+			"grounded": true,
+			"hidden": [
+				"Architecture/SouthLiving"
+			],
+			"label": "501 inside",
+			"position": "(-3.969059, 0.000887, 0.267831)",
+			"region": "apartment_501",
+			"tread_error": 0.0,
+			"y": 0.0008874949417077
+		},
+		{
+			"camera_y": 0.850547134876251,
+			"confirmed": "apartment_501",
+			"grounded": true,
+			"hidden": [
+				"Architecture/SouthLiving"
+			],
+			"label": "501 inside",
+			"position": "(-4.000098, 0.000829, 0.649686)",
+			"region": "apartment_501",
+			"tread_error": 0.0,
+			"y": 0.000829170399811119
+		},
+		{
+			"camera_y": 0.850479900836945,
+			"confirmed": "apartment_501",
+			"grounded": true,
+			"hidden": [
+				"Architecture/SouthLiving"
+			],
+			"label": "501 inside",
+			"position": "(-4.03859, 0.000824, 1.014782)",
+			"region": "apartment_501",
+			"tread_error": 0.0,
+			"y": 0.000824221933726221
+		},
+		{
+			"camera_y": 0.85054612159729,
+			"confirmed": "apartment_501",
+			"grounded": true,
+			"hidden": [
+				"Architecture/SouthLiving"
+			],
+			"label": "501 exit",
+			"position": "(-4.050626, 0.0001, 1.091277)",
+			"region": "apartment_501",
+			"tread_error": 0.0,
+			"y": 0.0000995048321783543
+		},
+		{
+			"camera_y": 0.850516676902771,
+			"confirmed": "apartment_501",
+			"grounded": true,
+			"hidden": [
+				"Architecture/SouthLiving"
+			],
+			"label": "501 exit",
+			"position": "(-4.306874, 0.000094, 1.116779)",
+			"region": "apartment_501",
+			"tread_error": 0.0,
+			"y": 0.000094323477242142
+		},
+		{
+			"camera_y": 0.850409746170044,
+			"confirmed": "apartment_501",
+			"grounded": true,
+			"hidden": [
+				"Architecture/WestSouth",
+				"Architecture/EntryLintel",
+				"Architecture/SouthLiving"
+			],
+			"label": "501 exit",
+			"position": "(-4.690849, -0.000101, 1.115205)",
+			"region": "corridor_f05",
+			"tread_error": 0.0,
+			"y": -0.000101370271295309
+		},
+		{
+			"camera_y": 0.850191712379456,
+			"confirmed": "apartment_501",
+			"grounded": true,
+			"hidden": [
+				"Architecture/WestSouth",
+				"Architecture/EntryLintel",
+				"Architecture/SouthLiving"
+			],
+			"label": "501 exit",
+			"position": "(-5.074846, -0.000048, 1.11363)",
+			"region": "corridor_f05",
+			"tread_error": 0.0,
+			"y": -0.0000480643939226866
+		},
+		{
+			"camera_y": 0.850195050239563,
+			"confirmed": "corridor_f05",
+			"grounded": true,
+			"hidden": [
+				"Architecture/WestSouth",
+				"Architecture/EntryLintel",
+				"Architecture/SouthLiving"
+			],
+			"label": "501 exit",
+			"position": "(-5.458844, 0.000069, 1.112055)",
+			"region": "corridor_f05",
+			"tread_error": 0.0,
+			"y": 0.0000685633858665824
+		},
+		{
+			"camera_y": 0.850314259529114,
+			"confirmed": "corridor_f05",
+			"grounded": true,
+			"hidden": [
+				"Architecture/SouthLiving"
+			],
+			"label": "501 exit",
+			"position": "(-5.836018, -0.000851, 1.110529)",
+			"region": "corridor_f05",
+			"tread_error": 0.0,
+			"y": -0.000851447053719312
+		},
+		{
+			"camera_y": 0.850137770175934,
+			"confirmed": "corridor_f05",
+			"grounded": true,
+			"hidden": [
+				"Architecture/SouthLiving"
+			],
+			"label": "draw zombie to left lane",
+			"position": "(-5.947715, 0.0008, 1.104622)",
+			"region": "corridor_f05",
+			"tread_error": 0.0,
+			"y": 0.000800012960098684
+		},
+		{
+			"camera_y": 0.850289225578308,
+			"confirmed": "corridor_f05",
+			"grounded": true,
+			"hidden": [],
+			"label": "draw zombie to left lane",
+			"position": "(-5.96564, -0.000161, 0.861702)",
+			"region": "corridor_f05",
+			"tread_error": 0.0,
+			"y": -0.000161214615218341
+		},
+		{
+			"camera_y": 0.850834608078003,
+			"confirmed": "corridor_f05",
+			"grounded": true,
+			"hidden": [],
+			"label": "sidestep windup",
+			"position": "(-5.955919, 0.000839, 0.704255)",
+			"region": "corridor_f05",
+			"tread_error": 0.0,
+			"y": 0.000839106854982674
+		},
+		{
+			"camera_y": 0.8503497838974,
+			"confirmed": "corridor_f05",
+			"grounded": true,
+			"hidden": [],
+			"label": "sidestep windup",
+			"position": "(-5.709353, 0.000068, 0.674962)",
+			"region": "corridor_f05",
+			"tread_error": 0.0,
+			"y": 0.0000676601193845272
+		},
+		{
+			"camera_y": 0.850256323814392,
+			"confirmed": "corridor_f05",
+			"grounded": true,
+			"hidden": [],
+			"label": "sidestep windup",
+			"position": "(-5.325366, -0.000057, 0.672608)",
+			"region": "corridor_f05",
+			"tread_error": 0.0,
+			"y": -0.0000565294758416712
+		},
+		{
+			"camera_y": 0.850260019302368,
+			"confirmed": "corridor_f05",
+			"grounded": true,
+			"hidden": [],
+			"label": "sidestep windup",
+			"position": "(-4.974715, 0.000119, 0.670535)",
+			"region": "corridor_f05",
+			"tread_error": 0.0,
+			"y": 0.00011933094356209
+		},
+		{
+			"camera_y": 0.85036563873291,
+			"confirmed": "corridor_f05",
+			"grounded": true,
+			"hidden": [],
+			"label": "hall chest",
+			"position": "(-4.928717, 0.000163, 0.675853)",
+			"region": "corridor_f05",
+			"tread_error": 0.0,
+			"y": 0.000162748910952359
+		},
+		{
+			"camera_y": 0.850243747234344,
+			"confirmed": "corridor_f05",
+			"grounded": true,
+			"hidden": [],
+			"label": "hall chest",
+			"position": "(-4.91188, 0.000178, 0.917419)",
+			"region": "corridor_f05",
+			"tread_error": 0.0,
+			"y": 0.000178408692590892
+		},
+		{
+			"camera_y": 0.850106000900269,
+			"confirmed": "corridor_f05",
+			"grounded": true,
+			"hidden": [],
+			"label": "hall chest",
+			"position": "(-4.928792, 0.000176, 1.301045)",
+			"region": "corridor_f05",
+			"tread_error": 0.0,
+			"y": 0.0001762859756127
+		},
+		{
+			"camera_y": 0.850123405456543,
+			"confirmed": "corridor_f05",
+			"grounded": true,
+			"hidden": [],
+			"label": "hall chest",
+			"position": "(-4.945703, 0.000164, 1.684665)",
+			"region": "corridor_f05",
+			"tread_error": 0.0,
+			"y": 0.000164107303135097
+		},
+		{
+			"camera_y": 0.850064098834991,
+			"confirmed": "corridor_f05",
+			"grounded": true,
+			"hidden": [],
+			"label": "hall chest",
+			"position": "(-4.962614, 0.000813, 2.068292)",
+			"region": "corridor_f05",
+			"tread_error": 0.0,
+			"y": 0.00081280228914693
+		},
+		{
+			"camera_y": 0.850275337696075,
+			"confirmed": "corridor_f05",
+			"grounded": true,
+			"hidden": [],
+			"label": "hall chest",
+			"position": "(-4.979526, 0.000099, 2.451919)",
+			"region": "corridor_f05",
+			"tread_error": 0.0,
+			"y": 0.0000985573278740048
+		},
+		{
+			"camera_y": 0.850173056125641,
+			"confirmed": "corridor_f05",
+			"grounded": true,
+			"hidden": [],
+			"label": "hall chest",
+			"position": "(-5.025437, 0.000018, 2.826987)",
+			"region": "corridor_f05",
+			"tread_error": 0.0,
+			"y": 0.0000184469390660524
+		},
+		{
+			"camera_y": 0.850233376026154,
+			"confirmed": "corridor_f05",
+			"grounded": true,
+			"hidden": [],
+			"label": "hall chest",
+			"position": "(-5.022759, -0.000003, 3.208953)",
+			"region": "corridor_f05",
+			"tread_error": 0.0,
+			"y": -0.00000266969436779618
+		},
+		{
+			"camera_y": 0.850207209587097,
+			"confirmed": "corridor_f05",
+			"grounded": true,
+			"hidden": [],
+			"label": "pass the live zombie",
+			"position": "(-5.019338, 0.000821, 3.382616)",
+			"region": "corridor_f05",
+			"tread_error": 0.0,
+			"y": 0.000821197987534106
+		},
+		{
+			"camera_y": 0.850284159183502,
+			"confirmed": "corridor_f05",
+			"grounded": true,
+			"hidden": [],
+			"label": "pass the live zombie",
+			"position": "(-5.006473, 0.00082, 3.625035)",
+			"region": "corridor_f05",
+			"tread_error": 0.0,
+			"y": 0.000820151064544916
+		},
+		{
+			"camera_y": 0.85037624835968,
+			"confirmed": "corridor_f05",
+			"grounded": true,
+			"hidden": [],
+			"label": "pass the live zombie",
+			"position": "(-4.993802, 0.00015, 4.008826)",
+			"region": "corridor_f05",
+			"tread_error": 0.0,
+			"y": 0.000149938045069575
+		},
+		{
+			"camera_y": 0.850237548351288,
+			"confirmed": "corridor_f05",
+			"grounded": true,
+			"hidden": [],
+			"label": "pass the live zombie",
+			"position": "(-4.981131, 0.000044, 4.392619)",
+			"region": "corridor_f05",
+			"tread_error": 0.0,
+			"y": 0.0000441195443272591
+		},
+		{
+			"camera_y": 0.850250244140625,
+			"confirmed": "corridor_f05",
+			"grounded": true,
+			"hidden": [],
+			"label": "pass the live zombie",
+			"position": "(-4.96846, 0.000325, 4.776411)",
+			"region": "corridor_f05",
+			"tread_error": 0.0,
+			"y": 0.00032494607148692
+		},
+		{
+			"camera_y": 0.850188314914703,
+			"confirmed": "corridor_f05",
+			"grounded": true,
+			"hidden": [],
+			"label": "pass the live zombie",
+			"position": "(-4.955789, 0.000329, 5.160202)",
+			"region": "corridor_f05",
+			"tread_error": 0.0,
+			"y": 0.00032945373095572
+		},
+		{
+			"camera_y": 0.850090801715851,
+			"confirmed": "corridor_f05",
+			"grounded": true,
+			"hidden": [],
+			"label": "pass the live zombie",
+			"position": "(-4.943118, 0.000064, 5.543992)",
+			"region": "corridor_f05",
+			"tread_error": 0.0,
+			"y": 0.0000638409983366728
+		},
+		{
+			"camera_y": 0.850101232528687,
+			"confirmed": "corridor_f05",
+			"grounded": true,
+			"hidden": [],
+			"label": "pass the live zombie",
+			"position": "(-4.930447, 0.000824, 5.927783)",
+			"region": "corridor_f05",
+			"tread_error": 0.0,
+			"y": 0.000824374437797815
+		},
+		{
+			"camera_y": 0.850231468677521,
+			"confirmed": "corridor_f05",
+			"grounded": true,
+			"hidden": [],
+			"label": "pass the live zombie",
+			"position": "(-4.917777, 0.000832, 6.311574)",
+			"region": "corridor_f05",
+			"tread_error": 0.0,
+			"y": 0.000831563433166593
+		},
+		{
+			"camera_y": 0.850275933742523,
+			"confirmed": "corridor_f05",
+			"grounded": true,
+			"hidden": [],
+			"label": "pass the live zombie",
+			"position": "(-4.905202, 0.00039, 6.692411)",
+			"region": "corridor_f05",
+			"tread_error": 0.0,
+			"y": 0.000389947206713259
+		},
+		{
+			"camera_y": 0.850315868854523,
+			"confirmed": "corridor_f05",
+			"grounded": true,
+			"hidden": [],
+			"label": "stair door",
+			"position": "(-4.906916, 0.000315, 6.845315)",
+			"region": "corridor_f05",
+			"tread_error": 0.0,
+			"y": 0.000314970733597875
+		},
+		{
+			"camera_y": 0.850385367870331,
+			"confirmed": "corridor_f05",
+			"grounded": true,
+			"hidden": [],
+			"label": "stair door",
+			"position": "(-5.071479, 0.000174, 7.170725)",
+			"region": "corridor_f05",
+			"tread_error": 0.0,
+			"y": 0.000174316810443997
+		},
+		{
+			"camera_y": 0.850314378738403,
+			"confirmed": "corridor_f05",
+			"grounded": true,
+			"hidden": [],
+			"label": "stair door",
+			"position": "(-5.25739, 0.000826, 7.50672)",
+			"region": "stairwell_f05",
+			"tread_error": 0.0,
+			"y": 0.00082586461212486
+		},
+		{
+			"camera_y": 0.850342452526093,
+			"confirmed": "corridor_f05",
+			"grounded": true,
+			"hidden": [],
+			"label": "stair door",
+			"position": "(-5.427284, -0.000076, 7.822238)",
+			"region": "stairwell_f05",
+			"tread_error": 0.0,
+			"y": -0.0000757115776650608
+		},
+		{
+			"camera_y": 0.849768757820129,
+			"confirmed": "stairwell_f05",
+			"grounded": true,
+			"hidden": [
+				"Corridor/Architecture/StairLintel"
+			],
+			"label": "fifth landing",
+			"position": "(-5.449783, 0.000827, 7.892554)",
+			"region": "stairwell_f05",
+			"tread_error": 0.0,
+			"y": 0.000826748204417527
+		},
+		{
+			"camera_y": 0.850008964538574,
+			"confirmed": "stairwell_f05",
+			"grounded": true,
+			"hidden": [
+				"Corridor/Architecture/StairLintel"
+			],
+			"label": "fifth landing",
+			"position": "(-5.456679, -0.000118, 8.13499)",
+			"region": "stairwell_f05",
+			"tread_error": 0.0,
+			"y": -0.000117879477329552
+		},
+		{
+			"camera_y": 0.85036426782608,
+			"confirmed": "stairwell_f05",
+			"grounded": true,
+			"hidden": [
+				"Corridor/Architecture/StairLintel"
+			],
+			"label": "fifth landing",
+			"position": "(-5.463284, 0.000168, 8.518927)",
+			"region": "stairs_landing_f05",
+			"tread_error": 0.0,
+			"y": 0.000168147089425474
+		},
+		{
+			"camera_y": 0.850271940231323,
+			"confirmed": "stairs_landing_f05",
+			"grounded": true,
+			"hidden": [
+				"Corridor/Architecture/StairLintel"
+			],
+			"label": "fifth landing",
+			"position": "(-5.469888, 0.000837, 8.902883)",
+			"region": "stairs_landing_f05",
+			"tread_error": 0.0,
+			"y": 0.000837217550724745
+		},
+		{
+			"camera_y": 0.850474655628204,
+			"confirmed": "stairs_landing_f05",
+			"grounded": true,
+			"hidden": [
+				"Corridor/Architecture/StairLintel"
+			],
+			"label": "down to fourth 1",
+			"position": "(-5.468741, 0.000833, 9.185771)",
+			"region": "stairs_landing_f05",
+			"tread_error": 0.0,
+			"y": 0.000832874502521008
+		},
+		{
+			"camera_y": 0.850518047809601,
+			"confirmed": "stairs_landing_f05",
+			"grounded": true,
+			"hidden": [
+				"Corridor/Architecture/StairLintel"
+			],
+			"label": "down to fourth 1",
+			"position": "(-5.230869, 0.000113, 9.317701)",
+			"region": "stairs_landing_f05",
+			"tread_error": 0.0,
+			"y": 0.000113085494376719
+		},
+		{
+			"camera_y": 0.850597023963928,
+			"confirmed": "stairs_landing_f05",
+			"grounded": true,
+			"hidden": [],
+			"label": "down to fourth 1",
+			"position": "(-4.867687, 0.000193, 9.442416)",
+			"region": "stairs_landing_f05",
+			"tread_error": 0.0,
+			"y": 0.000192635401617736
+		},
+		{
+			"camera_y": 0.850467145442963,
+			"confirmed": "stairs_landing_f05",
+			"grounded": true,
+			"hidden": [],
+			"label": "down to fourth 2",
+			"position": "(-4.724031, 0.000127, 9.490503)",
+			"region": "stairs_landing_f05",
+			"tread_error": 0.0,
+			"y": 0.000126983504742384
+		},
+		{
+			"camera_y": 0.850419998168945,
+			"confirmed": "stairs_landing_f05",
+			"grounded": true,
+			"hidden": [],
+			"label": "down to fourth 2",
+			"position": "(-4.704254, 0.000825, 9.772631)",
+			"region": "stairs_landing_f05",
+			"tread_error": 0.0,
+			"y": 0.0008251967956312
+		},
+		{
+			"camera_y": 0.835671544075012,
+			"confirmed": "stairs_landing_f05",
+			"grounded": true,
+			"hidden": [],
+			"label": "down to fourth 2",
+			"position": "(-4.703853, -0.088916, 10.15736)",
+			"region": "stairs_f05_mid",
+			"tread_error": 0.0264159068465233,
+			"y": -0.0889159068465233
+		},
+		{
+			"camera_y": 0.736971318721771,
+			"confirmed": "stairs_f05_mid",
+			"grounded": true,
+			"hidden": [],
+			"label": "down to fourth 2",
+			"position": "(-4.703453, -0.260793, 10.54272)",
+			"region": "stairs_f05_mid",
+			"tread_error": 0.05170738697052,
+			"y": -0.26079261302948
+		},
+		{
+			"camera_y": 0.591143369674683,
+			"confirmed": "stairs_f05_mid",
+			"grounded": true,
+			"hidden": [],
+			"label": "down to fourth 2",
+			"position": "(-4.703052, -0.432682, 10.92844)",
+			"region": "stairs_f05_mid",
+			"tread_error": 0.00481832027435303,
+			"y": -0.432681679725647
+		},
+		{
+			"camera_y": 0.431639224290848,
+			"confirmed": "stairs_f05_mid",
+			"grounded": true,
+			"hidden": [],
+			"label": "down to fourth 2",
+			"position": "(-4.702652, -0.605442, 11.31393)",
+			"region": "stairs_f05_mid",
+			"tread_error": 0.0820580124855042,
+			"y": -0.605441987514496
+		},
+		{
+			"camera_y": 0.267912536859512,
+			"confirmed": "stairs_f05_mid",
+			"grounded": true,
+			"hidden": [],
+			"label": "down to fourth 2",
+			"position": "(-4.70225, -0.777324, 11.69945)",
+			"region": "stairs_f05_mid",
+			"tread_error": 0.0351756811141968,
+			"y": -0.777324318885803
+		},
+		{
+			"camera_y": 0.0952112898230553,
+			"confirmed": "stairs_f05_mid",
+			"grounded": true,
+			"hidden": [],
+			"label": "down to fourth 2",
+			"position": "(-4.701849, -0.949206, 12.08495)",
+			"region": "stairs_f05_mid",
+			"tread_error": 0.0117058157920837,
+			"y": -0.949205815792084
+		},
+		{
+			"camera_y": -0.0774887949228287,
+			"confirmed": "stairs_f05_mid",
+			"grounded": true,
+			"hidden": [],
+			"label": "down to fourth 2",
+			"position": "(-4.701447, -1.121979, 12.4708)",
+			"region": "stairs_f05_mid",
+			"tread_error": 0.065521240234375,
+			"y": -1.12197875976563
+		},
+		{
+			"camera_y": -0.248838156461716,
+			"confirmed": "stairs_f05_mid",
+			"grounded": true,
+			"hidden": [],
+			"label": "down to fourth 2",
+			"position": "(-4.701046, -1.293862, 12.85634)",
+			"region": "stairs_f05_mid",
+			"tread_error": 0.0186381340026855,
+			"y": -1.29386186599731
+		},
+		{
+			"camera_y": -0.420685648918152,
+			"confirmed": "stairs_f05_mid",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/UpperBackWall"
+			],
+			"label": "down to fourth 2",
+			"position": "(-4.700644, -1.465747, 13.24195)",
+			"region": "stairs_f05_mid",
+			"tread_error": 0.0282473564147949,
+			"y": -1.46574735641479
+		},
+		{
+			"camera_y": -0.557171106338501,
+			"confirmed": "stairs_f05_mid",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/UpperBackWall"
+			],
+			"label": "down to fourth 2",
+			"position": "(-4.700243, -1.499978, 13.62629)",
+			"region": "stairs_turn",
+			"tread_error": 0.0,
+			"y": -1.49997770786285
+		},
+		{
+			"camera_y": -0.608667314052582,
+			"confirmed": "stairs_turn",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/LowerBackWall",
+				"Stairwell/UpperBackWall"
+			],
+			"label": "down to fourth 3",
+			"position": "(-4.705606, -1.499726, 13.83096)",
+			"region": "stairs_turn",
+			"tread_error": 0.0,
+			"y": -1.49972605705261
+		},
+		{
+			"camera_y": -0.63350784778595,
+			"confirmed": "stairs_turn",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/LowerBackWall",
+				"Stairwell/UpperBackWall"
+			],
+			"label": "down to fourth 3",
+			"position": "(-4.947909, -1.499168, 13.85856)",
+			"region": "stairs_turn",
+			"tread_error": 0.0,
+			"y": -1.49916839599609
+		},
+		{
+			"camera_y": -0.643201589584351,
+			"confirmed": "stairs_turn",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/LowerBackWall",
+				"Stairwell/UpperBackWall"
+			],
+			"label": "down to fourth 3",
+			"position": "(-5.331909, -1.499164, 13.85898)",
+			"region": "stairs_turn",
+			"tread_error": 0.0,
+			"y": -1.49916410446167
+		},
+		{
+			"camera_y": -0.647005319595337,
+			"confirmed": "stairs_turn",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/LowerBackWall",
+				"Stairwell/UpperBackWall"
+			],
+			"label": "down to fourth 3",
+			"position": "(-5.715909, -1.499172, 13.85941)",
+			"region": "stairs_turn",
+			"tread_error": 0.0,
+			"y": -1.49917209148407
+		},
+		{
+			"camera_y": -0.64856368303299,
+			"confirmed": "stairs_turn",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/LowerBackWall",
+				"Stairwell/UpperBackWall"
+			],
+			"label": "down to fourth 3",
+			"position": "(-6.095929, -1.499163, 13.85983)",
+			"region": "stairs_turn",
+			"tread_error": 0.0,
+			"y": -1.49916303157806
+		},
+		{
+			"camera_y": -0.648926675319672,
+			"confirmed": "stairs_turn",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/LowerBackWall",
+				"Stairwell/UpperBackWall"
+			],
+			"label": "down to fourth 4",
+			"position": "(-6.232697, -1.499769, 13.8544)",
+			"region": "stairs_turn",
+			"tread_error": 0.0,
+			"y": -1.49976861476898
+		},
+		{
+			"camera_y": -0.649272561073303,
+			"confirmed": "stairs_turn",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/LowerBackWall",
+				"Stairwell/UpperBackWall"
+			],
+			"label": "down to fourth 4",
+			"position": "(-6.248608, -1.49916, 13.61208)",
+			"region": "stairs_turn",
+			"tread_error": 0.0,
+			"y": -1.49915981292725
+		},
+		{
+			"camera_y": -0.649385154247284,
+			"confirmed": "stairs_turn",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/LowerBackWall",
+				"Stairwell/UpperBackWall"
+			],
+			"label": "down to fourth 4",
+			"position": "(-6.248732, -1.500823, 13.22809)",
+			"region": "stairs_mid_f04",
+			"tread_error": 0.0616772174835205,
+			"y": -1.50082278251648
+		},
+		{
+			"camera_y": -0.696808695793152,
+			"confirmed": "stairs_turn",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/LowerBackWall",
+				"Stairwell/UpperBackWall"
+			],
+			"label": "down to fourth 4",
+			"position": "(-6.248857, -1.660392, 12.84282)",
+			"region": "stairs_mid_f04",
+			"tread_error": 0.0271083116531372,
+			"y": -1.66039168834686
+		},
+		{
+			"camera_y": -0.819274604320526,
+			"confirmed": "stairs_mid_f04",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/LowerBackWall",
+				"Stairwell/UpperBackWall"
+			],
+			"label": "down to fourth 4",
+			"position": "(-6.248983, -1.832285, 12.45698)",
+			"region": "stairs_mid_f04",
+			"tread_error": 0.0197852849960327,
+			"y": -1.83228528499603
+		},
+		{
+			"camera_y": -0.968920290470123,
+			"confirmed": "stairs_mid_f04",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/LowerBackWall",
+				"Stairwell/UpperBackWall"
+			],
+			"label": "down to fourth 4",
+			"position": "(-6.249108, -2.00505, 12.07137)",
+			"region": "stairs_mid_f04",
+			"tread_error": 0.0574502944946289,
+			"y": -2.00504970550537
+		},
+		{
+			"camera_y": -1.13558745384216,
+			"confirmed": "stairs_mid_f04",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/UpperBackWall"
+			],
+			"label": "down to fourth 4",
+			"position": "(-6.249233, -2.176933, 11.68581)",
+			"region": "stairs_mid_f04",
+			"tread_error": 0.0105669498443604,
+			"y": -2.17693305015564
+		},
+		{
+			"camera_y": -1.30501365661621,
+			"confirmed": "stairs_mid_f04",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/UpperBackWall"
+			],
+			"label": "down to fourth 4",
+			"position": "(-6.249357, -2.348807, 11.30051)",
+			"region": "stairs_mid_f04",
+			"tread_error": 0.036306619644165,
+			"y": -2.34880661964417
+		},
+		{
+			"camera_y": -1.47604286670685,
+			"confirmed": "stairs_mid_f04",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/UpperBackWall"
+			],
+			"label": "down to fourth 4",
+			"position": "(-6.249481, -2.520683, 10.91513)",
+			"region": "stairs_mid_f04",
+			"tread_error": 0.0418167114257813,
+			"y": -2.52068328857422
+		},
+		{
+			"camera_y": -1.64791572093964,
+			"confirmed": "stairs_mid_f04",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/UpperBackWall"
+			],
+			"label": "down to fourth 4",
+			"position": "(-6.249606, -2.69346, 10.52915)",
+			"region": "stairs_mid_f04",
+			"tread_error": 0.00595974922180176,
+			"y": -2.6934597492218
+		},
+		{
+			"camera_y": -1.82017421722412,
+			"confirmed": "stairs_mid_f04",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/UpperBackWall"
+			],
+			"label": "down to fourth 4",
+			"position": "(-6.24973, -2.865368, 10.14284)",
+			"region": "stairs_mid_f04",
+			"tread_error": 0.0721316337585449,
+			"y": -2.86536836624146
+		},
+		{
+			"camera_y": -1.99054276943207,
+			"confirmed": "stairs_mid_f04",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/UpperBackWall"
+			],
+			"label": "down to fourth 4",
+			"position": "(-6.249853, -2.999174, 9.757287)",
+			"region": "stairs_landing_f04",
+			"tread_error": 0.0,
+			"y": -2.99917387962341
+		},
+		{
+			"camera_y": -2.08801531791687,
+			"confirmed": "stairs_landing_f04",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/UpperBackWall"
+			],
+			"label": "down to fourth 4",
+			"position": "(-6.249967, -3.000078, 9.389953)",
+			"region": "stairs_landing_f04",
+			"tread_error": 0.0,
+			"y": -3.00007843971252
+		},
+		{
+			"camera_y": -2.11103558540344,
+			"confirmed": "stairs_landing_f04",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/Landing05",
+				"Stairwell/FlightA",
+				"Stairwell/UpperBackWall"
+			],
+			"label": "down to fourth 5",
+			"position": "(-6.24443, -2.999871, 9.31262)",
+			"region": "stairs_landing_f04",
+			"tread_error": 0.0,
+			"y": -2.99987053871155
+		},
+		{
+			"camera_y": -2.13433194160461,
+			"confirmed": "stairs_landing_f04",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/Landing05",
+				"Stairwell/FlightA",
+				"Stairwell/UpperBackWall"
+			],
+			"label": "down to fourth 5",
+			"position": "(-6.002307, -2.999887, 9.256736)",
+			"region": "stairs_landing_f04",
+			"tread_error": 0.0,
+			"y": -2.99988722801209
+		},
+		{
+			"camera_y": -2.14353656768799,
+			"confirmed": "stairs_landing_f04",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/Landing05",
+				"Stairwell/FlightA"
+			],
+			"label": "down to fourth 5",
+			"position": "(-5.625295, -2.999167, 9.216171)",
+			"region": "stairs_landing_f04",
+			"tread_error": 0.0,
+			"y": -2.99916672706604
+		},
+		{
+			"camera_y": -2.14983558654785,
+			"confirmed": "stairs_landing_f04",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/Landing05",
+				"Stairwell/FlightA"
+			],
+			"label": "down to third 1",
+			"position": "(-5.474706, -2.999166, 9.211473)",
+			"region": "stairs_landing_f04",
+			"tread_error": 0.0,
+			"y": -2.9991660118103
+		},
+		{
+			"camera_y": -2.14942598342896,
+			"confirmed": "stairs_landing_f04",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/Landing05",
+				"Stairwell/FlightA",
+				"Stairwell/UpperBackWall"
+			],
+			"label": "down to third 1",
+			"position": "(-5.234538, -2.99916, 9.329247)",
+			"region": "stairs_landing_f04",
+			"tread_error": 0.0,
+			"y": -2.99916005134583
+		},
+		{
+			"camera_y": -2.14933228492737,
+			"confirmed": "stairs_landing_f04",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/Landing05",
+				"Stairwell/FlightA",
+				"Stairwell/UpperBackWall"
+			],
+			"label": "down to third 1",
+			"position": "(-4.868747, -2.999824, 9.446095)",
+			"region": "stairs_landing_f04",
+			"tread_error": 0.0,
+			"y": -2.9998242855072
+		},
+		{
+			"camera_y": -2.1494767665863,
+			"confirmed": "stairs_landing_f04",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/FlightA",
+				"Stairwell/UpperBackWall"
+			],
+			"label": "down to third 2",
+			"position": "(-4.723462, -2.99916, 9.491465)",
+			"region": "stairs_landing_f04",
+			"tread_error": 0.0,
+			"y": -2.99916005134583
+		},
+		{
+			"camera_y": -2.14948725700378,
+			"confirmed": "stairs_landing_f04",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/FlightA",
+				"Stairwell/UpperBackWall"
+			],
+			"label": "down to third 2",
+			"position": "(-4.702793, -2.999175, 9.771281)",
+			"region": "stairs_landing_f04",
+			"tread_error": 0.0,
+			"y": -2.99917459487915
+		},
+		{
+			"camera_y": -2.16413855552673,
+			"confirmed": "stairs_landing_f04",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/FlightA",
+				"Stairwell/UpperBackWall"
+			],
+			"label": "down to third 2",
+			"position": "(-4.70253, -3.088465, 10.15611)",
+			"region": "stairs_f04_mid",
+			"tread_error": 0.0,
+			"y": -3.08846497535706
+		},
+		{
+			"camera_y": -2.26309490203857,
+			"confirmed": "stairs_f04_mid",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/FlightA",
+				"Stairwell/UpperBackWall"
+			],
+			"label": "down to third 2",
+			"position": "(-4.702267, -3.260355, 10.54187)",
+			"region": "stairs_f04_mid",
+			"tread_error": 0.0,
+			"y": -3.26035523414612
+		},
+		{
+			"camera_y": -2.40746760368347,
+			"confirmed": "stairs_f04_mid",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/TurnLanding",
+				"Stairwell/FlightA",
+				"Stairwell/LowerBackWall",
+				"Stairwell/UpperBackWall"
+			],
+			"label": "down to third 2",
+			"position": "(-4.702004, -3.43312, 10.9275)",
+			"region": "stairs_f04_mid",
+			"tread_error": 0.0,
+			"y": -3.43311953544617
+		},
+		{
+			"camera_y": -2.56732535362244,
+			"confirmed": "stairs_f04_mid",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/TurnLanding",
+				"Stairwell/FlightA",
+				"Stairwell/LowerBackWall",
+				"Stairwell/UpperBackWall"
+			],
+			"label": "down to third 2",
+			"position": "(-4.701741, -3.605003, 11.31306)",
+			"region": "stairs_f04_mid",
+			"tread_error": 0.0,
+			"y": -3.60500288009644
+		},
+		{
+			"camera_y": -2.73458337783813,
+			"confirmed": "stairs_f04_mid",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/TurnLanding",
+				"Stairwell/FlightA",
+				"Stairwell/LowerBackWall",
+				"Stairwell/UpperBackWall"
+			],
+			"label": "down to third 2",
+			"position": "(-4.701478, -3.776882, 11.6985)",
+			"region": "stairs_f04_mid",
+			"tread_error": 0.0,
+			"y": -3.7768816947937
+		},
+		{
+			"camera_y": -2.90486264228821,
+			"confirmed": "stairs_f04_mid",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/TurnLanding",
+				"Stairwell/FlightA",
+				"Stairwell/LowerBackWall",
+				"Stairwell/UpperBackWall"
+			],
+			"label": "down to third 2",
+			"position": "(-4.701214, -3.94877, 12.0842)",
+			"region": "stairs_f04_mid",
+			"tread_error": 0.0,
+			"y": -3.94876980781555
+		},
+		{
+			"camera_y": -3.07619047164917,
+			"confirmed": "stairs_f04_mid",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/TurnLanding",
+				"Stairwell/FlightA",
+				"Stairwell/LowerBackWall",
+				"Stairwell/UpperBackWall"
+			],
+			"label": "down to third 2",
+			"position": "(-4.700951, -4.120648, 12.46963)",
+			"region": "stairs_f04_mid",
+			"tread_error": 0.0,
+			"y": -4.12064838409424
+		},
+		{
+			"camera_y": -3.24799656867981,
+			"confirmed": "stairs_f04_mid",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/TurnLanding",
+				"Stairwell/FlightA",
+				"Stairwell/LowerBackWall"
+			],
+			"label": "down to third 2",
+			"position": "(-4.700688, -4.293409, 12.85514)",
+			"region": "stairs_f04_mid",
+			"tread_error": 0.0,
+			"y": -4.29340887069702
+		},
+		{
+			"camera_y": -3.42001032829285,
+			"confirmed": "stairs_f04_mid",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/TurnLanding",
+				"Stairwell/LowerBackWall"
+			],
+			"label": "down to third 2",
+			"position": "(-4.700425, -4.465292, 13.2407)",
+			"region": "stairs_f04_mid",
+			"tread_error": 0.0,
+			"y": -4.46529150009155
+		},
+		{
+			"camera_y": -3.55700421333313,
+			"confirmed": "stairs_f04_mid",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/TurnLanding",
+				"Stairwell/LowerBackWall"
+			],
+			"label": "down to third 2",
+			"position": "(-4.700161, -4.499168, 13.6251)",
+			"region": "stairs_turn_04_03",
+			"tread_error": 0.0,
+			"y": -4.49916791915894
+		},
+		{
+			"camera_y": -3.60860109329224,
+			"confirmed": "stairs_turn_04_03",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/TurnLanding",
+				"Stairwell/LowerBackWall",
+				"../LowerConnection/BackWall"
+			],
+			"label": "down to third 3",
+			"position": "(-4.705589, -4.500016, 13.82977)",
+			"region": "stairs_turn_04_03",
+			"tread_error": 0.0,
+			"y": -4.50001573562622
+		},
+		{
+			"camera_y": -3.63342905044556,
+			"confirmed": "stairs_turn_04_03",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/TurnLanding",
+				"Stairwell/LowerBackWall",
+				"../LowerConnection/BackWall"
+			],
+			"label": "down to third 3",
+			"position": "(-4.94794, -4.499976, 13.85756)",
+			"region": "stairs_turn_04_03",
+			"tread_error": 0.0,
+			"y": -4.49997568130493
+		},
+		{
+			"camera_y": -3.64322638511658,
+			"confirmed": "stairs_turn_04_03",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/LowerBackWall",
+				"../LowerConnection/BackWall"
+			],
+			"label": "down to third 3",
+			"position": "(-5.331939, -4.49917, 13.85828)",
+			"region": "stairs_turn_04_03",
+			"tread_error": 0.0,
+			"y": -4.49916982650757
+		},
+		{
+			"camera_y": -3.64696669578552,
+			"confirmed": "stairs_turn_04_03",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/LowerBackWall",
+				"../LowerConnection/BackWall"
+			],
+			"label": "down to third 3",
+			"position": "(-5.715937, -4.499174, 13.859)",
+			"region": "stairs_turn_04_03",
+			"tread_error": 0.0,
+			"y": -4.49917411804199
+		},
+		{
+			"camera_y": -3.6485276222229,
+			"confirmed": "stairs_turn_04_03",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/LowerBackWall",
+				"../LowerConnection/BackWall"
+			],
+			"label": "down to third 3",
+			"position": "(-6.095951, -4.49916, 13.85971)",
+			"region": "stairs_turn_04_03",
+			"tread_error": 0.0,
+			"y": -4.4991602897644
+		},
+		{
+			"camera_y": -3.64905095100403,
+			"confirmed": "stairs_turn_04_03",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/LowerBackWall",
+				"../LowerConnection/BackWall"
+			],
+			"label": "down to third 4",
+			"position": "(-6.232687, -4.499163, 13.85437)",
+			"region": "stairs_turn_04_03",
+			"tread_error": 0.0,
+			"y": -4.4991626739502
+		},
+		{
+			"camera_y": -3.64929127693176,
+			"confirmed": "stairs_turn_04_03",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/LowerBackWall",
+				"../LowerConnection/BackWall"
+			],
+			"label": "down to third 4",
+			"position": "(-6.248588, -4.49916, 13.61214)",
+			"region": "stairs_turn_04_03",
+			"tread_error": 0.0,
+			"y": -4.4991602897644
+		},
+		{
+			"camera_y": -3.64939546585083,
+			"confirmed": "stairs_turn_04_03",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/LowerBackWall",
+				"../LowerConnection/BackWall"
+			],
+			"label": "down to third 4",
+			"position": "(-6.248714, -4.501857, 13.22814)",
+			"region": "stairs_mid_f03",
+			"tread_error": 0.0,
+			"y": -4.50185680389404
+		},
+		{
+			"camera_y": -3.69702434539795,
+			"confirmed": "stairs_turn_04_03",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/TurnLanding",
+				"Stairwell/LowerBackWall",
+				"../LowerConnection/BackWall"
+			],
+			"label": "down to third 4",
+			"position": "(-6.24884, -4.660563, 12.8424)",
+			"region": "stairs_mid_f03",
+			"tread_error": 0.0,
+			"y": -4.66056299209595
+		},
+		{
+			"camera_y": -3.82042264938354,
+			"confirmed": "stairs_mid_f03",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/TurnLanding",
+				"Stairwell/LowerBackWall",
+				"../LowerConnection/BackWall"
+			],
+			"label": "down to third 4",
+			"position": "(-6.248966, -4.83244, 12.457)",
+			"region": "stairs_mid_f03",
+			"tread_error": 0.0,
+			"y": -4.83244037628174
+		},
+		{
+			"camera_y": -3.97224116325378,
+			"confirmed": "stairs_mid_f03",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/TurnLanding",
+				"Stairwell/LowerBackWall",
+				"../LowerConnection/BackWall"
+			],
+			"label": "down to third 4",
+			"position": "(-6.249092, -5.004319, 12.07156)",
+			"region": "stairs_mid_f03",
+			"tread_error": 0.0,
+			"y": -5.004319190979
+		},
+		{
+			"camera_y": -4.1364893913269,
+			"confirmed": "stairs_mid_f03",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/TurnLanding",
+				"Stairwell/LowerBackWall"
+			],
+			"label": "down to third 4",
+			"position": "(-6.249218, -5.176212, 11.68573)",
+			"region": "stairs_mid_f03",
+			"tread_error": 0.0,
+			"y": -5.17621183395386
+		},
+		{
+			"camera_y": -4.30482578277588,
+			"confirmed": "stairs_mid_f03",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/TurnLanding",
+				"Stairwell/LowerBackWall"
+			],
+			"label": "down to third 4",
+			"position": "(-6.249343, -5.348963, 11.30046)",
+			"region": "stairs_mid_f03",
+			"tread_error": 0.0,
+			"y": -5.34896278381348
+		},
+		{
+			"camera_y": -4.47600936889648,
+			"confirmed": "stairs_mid_f03",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/TurnLanding",
+				"Stairwell/LowerBackWall"
+			],
+			"label": "down to third 4",
+			"position": "(-6.249469, -5.520842, 10.91501)",
+			"region": "stairs_mid_f03",
+			"tread_error": 0.0,
+			"y": -5.5208420753479
+		},
+		{
+			"camera_y": -4.64781761169434,
+			"confirmed": "stairs_mid_f03",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/TurnLanding",
+				"Stairwell/LowerBackWall"
+			],
+			"label": "down to third 4",
+			"position": "(-6.249595, -5.692729, 10.52935)",
+			"region": "stairs_mid_f03",
+			"tread_error": 0.0,
+			"y": -5.6927285194397
+		},
+		{
+			"camera_y": -4.8203649520874,
+			"confirmed": "stairs_mid_f03",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/TurnLanding",
+				"Stairwell/LowerBackWall"
+			],
+			"label": "down to third 4",
+			"position": "(-6.249721, -5.865504, 10.14339)",
+			"region": "stairs_mid_f03",
+			"tread_error": 0.0,
+			"y": -5.86550378799438
+		},
+		{
+			"camera_y": -4.9903507232666,
+			"confirmed": "stairs_mid_f03",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/TurnLanding",
+				"Stairwell/FlightB",
+				"Stairwell/LowerBackWall",
+				"Stairwell/UpperBackWall"
+			],
+			"label": "down to third 4",
+			"position": "(-6.249848, -5.999174, 9.758307)",
+			"region": "stairs_landing_f03",
+			"tread_error": 0.0,
+			"y": -5.99917411804199
+		},
+		{
+			"camera_y": -5.08770561218262,
+			"confirmed": "stairs_landing_f03",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/TurnLanding",
+				"Stairwell/FlightB",
+				"Stairwell/LowerBackWall",
+				"Stairwell/UpperBackWall"
+			],
+			"label": "down to third 4",
+			"position": "(-6.249966, -5.999922, 9.390972)",
+			"region": "stairs_landing_f03",
+			"tread_error": 0.0,
+			"y": -5.99992227554321
+		},
+		{
+			"camera_y": -5.11075687408447,
+			"confirmed": "stairs_landing_f03",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/TurnLanding",
+				"Stairwell/FlightB",
+				"Stairwell/LowerBackWall",
+				"Stairwell/UpperBackWall"
+			],
+			"label": "down to third 5",
+			"position": "(-6.244431, -5.999916, 9.313639)",
+			"region": "stairs_landing_f03",
+			"tread_error": 0.0,
+			"y": -5.99991607666016
+		},
+		{
+			"camera_y": -5.13425970077515,
+			"confirmed": "stairs_landing_f03",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/TurnLanding",
+				"Stairwell/FlightB",
+				"Stairwell/LowerBackWall",
+				"Stairwell/UpperBackWall"
+			],
+			"label": "down to third 5",
+			"position": "(-6.002309, -5.999736, 9.25739)",
+			"region": "stairs_landing_f03",
+			"tread_error": 0.0,
+			"y": -5.99973583221436
+		},
+		{
+			"camera_y": -5.14343929290771,
+			"confirmed": "stairs_landing_f03",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/TurnLanding",
+				"Stairwell/FlightB",
+				"Stairwell/LowerBackWall",
+				"Stairwell/UpperBackWall"
+			],
+			"label": "down to third 5",
+			"position": "(-5.625331, -5.999167, 9.216362)",
+			"region": "stairs_landing_f03",
+			"tread_error": 0.0,
+			"y": -5.99916744232178
+		},
+		{
+			"camera_y": -5.14985179901123,
+			"confirmed": "stairs_landing_f03",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/TurnLanding",
+				"Stairwell/FlightA",
+				"Stairwell/FlightB",
+				"Stairwell/LowerBackWall",
+				"Stairwell/UpperBackWall",
+				"../LowerConnection/FlightA"
+			],
+			"label": "back to fourth 4",
+			"position": "(-5.48578, -5.999167, 9.211545)",
+			"region": "stairs_landing_f03",
+			"tread_error": 0.0,
+			"y": -5.99916744232178
+		},
+		{
+			"camera_y": -5.14962959289551,
+			"confirmed": "stairs_landing_f03",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/Landing05",
+				"Stairwell/Landing04",
+				"Stairwell/TurnLanding",
+				"Stairwell/FlightA",
+				"Stairwell/FlightB",
+				"Stairwell/LowerBackWall",
+				"Stairwell/UpperBackWall",
+				"../LowerConnection/FlightA"
+			],
+			"label": "back to fourth 4",
+			"position": "(-5.728009, -5.999168, 9.25061)",
+			"region": "stairs_landing_f03",
+			"tread_error": 0.0,
+			"y": -5.99916839599609
+		},
+		{
+			"camera_y": -5.14955711364746,
+			"confirmed": "stairs_landing_f03",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/Landing05",
+				"Stairwell/Landing04",
+				"Stairwell/TurnLanding",
+				"Stairwell/FlightA",
+				"Stairwell/FlightB",
+				"Stairwell/LowerBackWall",
+				"Stairwell/UpperBackWall",
+				"../LowerConnection/FlightA"
+			],
+			"label": "back to fourth 4",
+			"position": "(-6.104746, -6.000133, 9.286202)",
+			"region": "stairs_landing_f03",
+			"tread_error": 0.0,
+			"y": -6.00013303756714
+		},
+		{
+			"camera_y": -5.14951753616333,
+			"confirmed": "stairs_landing_f03",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/Landing05",
+				"Stairwell/Landing04"
+			],
+			"label": "back to fourth 3",
+			"position": "(-6.218109, -5.999919, 9.300918)",
+			"region": "stairs_landing_f03",
+			"tread_error": 0.0,
+			"y": -5.99991893768311
+		},
+		{
+			"camera_y": -5.14947032928467,
+			"confirmed": "stairs_landing_f03",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/Landing05",
+				"Stairwell/Landing04"
+			],
+			"label": "back to fourth 3",
+			"position": "(-6.245077, -5.999164, 9.556345)",
+			"region": "stairs_landing_f03",
+			"tread_error": 0.0,
+			"y": -5.99916410446167
+		},
+		{
+			"camera_y": -5.14730024337769,
+			"confirmed": "stairs_landing_f03",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/Landing05",
+				"Stairwell/Landing04"
+			],
+			"label": "back to fourth 3",
+			"position": "(-6.245497, -5.963268, 9.922708)",
+			"region": "stairs_mid_f03",
+			"tread_error": 0.0,
+			"y": -5.96326780319214
+		},
+		{
+			"camera_y": -5.08285427093506,
+			"confirmed": "stairs_landing_f03",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/Landing05",
+				"Stairwell/Landing04",
+				"Stairwell/FlightB"
+			],
+			"label": "back to fourth 3",
+			"position": "(-6.245863, -5.822558, 10.23794)",
+			"region": "stairs_mid_f03",
+			"tread_error": 0.0,
+			"y": -5.82255792617798
+		},
+		{
+			"camera_y": -4.97213077545166,
+			"confirmed": "stairs_mid_f03",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/Landing05",
+				"Stairwell/Landing04",
+				"Stairwell/FlightB"
+			],
+			"label": "back to fourth 3",
+			"position": "(-6.24623, -5.68181, 10.55315)",
+			"region": "stairs_mid_f03",
+			"tread_error": 0.0,
+			"y": -5.68180990219116
+		},
+		{
+			"camera_y": -4.84319496154785,
+			"confirmed": "stairs_mid_f03",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/Landing05",
+				"Stairwell/Landing04",
+				"Stairwell/FlightB"
+			],
+			"label": "back to fourth 3",
+			"position": "(-6.246595, -5.541088, 10.86838)",
+			"region": "stairs_mid_f03",
+			"tread_error": 0.0,
+			"y": -5.54108762741089
+		},
+		{
+			"camera_y": -4.70710372924805,
+			"confirmed": "stairs_mid_f03",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/FlightB"
+			],
+			"label": "back to fourth 3",
+			"position": "(-6.246961, -5.40036, 11.1836)",
+			"region": "stairs_mid_f03",
+			"tread_error": 0.0,
+			"y": -5.40036010742188
+		},
+		{
+			"camera_y": -4.56820058822632,
+			"confirmed": "stairs_mid_f03",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/FlightB"
+			],
+			"label": "back to fourth 3",
+			"position": "(-6.247324, -5.259635, 11.49883)",
+			"region": "stairs_mid_f03",
+			"tread_error": 0.0,
+			"y": -5.25963497161865
+		},
+		{
+			"camera_y": -4.4281907081604,
+			"confirmed": "stairs_mid_f03",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/FlightB"
+			],
+			"label": "back to fourth 3",
+			"position": "(-6.247686, -5.118912, 11.81405)",
+			"region": "stairs_mid_f03",
+			"tread_error": 0.0,
+			"y": -5.11891174316406
+		},
+		{
+			"camera_y": -4.2877516746521,
+			"confirmed": "stairs_mid_f03",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/FlightB"
+			],
+			"label": "back to fourth 3",
+			"position": "(-6.248049, -4.978188, 12.12927)",
+			"region": "stairs_mid_f03",
+			"tread_error": 0.0,
+			"y": -4.97818803787231
+		},
+		{
+			"camera_y": -4.14713478088379,
+			"confirmed": "stairs_mid_f03",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/FlightB"
+			],
+			"label": "back to fourth 3",
+			"position": "(-6.248411, -4.83746, 12.4445)",
+			"region": "stairs_mid_f03",
+			"tread_error": 0.0,
+			"y": -4.83746004104614
+		},
+		{
+			"camera_y": -4.0064549446106,
+			"confirmed": "stairs_mid_f03",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/FlightB"
+			],
+			"label": "back to fourth 3",
+			"position": "(-6.24877, -4.696736, 12.75972)",
+			"region": "stairs_mid_f03",
+			"tread_error": 0.0,
+			"y": -4.69673585891724
+		},
+		{
+			"camera_y": -3.86510848999023,
+			"confirmed": "stairs_mid_f03",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/FlightB"
+			],
+			"label": "back to fourth 3",
+			"position": "(-6.249128, -4.556018, 13.07495)",
+			"region": "stairs_mid_f03",
+			"tread_error": 0.0,
+			"y": -4.55601787567139
+		},
+		{
+			"camera_y": -3.74075675010681,
+			"confirmed": "stairs_mid_f03",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/TurnLanding",
+				"Stairwell/FlightB"
+			],
+			"label": "back to fourth 3",
+			"position": "(-6.249527, -4.499174, 13.43291)",
+			"region": "stairs_turn_04_03",
+			"tread_error": 0.0,
+			"y": -4.49917364120483
+		},
+		{
+			"camera_y": -3.68542909622192,
+			"confirmed": "stairs_turn_04_03",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/TurnLanding",
+				"Stairwell/FlightB"
+			],
+			"label": "back to fourth 3",
+			"position": "(-6.249903, -4.499186, 13.78357)",
+			"region": "stairs_turn_04_03",
+			"tread_error": 0.0,
+			"y": -4.49918603897095
+		},
+		{
+			"camera_y": -3.67485022544861,
+			"confirmed": "stairs_turn_04_03",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/TurnLanding",
+				"Stairwell/FlightB"
+			],
+			"label": "back to fourth 2",
+			"position": "(-6.24439, -4.499162, 13.82957)",
+			"region": "stairs_turn_04_03",
+			"tread_error": 0.0,
+			"y": -4.49916219711304
+		},
+		{
+			"camera_y": -3.65941619873047,
+			"confirmed": "stairs_turn_04_03",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/TurnLanding",
+				"Stairwell/FlightB",
+				"Stairwell/UpperBackWall"
+			],
+			"label": "back to fourth 2",
+			"position": "(-6.002097, -4.499171, 13.85739)",
+			"region": "stairs_turn_04_03",
+			"tread_error": 0.0,
+			"y": -4.49917078018188
+		},
+		{
+			"camera_y": -3.65344619750977,
+			"confirmed": "stairs_turn_04_03",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/TurnLanding",
+				"Stairwell/UpperBackWall"
+			],
+			"label": "back to fourth 2",
+			"position": "(-5.618096, -4.499929, 13.85816)",
+			"region": "stairs_turn_04_03",
+			"tread_error": 0.0,
+			"y": -4.49992895126343
+		},
+		{
+			"camera_y": -3.65107679367065,
+			"confirmed": "stairs_turn_04_03",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/TurnLanding",
+				"Stairwell/UpperBackWall"
+			],
+			"label": "back to fourth 2",
+			"position": "(-5.234097, -4.499182, 13.85893)",
+			"region": "stairs_turn_04_03",
+			"tread_error": 0.0,
+			"y": -4.49918174743652
+		},
+		{
+			"camera_y": -3.65005946159363,
+			"confirmed": "stairs_turn_04_03",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/TurnLanding",
+				"Stairwell/UpperBackWall"
+			],
+			"label": "back to fourth 2",
+			"position": "(-4.854076, -4.499161, 13.85969)",
+			"region": "stairs_turn_04_03",
+			"tread_error": 0.0,
+			"y": -4.49916124343872
+		},
+		{
+			"camera_y": -3.64960861206055,
+			"confirmed": "stairs_turn_04_03",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/TurnLanding",
+				"Stairwell/UpperBackWall"
+			],
+			"label": "back to fourth 1",
+			"position": "(-4.717301, -4.499161, 13.85436)",
+			"region": "stairs_turn_04_03",
+			"tread_error": 0.0,
+			"y": -4.49916124343872
+		},
+		{
+			"camera_y": -3.64949250221252,
+			"confirmed": "stairs_turn_04_03",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/TurnLanding",
+				"Stairwell/UpperBackWall"
+			],
+			"label": "back to fourth 1",
+			"position": "(-4.701383, -4.499161, 13.61214)",
+			"region": "stairs_turn_04_03",
+			"tread_error": 0.0,
+			"y": -4.49916124343872
+		},
+		{
+			"camera_y": -3.64780449867249,
+			"confirmed": "stairs_turn_04_03",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/TurnLanding",
+				"Stairwell/UpperBackWall"
+			],
+			"label": "back to fourth 1",
+			"position": "(-4.701259, -4.466398, 13.24434)",
+			"region": "stairs_f04_mid",
+			"tread_error": 0.0,
+			"y": -4.46639776229858
+		},
+		{
+			"camera_y": -3.58495759963989,
+			"confirmed": "stairs_turn_04_03",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/TurnLanding",
+				"Stairwell/UpperBackWall"
+			],
+			"label": "back to fourth 1",
+			"position": "(-4.701152, -4.325687, 12.92911)",
+			"region": "stairs_f04_mid",
+			"tread_error": 0.0,
+			"y": -4.32568740844727
+		},
+		{
+			"camera_y": -3.47459053993225,
+			"confirmed": "stairs_f04_mid",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/TurnLanding",
+				"Stairwell/FlightA",
+				"Stairwell/UpperBackWall"
+			],
+			"label": "back to fourth 1",
+			"position": "(-4.701045, -4.184972, 12.61388)",
+			"region": "stairs_f04_mid",
+			"tread_error": 0.0,
+			"y": -4.18497180938721
+		},
+		{
+			"camera_y": -3.3460738658905,
+			"confirmed": "stairs_f04_mid",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/TurnLanding",
+				"Stairwell/FlightA",
+				"Stairwell/UpperBackWall"
+			],
+			"label": "back to fourth 1",
+			"position": "(-4.700939, -4.044244, 12.29866)",
+			"region": "stairs_f04_mid",
+			"tread_error": 0.0,
+			"y": -4.04424428939819
+		},
+		{
+			"camera_y": -3.21413016319275,
+			"confirmed": "stairs_f04_mid",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/FlightA"
+			],
+			"label": "back to fourth 1",
+			"position": "(-4.700832, -3.903505, 11.98344)",
+			"region": "stairs_f04_mid",
+			"tread_error": 0.0,
+			"y": -3.90350484848022
+		},
+		{
+			"camera_y": -3.07287001609802,
+			"confirmed": "stairs_f04_mid",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/FlightA"
+			],
+			"label": "back to fourth 1",
+			"position": "(-4.700726, -3.762776, 11.66821)",
+			"region": "stairs_f04_mid",
+			"tread_error": 0.0,
+			"y": -3.76277637481689
+		},
+		{
+			"camera_y": -2.93051528930664,
+			"confirmed": "stairs_f04_mid",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/FlightA"
+			],
+			"label": "back to fourth 1",
+			"position": "(-4.70062, -3.622053, 11.35298)",
+			"region": "stairs_f04_mid",
+			"tread_error": 0.0,
+			"y": -3.62205290794373
+		},
+		{
+			"camera_y": -2.79121994972229,
+			"confirmed": "stairs_f04_mid",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/FlightA"
+			],
+			"label": "back to fourth 1",
+			"position": "(-4.700515, -3.481327, 11.03776)",
+			"region": "stairs_f04_mid",
+			"tread_error": 0.0,
+			"y": -3.48132705688477
+		},
+		{
+			"camera_y": -2.65040588378906,
+			"confirmed": "stairs_f04_mid",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/FlightA"
+			],
+			"label": "back to fourth 1",
+			"position": "(-4.700408, -3.340594, 10.72254)",
+			"region": "stairs_f04_mid",
+			"tread_error": 0.0,
+			"y": -3.34059357643127
+		},
+		{
+			"camera_y": -2.50964546203613,
+			"confirmed": "stairs_f04_mid",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/FlightA"
+			],
+			"label": "back to fourth 1",
+			"position": "(-4.700302, -3.19991, 10.40729)",
+			"region": "stairs_f04_mid",
+			"tread_error": 0.0,
+			"y": -3.19991040229797
+		},
+		{
+			"camera_y": -2.36891674995422,
+			"confirmed": "stairs_f04_mid",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/FlightA"
+			],
+			"label": "back to fourth 1",
+			"position": "(-4.700197, -3.059157, 10.09208)",
+			"region": "stairs_f04_mid",
+			"tread_error": 0.0,
+			"y": -3.059157371521
+		},
+		{
+			"camera_y": -2.24292302131653,
+			"confirmed": "stairs_f04_mid",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/FlightA"
+			],
+			"label": "back to fourth 1",
+			"position": "(-4.700078, -2.999917, 9.735848)",
+			"region": "stairs_landing_f04",
+			"tread_error": 0.0,
+			"y": -2.99991679191589
+		},
+		{
+			"camera_y": -2.19072699546814,
+			"confirmed": "stairs_landing_f04",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/Landing05",
+				"Stairwell/FlightA"
+			],
+			"label": "back to fourth 0",
+			"position": "(-4.705571, -2.999172, 9.53118)",
+			"region": "stairs_landing_f04",
+			"tread_error": 0.0,
+			"y": -2.99917221069336
+		},
+		{
+			"camera_y": -2.16566967964172,
+			"confirmed": "stairs_landing_f04",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/Landing05",
+				"Stairwell/FlightA"
+			],
+			"label": "back to fourth 0",
+			"position": "(-4.945078, -2.999162, 9.392794)",
+			"region": "stairs_landing_f04",
+			"tread_error": 0.0,
+			"y": -2.99916195869446
+		},
+		{
+			"camera_y": -2.15584778785706,
+			"confirmed": "stairs_landing_f04",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/Landing05",
+				"Stairwell/FlightA"
+			],
+			"label": "back to fourth 0",
+			"position": "(-5.305937, -2.99916, 9.261507)",
+			"region": "stairs_landing_f04",
+			"tread_error": 0.0,
+			"y": -2.99915981292725
+		},
+		{
+			"camera_y": -2.14936208724976,
+			"confirmed": "stairs_landing_f04",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/Landing05",
+				"Stairwell/FlightA"
+			],
+			"label": "back to fifth 4",
+			"position": "(-5.472353, -2.999162, 9.226412)",
+			"region": "stairs_landing_f04",
+			"tread_error": 0.0,
+			"y": -2.99916172027588
+		},
+		{
+			"camera_y": -2.1493935585022,
+			"confirmed": "stairs_landing_f04",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/Landing05",
+				"Stairwell/FlightA"
+			],
+			"label": "back to fifth 4",
+			"position": "(-5.714655, -2.999166, 9.258464)",
+			"region": "stairs_landing_f04",
+			"tread_error": 0.0,
+			"y": -2.99916577339172
+		},
+		{
+			"camera_y": -2.14953327178955,
+			"confirmed": "stairs_landing_f04",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/Landing05",
+				"Stairwell/FlightA"
+			],
+			"label": "back to fifth 4",
+			"position": "(-6.094171, -3.000179, 9.287909)",
+			"region": "stairs_landing_f04",
+			"tread_error": 0.0,
+			"y": -3.00017881393433
+		},
+		{
+			"camera_y": -2.14960145950317,
+			"confirmed": "stairs_landing_f04",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/Landing05",
+				"Stairwell/FlightA"
+			],
+			"label": "back to fifth 3",
+			"position": "(-6.233451, -2.999168, 9.302396)",
+			"region": "stairs_landing_f04",
+			"tread_error": 0.0,
+			"y": -2.99916791915894
+		},
+		{
+			"camera_y": -2.14954233169556,
+			"confirmed": "stairs_landing_f04",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/Landing05",
+				"Stairwell/FlightA"
+			],
+			"label": "back to fifth 3",
+			"position": "(-6.250334, -2.999174, 9.553691)",
+			"region": "stairs_landing_f04",
+			"tread_error": 0.0,
+			"y": -2.99917364120483
+		},
+		{
+			"camera_y": -2.14758968353271,
+			"confirmed": "stairs_landing_f04",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/Landing05",
+				"Stairwell/FlightA"
+			],
+			"label": "back to fifth 3",
+			"position": "(-6.250307, -2.964368, 9.920404)",
+			"region": "stairs_mid_f04",
+			"tread_error": 0.0268678665161133,
+			"y": -2.96436786651611
+		},
+		{
+			"camera_y": -2.08360123634338,
+			"confirmed": "stairs_landing_f04",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/Landing05",
+				"Stairwell/FlightA"
+			],
+			"label": "back to fifth 3",
+			"position": "(-6.250284, -2.823591, 10.23561)",
+			"region": "stairs_mid_f04",
+			"tread_error": 0.0110907554626465,
+			"y": -2.82359075546265
+		},
+		{
+			"camera_y": -1.97304773330688,
+			"confirmed": "stairs_mid_f04",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/Landing05",
+				"Stairwell/FlightA"
+			],
+			"label": "back to fifth 3",
+			"position": "(-6.250261, -2.682857, 10.55083)",
+			"region": "stairs_mid_f04",
+			"tread_error": 0.00464296340942383,
+			"y": -2.68285703659058
+		},
+		{
+			"camera_y": -1.84418714046478,
+			"confirmed": "stairs_mid_f04",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/Landing05",
+				"Stairwell/FlightA"
+			],
+			"label": "back to fifth 3",
+			"position": "(-6.250238, -2.542128, 10.86605)",
+			"region": "stairs_mid_f04",
+			"tread_error": 0.0203721523284912,
+			"y": -2.54212784767151
+		},
+		{
+			"camera_y": -1.70812284946442,
+			"confirmed": "stairs_mid_f04",
+			"grounded": true,
+			"hidden": [],
+			"label": "back to fifth 3",
+			"position": "(-6.250216, -2.401437, 11.18128)",
+			"region": "stairs_mid_f04",
+			"tread_error": 0.0360627174377441,
+			"y": -2.40143728256226
+		},
+		{
+			"camera_y": -1.56923818588257,
+			"confirmed": "stairs_mid_f04",
+			"grounded": true,
+			"hidden": [],
+			"label": "back to fifth 3",
+			"position": "(-6.250193, -2.260677, 11.49649)",
+			"region": "stairs_mid_f04",
+			"tread_error": 0.0518231391906738,
+			"y": -2.26067686080933
+		},
+		{
+			"camera_y": -1.42923223972321,
+			"confirmed": "stairs_mid_f04",
+			"grounded": true,
+			"hidden": [],
+			"label": "back to fifth 3",
+			"position": "(-6.25017, -2.119951, 11.81172)",
+			"region": "stairs_mid_f04",
+			"tread_error": 0.0675485134124756,
+			"y": -2.11995148658752
+		},
+		{
+			"camera_y": -1.2878555059433,
+			"confirmed": "stairs_mid_f04",
+			"grounded": true,
+			"hidden": [],
+			"label": "back to fifth 3",
+			"position": "(-6.250147, -1.979228, 12.12694)",
+			"region": "stairs_mid_f04",
+			"tread_error": 0.0832722187042236,
+			"y": -1.97922778129578
+		},
+		{
+			"camera_y": -1.1473925113678,
+			"confirmed": "stairs_mid_f04",
+			"grounded": true,
+			"hidden": [],
+			"label": "back to fifth 3",
+			"position": "(-6.250122, -1.838501, 12.44216)",
+			"region": "stairs_mid_f04",
+			"tread_error": 0.0260008573532104,
+			"y": -1.83850085735321
+		},
+		{
+			"camera_y": -1.00719344615936,
+			"confirmed": "stairs_mid_f04",
+			"grounded": true,
+			"hidden": [],
+			"label": "back to fifth 3",
+			"position": "(-6.250096, -1.697826, 12.75742)",
+			"region": "stairs_mid_f04",
+			"tread_error": 0.0103263854980469,
+			"y": -1.69782638549805
+		},
+		{
+			"camera_y": -0.866673231124878,
+			"confirmed": "stairs_mid_f04",
+			"grounded": true,
+			"hidden": [],
+			"label": "back to fifth 3",
+			"position": "(-6.25007, -1.557059, 13.07262)",
+			"region": "stairs_mid_f04",
+			"tread_error": 0.00544071197509766,
+			"y": -1.5570592880249
+		},
+		{
+			"camera_y": -0.741531193256378,
+			"confirmed": "stairs_mid_f04",
+			"grounded": true,
+			"hidden": [],
+			"label": "back to fifth 3",
+			"position": "(-6.250038, -1.499917, 13.43001)",
+			"region": "stairs_turn",
+			"tread_error": 0.0,
+			"y": -1.49991703033447
+		},
+		{
+			"camera_y": -0.685717105865479,
+			"confirmed": "stairs_turn",
+			"grounded": true,
+			"hidden": [],
+			"label": "back to fifth 3",
+			"position": "(-6.250008, -1.499839, 13.78067)",
+			"region": "stairs_turn",
+			"tread_error": 0.0,
+			"y": -1.49983894824982
+		},
+		{
+			"camera_y": -0.675177752971649,
+			"confirmed": "stairs_turn",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/LowerBackWall",
+				"Stairwell/UpperBackWall"
+			],
+			"label": "back to fifth 2",
+			"position": "(-6.244451, -1.500076, 13.82666)",
+			"region": "stairs_turn",
+			"tread_error": 0.0,
+			"y": -1.50007629394531
+		},
+		{
+			"camera_y": -0.659615635871887,
+			"confirmed": "stairs_turn",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/LowerBackWall",
+				"Stairwell/UpperBackWall"
+			],
+			"label": "back to fifth 2",
+			"position": "(-6.001996, -1.499967, 13.85494)",
+			"region": "stairs_turn",
+			"tread_error": 0.0,
+			"y": -1.49996674060822
+		},
+		{
+			"camera_y": -0.653591454029083,
+			"confirmed": "stairs_turn",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/LowerBackWall",
+				"Stairwell/UpperBackWall"
+			],
+			"label": "back to fifth 2",
+			"position": "(-5.617998, -1.499169, 13.85643)",
+			"region": "stairs_turn",
+			"tread_error": 0.0,
+			"y": -1.49916875362396
+		},
+		{
+			"camera_y": -0.651016116142273,
+			"confirmed": "stairs_turn",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/LowerBackWall",
+				"Stairwell/UpperBackWall"
+			],
+			"label": "back to fifth 2",
+			"position": "(-5.234001, -1.499916, 13.85793)",
+			"region": "stairs_turn",
+			"tread_error": 0.0,
+			"y": -1.499915599823
+		},
+		{
+			"camera_y": -0.650111019611359,
+			"confirmed": "stairs_turn",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/LowerBackWall",
+				"Stairwell/UpperBackWall"
+			],
+			"label": "back to fifth 2",
+			"position": "(-4.854003, -1.499814, 13.8594)",
+			"region": "stairs_turn",
+			"tread_error": 0.0,
+			"y": -1.49981439113617
+		},
+		{
+			"camera_y": -0.649794399738312,
+			"confirmed": "stairs_turn",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/LowerBackWall",
+				"Stairwell/UpperBackWall"
+			],
+			"label": "back to fifth 1",
+			"position": "(-4.717331, -1.499161, 13.85429)",
+			"region": "stairs_turn",
+			"tread_error": 0.0,
+			"y": -1.49916088581085
+		},
+		{
+			"camera_y": -0.649576604366302,
+			"confirmed": "stairs_turn",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/LowerBackWall",
+				"Stairwell/UpperBackWall"
+			],
+			"label": "back to fifth 1",
+			"position": "(-4.701449, -1.49916, 13.61228)",
+			"region": "stairs_turn",
+			"tread_error": 0.0,
+			"y": -1.49916017055511
+		},
+		{
+			"camera_y": -0.647846758365631,
+			"confirmed": "stairs_turn",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/LowerBackWall",
+				"Stairwell/UpperBackWall"
+			],
+			"label": "back to fifth 1",
+			"position": "(-4.701319, -1.466508, 13.24455)",
+			"region": "stairs_f05_mid",
+			"tread_error": 0.0290077924728394,
+			"y": -1.46650779247284
+		},
+		{
+			"camera_y": -0.584772765636444,
+			"confirmed": "stairs_turn",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/LowerBackWall",
+				"Stairwell/UpperBackWall"
+			],
+			"label": "back to fifth 1",
+			"position": "(-4.701207, -1.325797, 12.92931)",
+			"region": "stairs_f05_mid",
+			"tread_error": 0.0132973194122314,
+			"y": -1.32579731941223
+		},
+		{
+			"camera_y": -0.474781006574631,
+			"confirmed": "stairs_f05_mid",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/LowerBackWall",
+				"Stairwell/UpperBackWall"
+			],
+			"label": "back to fifth 1",
+			"position": "(-4.701095, -1.185069, 12.61409)",
+			"region": "stairs_f05_mid",
+			"tread_error": 0.00243103504180908,
+			"y": -1.18506896495819
+		},
+		{
+			"camera_y": -0.346203058958054,
+			"confirmed": "stairs_f05_mid",
+			"grounded": true,
+			"hidden": [
+				"Stairwell/LowerBackWall",
+				"Stairwell/UpperBackWall"
+			],
+			"label": "back to fifth 1",
+			"position": "(-4.700982, -1.044319, 12.29887)",
+			"region": "stairs_f05_mid",
+			"tread_error": 0.0181812047958374,
+			"y": -1.04431879520416
+		},
+		{
+			"camera_y": -0.209893569350243,
+			"confirmed": "stairs_f05_mid",
+			"grounded": true,
+			"hidden": [],
+			"label": "back to fifth 1",
+			"position": "(-4.700868, -0.903605, 11.98364)",
+			"region": "stairs_f05_mid",
+			"tread_error": 0.0338954329490662,
+			"y": -0.903604567050934
+		},
+		{
+			"camera_y": -0.07126085460186,
+			"confirmed": "stairs_f05_mid",
+			"grounded": true,
+			"hidden": [],
+			"label": "back to fifth 1",
+			"position": "(-4.700757, -0.762872, 11.66842)",
+			"region": "stairs_f05_mid",
+			"tread_error": 0.0496280193328857,
+			"y": -0.762871980667114
+		},
+		{
+			"camera_y": 0.0686373636126518,
+			"confirmed": "stairs_f05_mid",
+			"grounded": true,
+			"hidden": [],
+			"label": "back to fifth 1",
+			"position": "(-4.700645, -0.622156, 11.3532)",
+			"region": "stairs_f05_mid",
+			"tread_error": 0.0653442740440369,
+			"y": -0.622155725955963
+		},
+		{
+			"camera_y": 0.206046298146248,
+			"confirmed": "stairs_f05_mid",
+			"grounded": true,
+			"hidden": [],
+			"label": "back to fifth 1",
+			"position": "(-4.700535, -0.481429, 11.03797)",
+			"region": "stairs_f05_mid",
+			"tread_error": 0.0810706615447998,
+			"y": -0.4814293384552
+		},
+		{
+			"camera_y": 0.349886119365692,
+			"confirmed": "stairs_f05_mid",
+			"grounded": true,
+			"hidden": [],
+			"label": "back to fifth 1",
+			"position": "(-4.700424, -0.340697, 10.72275)",
+			"region": "stairs_f05_mid",
+			"tread_error": 0.0281965434551239,
+			"y": -0.340696543455124
+		},
+		{
+			"camera_y": 0.491924494504929,
+			"confirmed": "stairs_f05_mid",
+			"grounded": true,
+			"hidden": [],
+			"label": "back to fifth 1",
+			"position": "(-4.700313, -0.199968, 10.40753)",
+			"region": "stairs_f05_mid",
+			"tread_error": 0.0124678909778595,
+			"y": -0.19996789097786
+		},
+		{
+			"camera_y": 0.631651341915131,
+			"confirmed": "stairs_f05_mid",
+			"grounded": true,
+			"hidden": [],
+			"label": "back to fifth 1",
+			"position": "(-4.700203, -0.059255, 10.0923)",
+			"region": "stairs_f05_mid",
+			"tread_error": 0.00324520096182823,
+			"y": -0.0592547990381718
+		},
+		{
+			"camera_y": 0.757264256477356,
+			"confirmed": "stairs_f05_mid",
+			"grounded": true,
+			"hidden": [],
+			"label": "back to fifth 1",
+			"position": "(-4.70008, 0.000827, 9.736118)",
+			"region": "stairs_landing_f05",
+			"tread_error": 0.0,
+			"y": 0.000826644361950457
+		},
+		{
+			"camera_y": 0.809218943119049,
+			"confirmed": "stairs_landing_f05",
+			"grounded": true,
+			"hidden": [],
+			"label": "back to fifth 0",
+			"position": "(-4.705572, 0.000824, 9.531452)",
+			"region": "stairs_landing_f05",
+			"tread_error": 0.0,
+			"y": 0.000824183167424053
+		},
+		{
+			"camera_y": 0.83426034450531,
+			"confirmed": "stairs_landing_f05",
+			"grounded": true,
+			"hidden": [],
+			"label": "back to fifth 0",
+			"position": "(-4.945073, 0.00084, 9.392963)",
+			"region": "stairs_landing_f05",
+			"tread_error": 0.0,
+			"y": 0.00084010511636734
+		},
+		{
+			"camera_y": 0.84414666891098,
+			"confirmed": "stairs_landing_f05",
+			"grounded": true,
+			"hidden": [],
+			"label": "back to fifth 0",
+			"position": "(-5.305896, 0.00084, 9.261576)",
+			"region": "stairs_landing_f05",
+			"tread_error": 0.0,
+			"y": 0.000840005115605891
+		},
+		{
+			"camera_y": 0.850463211536407,
+			"confirmed": "stairs_landing_f05",
+			"grounded": true,
+			"hidden": [],
+			"label": "return hall threshold",
+			"position": "(-5.46702, 0.000834, 9.216094)",
+			"region": "stairs_landing_f05",
+			"tread_error": 0.0,
+			"y": 0.00083371001528576
+		},
+		{
+			"camera_y": 0.850511431694031,
+			"confirmed": "stairs_landing_f05",
+			"grounded": true,
+			"hidden": [],
+			"label": "return hall threshold",
+			"position": "(-5.469189, 0.000837, 8.973648)",
+			"region": "stairs_landing_f05",
+			"tread_error": 0.0,
+			"y": 0.000837097235489637
+		},
+		{
+			"camera_y": 0.850387692451477,
+			"confirmed": "stairs_landing_f05",
+			"grounded": true,
+			"hidden": [],
+			"label": "return hall threshold",
+			"position": "(-5.471267, 0.000114, 8.589685)",
+			"region": "stairs_landing_f05",
+			"tread_error": 0.0,
+			"y": 0.00011379539500922
+		},
+		{
+			"camera_y": 0.850285053253174,
+			"confirmed": "stairs_landing_f05",
+			"grounded": true,
+			"hidden": [],
+			"label": "return hall threshold",
+			"position": "(-5.473345, -0.000148, 8.205673)",
+			"region": "stairwell_f05",
+			"tread_error": 0.0,
+			"y": -0.000147556769661605
+		},
+		{
+			"camera_y": 0.850176393985748,
+			"confirmed": "stairwell_f05",
+			"grounded": true,
+			"hidden": [],
+			"label": "return hall lane",
+			"position": "(-5.469213, -0.000197, 7.90233)",
+			"region": "stairwell_f05",
+			"tread_error": 0.0,
+			"y": -0.000197311281226575
+		},
+		{
+			"camera_y": 0.85015857219696,
+			"confirmed": "stairwell_f05",
+			"grounded": true,
+			"hidden": [
+				"Corridor/Architecture/StairLintel"
+			],
+			"label": "return hall lane",
+			"position": "(-5.336783, -0.000036, 7.557568)",
+			"region": "stairwell_f05",
+			"tread_error": 0.0,
+			"y": -0.0000355777447111905
+		},
+		{
+			"camera_y": 0.850296914577484,
+			"confirmed": "stairwell_f05",
+			"grounded": true,
+			"hidden": [
+				"Corridor/Architecture/StairLintel"
+			],
+			"label": "return hall lane",
+			"position": "(-5.197, 0.000271, 7.199913)",
+			"region": "corridor_f05",
+			"tread_error": 0.0,
+			"y": 0.000270854216068983
+		},
+		{
+			"camera_y": 0.850355684757233,
+			"confirmed": "stairwell_f05",
+			"grounded": true,
+			"hidden": [
+				"Corridor/Architecture/StairLintel"
+			],
+			"label": "return hall lane",
+			"position": "(-5.057217, -0.000122, 6.842258)",
+			"region": "corridor_f05",
+			"tread_error": 0.0,
+			"y": -0.000121925259009004
+		},
+		{
+			"camera_y": 0.850327253341675,
+			"confirmed": "corridor_f05",
+			"grounded": true,
+			"hidden": [
+				"Corridor/Architecture/StairLintel"
+			],
+			"label": "return hall lane",
+			"position": "(-4.932867, 0.000191, 6.516241)",
+			"region": "corridor_f05",
+			"tread_error": 0.0,
+			"y": 0.000190631777513772
+		},
+		{
+			"camera_y": 0.85022634267807,
+			"confirmed": "corridor_f05",
+			"grounded": true,
+			"hidden": [
+				"Corridor/Architecture/StairLintel"
+			],
+			"label": "back to 501 threshold",
+			"position": "(-4.919704, 0.000591, 6.452646)",
+			"region": "corridor_f05",
+			"tread_error": 0.0,
+			"y": 0.00059084256645292
+		},
+		{
+			"camera_y": 0.850208044052124,
+			"confirmed": "corridor_f05",
+			"grounded": true,
+			"hidden": [
+				"Corridor/Architecture/StairLintel"
+			],
+			"label": "back to 501 threshold",
+			"position": "(-4.918299, 0.000831, 6.112895)",
+			"region": "corridor_f05",
+			"tread_error": 0.0,
+			"y": 0.000831302546430379
+		},
+		{
+			"camera_y": 0.850168228149414,
+			"confirmed": "corridor_f05",
+			"grounded": true,
+			"hidden": [],
+			"label": "back to 501 threshold",
+			"position": "(-4.916895, 0.000827, 5.7289)",
+			"region": "corridor_f05",
+			"tread_error": 0.0,
+			"y": 0.000826906820293516
+		},
+		{
+			"camera_y": 0.850222766399384,
+			"confirmed": "corridor_f05",
+			"grounded": true,
+			"hidden": [],
+			"label": "back to 501 threshold",
+			"position": "(-4.915491, 0.000063, 5.344904)",
+			"region": "corridor_f05",
+			"tread_error": 0.0,
+			"y": 0.0000627458794042468
+		},
+		{
+			"camera_y": 0.850187957286835,
+			"confirmed": "corridor_f05",
+			"grounded": true,
+			"hidden": [],
+			"label": "back to 501 threshold",
+			"position": "(-4.914087, 0.00014, 4.960907)",
+			"region": "corridor_f05",
+			"tread_error": 0.0,
+			"y": 0.000140084302984178
+		},
+		{
+			"camera_y": 0.850185513496399,
+			"confirmed": "corridor_f05",
+			"grounded": true,
+			"hidden": [],
+			"label": "back to 501 threshold",
+			"position": "(-4.912682, -0.000157, 4.576909)",
+			"region": "corridor_f05",
+			"tread_error": 0.0,
+			"y": -0.000156913883984089
+		},
+		{
+			"camera_y": 0.850107550621033,
+			"confirmed": "corridor_f05",
+			"grounded": true,
+			"hidden": [],
+			"label": "back to 501 threshold",
+			"position": "(-4.911278, 0.000808, 4.192912)",
+			"region": "corridor_f05",
+			"tread_error": 0.0,
+			"y": 0.000808312615845352
+		},
+		{
+			"camera_y": 0.850101888179779,
+			"confirmed": "corridor_f05",
+			"grounded": true,
+			"hidden": [],
+			"label": "back to 501 threshold",
+			"position": "(-4.909874, -0.000033, 3.808914)",
+			"region": "corridor_f05",
+			"tread_error": 0.0,
+			"y": -0.0000327136367559433
+		},
+		{
+			"camera_y": 0.850271105766296,
+			"confirmed": "corridor_f05",
+			"grounded": true,
+			"hidden": [],
+			"label": "back to 501 threshold",
+			"position": "(-4.934202, 0.000212, 3.462441)",
+			"region": "corridor_f05",
+			"tread_error": 0.0,
+			"y": 0.000211534381378442
+		},
+		{
+			"camera_y": 0.850429475307465,
+			"confirmed": "corridor_f05",
+			"grounded": true,
+			"hidden": [],
+			"label": "back to 501 threshold",
+			"position": "(-5.020263, 0.000018, 3.204647)",
+			"region": "corridor_f05",
+			"tread_error": 0.0,
+			"y": 0.0000184592208825052
+		},
+		{
+			"camera_y": 0.850652933120728,
+			"confirmed": "corridor_f05",
+			"grounded": true,
+			"hidden": [],
+			"label": "back to 501 threshold",
+			"position": "(-5.020943, 0.000885, 2.821408)",
+			"region": "corridor_f05",
+			"tread_error": 0.0,
+			"y": 0.000884959881659597
+		},
+		{
+			"camera_y": 0.85047447681427,
+			"confirmed": "corridor_f05",
+			"grounded": true,
+			"hidden": [],
+			"label": "back to 501 threshold",
+			"position": "(-4.993874, 0.000201, 2.438363)",
+			"region": "corridor_f05",
+			"tread_error": 0.0,
+			"y": 0.000200957350898534
+		},
+		{
+			"camera_y": 0.850199341773987,
+			"confirmed": "corridor_f05",
+			"grounded": true,
+			"hidden": [],
+			"label": "back to 501 threshold",
+			"position": "(-4.966805, -0.000068, 2.05532)",
+			"region": "corridor_f05",
+			"tread_error": 0.0,
+			"y": -0.0000677565112709999
+		},
+		{
+			"camera_y": 0.850178003311157,
+			"confirmed": "corridor_f05",
+			"grounded": true,
+			"hidden": [],
+			"label": "back to 501 threshold",
+			"position": "(-4.939735, -0.000034, 1.672276)",
+			"region": "corridor_f05",
+			"tread_error": 0.0,
+			"y": -0.0000344682484865189
+		},
+		{
+			"camera_y": 0.850100040435791,
+			"confirmed": "corridor_f05",
+			"grounded": true,
+			"hidden": [],
+			"label": "back to 501 threshold",
+			"position": "(-4.912666, 0.000117, 1.289231)",
+			"region": "corridor_f05",
+			"tread_error": 0.0,
+			"y": 0.000117137911729515
+		},
+		{
+			"camera_y": 0.850103795528412,
+			"confirmed": "corridor_f05",
+			"grounded": true,
+			"hidden": [],
+			"label": "back inside 501",
+			"position": "(-4.897755, 0.000808, 1.133162)",
+			"region": "corridor_f05",
+			"tread_error": 0.0,
+			"y": 0.000808142882306129
+		},
+		{
+			"camera_y": 0.85020250082016,
+			"confirmed": "corridor_f05",
+			"grounded": true,
+			"hidden": [],
+			"label": "back inside 501",
+			"position": "(-4.64605, 0.000673, 1.107299)",
+			"region": "corridor_f05",
+			"tread_error": 0.0,
+			"y": 0.000673043308779597
+		},
+		{
+			"camera_y": 0.850259125232697,
+			"confirmed": "corridor_f05",
+			"grounded": true,
+			"hidden": [],
+			"label": "back inside 501",
+			"position": "(-4.262043, 0.000824, 1.109039)",
+			"region": "apartment_501",
+			"tread_error": 0.0,
+			"y": 0.000824435614049435
+		},
+		{
+			"camera_y": 0.870000004768372,
+			"confirmed": "corridor_f05",
+			"grounded": false,
+			"hidden": [],
+			"label": "past corpse",
+			"position": "(-5.475, 0.017278, 3.505556)",
+			"region": "corridor_f05",
+			"tread_error": 0.0,
+			"y": 0.0172777771949768
+		},
+		{
+			"camera_y": 0.859858751296997,
+			"confirmed": "corridor_f05",
+			"grounded": true,
+			"hidden": [],
+			"label": "past corpse",
+			"position": "(-5.475, 0.000833, 3.748)",
+			"region": "corridor_f05",
+			"tread_error": 0.0,
+			"y": 0.000833367288578302
+		},
+		{
+			"camera_y": 0.85408890247345,
+			"confirmed": "corridor_f05",
+			"grounded": true,
+			"hidden": [],
+			"label": "past corpse",
+			"position": "(-5.475, 0.000835, 4.131996)",
+			"region": "corridor_f05",
+			"tread_error": 0.0,
+			"y": 0.000834671664051712
+		},
+		{
+			"camera_y": 0.85200035572052,
+			"confirmed": "corridor_f05",
+			"grounded": true,
+			"hidden": [],
+			"label": "past corpse",
+			"position": "(-5.475, 0.000088, 4.515995)",
+			"region": "corridor_f05",
+			"tread_error": 0.0,
+			"y": 0.0000883463071659207
+		},
+		{
+			"camera_y": 0.851074934005737,
+			"confirmed": "corridor_f05",
+			"grounded": true,
+			"hidden": [],
+			"label": "past corpse",
+			"position": "(-5.475, 0.000094, 4.895997)",
+			"region": "corridor_f05",
+			"tread_error": 0.0,
+			"y": 0.0000942851183936
+		}
+	]
+}
