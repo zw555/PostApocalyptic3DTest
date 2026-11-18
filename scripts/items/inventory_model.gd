@@ -98,9 +98,11 @@ func remove_item(id: String, amount: int, commit_effect: Callable = Callable(), 
 	_busy = false
 	return _result(true,"removed",amount,{id:amount})
 func transfer_all_to(target: RefCounted) -> Dictionary: return transfer_to(target,contents())
-func transfer_to(target: RefCounted, requests: Dictionary) -> Dictionary:
+## Supply a source slot when transferring the stack selected in an inventory UI.
+func transfer_to(target: RefCounted, requests: Dictionary, source_slot: int = -1) -> Dictionary:
 	if target == null or target == self or _busy or target._busy: return _result(false,"invalid_target_or_busy")
 	if requests.is_empty(): return _result(false,"empty")
+	if source_slot < -1 or (source_slot >= 0 and requests.size() != 1): return _result(false,"invalid_request")
 	requests = requests.duplicate(true) # Observers cannot mutate the caller request mid-result.
 	# Prepare detached models. No live state is touched until every operation succeeds.
 	var source_plan = get_script().new(_database,slot_count())
@@ -110,7 +112,7 @@ func transfer_to(target: RefCounted, requests: Dictionary) -> Dictionary:
 	var total := 0
 	for id in requests:
 		if not id is String or typeof(requests[id]) != TYPE_INT or requests[id] <= 0: return _result(false,"invalid_request")
-		var removed: Dictionary = source_plan.remove_item(id,requests[id])
+		var removed: Dictionary = source_plan.remove_item(id,requests[id],Callable(),source_slot)
 		if not removed.ok: return _result(false,removed.reason)
 		var added: Dictionary = target_plan.add_item(id,requests[id])
 		if not added.ok: return _result(false,added.reason)

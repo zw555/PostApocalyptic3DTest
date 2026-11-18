@@ -7,12 +7,12 @@ var inventory: RefCounted
 var zone: Node3D
 var shell: MeshInstance3D
 var shell_material: StandardMaterial3D
-func configure(data: Resource, database: RefCounted) -> Dictionary:
+func configure(data: Resource, database: RefCounted, slots: int = 12) -> Dictionary:
 	if data == null or data.container_id.is_empty(): return {"ok":false,"reason":"invalid_container"}
 	definition = data
 	name = data.container_id
 	position = data.position
-	inventory = Model.new(database,12)
+	inventory = Model.new(database,slots)
 	for amount in data.contents:
 		if amount == null or amount.definition == null: return {"ok":false,"reason":"invalid_contents"}
 		var result: Dictionary = inventory.add_item(amount.definition.item_id,amount.quantity)
@@ -27,7 +27,9 @@ func _inventory_changed(_revision: int) -> void:
 	shell_material.albedo_color = Color("606b66") if inventory.contents().is_empty() else Color("b59462")
 func stable_id() -> String: return definition.container_id
 func can_interact(context: Dictionary) -> bool:
-	if not context.host.can_interact() or zone == null: return false
+	return context.host.can_interact() and is_accessible(context)
+func is_accessible(context: Dictionary) -> bool:
+	if zone == null: return false
 	var actor: CharacterBody3D = context.player
 	if absf(global_basis.y.normalized().dot(actor.global_position-global_position)) > 0.65: return false
 	if actor.global_position.distance_to(global_position) > 1.3: return false

@@ -24,17 +24,22 @@ func _ready() -> void:
 	hint.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	get_node("ApartmentHUD").add_child(hint)
 func inventory_is_open() -> bool: return inventory_ui != null and inventory_ui.is_open()
+func world_modal_is_open() -> bool: return inventory_is_open()
 func open_inventory() -> void:
-	if inventory_is_open() or inventory_ui == null: return
+	if world_modal_is_open() or inventory_ui == null: return
+	_lock_world_controls()
+	inventory_ui.set_open(true)
+func _lock_world_controls() -> void:
 	_controls_before_ui = player.controls_enabled if not _waiting_motion_release else _controls_before_ui
 	player.controls_enabled = false
 	player.velocity = Vector3.ZERO
 	_cancel_pending_attack()
 	_release_motion_actions()
-	inventory_ui.set_open(true)
 func close_inventory() -> void:
 	if not inventory_is_open(): return
 	inventory_ui.set_open(false)
+	_unlock_world_controls()
+func _unlock_world_controls() -> void:
 	_release_motion_actions()
 	_waiting_motion_release = MOTION_KEYS.any(func(key):return Input.is_physical_key_pressed(key))
 	_waiting_mouse_release = Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT)
@@ -53,7 +58,7 @@ func _restore_controls() -> void:
 		broker.refresh(interaction_context())
 		interaction_label.text = broker.displayed_prompt
 func _physics_process(_delta: float) -> void:
-	if inventory_is_open():
+	if world_modal_is_open():
 		player.controls_enabled = false
 		player.velocity = Vector3.ZERO
 		_release_motion_actions()
@@ -81,13 +86,13 @@ func _input(event: InputEvent) -> void:
 		get_viewport().set_input_as_handled()
 	# Open modal mouse events go to its full-screen GUI; they never reach world unhandled input.
 func _unhandled_key_input(event: InputEvent) -> void:
-	if inventory_is_open():
+	if world_modal_is_open():
 		get_viewport().set_input_as_handled()
 		return
 	super._unhandled_key_input(event)
-func can_interact() -> bool: return not inventory_is_open() and super.can_interact()
+func can_interact() -> bool: return not world_modal_is_open() and super.can_interact()
 func interact_selected() -> bool:
-	if inventory_is_open():
+	if world_modal_is_open():
 		last_interaction = {"ok":false,"reason":"ui_blocked","actual_quantity":0}
 		return false
 	return super.interact_selected()
