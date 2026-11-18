@@ -64,22 +64,36 @@ func add_item(id: String, amount: int) -> Dictionary:
 	changed.emit(revision)
 	_busy = false
 	return _result(true,"added",amount,{id:amount})
-func remove_item(id: String, amount: int) -> Dictionary:
+## An optional synchronous effect runs under the same lock after removal has
+## been prepared. Return false without changing state, or commit the paired
+## state and return true. The effect must not notify observers itself.
+## Set only_slot to restrict the removal to the selected stack.
+func remove_item(id: String, amount: int, commit_effect: Callable = Callable(), only_slot: int = -1) -> Dictionary:
 	if _busy: return _result(false,"busy")
 	if amount <= 0 or _database == null or not _database.has_item(id): return _result(false,"invalid_request")
-	if count_item(id) < amount: return _result(false,"insufficient")
+	if only_slot == -1:
+		if count_item(id) < amount: return _result(false,"insufficient")
+	else:
+		if only_slot < 0 or only_slot >= _slots.size(): return _result(false,"insufficient")
+		var selected: RefCounted = _slots[only_slot]
+		if selected == null or selected.item_id != id or selected.quantity < amount:
+			return _result(false,"insufficient")
 	var pending := _copy_slots()
 	var left := amount
-	for i in pending.size():
+	var indices := range(pending.size()) if only_slot == -1 else [only_slot]
+	for i in indices:
 		var stack: RefCounted = pending[i]
 		if stack == null or stack.item_id != id: continue
 		var quantity := mini(left,stack.quantity)
 		stack.quantity -= quantity
 		left -= quantity
 		if stack.quantity == 0: pending[i] = null
+	_busy = true
+	if not commit_effect.is_null() and (not commit_effect.is_valid() or commit_effect.call() != true):
+		_busy = false
+		return _result(false,"effect_rejected")
 	_slots = pending
 	revision += 1
-	_busy = true
 	changed.emit(revision)
 	_busy = false
 	return _result(true,"removed",amount,{id:amount})
