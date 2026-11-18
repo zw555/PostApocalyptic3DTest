@@ -1,0 +1,10 @@
+[gd_resource type="Resource" load_steps=2 format=3]
+[ext_resource type="Script" path="res://stage6c3/scripts/survival_profile.gd" id="profile"]
+[resource]
+script = ExtResource("profile")
+maximum = 100.0
+warning_below = 25.0
+hunger_per_minute = 1.0
+thirst_per_minute = 1.5
+canned_food_recovery = 35.0
+water_bottle_recovery = 40.0
