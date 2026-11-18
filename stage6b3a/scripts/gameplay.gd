@@ -24,6 +24,10 @@ func create_melee_controller() -> Node:
 func vector3(value: Array) -> Vector3: return Vector3(value[0],value[1],value[2])
 func create_structure_visibility() -> Node:
 	var coordinator: Node = super.create_structure_visibility()
+	spawn_combat_targets(coordinator)
+	return coordinator
+
+func spawn_combat_targets(coordinator: Node) -> void:
 	var entries: Array = JSON.parse_string(FileAccess.get_file_as_string("res://stage6b3a/data/training_targets.json"))
 	for entry in entries:
 		var target := TrainingZombie.new()
@@ -34,17 +38,19 @@ func create_structure_visibility() -> Node:
 		target.training_bounds=AABB(vector3(entry.bounds_position),vector3(entry.bounds_size))
 		target.combat_zone=coordinator.config.zones.filter(func(zone):return zone.zone_id==entry.zone_id)[0]
 		add_child(target)
-		coordinator.config.register_object(target,target.combat_zone,"content")
-		for mesh in target.find_children("*","GeometryInstance3D",true,false):
-			var record: Dictionary = coordinator.config.records[mesh]
-			record.category="GameInformation"
-			record.discovered=true
-			record.information_offset=Vector3.UP
-			record.structure_visible_from=[]
-			record.height_reference=target
-			record.height_interval=Vector2(-0.75,0.75)
-		training_targets.append(target)
-	return coordinator
+		register_combat_target(coordinator,target)
+
+func register_combat_target(coordinator: Node, target: Node3D) -> void:
+	coordinator.config.register_object(target,target.combat_zone,"content")
+	for mesh in target.find_children("*","GeometryInstance3D",true,false):
+		var record: Dictionary = coordinator.config.records[mesh]
+		record.category="GameInformation"
+		record.discovered=true
+		record.information_offset=Vector3.UP
+		record.structure_visible_from=[]
+		record.height_reference=target
+		record.height_interval=Vector2(-0.75,0.75)
+	training_targets.append(target)
 func _ready() -> void:
 	super._ready()
 	combat_domain=Domain.new()

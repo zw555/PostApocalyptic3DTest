@@ -1,0 +1,5 @@
+[gd_scene load_steps=3 format=3]
+[ext_resource type="PackedScene" path="res://stage6b5b/scenes/gameplay.tscn" id="base"]
+[ext_resource type="Script" path="res://stage6b5b1/scripts/gameplay.gd" id="main"]
+[node name="Stage6B5B1PursuitAndSupplies" instance=ExtResource("base")]
+script = ExtResource("main")

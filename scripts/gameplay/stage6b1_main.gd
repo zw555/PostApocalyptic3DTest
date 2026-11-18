@@ -12,6 +12,10 @@ var broker := Broker.new()
 var inventory_debug_panel: CanvasLayer
 var last_interaction := {}
 var interaction_usec := 0
+
+func container_definitions() -> Array:
+	return ContainerData
+
 func create_structure_visibility() -> Node:
 	var coordinator: Node = super.create_structure_visibility()
 	item_database = Database.new()
@@ -21,7 +25,7 @@ func create_structure_visibility() -> Node:
 		return coordinator
 	player_inventory = Inventory.new(item_database,12)
 	var config: Node3D = coordinator.config
-	for data in ContainerData:
+	for data in container_definitions():
 		var container := ContainerEndpoint.new()
 		add_child(container)
 		var container_result: Dictionary = container.configure(data,item_database)

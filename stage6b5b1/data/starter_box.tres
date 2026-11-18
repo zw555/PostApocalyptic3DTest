@@ -1,0 +1,20 @@
+[gd_resource type="Resource" load_steps=7 format=3]
+[ext_resource type="Script" path="res://scripts/interaction/container_definition.gd" id="container"]
+[ext_resource type="Script" path="res://scripts/items/item_amount.gd" id="amount"]
+[ext_resource type="Resource" path="res://data/items/combat_knife.tres" id="knife"]
+[ext_resource type="Resource" path="res://data/items/baseball_bat.tres" id="bat"]
+[sub_resource type="Resource" id="knife_amount"]
+script = ExtResource("amount")
+definition = ExtResource("knife")
+quantity = 1
+[sub_resource type="Resource" id="bat_amount"]
+script = ExtResource("amount")
+definition = ExtResource("bat")
+quantity = 1
+[resource]
+script = ExtResource("container")
+container_id = "supply_501_starter"
+display_name = "501 武器储物箱"
+region_id = "apartment_501"
+position = Vector3(-4.15, 0, -1.055)
+contents = Array[Resource]([SubResource("knife_amount"), SubResource("bat_amount")])
