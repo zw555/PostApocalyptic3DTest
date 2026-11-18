@@ -18,6 +18,9 @@ var combat_status: Label
 var combat_automatic := true
 var combat_ready := false
 var last_combat_tick := -1
+func create_melee_controller() -> Node:
+	return EquippedMelee.new()
+
 func vector3(value: Array) -> Vector3: return Vector3(value[0],value[1],value[2])
 func create_structure_visibility() -> Node:
 	var coordinator: Node = super.create_structure_visibility()
@@ -47,7 +50,7 @@ func _ready() -> void:
 	combat_domain=Domain.new()
 	combat_domain.host=self
 	combat_domain.targets=training_targets
-	melee=EquippedMelee.new()
+	melee=create_melee_controller()
 	melee.name="EquippedMelee"
 	player.add_child(melee)
 	player_combat=Receiver.new()
